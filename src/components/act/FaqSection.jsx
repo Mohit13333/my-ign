@@ -87,10 +87,10 @@ const FAQSection = () => {
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section testTitle"
-              style={{ animationDelay: "0.2s" }}
+              className="fade-in-section"
+              style={{ animationDelay: "0.2s",color:"#19245E",fontWeight:800,marginBottom:"20px",fontSize:isMobile?"20px":"2.5rem" }}
             >
-              LOREM IPSUM DOLOR SIT AMET,
+              LOREM IPSUM DOLOR SIT AMET,<br/>
               <span className="highlight">CONSECTETUR</span> ADIPISCING
             </h2>
 
