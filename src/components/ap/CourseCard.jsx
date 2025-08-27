@@ -799,24 +799,35 @@ function CourseCard() {
                     {/* Left side: index + title */}
                     <div className="d-flex flex-column gap-1">
                       <span
-                        className="fw-bold"
                         style={{
                           fontSize: "2rem",
+                          fontWeight: 800,
                           opacity: "0.7",
                           borderBottom: "1px solid rgba(22, 22, 100, 0.5)",
                           width: "50px",
                           display: "inline-block",
+                          background: "linear-gradient(90deg, #161664, #3F88BA)",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
                         }}
                       >
                         {String(index + 1).padStart(2, "0")}.
                       </span>
+
                       <span
-                        className="fw-bold"
-                        style={{ fontSize: "1rem", letterSpacing: "1px" }}
+                        style={{
+                          fontSize: "1rem",
+                          letterSpacing: "1px",
+                          fontWeight: 800,
+                          background: "linear-gradient(90deg, #161664, #3F88BA)",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                        }}
                       >
                         {item.title}
                       </span>
                     </div>
+
 
                     {/* Right side: Chevron */}
                     <span>
