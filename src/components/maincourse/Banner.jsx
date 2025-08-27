@@ -29,7 +29,7 @@ export default function TutoringCourses() {
       </Head>
 
       <main>
-        <section className="heading-section">
+        <section className="heading-section mx-auto">
           <div
             className="text-center mb-5 fade-in-section"
             data-scroll
