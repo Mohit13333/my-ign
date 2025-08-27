@@ -592,7 +592,7 @@ export default function StudentAchievements() {
             data-scroll-repeat
             style={{
               animationDelay: "0.3s",
-              fontSize: isMobile ? "25px" : "2.5rem",
+              fontSize: isMobile ? "23px" : "2.5rem",
               lineHeight: "1.1",
               textTransform: "uppercase",
               marginTop: "3vh"
