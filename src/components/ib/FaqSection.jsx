@@ -430,7 +430,7 @@ const FAQSection = () => {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
-  padding: 0 40px;
+  padding: 22px;
   display: inline-flex;  /* ✅ ensures proper alignment */
   align-items: center;   /* ✅ centers text with icons */
 }
@@ -439,7 +439,7 @@ const FAQSection = () => {
 .SubHeading:after {
   content: "";
   width: 18px;   /* ✅ unchanged */
-  height: 18px;  /* ✅ unchanged */
+  height: 36px;  /* ✅ unchanged */
   position: absolute;
   top: 50%;                /* center vertically */
   transform: translateY(-50%); /* exact middle */
@@ -458,14 +458,27 @@ const FAQSection = () => {
 @media (max-width: 1024px) {
   .SubHeading {
     font-size: 24px;
-    padding: 0 40px; /* keep icons same size */
+    padding: 0 22px; /* keep icons same size */
   }
 }
 @media (max-width: 575px) {
   .SubHeading {
     font-size: 20px;
-    padding: 0 40px; /* keep icons same size */
+    padding: 0 22px; /* keep icons same size */
   }
+    .SubHeading:before,
+.SubHeading:after {
+  content: "";
+  width: 18px;   /* ✅ unchanged */
+  height: 24px;  /* ✅ unchanged */
+  position: absolute;
+  top: 50%;                /* center vertically */
+  transform: translateY(-50%); /* exact middle */
+  background: url(/images/heading-icon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 }
 
 }`}</style>
