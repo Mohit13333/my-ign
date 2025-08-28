@@ -14,7 +14,7 @@ const advantages = [
   {
     title: "grade improvement is our benchmark",
     icon: "/assets/unioun.png",
-    text: "We don’t just teach - we deliver outcomes. Our success is measured in A/A* results, top scores, and student confidence.",
+    text: "We don't just teach - we deliver outcomes. Our success is measured in A/A* results, top scores, and student confidence.",
   },
   {
     title: "CUSTOMIZED LEARNING",
@@ -420,11 +420,17 @@ const Learning = () => {
 
         .mobile-card-icon {
           margin-bottom: 15px;
+          width: 60px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
         }
 
         .mobile-icon {
           width: 60px;
-          height: auto;
+          height: 60px;
+          object-fit: contain;
         }
 
         .mobile-card-content {
@@ -562,11 +568,17 @@ const Learning = () => {
 
           .desktop-card-icon {
             margin-bottom: 19px;
+            width: 90px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
           }
 
           .desktop-card-icon img {
             width: 90px;
-            height: auto;
+            height: 90px;
+            object-fit: contain;
           }
 
           .desktop-card-title {
