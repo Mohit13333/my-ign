@@ -355,7 +355,7 @@ const subjectRows = [
   ["English Language & Literature"],
 ];
 
-export default function SubjectsCard1({}) {
+export default function SubjectsCard1({ }) {
   return (
     <section
       data-scroll
@@ -391,7 +391,7 @@ export default function SubjectsCard1({}) {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,<br/> CONSECTETUR{ " "}
+            LOREM IPSUM DOLOR SIT AMET,<br /> CONSECTETUR{" "}
             <span className="highlight">ADIPISCING</span>
           </h2>
         </div>
@@ -621,6 +621,7 @@ export default function SubjectsCard1({}) {
             padding: 5px 15px 10px 15px;
             font-size: 16px;
             min-width: auto; /* Remove min-width constraint on mobile */
+            border: 1px solid #ffffff !important;
           }
 
           .subjects-card1-section .subjects-card1-bubble-row {
