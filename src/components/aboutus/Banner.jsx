@@ -24,7 +24,7 @@ export default function AboutBanner() {
             backgroundClip: "text",
           }}
         >
-          CAREERS
+          ABOUT US
         </h2>
         <p className="subHeading">HOME // CAREERS</p>
       </div>
