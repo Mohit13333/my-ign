@@ -520,7 +520,6 @@
 
 "use client"
 import React, { useState, useMemo, useEffect } from "react";
-import { ArrowRight, ArrowLeft } from "lucide-react";
 
 const categories = ["ALL", "MARKETING", "NEWS", "LOREM", "IPSUM"];
 
@@ -636,7 +635,7 @@ export default function BlogSection() {
               style={{ animationDelay: "0.2s" }}
             >
               LOREM IPSUM DOLOR SIT AMET,
-              CONSECTETUR <span className="highlight">ADIPISCING</span>
+             <span className="highlight"> CONSECTETUR</span> ADIPISCING
             </h2>
           </div>
           {/* Category tabs */}

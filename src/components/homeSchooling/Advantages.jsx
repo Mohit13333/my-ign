@@ -165,12 +165,12 @@ const AdvantagesCarousel = () => {
                             >
                                 <span
                                     style={{
-                                        background: "linear-gradient(135deg, #3F88BA, #161664)",
+                                        background: "linear-gradient(135deg,#161664, #3F88BA)",
                                         WebkitBackgroundClip: "text",
                                         WebkitTextFillColor: "transparent"
                                     }}
                                 >
-                                    ADVANTAGES OF
+                                    ADVANTAGES OF HOMESCHOOLING OVER
                                 </span>{" "}
                                 <span
                                     style={{
@@ -179,7 +179,7 @@ const AdvantagesCarousel = () => {
                                         WebkitTextFillColor: "transparent"
                                     }}
                                 >
-                                    HOMESCHOOLING OVER
+                TRADITIONAL
                                 </span>{" "}
                                 <span
                                     style={{
@@ -188,7 +188,7 @@ const AdvantagesCarousel = () => {
                                         WebkitTextFillColor: "transparent"
                                     }}
                                 >
-                                    TRADITIONAL PROCESSES
+                                     PROCESSES
                                 </span>
                             </h2>
                             <p className="desktop-subtitle">
