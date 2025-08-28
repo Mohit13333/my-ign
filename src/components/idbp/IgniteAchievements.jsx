@@ -98,10 +98,13 @@ export default function IgniteAchievements() {
                   paddingLeft: isMobile ? "0" : "20px",
                 }}>60%</div>
               </div>
-              <div className="border-md-start ps-md-4 ps-0 mt-md-0 mt-2 pt-md-0 pt-2" style={{
-                borderLeft: '2px solid #6b7280',
-                borderTop: 'none'
-              }}>
+                      <div
+  className="border-md-start ps-md-4 ps-0 mt-md-0 mt-2 pt-md-0 pt-2"
+  style={{
+    borderLeft: "2px solid rgba(107, 114, 128, 0.5)", // gray with 50% opacity
+    borderTop: "none",
+  }}
+>
                 <h3 className="h5 fw-bold mb-1 mb-md-2" style={{
                   background: "linear-gradient(90deg, #00A491, #003E37)",
                   WebkitBackgroundClip: "text",
@@ -149,10 +152,13 @@ export default function IgniteAchievements() {
                   paddingLeft: isMobile ? "0" : "20px",
                 }}>30+</div>
               </div>
-              <div className="border-md-start ps-md-4 ps-0 mt-md-0 mt-2 pt-md-0 pt-2" style={{
-                borderLeft: '2px solid #6b7280',
-                borderTop: 'none'
-              }}>
+                      <div
+  className="border-md-start ps-md-4 ps-0 mt-md-0 mt-2 pt-md-0 pt-2"
+  style={{
+    borderLeft: "2px solid rgba(107, 114, 128, 0.5)", // gray with 50% opacity
+    borderTop: "none",
+  }}
+>
                 <h3 className="h5 fw-bold mb-1 mb-md-2" style={{
                    background: "linear-gradient(90deg,#161664, #3F88BA)",
                   WebkitBackgroundClip: "text",
@@ -200,10 +206,13 @@ export default function IgniteAchievements() {
                   paddingLeft: isMobile ? "0" : "20px",
                 }}>60%</div>
               </div>
-              <div className="border-md-start ps-md-4 ps-0 mt-md-0 mt-2 pt-md-0 pt-2" style={{
-                borderLeft: '2px solid #6b7280',
-                borderTop: 'none'
-              }}>
+                      <div
+  className="border-md-start ps-md-4 ps-0 mt-md-0 mt-2 pt-md-0 pt-2"
+  style={{
+    borderLeft: "2px solid rgba(107, 114, 128, 0.5)", // gray with 50% opacity
+    borderTop: "none",
+  }}
+>
                 <h3 className="h5 fw-bold mb-1 mb-md-2" style={{
                    background: "linear-gradient(90deg,#161664, #3F88BA)",
                   WebkitBackgroundClip: "text",
@@ -251,10 +260,13 @@ export default function IgniteAchievements() {
                   paddingLeft: isMobile ? "0" : "20px",
                 }}>30+</div>
               </div>
-              <div className="border-md-start ps-md-4 ps-0 mt-md-0 mt-2 pt-md-0 pt-2" style={{
-                borderLeft: '2px solid #6b7280',
-                borderTop: 'none'
-              }}>
+                      <div
+  className="border-md-start ps-md-4 ps-0 mt-md-0 mt-2 pt-md-0 pt-2"
+  style={{
+    borderLeft: "2px solid rgba(107, 114, 128, 0.5)", // gray with 50% opacity
+    borderTop: "none",
+  }}
+>
                 <h3 className="h5 fw-bold mb-1 mb-md-2" style={{
                   background: "linear-gradient(90deg, #00A491, #003E37)",
                   WebkitBackgroundClip: "text",
@@ -328,12 +340,13 @@ export default function IgniteAchievements() {
           transform: translateY(0);
         }
     @media (max-width: 767.98px) {
-  .border-md-start {
-    border-left: none !important;
-    border-top: 1px solid #6b7280 !important; /* grey border */
-    padding-top: 0.5rem !important;
-    margin-top: 0.5rem !important;
-  }
+.border-md-start {
+  border-left: none !important;
+  border-top: 2px solid rgba(107, 114, 128, 0.5) !important;
+  padding-top: 0.5rem !important;
+  margin-top: 0.5rem !important;
+}
+
 }
 
         }
