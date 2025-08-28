@@ -357,7 +357,7 @@
 //           -webkit-text-fill-color: transparent;
 //           background-clip: text;
 //         }
-        
+
 //         .blue-text {
 //           background: linear-gradient(90deg, #3F88BA, #161664);
 //           -webkit-background-clip: text;
@@ -372,12 +372,12 @@
 //           gap: 3rem;
 //           min-height: 500px;
 //         }
-        
+
 //         .left-content {
 //           flex: 0 0 45%;
 //           /* No background color for left side */
 //         }
-        
+
 //  .stats-grid-desktop {
 //   flex: 1;
 //   background: url("/assets/Rectangle125.png") no-repeat center/cover;
@@ -388,12 +388,12 @@
 //   gap: 2rem;
 // }
 
-        
+
 //         .stats-row {
 //           display: flex;
 //           gap: 2rem;
 //         }
-        
+
 //         .stat-card-desktop {
 //           flex: 1;
 //           display: flex;
@@ -401,13 +401,13 @@
 //           text-align: center;
 //           gap: 1rem;
 //         }
-        
+
 //         .stat-number {
 //           font-size: 4rem;
 //           font-weight: 800;
 //           line-height: 1;
 //         }
-        
+
 //  .stat-divider {
 //   width: 9vw;
 //   height: 1px;
@@ -416,11 +416,11 @@
 //   margin: 0 auto;
 // }
 
-        
+
 //         .stat-content {
 //           flex: 1;
 //         }
-        
+
 //         .stat-title {
 //           font-size: 1rem;
 //           font-weight: 700;
@@ -435,19 +435,19 @@
 //           border-radius: 20px;
 //           padding: 2rem;
 //         }
-        
+
 //         .stat-card-mobile {
 //           text-align: center;
 //           padding: 1.5rem 1rem;
 //         }
-        
+
 //         .stat-card-mobile .stat-number {
 //           font-size: 2.5rem;
 //           font-weight: 800;
 //           line-height: 1;
 //           margin-bottom: 1rem;
 //         }
-        
+
 //         .stat-title-mobile {
 //           font-size: 0.8rem;
 //           font-weight: 700;
@@ -461,11 +461,11 @@
 //           .stat-card-mobile .stat-number {
 //             font-size: 2rem;
 //           }
-          
+
 //           .stat-title-mobile {
 //             font-size: 0.7rem;
 //           }
-          
+
 //           .stats-grid-mobile {
 //             padding: 1.5rem;
 //           }
@@ -478,7 +478,21 @@
 
 "use client"
 
+import { useEffect, useState } from "react";
+
 export default function IgniteAchievements() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      setIsMobile(window.innerWidth <= 1100);
+    };
+
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+
+    return () => window.removeEventListener('resize', checkDevice);
+  }, []);
   return (
     <div className=" py-md-5 py-4 fade-in-section" data-scroll
       data-scroll-class="is-inview"
@@ -506,7 +520,7 @@ export default function IgniteAchievements() {
               data-scroll-class="is-inview"
               data-scroll-repeat
               style={{
-                 background: "linear-gradient(90deg,#161664, #3F88BA)",
+                background: "linear-gradient(90deg,#161664, #3F88BA)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 letterSpacing: '0.1em',
@@ -530,40 +544,19 @@ export default function IgniteAchievements() {
           </div>
 
           {/* Main Title */}
-          <h2 className="fw-bold mb-2 lh-sm fade-in-section"
+            <h2
             data-scroll
             data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{
-              background: "#19245E",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              animationDelay: "0.35s",
-              fontSize: "1.4rem"
-            }}>
-            LOREM IPSUM DOLOR SIT AMET,
+            data-scroll-repeat="true"
+            className="fade-in-section testTitle"
+            style={{ animationDelay: "0.2s" }}
+          >
+            LOREM IPSUM DOLOR SIT AMET,<br /> <span className="highlight"> CONSECTETUR{" "}</span>
+           ADIPISCING
           </h2>
-          <h2 className="fw-bold mb-3 lh-sm fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{
-              background: "linear-gradient(90deg, #00A491, #003E37)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              animationDelay: "0.4s",
-              fontSize: "1.4rem"
-            }}>
-            CONSECTETUR <span style={{
-              background: "#19245E",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              animationDelay: "0.4s",
-              fontSize: "1.4rem"
-            }}>ADIPISCING</span>          </h2>
 
           {/* Subtitle */}
-          <p className="mx-auto lh-lg fade-in-section"
+          <p className="mx-auto fade-in-section"
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
@@ -572,7 +565,8 @@ export default function IgniteAchievements() {
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               animationDelay: "0.45s",
-              fontSize: "0.9rem"
+              fontSize: "0.9rem",
+              lineHeight: isMobile ? "1.3" : "1.2",
             }}>
             Choosing us means partnering with experienced coaches
             who are dedicated to unlocking your potential.
@@ -598,41 +592,55 @@ export default function IgniteAchievements() {
                 </div>
 
                 {/* Main Title */}
-                <h2 className="fw-bold mb-2 lh-sm fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
-                  style={{
-                    background: "#19245E",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    animationDelay: "0.35s",
-                    fontSize: "2rem"
-                  }}>
-                  LOREM IPSUM DOLOR SIT AMET,
-                </h2>
-                <h2 className="fw-bold mb-3 lh-sm fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
-                  style={{
-                    background: "linear-gradient(90deg, #00A491, #003E37)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    animationDelay: "0.4s",
-                    fontSize: "2rem"
-                  }}>
-                  CONSECTETUR <span style={{
-                    background: "#19245E",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    animationDelay: "0.4s",
-                    fontSize: "2rem"
-                  }}>ADIPISCING</span>
-                </h2>
+              <h2
+  className="fw-bold fade-in-section"
+  data-scroll
+  data-scroll-class="is-inview"
+  data-scroll-repeat
+  style={{
+    background: "#19245E",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    animationDelay: "0.35s",
+    fontSize: "2rem",
+    margin: 0, // ✅ removes the margin
+  }}
+>
+  LOREM IPSUM DOLOR SIT AMET,
+</h2>
+
+<h2
+  className="fw-bold fade-in-section"
+  data-scroll
+  data-scroll-class="is-inview"
+  data-scroll-repeat
+  style={{
+    background: "linear-gradient(90deg, #00A491, #003E37)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    animationDelay: "0.4s",
+    fontSize: "2rem",
+    margin: 0, // ✅ removes the margin
+  }}
+>
+  CONSECTETUR{" "}
+  <span
+    style={{
+      background: "#19245E",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      animationDelay: "0.4s",
+      fontSize: "2rem",
+      margin: 0, // ✅ removes margin inside span (not needed, but safe)
+    }}
+  >
+    ADIPISCING
+  </span>
+</h2>
+
 
                 {/* Subtitle */}
-                <p className="lh-lg mb-4 fade-in-section"
+                <p className="lh-sm mb-4 fade-in-section"
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat
@@ -641,9 +649,10 @@ export default function IgniteAchievements() {
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     animationDelay: "0.45s",
-                    fontSize: "1.1rem"
+                    fontSize: "1.2rem",
+                    marginTop:"16px",
                   }}>
-                  Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential.
+                  Choosing us means partnering with experienced coaches<br/> who are dedicated to unlocking your potential.
                 </p>
               </div>
 
@@ -652,7 +661,7 @@ export default function IgniteAchievements() {
                 <button
                   className="btn fw-bold d-flex align-items-center rounded-pill"
                   style={{
-                     background: "linear-gradient(90deg,#161664, #3F88BA)",
+                    background: "linear-gradient(90deg,#161664, #3F88BA)",
                     color: 'white',
                     padding: '1rem 2rem',
                     border: 'none',
@@ -734,7 +743,7 @@ export default function IgniteAchievements() {
             <button
               className="btn fw-bold d-flex align-items-center mx-auto rounded-pill"
               style={{
-                 background: "linear-gradient(90deg,#161664, #3F88BA)",
+                background: "linear-gradient(90deg,#161664, #3F88BA)",
                 color: 'white',
                 padding: '0.8rem 1.8rem',
                 border: 'none',
