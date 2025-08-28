@@ -783,6 +783,7 @@ export default function InfoCard() {
               >
                 LOREM IPSUM DOLOR SIT AMET
               </p>
+              <div className="divider"></div>
 
               <div
                 className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold fade-in-section info-row"
