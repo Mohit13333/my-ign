@@ -510,38 +510,8 @@ export default function IgniteAchievements() {
           data-scroll-class="is-inview"
           data-scroll-repeat
           style={{ animationDelay: "0.2s" }}>
-          <div className="d-flex align-items-center justify-content-center mb-3 fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{ animationDelay: "0.25s" }}>
-            <h1 className="px-3 h2 fw-bold mx-md-3 mx-2 fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
-              style={{
-                background: "linear-gradient(90deg,#161664, #3F88BA)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                letterSpacing: '0.1em',
-                animationDelay: "0.3s",
-                fontSize: "clamp(0.9rem, 3vw, 1.2rem)"
-              }}>
-              <img
-                src="/assets/3color.png"
-                alt="act"
-                width={15}
-                height={18}
-                style={{ verticalAlign: "middle", marginLeft: "0.5rem" }}
-              /> IGNITE ACHIEVEMENTS     <img
-                src="/assets/3color.png"
-                alt="act"
-                width={15}
-                height={18}
-                style={{ verticalAlign: "middle", marginLeft: "0.5rem" }}
-              />
-            </h1>
-          </div>
+          <div className="SubHeading testSubheading">IGNITE ACHIEVEMENTS
+              </div>
 
           {/* Main Title */}
             <h2

@@ -26,7 +26,7 @@ const IBCurriculumStages = () => {
               style={{ animationDelay: "0.25s" }}
             >
               <h1 className="achievementsTitle">
-                Lorem ipsum dolor sit amet, <br></br>{" "}
+                Lorem ipsum dolor sit amet,<br/>
                 <span className="highlight"> consectetur</span> adipiscing{" "}
               </h1>
             </div>
@@ -641,7 +641,7 @@ const IBCurriculumStages = () => {
     font-size: 22px !important;
   }
   .achievementsTitle {
-    font-size: 1.5em;
+    font-size: 23px;
   }
   .subjects-card {
     border-radius: 10px !important;
