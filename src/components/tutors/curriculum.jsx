@@ -1,7 +1,18 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const IBCurriculumStages = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setIsMobile(width < 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <div>
       <section className="achievementsSection pb-0" style={{ position: 'relative' }}>
@@ -26,7 +37,7 @@ const IBCurriculumStages = () => {
               style={{ animationDelay: "0.25s" }}
             >
               <h1 className="achievementsTitle">
-                Lorem ipsum dolor sit amet,<br/>
+                Lorem ipsum dolor sit amet,<br />
                 <span className="highlight"> consectetur</span> adipiscing{" "}
               </h1>
             </div>
@@ -34,8 +45,11 @@ const IBCurriculumStages = () => {
         </div>
         <img src="/assets/bgrect25.png" alt="bg-shape" className="testimonialRect rect-1" />
         <img src="/assets/bgrect26.png" alt="bg-shape" className="testimonialRect rect-2" />
-        <img src="/assets/bgrect27.png" alt="bg-shape" className="testimonialRect rect-3" />
-      </section>
+        <img
+          src={isMobile ? "/assets/bgrect45.png" : "/assets/bgrect27.png"}
+          alt="bg-shape"
+          className="testimonialRect rect-3"
+        />      </section>
       <section className="achievementsSection" style={{ position: 'relative' }}>
         <div className="container">
           <div className="row gy-5">
@@ -191,24 +205,24 @@ const IBCurriculumStages = () => {
         }
 
         .rect-1 {
-          top: -53px;
-          right: 0;
-          width: 631px;
-          height: 120px;
+top: -53px;
+    right: 0;
+    width: 608px;
+    height: 88px;
         }
 
         .rect-2 {
           top: 62%;
           left: 0;
            width: 428px;
-          height: 120px;
+          height: 88px;
         }
 
         .rect-3 {
-          bottom: -294%;
-          right: 0;
-          width: 500px;
-          height: 120px;
+bottom: -293%;
+    right: 0;
+    width: 632px;
+    height: 88px;
         }
 
 .achievementsHeadings {
@@ -609,23 +623,23 @@ const IBCurriculumStages = () => {
 
      .rect-1 {
           top: 319%;
-          right: -32px;
-          width: 125px;
-          height: 50px;
+          right: -44px;
+          width: 157px;
+          height: 55px;
         }
 
         .rect-2 {
-          top: 140%;
-          left: 0;
-           width: 320px;
-          height: 70px;
+    top: 146%;
+        left: 24px;
+        width: 279px;
+        height: 55px;
         }
 
         .rect-3 {
-          bottom: -174%;
-          right: 290px;
-          width: 125px;
-          height: 50px;
+          bottom: -200%;
+          right: 357px;
+          width: 100px;
+          height: 55px;
         }
 
   .curriculum-info {
@@ -724,12 +738,16 @@ const IBCurriculumStages = () => {
   padding: 30px;
   padding-right: 100px;
 }
-.curriculum-col-left{
-background: linear-gradient(235.04deg, #EDFFF4 45.21%, #A6EAC7 95.86%);
+.curriculum-col-left {
+  background: url("/assets/turg.png") no-repeat center center;
+  background-size: cover;
 }
-.curriculum-col-right{
-  background: linear-gradient(237.21deg, #E7F6FF 54.23%, #A3CAF5 103.75%);
+
+.curriculum-col-right {
+  background: url("/assets/turb.png") no-repeat center center;
+  background-size: cover;
 }
+
 
 .curriculum-left-button {
   position: relative;
