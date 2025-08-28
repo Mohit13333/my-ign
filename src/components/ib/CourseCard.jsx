@@ -702,7 +702,7 @@ function CourseCard() {
                       {/* Right Image */}
                       <div className="col-md-6 d-flex justify-content-center align-items-center">
                         <img
-                          src="https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
+                          src="/assets/corsebg.jpg"
                           alt="Students studying together"
                           className="img-fluid image1"
                           style={{
@@ -780,7 +780,7 @@ function CourseCard() {
                     style={{
                       backgroundImage: `
       linear-gradient(135deg, rgba(227, 242, 253, 0.9), rgba(187, 222, 251, 0.9)),
-      url("https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop")
+      url("/assets/corsebg.jpg")
     `,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
@@ -795,21 +795,26 @@ function CourseCard() {
                   >
                     {/* Left side: index + title */}
                     <div className="d-flex flex-column gap-1">
-                      <span
-                        style={{
-                          fontSize: "2rem",
-                          fontWeight: 800,
-                          opacity: "0.7",
-                          borderBottom: "1px solid rgba(22, 22, 100, 0.5)",
-                          width: "50px",
-                          display: "inline-block",
-                          background: "linear-gradient(90deg, #161664, #3F88BA)",
-                          WebkitBackgroundClip: "text",
-                          WebkitTextFillColor: "transparent",
-                        }}
-                      >
-                        {String(index + 1).padStart(2, "0")}.
-                      </span>
+                      <div className="d-flex justify-content-between align-items-center">
+                        <span
+                          style={{
+                            fontSize: "2rem",
+                            fontWeight: 800,
+                            opacity: "0.7",
+                            borderBottom: "1px solid rgba(22, 22, 100, 0.5)",
+                            width: "50px",
+                            background: "linear-gradient(90deg, #161664, #3F88BA)",
+                            WebkitBackgroundClip: "text",
+                            WebkitTextFillColor: "transparent",
+                          }}
+                        >
+                          {String(index + 1).padStart(2, "0")}.
+                        </span>
+
+                        <span>
+                          <ChevronDown size={24} />
+                        </span>
+                      </div>
 
                       <span
                         style={{
@@ -824,12 +829,6 @@ function CourseCard() {
                         {item.title}
                       </span>
                     </div>
-
-
-                    {/* Right side: Chevron */}
-                    <span>
-                      <ChevronDown size={24} />
-                    </span>
                   </div>
 
                 )}
@@ -852,7 +851,7 @@ function CourseCard() {
                           background: "linear-gradient(135deg, #4A5D23, #2E3A16)",
                           padding: "1.5rem",
                           color: "#ffffff",
-                          backgroundImage: "url('https://images.pexels.com/photos/5212345/pexels-photo-5212345.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop')",
+                          backgroundImage: "url('/assets/corsebg.jpg')",
                           backgroundSize: "cover",
                           backgroundPosition: "center right",
                           backgroundBlendMode: "multiply",
@@ -919,7 +918,7 @@ function CourseCard() {
                           left: 0,
                           right: 0,
                           bottom: 0,
-                          background: "rgba(74, 93, 35, 0.7)",
+background: "linear-gradient(65.39deg, #000000 5.24%, rgba(166, 234, 199, 0.3) 151.85%)",
                           zIndex: 1,
                         }}></div>
                       </div>
@@ -1068,7 +1067,7 @@ function CourseCard() {
           }
           
           .mobile-card-header span:nth-child(2) {
-            font-size: 0.85rem !important;
+            font-size: 18px !important;
           }
         }
       `}</style>
