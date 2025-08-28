@@ -755,6 +755,7 @@ export default function Trainers({ }) {
                                 </button>
                             </Swiper>
 
+                            <div className="trainersPagination" style={{marginBottom:"20px"}}></div>
 
                             <button
                                 data-scroll
@@ -765,7 +766,6 @@ export default function Trainers({ }) {
                             >
                                 SEE MORE
                             </button>
-                            <div className="trainersPagination"></div>
                         </div>
                     ) : (
                         <>

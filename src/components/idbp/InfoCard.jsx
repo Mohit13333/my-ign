@@ -189,7 +189,7 @@ export default function InfoCard() {
                 <button
                   className="btn fw-bold text-uppercase d-flex align-items-center gap-2 shadow"
                   style={{
-                    background: "linear-gradient(to right, #E7F6FF, #A3CAF5)",
+                    background: "linear-gradient(to right, #A3CAF5, #E7F6FF)",
                     color: "#273972",
                     borderRadius: "40px",
                     fontSize: "0.95rem",
