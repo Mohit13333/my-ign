@@ -895,7 +895,7 @@ function CourseCard() {
                           <hr style={{
                             border: "none",
                             height: "1px",
-                            background: "rgba(255,255,255,0.3)",
+                            background: "#FFFFFF",
                             margin: "1rem 0"
                           }} />
 
