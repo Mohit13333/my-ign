@@ -17,7 +17,7 @@ export default function TutoringCourses() {
   }, []);
 
   return (
-    <div className="container" style={{marginBlock: isMobile?"2.5rem":"96px"}}>
+    <div className="container mx-auto" style={{ marginBlock: isMobile ? "2.5rem" : "96px" }}>
       <Head>
         <title>Tutoring Courses</title>
         <meta charSet="utf-8" />
@@ -29,7 +29,7 @@ export default function TutoringCourses() {
       </Head>
 
       <main>
-        <section className="heading-section mx-auto">
+        <section className="heading-section">
           <div
             className="text-center mb-5 fade-in-section"
             data-scroll
@@ -148,7 +148,7 @@ export default function TutoringCourses() {
           </article>
 
           {/* MYP Card */}
-          <article className={`card1 ${isMobile? "card-plain":"card-gradient"}`}>
+          <article className={`card1 ${isMobile ? "card-plain" : "card-gradient"}`}>
             <div className="icon-container">
               <div className="icon-circle">
                 <Image
@@ -176,7 +176,7 @@ export default function TutoringCourses() {
           </article>
 
           {/* IGCSE Card */}
-          <article className={`card1 ${isMobile? "card-gradient":"card-plain"}`}>
+          <article className={`card1 ${isMobile ? "card-gradient" : "card-plain"}`}>
             <div className="icon-container">
               <div className="icon-circle">
                 <Image
@@ -241,11 +241,8 @@ export default function TutoringCourses() {
           display: flex;
           justify-content: center;
           padding: 2.5rem 0.5rem;
-        }
+                    max-width: 90vw;
 
-        main {
-          max-width: 90vw;
-          width: 100%;
         }
 
         .heading-section {
