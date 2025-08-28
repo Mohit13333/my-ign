@@ -614,7 +614,7 @@ const IBCurriculumStages= () => {
     font-size: 22px !important;
   }
   .achievementsTitle {
-    font-size: 1.5em;
+    font-size: 23px;
   }
   .subjects-card {
     border-radius: 10px !important;
