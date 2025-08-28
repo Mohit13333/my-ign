@@ -246,15 +246,17 @@ export default function MeetOurFounders() {
         .founder-message {
           padding: 2rem;
           border-radius: 16px;
+          margin-top:67px;
         }
 
         .founder-message2 {
           padding: 2rem;
           border-radius: 16px;
+                    margin-top:67px;
         }
 
         .message-title {
-          font-size: 1.4rem;
+          font-size: 35px;
           font-weight: 700;
           margin-bottom: 1.5rem;
           text-transform: uppercase;
@@ -267,7 +269,7 @@ export default function MeetOurFounders() {
         }
 
         .message-title2 {
-          font-size: 1.4rem;
+          font-size: 35px;
           font-weight: 700;
           margin-bottom: 1.5rem;
           text-transform: uppercase;
@@ -281,7 +283,7 @@ export default function MeetOurFounders() {
 
         .message-text {
           color: #444;
-          font-size: 1rem;
+          font-size: 23px;
           line-height: 1.8;
           margin-bottom: 1.2rem;
         }
@@ -292,7 +294,7 @@ export default function MeetOurFounders() {
 
         .message-text2 {
           color: #444;
-          font-size: 1rem;
+          font-size: 23px;
           line-height: 1.8;
           margin-bottom: 1.2rem;
         }

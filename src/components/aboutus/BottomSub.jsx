@@ -604,7 +604,7 @@ export default function CallToAction() {
                                     onMouseEnter={() => setIsMobileHovered(true)}
                                     onMouseLeave={() => setIsMobileHovered(false)}
                                 >
-                                    <span>EXPLORE OUR TUTORING COURSES</span>
+                                    <span style={{fontSize:"12px !important",opacity:0.5}}>EXPLORE OUR TUTORING COURSES</span>
                                     <div style={{ ...styles.mobileButtonIcon, ...mobileButtonIconHoverStyle }}>
                                         <ArrowRight size={18} />
                                     </div>

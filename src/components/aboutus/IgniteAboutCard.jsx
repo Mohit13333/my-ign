@@ -1,8 +1,20 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function IgniteAboutCard() {
+    const [isMobile, setIsMobile] = useState(false);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        const width = window.innerWidth;
+        setIsMobile(width < 768);
+      };
+  
+      handleResize();
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
   return (
     <section className="ignite-section">
       <div className="ignite-container">
@@ -85,7 +97,7 @@ export default function IgniteAboutCard() {
             }}
           >
             <img
-              src="/assets/person1.jpg"
+              src="/assets/aboutbg.jpg"
               alt="Two professionals working together on laptop"
               className="main-image"
             />
@@ -134,50 +146,41 @@ export default function IgniteAboutCard() {
         </div>
       </div>
 
-      <div
-        className="text-center mt-3 fade-in-section"
-        data-scroll
-        data-scroll-class="is-inview"
-        data-scroll-repeat
-        style={{ animationDelay: "0.7s" }}
-      >
-        <button
-          className="btn fw-bold d-flex align-items-center justify-content-between mx-auto rounded-pill"
-          style={{
-             background: "linear-gradient(90deg,#161664, #3F88BA)",
-            color: "white",
-            width: "230px",
-            padding: "0.5rem",
-            border: "none",
-            transition: "opacity 0.3s ease",
-            fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
-            marginTop: "2rem",
-          }}
-          onMouseEnter={(e) => (e.target.style.opacity = "0.9")}
-          onMouseLeave={(e) => (e.target.style.opacity = "1")}
-        >
-          GET IN TOUCH
-          <div
-            className="ms-3 rounded-circle d-flex align-items-center justify-content-center fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
+        <div className="text-center mt-3 fade-in-section"
+          data-scroll
+          data-scroll-class="is-inview"
+          data-scroll-repeat
+          style={{ animationDelay: "0.7s" }}>
+          <button
+            className="btn fw-bold d-flex align-items-center mx-auto rounded-pill"
             style={{
-              width: "clamp(1.5rem, 2vw, 2rem)",
-              height: "clamp(1.5rem, 2vw, 2rem)",
-              background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-              animationDelay: "0.75s",
+              background: "linear-gradient(90deg, #161664, #3F88BA)",
+              color: 'white',
+              padding: '0.8rem 1.8rem',
+              border: 'none',
+              transition: 'opacity 0.3s ease',
+              fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
             }}
+            onMouseEnter={(e) => e.target.style.opacity = "0.9"}
+            onMouseLeave={(e) => e.target.style.opacity = "1"}
           >
-            <img
-              src="/assets/arrowright.png"
-              alt="arrright"
-              width={12}
-              height={12}
-            />
-          </div>
-        </button>
-      </div>
+          GET IN TOUCH
+            <div
+              className="ms-3 rounded-circle d-flex align-items-center justify-content-center fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat
+              style={{
+                width: 'clamp(1.5rem, 2vw, 2rem)',
+                height: 'clamp(1.5rem, 2vw, 2rem)',
+                background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                animationDelay: "0.75s"
+              }}
+            >
+              <img src="/assets/fadb.png" alt="btn" width={isMobile ? 30 : 32} height={isMobile ? 30 : 32} />
+            </div>
+          </button>
+        </div>
 
       <style jsx>{`
         @font-face {
@@ -237,6 +240,8 @@ export default function IgniteAboutCard() {
           justify-content: flex-start;
           gap: 15px;
           margin-bottom: 25px;
+                    margin-top:30px;
+
         }
 
         .header-title {
@@ -278,6 +283,8 @@ export default function IgniteAboutCard() {
           color: #233467;
           line-height: 1.2;
           margin: 0 0 12px 0;
+                    margin-bottom: 25px;
+
         }
 
         .green-text {
@@ -341,20 +348,20 @@ export default function IgniteAboutCard() {
         }
 
         .check-box {
-          background: url("/assets/Rectangle154.png") no-repeat center/cover;
+          background: url("/assets/fullrect.png") no-repeat center/cover;
           border-radius: 15px;
           padding: 20px;
           display: flex;
           align-items: flex-start;
           gap: 12px;
+          border: 2px solid #A6EAC7;
           flex: 1;
-          box-shadow: 0 4px 15px rgba(168, 197, 242, 0.3);
         }
 
         .check-circle {
           width: 28px;
           height: 28px;
-          background: linear-gradient(180deg, #3f88ba 0%, #161664 100%);
+          // background: linear-gradient(180deg, #3f88ba 0%, #161664 100%);
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -373,7 +380,7 @@ export default function IgniteAboutCard() {
         .heading-title {
           font-family: "Monstra", sans-serif;
           font-weight: bolder;
-          font-size: 16px;
+          font-size: 33px;
           text-align: center;
           position: relative;
           display: inline-block; /* keeps the underline centered under text */
@@ -392,7 +399,7 @@ export default function IgniteAboutCard() {
         }
 
         .heading-subtitle {
-          font-size: 12px;
+          font-size: 23px;
           text-align: center;
           color: #2c5f7d;
           margin: 0;
@@ -424,6 +431,8 @@ export default function IgniteAboutCard() {
 
           .heading-subtitle {
             font-size: 14px;
+            max-width:70%;
+            margin:0 auto;
           }
 
           .check-boxes-container {
@@ -471,7 +480,7 @@ export default function IgniteAboutCard() {
           }
 
           .ignite-main-title {
-            font-size: 21.4px;
+            font-size: 20.4px;
             font-weight: 800;
             color: #233467;
             margin: 0 0 25px 0;
