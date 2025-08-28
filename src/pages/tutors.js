@@ -1,8 +1,3 @@
-import Accordion from '@/components/idbp/accordian';
-import FAQSection from '@/components/idbp/FaqSection';
-import LifeAtIgniteCarousel from '@/components/idbp/LifeAtIgniteCarousel';
-import MarqueeBanner from '@/components/idbp/MarqueeBanner';
-import ReviewsSection from '@/components/idbp/ReviewsSection';
 import StudentAchievements from '@/components/tutors/StudentAchivement';
 import { useEffect, useRef } from 'react';
 import CurriculumTestsComponent from '@/components/tutors/curriculum';
@@ -12,6 +7,11 @@ import SubjectsCard1 from '@/components/tutors/SubjectCard1';
 import IgniteAchievements from '@/components/tutors/igniteAchivement';
 import BlogSection from '@/components/tutors/BlogSection';
 import UpsSection from '@/components/tutors/UspsSection';
+import Accordion from '@/components/tutors/accordian';
+import FAQSection from '@/components/tutors/FaqSection';
+import MarqueeBanner from '@/components/tutors/MarqueeBanner';
+import LifeAtIgniteCarousel from '@/components/tutors/LifeAtIgniteCarousel';
+import ReviewsSection from '@/components/tutors/ReviewsSection';
 
 const Tutors = () => {
   const scrollRef = useRef(null);
