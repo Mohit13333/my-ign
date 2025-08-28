@@ -3,18 +3,18 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 export default function IgniteAboutCard() {
-    const [isMobile, setIsMobile] = useState(false);
-  
-    useEffect(() => {
-      const handleResize = () => {
-        const width = window.innerWidth;
-        setIsMobile(width < 768);
-      };
-  
-      handleResize();
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
-    }, []);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setIsMobile(width < 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <section className="ignite-section">
       <div className="ignite-container">
@@ -68,7 +68,6 @@ export default function IgniteAboutCard() {
             strategies, proven methods, and unwavering support to help you
             navigate challenges.
           </p>
-
           {/* <h2 className="ignite-secondary-title fade-in-section" data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat style={{
@@ -87,6 +86,22 @@ export default function IgniteAboutCard() {
 
         {/* Right Content */}
         <div className="ignite-right">
+          <img
+            src="/assets/arect.png"
+            alt="bg-shape"
+            className="testimonialRect rect-1"
+          />
+          <img
+            src="/assets/arect1.png"
+            alt="bg-shape"
+            className="testimonialRect rect-2"
+          />
+          <img
+            src="/assets/arect2.png"
+            alt="bg-shape"
+            className="testimonialRect rect-3"
+          />
+
           <div
             className="image-container fade-in-section"
             data-scroll
@@ -146,41 +161,41 @@ export default function IgniteAboutCard() {
         </div>
       </div>
 
-        <div className="text-center mt-3 fade-in-section"
-          data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat
-          style={{ animationDelay: "0.7s" }}>
-          <button
-            className="btn fw-bold d-flex align-items-center mx-auto rounded-pill"
-            style={{
-              background: "linear-gradient(90deg, #161664, #3F88BA)",
-              color: 'white',
-              padding: '0.8rem 1.8rem',
-              border: 'none',
-              transition: 'opacity 0.3s ease',
-              fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
-            }}
-            onMouseEnter={(e) => e.target.style.opacity = "0.9"}
-            onMouseLeave={(e) => e.target.style.opacity = "1"}
-          >
+      <div className="text-center mt-3 fade-in-section"
+        data-scroll
+        data-scroll-class="is-inview"
+        data-scroll-repeat
+        style={{ animationDelay: "0.7s" }}>
+        <button
+          className="btn fw-bold d-flex align-items-center mx-auto rounded-pill"
+          style={{
+            background: "linear-gradient(90deg, #161664, #3F88BA)",
+            color: 'white',
+            padding: '0.8rem 1.8rem',
+            border: 'none',
+            transition: 'opacity 0.3s ease',
+            fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
+          }}
+          onMouseEnter={(e) => e.target.style.opacity = "0.9"}
+          onMouseLeave={(e) => e.target.style.opacity = "1"}
+        >
           GET IN TOUCH
-            <div
-              className="ms-3 rounded-circle d-flex align-items-center justify-content-center fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
-              style={{
-                width: 'clamp(1.5rem, 2vw, 2rem)',
-                height: 'clamp(1.5rem, 2vw, 2rem)',
-                background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                animationDelay: "0.75s"
-              }}
-            >
-              <img src="/assets/fadb.png" alt="btn" width={isMobile ? 30 : 32} height={isMobile ? 30 : 32} />
-            </div>
-          </button>
-        </div>
+          <div
+            className="ms-3 rounded-circle d-flex align-items-center justify-content-center fade-in-section"
+            data-scroll
+            data-scroll-class="is-inview"
+            data-scroll-repeat
+            style={{
+              width: 'clamp(1.5rem, 2vw, 2rem)',
+              height: 'clamp(1.5rem, 2vw, 2rem)',
+              background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+              animationDelay: "0.75s"
+            }}
+          >
+            <img src="/assets/fadb.png" alt="btn" width={isMobile ? 30 : 32} height={isMobile ? 30 : 32} />
+          </div>
+        </button>
+      </div>
 
       <style jsx>{`
         @font-face {
@@ -193,6 +208,35 @@ export default function IgniteAboutCard() {
         .my-text {
           font-family: "Monstra", sans-serif;
         }
+
+         .testimonialRect {
+          position: absolute;
+          opacity: 1;
+          pointer-events: none;
+          z-index: 2;
+        }
+
+        .rect-1 {
+           top: 5%;
+    left: -43%;
+    width: 350px;
+    height: 88px;
+        }
+
+        .rect-2 {
+    top: 40%;
+    right: 100%;
+    width: 114px;
+    height: 88px;
+        }
+
+        .rect-3 {
+ bottom: 20%;
+    right: 100%;
+    width: 542px;
+    height: 88px;
+        }
+
 
         .ignite-section {
           padding: 60px 20px;
@@ -471,6 +515,18 @@ export default function IgniteAboutCard() {
             text-align: center;
             width: 100%;
           }
+
+                .rect-1 {
+        display:none !important;
+        }
+
+        .rect-2 {
+        display:none !important;
+        }
+
+        .rect-3 {
+        display:none !important;
+        }
 
           .header-title {
             font-size: 20px !important;
