@@ -1443,7 +1443,7 @@ export default function InfoCard() {
           }
 
           h1 {
-            font-size: 1.5rem !important;
+            font-size: 1.4rem !important;
             line-height: 1.2 !important;
             text-align: center !important;
             margin-bottom: 1rem !important;
