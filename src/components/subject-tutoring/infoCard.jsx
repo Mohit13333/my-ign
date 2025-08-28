@@ -773,6 +773,7 @@ export default function InfoCard() {
               >
                 COMPUTER SCIENCE
                 TUTORS IN DUBAI                            </h1>
+              <div className="divider"></div>
 
               <p
                 className="text-white mb-4 fade-in-section fs-6 fs-md-5"
@@ -783,7 +784,6 @@ export default function InfoCard() {
               >
                 LOREM IPSUM DOLOR SIT AMET
               </p>
-              <div className="divider"></div>
 
               <div
                 className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold fade-in-section info-row"
