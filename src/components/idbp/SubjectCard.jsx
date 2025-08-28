@@ -747,13 +747,12 @@ export default function SubjectsCard() {
         }
 
         @media (max-width: 1100px) {
-          .subjectSectionInner {
+    .subjectSectionInner {
             flex-direction: column;
             align-items: center;
             gap: 32px;
-            padding: 120px 20px;
+            padding: 75px 20px;
           }
-
           .subjectLeft {
             margin-left: 0;
             width: 100%;
