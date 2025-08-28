@@ -47,188 +47,306 @@ export default function TutoringCourses() {
               <div className="SubHeading testSubheading">TUTORING COURSES</div>
             </div>
 
-            <h2
-              className="fw-bold mb-0 fade-in-section"
+                   <h2
               data-scroll
               data-scroll-class="is-inview"
-              data-scroll-repeat
-              style={{
-                animationDelay: "0.3s",
-                fontSize: isMobile ? "1.5rem" : "2.5rem",
-                lineHeight: "1.1",
-                textTransform: "uppercase",
-                marginTop: "3vh",
-              }}
+              data-scroll-repeat="true"
+              className="fade-in-section testTitle font-sizet"
+              style={{ animationDelay: "0.2s" }}
             >
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #3F88BA, #161664)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                LOREM IPSUM DOLOR SIT AMET,
-              </span>{" "}
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #00A491, #003E37)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                CONSECTETUR
-              </span>{" "}
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #3F88BA, #161664)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                ADIPISCING
-              </span>
+              LOREM IPSUM DOLOR SIT AMET, <span className="highlight">
+              CONSECTETUR</span> ADIPISCING
             </h2>
           </div>
         </section>
 
         <section className="cards-grid">
-          {/* IB Card */}
-          <article className="card1 card-gradient">
-            <div className="icon-container">
-              <div className="icon-circle">
-                <Image
-                  alt="Open book icon in white on teal circular background"
-                  src="/assets/book1.svg"
-                  width={isMobile ? 25 : 60}
-                  height={isMobile ? 25 : 60}
-                />
-              </div>
-            </div>
-            <h3 className="card-title">IB</h3>
-            <p className="card-description">
-              Transforming lives through tailored coaching for personal success.
-            </p>
-            <button className="card-button">
-              LEARN MORE
-              <img
-                src="/assets/leftarr.png"
-                alt="leftarr"
-                width={isMobile ? 16 : 32}
-                height={isMobile ? 16 : 32}
-              />
-            </button>
-          </article>
+          {!isMobile ? (
+            <>
+              <div className="top-row">
+                {/* IB Card */}
+                <article className="card1 card-gradient">
+                  <div className="icon-container">
+                    <div className="icon-circle">
+                      <Image
+                        alt="Open book icon in white on teal circular background"
+                        src="/assets/book1.svg"
+                        width={60}
+                        height={60}
+                      />
+                    </div>
+                  </div>
+                  <h3 className="card-title">IB</h3>
+                  <p className="card-description">
+                    Transforming lives through tailored coaching for personal success.
+                  </p>
+                  <button className="card-button">
+                    LEARN MORE
+                    <img
+                      src="/assets/leftarr.png"
+                      alt="leftarr"
+                      width={32}
+                      height={32}
+                    />
+                  </button>
+                </article>
 
-          {/* IBDP Card */}
-          <article className="card1 card-plain">
-            <div className="icon-container">
-              <div className="icon-circle">
-                <Image
-                  alt="Closed book icon in white on teal circular background"
-                  src="/assets/book2.svg"
-                  width={isMobile ? 25 : 60}
-                  height={isMobile ? 25 : 60}
-                />
-              </div>
-            </div>
-            <h3 className="card-title">IBDP</h3>
-            <p className="card-description dark-text">
-              Maximize to 45 points with subject-specific tutors that will help
-              you.
-            </p>
-            <button className="card-button">
-              LEARN MORE
-              <img
-                src="/assets/leftarr.png"
-                alt="leftarr"
-                width={isMobile ? 16 : 32}
-                height={isMobile ? 16 : 32}
-              />
-            </button>
-          </article>
+                {/* IBDP Card */}
+                <article className="card1 card-plain">
+                  <div className="icon-container">
+                    <div className="icon-circle">
+                      <Image
+                        alt="Closed book icon in white on teal circular background"
+                        src="/assets/book2.svg"
+                        width={60}
+                        height={60}
+                      />
+                    </div>
+                  </div>
+                  <h3 className="card-title">IBDP</h3>
+                  <p className="card-description dark-text">
+                    Maximize to 45 points with subject-specific tutors that will help
+                    you.
+                  </p>
+                  <button className="card-button">
+                    LEARN MORE
+                    <img
+                      src="/assets/leftarr.png"
+                      alt="leftarr"
+                      width={32}
+                      height={32}
+                    />
+                  </button>
+                </article>
 
-          {/* MYP Card */}
-          <article className={`card1 ${isMobile ? "card-plain" : "card-gradient"}`}>
-            <div className="icon-container">
-              <div className="icon-circle">
-                <Image
-                  alt="Lightbulb icon in white on teal circular background"
-                  src="/assets/bulb.svg"
-                  width={isMobile ? 25 : 60}
-                  height={isMobile ? 25 : 60}
-                />
+                {/* MYP Card */}
+                <article className="card1 card-gradient">
+                  <div className="icon-container">
+                    <div className="icon-circle">
+                      <Image
+                        alt="Lightbulb icon in white on teal circular background"
+                        src="/assets/bulb.svg"
+                        width={60}
+                        height={60}
+                      />
+                    </div>
+                  </div>
+                  <h3 className="card-title">MYP</h3>
+                  <p className="card-description">
+                    Kick-start your MYP learnings with tutor-led courses that best
+                    suit.
+                  </p>
+                  <button className="card-button">
+                    LEARN MORE
+                    <img
+                      src="/assets/leftarr.png"
+                      alt="leftarr"
+                      width={32}
+                      height={32}
+                    />
+                  </button>
+                </article>
               </div>
-            </div>
-            <h3 className="card-title">MYP</h3>
-            <p className="card-description">
-              Kick-start your MYP learnings with tutor-led courses that best
-              suit.
-            </p>
-            <button className="card-button">
-              LEARN MORE
-              <img
-                src="/assets/leftarr.png"
-                alt="leftarr"
-                width={isMobile ? 16 : 32}
-                height={isMobile ? 16 : 32}
-              />
-            </button>
-          </article>
 
-          {/* IGCSE Card */}
-          <article className={`card1 ${isMobile ? "card-gradient" : "card-plain"}`}>
-            <div className="icon-container">
-              <div className="icon-circle">
-                <Image
-                  alt="Open book icon with a bookmark in white on teal circular background"
-                  src="/assets/book3.svg"
-                  width={isMobile ? 25 : 60}
-                  height={isMobile ? 25 : 60}
-                />
-              </div>
-            </div>
-            <h3 className="card-title">IGCSE</h3>
-            <p className="card-description">
-              Get exclusive tutoring support for IGCSE / GCSE qualifications.
-            </p>
-            <button className="card-button">
-              LEARN MORE
-              <img
-                src="/assets/leftarr.png"
-                alt="leftarr"
-                width={isMobile ? 16 : 32}
-                height={isMobile ? 16 : 32}
-              />
-            </button>
-          </article>
+              <div className="bottom-row">
+                {/* IGCSE Card */}
+                <article className="card1 card-plain">
+                  <div className="icon-container">
+                    <div className="icon-circle">
+                      <Image
+                        alt="Open book icon with a bookmark in white on teal circular background"
+                        src="/assets/book3.svg"
+                        width={60}
+                        height={60}
+                      />
+                    </div>
+                  </div>
+                  <h3 className="card-title">IGCSE</h3>
+                  <p className="card-description">
+                    Get exclusive tutoring support for IGCSE / GCSE qualifications.
+                  </p>
+                  <button className="card-button">
+                    LEARN MORE
+                    <img
+                      src="/assets/leftarr.png"
+                      alt="leftarr"
+                      width={32}
+                      height={32}
+                    />
+                  </button>
+                </article>
 
-          {/* A-Levels Card */}
-          <article className="card1 card-gradient">
-            <div className="icon-container">
-              <div className="icon-circle">
-                <Image
-                  alt="Graduation cap icon in white on teal circular background"
-                  src="/assets/hat.svg"
-                  width={isMobile ? 25 : 60}
-                  height={isMobile ? 25 : 60}
-                />
+                {/* A-Levels Card */}
+                <article className="card1 card-gradient">
+                  <div className="icon-container">
+                    <div className="icon-circle">
+                      <Image
+                        alt="Graduation cap icon in white on teal circular background"
+                        src="/assets/hat.svg"
+                        width={60}
+                        height={60}
+                      />
+                    </div>
+                  </div>
+                  <h3 className="card-title">A-LEVELS</h3>
+                  <p className="card-description">
+                    Enjoy excellent resources &amp; training under top A-Levels tutors
+                    for all exam boards.
+                  </p>
+                  <button className="card-button">
+                    LEARN MORE
+                    <img
+                      src="/assets/leftarr.png"
+                      alt="leftarr"
+                      width={32}
+                      height={32}
+                    />
+                  </button>
+                </article>
               </div>
-            </div>
-            <h3 className="card-title">A-LEVELS</h3>
-            <p className="card-description">
-              Enjoy excellent resources &amp; training under top A-Levels tutors
-              for all exam boards.
-            </p>
-            <button className="card-button">
-              LEARN MORE
-              <img
-                src="/assets/leftarr.png"
-                alt="leftarr"
-                width={isMobile ? 16 : 32}
-                height={isMobile ? 16 : 32}
-              />
-            </button>
-          </article>
+            </>
+          ) : (
+            <>
+              {/* Mobile layout - keep as grid */}
+              {/* IB Card */}
+              <article className="card1 card-gradient">
+                <div className="icon-container">
+                  <div className="icon-circle">
+                    <Image
+                      alt="Open book icon in white on teal circular background"
+                      src="/assets/book1.svg"
+                      width={25}
+                      height={25}
+                    />
+                  </div>
+                </div>
+                <h3 className="card-title">IB</h3>
+                <p className="card-description">
+                  Transforming lives through tailored coaching for personal success.
+                </p>
+                <button className="card-button">
+                  LEARN MORE
+                  <img
+                    src="/assets/leftarr.png"
+                    alt="leftarr"
+                    width={16}
+                    height={16}
+                  />
+                </button>
+              </article>
+
+              {/* IBDP Card */}
+              <article className="card1 card-plain">
+                <div className="icon-container">
+                  <div className="icon-circle">
+                    <Image
+                      alt="Closed book icon in white on teal circular background"
+                      src="/assets/book2.svg"
+                      width={25}
+                      height={25}
+                    />
+                  </div>
+                </div>
+                <h3 className="card-title">IBDP</h3>
+                <p className="card-description dark-text">
+                  Maximize to 45 points with subject-specific tutors that will help
+                  you.
+                </p>
+                <button className="card-button">
+                  LEARN MORE
+                  <img
+                    src="/assets/leftarr.png"
+                    alt="leftarr"
+                    width={16}
+                    height={16}
+                  />
+                </button>
+              </article>
+
+              {/* MYP Card */}
+              <article className="card1 card-plain">
+                <div className="icon-container">
+                  <div className="icon-circle">
+                    <Image
+                      alt="Lightbulb icon in white on teal circular background"
+                      src="/assets/bulb.svg"
+                      width={25}
+                      height={25}
+                    />
+                  </div>
+                </div>
+                <h3 className="card-title">MYP</h3>
+                <p className="card-description">
+                  Kick-start your MYP learnings with tutor-led courses that best
+                  suit.
+                </p>
+                <button className="card-button">
+                  LEARN MORE
+                  <img
+                    src="/assets/leftarr.png"
+                    alt="leftarr"
+                    width={16}
+                    height={16}
+                  />
+                </button>
+              </article>
+
+              {/* IGCSE Card */}
+              <article className="card1 card-gradient">
+                <div className="icon-container">
+                  <div className="icon-circle">
+                    <Image
+                      alt="Open book icon with a bookmark in white on teal circular background"
+                      src="/assets/book3.svg"
+                      width={25}
+                      height={25}
+                    />
+                  </div>
+                </div>
+                <h3 className="card-title">IGCSE</h3>
+                <p className="card-description">
+                  Get exclusive tutoring support for IGCSE / GCSE qualifications.
+                </p>
+                <button className="card-button">
+                  LEARN MORE
+                  <img
+                    src="/assets/leftarr.png"
+                    alt="leftarr"
+                    width={16}
+                    height={16}
+                  />
+                </button>
+              </article>
+
+              {/* A-Levels Card */}
+              <article className="card1 card-gradient">
+                <div className="icon-container">
+                  <div className="icon-circle">
+                    <Image
+                      alt="Graduation cap icon in white on teal circular background"
+                      src="/assets/hat.svg"
+                      width={25}
+                      height={25}
+                    />
+                  </div>
+                </div>
+                <h3 className="card-title">A-LEVELS</h3>
+                <p className="card-description">
+                  Enjoy excellent resources &amp; training under top A-Levels tutors
+                  for all exam boards.
+                </p>
+                <button className="card-button">
+                  LEARN MORE
+                  <img
+                    src="/assets/leftarr.png"
+                    alt="leftarr"
+                    width={16}
+                    height={16}
+                  />
+                </button>
+              </article>
+            </>
+          )}
         </section>
       </main>
 
@@ -241,8 +359,7 @@ export default function TutoringCourses() {
           display: flex;
           justify-content: center;
           padding: 2.5rem 0.5rem;
-                    max-width: 90vw;
-
+          max-width: 90vw;
         }
 
         .heading-section {
@@ -260,9 +377,25 @@ export default function TutoringCourses() {
 
         @media (min-width: 768px) {
           .cards-grid {
-            grid-template-columns: repeat(3, 1fr);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 2.5rem;
-            justify-content: center; 
+            max-width: 1200px;
+          }
+          
+          .cards-grid .top-row {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+          }
+          
+          .cards-grid .bottom-row {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            flex-wrap: wrap;
           }
         }
 
