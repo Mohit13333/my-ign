@@ -262,6 +262,12 @@ const APBenefits = () => {
             padding: 0 20px;
         }
 
+    .greenBg {
+        background-image: url('/assets/uniap.png') !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
         .card1 {
             min-width: unset;
             width: 100%;
