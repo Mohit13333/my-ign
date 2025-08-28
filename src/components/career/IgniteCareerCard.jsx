@@ -13,16 +13,16 @@ export default function IgniteCareerCard() {
               data-scroll-class="is-inview"
               data-scroll-repeat
               style={{ animationDelay: "0.25s" }}>
-               <div
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat="true"
-            className="fade-in-section"
-            style={{ animationDelay: "0.1s" }}
-          >
-            <div className="SubHeading testSubheading">ABOUT IGNITE'S CAREER
-</div>
-          </div>
+              <div
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section"
+                style={{ animationDelay: "0.1s" }}
+              >
+                <div className="SubHeading testSubheading">ABOUT IGNITE'S CAREER
+                </div>
+              </div>
             </div>
           </div>
 
@@ -89,13 +89,13 @@ export default function IgniteCareerCard() {
 
               {/* First item */}
               <div className="d-flex align-items-start gap-2">
-                  <img src="/assets/check.png" alt="check" width={30} height={30} />
+                <img src="/assets/check.png" alt="check" width={30} height={30} />
                 <span>Lorem ipsum dolor<br />sit amet, consectetur.</span>
               </div>
 
               {/* Second item */}
               <div className="d-flex align-items-start gap-2">
-                  <img src="/assets/check.png" alt="check" width={30} height={30} />
+                <img src="/assets/check.png" alt="check" width={30} height={30} />
                 <span className="spanText">Lorem ipsum dolor<br />sit amet, consectetur.</span>
               </div>
 
@@ -118,8 +118,9 @@ export default function IgniteCareerCard() {
 }
 
         .ignite-section {
-          padding: 60px 20px;
-          margin: 40px auto;
+     padding: 60px 20px;
+          max-width:88vw;
+        margin: 40px auto;          
           font-family: 'Montserrat', sans-serif;
         }
 
@@ -152,6 +153,7 @@ export default function IgniteCareerCard() {
           align-items: center;
           justify-content: flex-start;
           gap: 15px;
+          margin-top:20px;
           margin-bottom: 25px;
         }
 
@@ -268,7 +270,6 @@ export default function IgniteCareerCard() {
           align-items: flex-start;
           gap: 12px;
           flex: 1;
-          box-shadow: 0 4px 15px rgba(168, 197, 242, 0.3);
         }
 
         .check-circle {
