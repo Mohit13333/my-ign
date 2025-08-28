@@ -1,18 +1,17 @@
 import Accordion from '@/components/idbp/accordian';
-import BlogSection from '@/components/idbp/BlogSection';
-import CourseCard from '@/components/idbp/CourseCard';
 import FAQSection from '@/components/idbp/FaqSection';
 import LifeAtIgniteCarousel from '@/components/idbp/LifeAtIgniteCarousel';
 import MarqueeBanner from '@/components/idbp/MarqueeBanner';
 import ReviewsSection from '@/components/idbp/ReviewsSection';
 import StudentAchievements from '@/components/tutors/StudentAchivement';
-import UspsSection from '@/components/idbp/UspsSection';
 import { useEffect, useRef } from 'react';
 import CurriculumTestsComponent from '@/components/tutors/curriculum';
 import InfoCard from '@/components/tutors/infoCard';
 import OurTrainers from '@/components/tutors/ourTrainers';
 import SubjectsCard1 from '@/components/tutors/SubjectCard1';
 import IgniteAchievements from '@/components/tutors/igniteAchivement';
+import BlogSection from '@/components/tutors/BlogSection';
+import UpsSection from '@/components/tutors/UspsSection';
 
 const Tutors = () => {
   const scrollRef = useRef(null);
@@ -82,7 +81,7 @@ const Tutors = () => {
       </section>
 
       <section data-scroll-section>
-        <UspsSection />
+        <UpsSection />
       </section>
 
       <section data-scroll-section>
