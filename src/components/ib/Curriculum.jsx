@@ -395,10 +395,10 @@ export default function IBCurriculumStages() {
             gap: 1.5rem;
           }
           .program {
-            font-size: 60px !important;
+            font-size: 44px!important
           }
           .program1 {
-            font-size: 60px !important;
+            font-size: 44px!important
           }
           .curriculumSubHeading {
             font-size: 1.2rem;
