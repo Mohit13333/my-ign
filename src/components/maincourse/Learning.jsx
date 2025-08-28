@@ -72,7 +72,7 @@ const Learning = () => {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading">
+              <div className="SubHeading testSubheading" style={{marginLeft:isMobile?"25px":""}}>
                 HOW IS LEARNING WITH US DIFFRENT
               </div>
             </div>

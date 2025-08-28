@@ -82,7 +82,7 @@ const TrainersMessage = () => {
           data-scroll-repeat
           style={{
             animationDelay: "0.3s",
-            fontSize: isMobile ? "1.5rem" : "2.5rem",
+            fontSize: isMobile ? "21px" : "2.5rem",
             lineHeight: "1.1",
             textTransform: "uppercase",
             marginTop: "3vh",
