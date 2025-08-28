@@ -240,6 +240,8 @@ export default function IgniteAboutCard() {
 
         .ignite-section {
           padding: 60px 20px;
+          max-width:88vw;
+          margin: 0 auto;
           font-family: "Montserrat", sans-serif;
         }
 
