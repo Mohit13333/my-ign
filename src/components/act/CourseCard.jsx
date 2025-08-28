@@ -872,7 +872,7 @@ function CourseCard() {
                           <h3
                             className="fw-bold mb-3 d-flex justify-content-between align-items-center"
                             style={{
-                              fontSize: "1.1rem",
+                              fontSize: "25px",
                               color: "#ffffff",
                               opacity: "0.5",
                               letterSpacing: "1px",
