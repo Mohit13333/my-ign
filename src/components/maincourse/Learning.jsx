@@ -53,7 +53,7 @@ const Learning = () => {
   };
 
   return (
-    <div className="advantages-container" style={{marginBlock:isMobile?"2.5rem":"96px"}}>
+    <div className="advantages-container" style={{ marginBlock: isMobile ? "2.5rem" : "96px" }}>
       {/* Mobile Layout */}
       <div className="mobile-layout">
         <div className="section-header">
@@ -72,7 +72,7 @@ const Learning = () => {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading" style={{marginLeft:isMobile?"25px":""}}>
+              <div className="SubHeading testSubheading" style={{ marginLeft: isMobile ? "25px" : "" }}>
                 HOW IS LEARNING WITH US DIFFRENT
               </div>
             </div>
@@ -93,7 +93,7 @@ const Learning = () => {
             >
               <span
                 style={{
-                  background: "linear-gradient(135deg, #3F88BA, #161664)",
+                  background: "#19245E",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -111,7 +111,7 @@ const Learning = () => {
               </span>{" "}
               <span
                 style={{
-                  background: "linear-gradient(135deg, #3F88BA, #161664)",
+                  background: "#19245E",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -207,7 +207,7 @@ const Learning = () => {
               >
                 <span
                   style={{
-                    background: "linear-gradient(135deg, #3F88BA, #161664)",
+                    background: "#19245E",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                   }}
@@ -225,7 +225,7 @@ const Learning = () => {
                 </span>{" "}
                 <span
                   style={{
-                    background: "linear-gradient(135deg, #3F88BA, #161664)",
+                    background: "#19245E",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                   }}
@@ -336,9 +336,10 @@ const Learning = () => {
 
         .mobile-subtitle {
           font-size: 16px;
-          color: #666;
+          color: #233467;
           line-height: 1.6;
           margin-top: 20px;
+          font-weight:500;
         }
 
         .mobile-cards-container {
@@ -442,7 +443,7 @@ const Learning = () => {
           font-weight: 700;
           margin-bottom: 12px;
           line-height: 1.3;
-          background: linear-gradient(135deg, #3f88ba, #161664);
+          background: linear-gradient(135deg, #161664,#3f88ba);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -450,9 +451,10 @@ const Learning = () => {
 
         .mobile-card-text {
           font-size: 12px;
-          color: #333;
+          color: #233467;
           line-height: 1.5;
           margin: 0;
+          font-weight:500;
         }
 
         /* Desktop Layout */
@@ -498,6 +500,7 @@ const Learning = () => {
             line-height: 1.6;
             margin-bottom: 30px;
             margin-top: 30px;
+            font-weight:500;
           }
 
           .carousel-controls {
@@ -583,11 +586,11 @@ const Learning = () => {
 
           .desktop-card-title {
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 800;
             color: #2c5282;
             margin-bottom: 18px;
             line-height: 1.3;
-            background: linear-gradient(to right, #3f88ba, #161664);
+            background: linear-gradient(to right, #161664,#3F88BA);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -598,7 +601,7 @@ const Learning = () => {
             color: #233467;
             line-height: 36px;
             margin: 0;
-            font-weight: 400;
+            font-weight:500;
           }
 
           .desktop-carousel-dots {
