@@ -1416,9 +1416,10 @@ export default function InfoCard() {
             z-index: 1;
           }
 
-          .position-absolute.top-0.start-0.w-100.h-100 {
-            display: none !important;
-          }
+  .position-absolute.top-0.start-0.w-100.h-100 {
+    display: block !important; 
+    background: rgba(0,0,0,0.45) !important; /* slightly lighter for mobile */
+      }
 
           .row.g-0.h-100 {
             flex-direction: column !important;
