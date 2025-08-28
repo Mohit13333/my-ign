@@ -469,14 +469,14 @@ export default function SubjectsCard() {
           }
           
           .rect-2 {
-            display: none;
-          }
+  height: 7vh;
+            }
 
           .rect-3 {
-            bottom: 3%;
-            right: -9%;
-            width: 31vw;
-            height: 7vh;
+bottom: 50%;
+        right: -15%;
+        width: 31vw;
+        height: 7vh;
           }
 
           .navButton {
