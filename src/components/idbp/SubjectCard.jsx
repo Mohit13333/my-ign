@@ -726,7 +726,7 @@ export default function SubjectsCard() {
           }
 
           .subjectSectionInner {
-            padding: 140px 30px;
+            padding: 75px 30px;
           }
 
           .subjectLeft {
