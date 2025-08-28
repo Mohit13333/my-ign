@@ -16,94 +16,42 @@ const UniversityLogosCard = () => {
       >
         {/* Desktop Layout - Horizontal */}
         <div className="d-none d-md-flex justify-content-between align-items-center w-100">
-          <div
-            className="text-center flex-fill fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{ animationDelay: "0.2s" }}
-          >
-            <img
-              src="/assets/uni1.png"
-              alt="Pearson Edexcel"
-              className="img-fluid"
-              style={{ maxHeight: "200px", maxWidth: "400px" }}
-            />
-          </div>
-          <div
-            className="text-center flex-fill mx-3 fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{ animationDelay: "0.3s" }}
-          >
-            <img
-              src="/assets/uni2.png"
-              alt="University of Cambridge"
-              className="img-fluid"
-              style={{ maxHeight: "200px", maxWidth: "400px" }}
-            />
-          </div>
-          <div
-            className="text-center flex-fill fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{ animationDelay: "0.4s" }}
-          >
-            <img
-              src="/assets/uni3.png"
-              alt="AQA Realising Potential"
-              className="img-fluid"
-              style={{ maxHeight: "200px", maxWidth: "400px" }}
-            />
-          </div>
+          {[
+            { src: "/assets/uni1.png", alt: "Pearson Edexcel" },
+            { src: "/assets/camb.png", alt: "University of Cambridge" },
+            { src: "/assets/uni3.png", alt: "AQA Realising Potential" },
+          ].map((logo, index) => (
+            <div
+              key={index}
+              className="logo-wrapper desktop-logo fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat
+              style={{ animationDelay: `${0.2 + index * 0.1}s` }}
+            >
+              <img src={logo.src} alt={logo.alt} className="logo-img" />
+            </div>
+          ))}
         </div>
 
         {/* Mobile Layout - Vertical Stack */}
-        <div className="d-md-none w-100">
-          <div
-            className="text-center mb-4 fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{ animationDelay: "0.2s" }}
-          >
-            <img
-              src="/assets/uni1.png"
-              alt="Pearson Edexcel"
-              className="img-fluid"
-              style={{ maxHeight: "120px", maxWidth: "280px" }}
-            />
-          </div>
-          <div
-            className="text-center mb-4 fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{ animationDelay: "0.3s" }}
-          >
-            <img
-              src="/assets/uni2.png"
-              alt="University of Cambridge"
-              className="img-fluid"
-              style={{ maxHeight: "120px", maxWidth: "280px" }}
-            />
-          </div>
-          <div
-            className="text-center fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{ animationDelay: "0.4s" }}
-          >
-            <img
-              src="/assets/uni3.png"
-              alt="AQA Realising Potential"
-              className="img-fluid"
-              style={{ maxHeight: "120px", maxWidth: "280px" }}
-            />
-          </div>
+        <div className="d-md-none w-100 d-flex flex-column align-items-center gap-4">
+          {[
+            { src: "/assets/pea.png", alt: "Pearson Edexcel" },
+            { src: "/assets/camb.png", alt: "University of Cambridge" },
+            { src: "/assets/aqa.png", alt: "AQA Realising Potential" },
+          ].map((logo, index) => (
+            <div
+              key={index}
+              className="logo-wrapper mobile-logo fade-in-section"
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat
+              style={{ animationDelay: `${0.2 + index * 0.1}s` }}
+            >
+              <img src={logo.src} alt={logo.alt} className="logo-img" />
+            </div>
+          ))}
         </div>
       </div>
 
@@ -118,12 +66,39 @@ const UniversityLogosCard = () => {
           opacity: 1;
           transform: translateY(0);
         }
+
+        /* Shared wrapper */
+        .logo-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        /* Desktop sizes */
+        .desktop-logo {
+          width: 450px;
+          height: 300px;
+        }
+
+        /* Mobile sizes */
+        .mobile-logo {
+          width: 200px;
+          height: 100px;
+        }
+
+        /* Image scaling */
+        .logo-img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+
         .university-logos-container {
-          height: 30vh; /* PC/Desktop */
+          height: 30vh; /* Desktop */
         }
         @media (max-width: 767px) {
           .university-logos-container {
-            height: 50vh; /* Mobile */
+            height: auto; /* Mobile */
           }
         }
       `}</style>
