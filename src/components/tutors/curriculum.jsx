@@ -542,7 +542,28 @@ bottom: -293%;
 .act-exam-table td:last-child {
   border-right: none;
 }
+  @media (max-width: 388px) {
+    .rect-1 {
+                top: 260% !important;
+        right: -44px !important;
+        width: 144px !important;
+        height: 55px !important;
+    }
 
+        .rect-2 {
+          top: 132% !important;
+        left: 0px !important;
+        width: 279px !important;
+        height: 55px !important;
+    }
+        .rect-3 {
+           bottom: -140% !important;
+        right: 296px !important;
+        width: 100px !important;
+        height: 55px !important; 
+        }
+
+      }
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .act-exam-table th,
