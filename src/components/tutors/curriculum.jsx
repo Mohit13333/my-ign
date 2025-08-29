@@ -61,7 +61,7 @@ const IBCurriculumStages = () => {
                 <p
                   className="curriculum-section-heading1 text-center"
                   style={{
-                    fontSize: "2.5rem",
+                    fontSize: "35px",
                     borderBottomColor: "grey",
                     borderBottomWidth: 1,
                   }}
@@ -128,7 +128,7 @@ const IBCurriculumStages = () => {
                 <p
                   className="curriculum-section-heading2 text-center"
                   style={{
-                    fontSize: "2.5rem",
+                    fontSize: "35px",
                     borderBottomColor: "grey",
                     borderBottomWidth: 1,
                     borderRadius: 0,
@@ -350,7 +350,7 @@ bottom: -293%;
 }
 .curriculum-info h1 {
   color: rgba(35, 52, 103, 1);
-  font-size: 30px;
+  font-size: 23px;
   font-weight: 700;
   margin-bottom: 0;
 }

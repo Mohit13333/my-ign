@@ -1800,19 +1800,21 @@ const trainers = [
 export default function Trainers({ }) {
 
   const [isTrainersSwiper, setIsTrainersSwiper] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
+const [isMobile, setIsMobile] = useState(false);
+const [isTablet, setIsTablet] = useState(false);
 
-  useEffect(() => {
-    const checkDevice = () => {
-      setIsMobile(window.innerWidth <= 1100);
-    };
+useEffect(() => {
+  const checkDevice = () => {
+    const width = window.innerWidth;
+    setIsMobile(width <= 768);  
+    setIsTablet(width > 1100 && width <= 1366); 
+  };
 
-    checkDevice();
-    window.addEventListener("resize", checkDevice);
-
-    return () => window.removeEventListener("resize", checkDevice);
-  }, []);
-  useEffect(() => {
+  checkDevice();
+  window.addEventListener("resize", checkDevice);
+  return () => window.removeEventListener("resize", checkDevice);
+}, []);
+useEffect(() => {
     const handleResize = () => {
       setIsTrainersSwiper(true);
     };
@@ -1899,7 +1901,7 @@ export default function Trainers({ }) {
                             marginBottom: "10px",
                             position: "absolute",
                             zIndex: 9,
-                            maxWidth: isMobile ? "94%" : "69%",
+                            maxWidth: isTablet ? "100%" : isMobile ? "94%" : "69%",
                             fontWeight: 500,
                           }}
                         >
