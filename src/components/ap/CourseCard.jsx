@@ -1095,9 +1095,20 @@ import { Plus, Minus, ChevronDown, ChevronUp } from "lucide-react";
 
 function CourseCard() {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+    setActiveIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+    setActiveIndex(null);
   };
 
   const accordionItems = [
@@ -1168,24 +1179,51 @@ function CourseCard() {
             }}
           >
             {accordionItems.map((item, index) => (
-              <div key={index}>
+              <div 
+                key={index}
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
+                style={{
+                  transform: hoveredIndex === index ? 'translateY(-2px) scale(1.02)' : 'translateY(0) scale(1)',
+                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                  zIndex: hoveredIndex === index ? 10 : 1,
+                  position: 'relative',
+                }}
+              >
                 {/* Header */}
                 <div
                   className="d-flex justify-content-between align-items-center px-4 py-3"
                   style={{
                     background: activeIndex === index
                       ? "linear-gradient(90deg, #EDFFF4, #A6EAC7)"
-                      : item.bg,
+                      : hoveredIndex === index 
+                        ? "linear-gradient(90deg, rgba(237, 255, 244, 0.8), rgba(166, 234, 199, 0.8))"
+                        : item.bg,
                     cursor: "pointer",
                     fontWeight: "bold",
                     fontSize: "1rem",
                     userSelect: "none",
-                    transition: "all 0.3s ease",
+                    transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+                    boxShadow: hoveredIndex === index ? "0 8px 32px rgba(0, 0, 0, 0.12)" : "none",
                   }}
                   onClick={() => toggleAccordion(index)}
                 >
-                  <span className="gradient-text py-3">{item.title}</span>
-                  <span style={{ color: "#3F88BA" }}>
+                  <span 
+                    className="gradient-text py-3"
+                    style={{
+                      transform: hoveredIndex === index ? 'translateX(10px)' : 'translateX(0)',
+                      transition: 'transform 0.3s ease-out',
+                    }}
+                  >
+                    {item.title}
+                  </span>
+                  <span 
+                    style={{ 
+                      color: "#3F88BA",
+                      transform: hoveredIndex === index ? 'rotate(180deg) scale(1.1)' : 'rotate(0deg) scale(1)',
+                      transition: 'all 0.3s ease-out',
+                    }}
+                  >
                     {activeIndex === index ? <Minus size={20} /> : <Plus size={20} />}
                   </span>
                 </div>
@@ -1198,13 +1236,19 @@ function CourseCard() {
                       background: "linear-gradient(90deg, #EDFFF4, #A6EAC7)",
                       color: "#374151",
                       fontSize: "0.95rem",
+                      animation: 'slideDown 0.5s ease-out',
                     }}
 
                   >
                     <div className="row g-4">
                       {/* Left Text */}
-                      <div className="col-md-6">
-                        <p className="desc" style={{ lineHeight: "40px" }}>
+                      <div 
+                        className="col-md-6 ps-4" // Added ps-4 for consistent padding
+                        style={{
+                          animation: 'fadeIn 0.6s ease-out', // Changed from slideInLeft to fadeIn
+                        }}
+                      >
+                        <p className="desc" style={{ lineHeight: "40px", marginLeft: "0", paddingLeft: "0" }}>
                           An all-year-round MYP program thoughtfully designed to align with each
                           student's unique learning objectives.
                         </p>
@@ -1217,7 +1261,7 @@ function CourseCard() {
                         }}>
                           KEY HIGHLIGHTS
                         </h5>
-                        <ul className="list-unstyled" style={{ fontSize: "0.9rem", color: "#374151" }}>
+                        <ul className="list-unstyled" style={{ fontSize: "0.9rem", color: "#374151", paddingLeft: "0" }}>
                           {[
                             "Year-round personalized support for MYP students.",
                             "Customized lessons & flexible learning schedules.",
@@ -1232,6 +1276,9 @@ function CourseCard() {
                                 display: "flex",
                                 alignItems: "flex-start",
                                 gap: "10px",
+                                animation: `fadeIn 0.4s ease-out ${i * 0.1}s both`, // Changed from slideInUp to fadeIn
+                                marginLeft: "0",
+                                paddingLeft: "0",
                               }}
                             >
                               {/* Custom Gradient Bullet */}
@@ -1265,7 +1312,12 @@ function CourseCard() {
                       </div>
 
                       {/* Right Image */}
-                      <div className="col-md-6 d-flex justify-content-center align-items-center">
+                      <div 
+                        className="col-md-6 d-flex justify-content-center align-items-center"
+                        style={{
+                          animation: 'fadeIn 0.6s ease-out', // Changed from slideInRight to fadeIn
+                        }}
+                      >
                         <img
                           src="/assets/corsebg.jpg"
                           alt="Students studying together"
@@ -1275,6 +1327,8 @@ function CourseCard() {
                             width: "654px",
                             objectFit: "cover",
                             boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                            transform: hoveredIndex === index ? 'scale(1.02)' : 'scale(1)',
+                            transition: 'transform 0.4s ease-out',
                           }}
                         />
                       </div>
@@ -1355,8 +1409,12 @@ function CourseCard() {
                       color: index === 1 ? "#2D5AA0" : "#2D5AA0",
                       position: "relative",
                       boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                      transform: hoveredIndex === index ? 'translateY(-4px) scale(1.02)' : 'translateY(0) scale(1)',
+                      transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                     }}
                     onClick={() => toggleAccordion(index)}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
                   >
                     {/* Left side: index + title */}
                     <div className="d-flex flex-column gap-1">
@@ -1371,12 +1429,19 @@ function CourseCard() {
                             background: "linear-gradient(90deg, #161664, #3F88BA)",
                             WebkitBackgroundClip: "text",
                             WebkitTextFillColor: "transparent",
+                            transform: hoveredIndex === index ? 'scale(1.1)' : 'scale(1)',
+                            transition: 'transform 0.3s ease-out',
                           }}
                         >
                           {String(index + 1).padStart(2, "0")}.
                         </span>
 
-                        <span>
+                        <span
+                          style={{
+                            transform: hoveredIndex === index ? 'rotate(180deg) scale(1.1)' : 'rotate(0deg) scale(1)',
+                            transition: 'all 0.3s ease-out',
+                          }}
+                        >
                           <ChevronDown size={24} />
                         </span>
                       </div>
@@ -1389,6 +1454,8 @@ function CourseCard() {
                           background: "linear-gradient(90deg, #161664, #3F88BA)",
                           WebkitBackgroundClip: "text",
                           WebkitTextFillColor: "transparent",
+                          transform: hoveredIndex === index ? 'translateX(8px)' : 'translateX(0)',
+                          transition: 'transform 0.3s ease-out',
                         }}
                       >
                         {item.title}
@@ -1408,6 +1475,7 @@ function CourseCard() {
                         borderRadius: "20px",
                         overflow: "hidden",
                         boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                        animation: 'expandCard 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
                       }}
                     >
                       {/* Top Dark Green Section with Image Background AND Title */}
@@ -1440,7 +1508,14 @@ function CourseCard() {
                             }}
                           >
                             <span>0{index + 1}.</span>
-                            <span onClick={() => toggleAccordion(index)} style={{ cursor: "pointer" }}>
+                            <span 
+                              onClick={() => toggleAccordion(index)} 
+                              style={{ 
+                                cursor: "pointer",
+                                transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
+                                transition: 'transform 0.3s ease-out',
+                              }}
+                            >
                               {activeIndex === index ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
                             </span>
                           </h3>
@@ -1451,17 +1526,19 @@ function CourseCard() {
                             color: "#ffffff",
                             letterSpacing: "1px",
                             lineHeight: "1.3",
-                            textTransform: "uppercase"
+                            textTransform: "uppercase",
+                            animation: 'fadeInUp 0.6s ease-out',
                           }}>
-                            {item?.title
-                            }                          </h3>
+                            {item?.title}
+                          </h3>
 
                           {/* Divider line */}
                           <hr style={{
                             border: "none",
                             height: "1px",
                             background: "#FFFFFF",
-                            margin: "1rem 0"
+                            margin: "1rem 0",
+                            animation: 'expandWidth 0.8s ease-out',
                           }} />
 
                           <p style={{
@@ -1469,7 +1546,8 @@ function CourseCard() {
                             lineHeight: "1.5",
                             fontSize: "0.95rem",
                             color: "#ffffff",
-                            fontWeight: "400"
+                            fontWeight: "400",
+                            animation: 'fadeInUp 0.7s ease-out',
                           }}>
                             An all-year-round MYP program thoughtfully designed to align with each
                             student's unique learning objectives.
@@ -1483,7 +1561,7 @@ function CourseCard() {
                           left: 0,
                           right: 0,
                           bottom: 0,
-background: "linear-gradient(65.39deg, #000000 5.24%, rgba(166, 234, 199, 0.3) 151.85%)",
+                          background: "linear-gradient(65.39deg, #000000 5.24%, rgba(166, 234, 199, 0.3) 151.85%)",
                           zIndex: 1,
                         }}></div>
                       </div>
@@ -1500,7 +1578,8 @@ background: "linear-gradient(65.39deg, #000000 5.24%, rgba(166, 234, 199, 0.3) 1
                           fontSize: "23px",
                           color: "#2D5AA0",
                           letterSpacing: "0.5px",
-                          textTransform: "uppercase"
+                          textTransform: "uppercase",
+                          animation: 'fadeInUp 0.6s ease-out',
                         }}>
                           KEY HIGHLIGHTS
                         </h5>
@@ -1512,7 +1591,14 @@ background: "linear-gradient(65.39deg, #000000 5.24%, rgba(166, 234, 199, 0.3) 1
                             "One-on-one attention and personalized learning pace.",
                             "Continuous progress tracking with detailed feedback.",
                           ].map((point, i) => (
-                            <li key={i} className="d-flex align-items-start mb-2" style={{ lineHeight: "1.4" }}>
+                            <li 
+                              key={i} 
+                              className="d-flex align-items-start mb-2" 
+                              style={{ 
+                                lineHeight: "1.4",
+                                animation: `fadeIn 0.4s ease-out ${0.2 + i * 0.1}s both`, // Changed from slideInUp to fadeIn
+                              }}
+                            >
                               <span
                                 style={{
                                   width: "6px",
@@ -1555,15 +1641,95 @@ background: "linear-gradient(65.39deg, #000000 5.24%, rgba(166, 234, 199, 0.3) 1
         .desc{
           font-size:30px;
           line-height:40px !important;
- vertical-align: "middle",        }
+          vertical-align: middle;        
+        }
+        
         @keyframes fadeIn {
           to {
             opacity: 1;
             transform: translateY(0);
           }
         }
+        
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-20px);
+            max-height: 0;
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+            max-height: 1000px;
+          }
+        }
+        
+        @keyframes slideInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes slideInRight {
+          from {
+            opacity: 0;
+            transform: translateX(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes slideInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @keyframes expandCard {
+          from {
+            opacity: 0;
+            transform: translateY(-10px) scale(0.95);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+        
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(15px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @keyframes expandWidth {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+        
         .image1{
-        border-radius:30px !important;
+          border-radius:30px !important;
         }
         .gradient-text {
           background: linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%);
@@ -1596,27 +1762,16 @@ background: "linear-gradient(65.39deg, #000000 5.24%, rgba(166, 234, 199, 0.3) 1
           }
           
           .mobile-card-header {
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           }
           
           .mobile-card-header:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
           }
           
           .mobile-expanded-content {
-            animation: slideDown 0.3s ease-out;
-          }
-          
-          @keyframes slideDown {
-            from {
-              opacity: 0;
-              transform: translateY(-10px);
-            }
-            to {
-              opacity: 1;
-              transform: translateY(0);
-            }
+            animation: slideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1);
           }
         }
 
