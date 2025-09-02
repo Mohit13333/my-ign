@@ -787,7 +787,7 @@ function CourseCard() {
                 style={{ animationDelay: "0.2s" }}
               >
                 LOREM IPSUM DOLOR SIT AMET,
-                CONSECTETUR <span className="highlight">ADIPISCING</span>
+               <span className="highlight"> CONSECTETUR </span>ADIPISCING
               </h2>
             </div>
           </div>
@@ -992,7 +992,7 @@ function CourseCard() {
               </span>{" "}
               <span
                 style={{
-                  background: "linear-gradient(135deg, #00A491, #003E37)",
+                  background: "linear-gradient(135deg, #161664,#3F88BA)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -1001,7 +1001,7 @@ function CourseCard() {
               </span>
               <span
                 style={{
-                  background: "linear-gradient(135deg, #161664,#3F88BA)",
+                  background: "linear-gradient(135deg, #00A491, #003E37)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}

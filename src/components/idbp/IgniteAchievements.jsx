@@ -73,7 +73,7 @@ export default function IgniteAchievements() {
         </div>
 
         {/* Stats Grid */}
-        <div className="row g-4 mb-md-5 mb-4">
+        <div className="row custom-gap mb-md-5 mb-4">
 
           {/* Top Left - Card 1 */}
           <div className="col-md-6 col-6 fade-in-section"
@@ -88,7 +88,7 @@ export default function IgniteAchievements() {
               borderRadius: '1.5rem',
               minHeight: '180px'
             }}>
-              <div className="flex-shrink-0 me-md-4 mb-md-0 mb-2">
+              <div className="flex-shrink-0 me-md-4 mb-md-0 ">
                 <div className="fw-bold" style={{
                   background: "linear-gradient(90deg, #00A491, #003E37)",
                   WebkitBackgroundClip: "text",
@@ -109,7 +109,7 @@ export default function IgniteAchievements() {
                   background: "linear-gradient(90deg, #00A491, #003E37)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: isMobile ? "19px" : "25px"
+                  fontSize: isMobile ? "18px" : "25px"
                 }}>
                   LOREM IPSUM DOLOR
                 </h3>
@@ -142,7 +142,7 @@ export default function IgniteAchievements() {
               borderRadius: '1.5rem',
               minHeight: '180px'
             }}>
-              <div className="flex-shrink-0 me-md-4 mb-md-0 mb-2">
+              <div className="flex-shrink-0 me-md-4 mb-md-0 ">
                 <div className="fw-bold" style={{
                   background: "linear-gradient(90deg,#161664, #3F88BA)",
                   WebkitBackgroundClip: "text",
@@ -163,7 +163,7 @@ export default function IgniteAchievements() {
                   background: "linear-gradient(90deg,#161664, #3F88BA)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: isMobile ? "19px" : "25px"
+                  fontSize: isMobile ? "18px" : "25px"
                 }}>
                   LOREM IPSUM DOLOR
                 </h3>
@@ -196,7 +196,7 @@ export default function IgniteAchievements() {
               borderRadius: '1.5rem',
               minHeight: '180px'
             }}>
-              <div className="flex-shrink-0 me-md-4 mb-md-0 mb-2">
+              <div className="flex-shrink-0 me-md-4 mb-md-0 ">
                 <div className="fw-bold" style={{
                   background: "linear-gradient(90deg,#161664, #3F88BA)",
                   WebkitBackgroundClip: "text",
@@ -217,7 +217,7 @@ export default function IgniteAchievements() {
                   background: "linear-gradient(90deg,#161664, #3F88BA)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: isMobile ? "19px" : "25px"
+                  fontSize: isMobile ? "18px" : "25px"
                 }}>
                   LOREM IPSUM DOLOR
                 </h3>
@@ -250,7 +250,7 @@ export default function IgniteAchievements() {
               borderRadius: '1.5rem',
               minHeight: '180px'
             }}>
-              <div className="flex-shrink-0 me-md-4 mb-md-0 mb-2">
+              <div className="flex-shrink-0 me-md-4 mb-md-0 ">
                 <div className="fw-bold" style={{
                   background: "linear-gradient(90deg, #00A491, #003E37)",
                   WebkitBackgroundClip: "text",
@@ -271,7 +271,7 @@ export default function IgniteAchievements() {
                   background: "linear-gradient(90deg, #00A491, #003E37)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: isMobile ? "19px" : "25px"
+                  fontSize: isMobile ? "18px" : "25px"
                 }}>
                   LOREM IPSUM DOLOR
                 </h3>
@@ -303,9 +303,10 @@ export default function IgniteAchievements() {
             style={{
               background: "linear-gradient(90deg,#161664, #3F88BA)",
               color: 'white',
-              padding: '0.8rem 1.8rem',
+              padding: '12px 14px 12px 20px',
               border: 'none',
               transition: 'opacity 0.3s ease',
+              letterSpacing: "3px",
               fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
             }}
             onMouseEnter={(e) => e.target.style.opacity = "0.9"}
@@ -318,13 +319,14 @@ export default function IgniteAchievements() {
               data-scroll-class="is-inview"
               data-scroll-repeat
               style={{
-                width: 'clamp(1.5rem, 2vw, 2rem)',
-                height: 'clamp(1.5rem, 2vw, 2rem)',
+                width: "2.5rem",
+                height: "2.5rem",
                 background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                animationDelay: "0.75s"
+                animationDelay: "0.75s",
+                marginLeft: "2.1rem !important"
               }}
             >
-              <img src="/assets/arrowright.png" alt="arrright" width={12} height={12} />
+              <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
             </div>
           </button>
         </div>
@@ -339,12 +341,21 @@ export default function IgniteAchievements() {
           opacity: 1;
           transform: translateY(0);
         }
+          .custom-gap {
+  --bs-gutter-x: 5rem; /* horizontal gap */
+  --bs-gutter-y: 3rem; /* vertical gap */
+}
+
     @media (max-width: 767.98px) {
 .border-md-start {
   border-left: none !important;
   border-top: 2px solid rgba(107, 114, 128, .2) !important;
   padding-top: 0.5rem !important;
   margin-top: 0.5rem !important;
+}
+            .custom-gap {
+  --bs-gutter-x: 1rem; /* horizontal gap */
+  --bs-gutter-y: 1rem; /* vertical gap */
 }
 
 }

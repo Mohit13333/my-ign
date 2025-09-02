@@ -7,24 +7,20 @@ export default function LifeAtIgniteCarousel() {
 
   const images = [
     {
-      url: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      url: "/assets/igncra.jpg",
       alt: "Modern library with bookshelves and seating area",
     },
     {
-      url: "https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      url: "/assets/igncra.jpg",
       alt: "Modern office workspace with computers",
     },
     {
-      url: "https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      url: "/assets/igncra.jpg",
       alt: "Collaborative meeting room",
     },
     {
-      url: "https://images.pexels.com/photos/1181534/pexels-photo-1181534.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      url: "/assets/igncra.jpg",
       alt: "Creative workspace with plants",
-    },
-    {
-      url: "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      alt: "Modern break room and lounge area",
     },
   ];  
   useEffect(() => {
@@ -94,7 +90,7 @@ export default function LifeAtIgniteCarousel() {
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ maxWidth: '800px', animationDelay: "0.4s" }}>
+          style={{ maxWidth: '1200px', animationDelay: "0.4s" }}>
           {/* Left Arrow */}
           <button
             onClick={prevImage}
@@ -104,14 +100,14 @@ export default function LifeAtIgniteCarousel() {
             data-scroll-repeat
             style={{
               zIndex: 10,
-              left: '-8rem',
+              left: '-4rem',
               width: '3rem',
               height: '3rem',
               transition: 'background-color 0.3s ease',
               animationDelay: "0.45s"
             }}
           >
-            <img src="/assets/lar.png" alt="leftarr" width={isMobile?32:40} height={isMobile?32:40} />
+            <img src="/assets/lar.png" alt="leftarr" width={isMobile?32:80} height={isMobile?32:80} />
           </button>
 
           {/* Stacked Images */}
@@ -151,14 +147,14 @@ export default function LifeAtIgniteCarousel() {
             data-scroll-repeat
             style={{
               zIndex: 10,
-              right: '-8rem',
+              right: '-4rem',
               width: '3rem',
               height: '3rem',
               transition: 'background-color 0.3s ease',
               animationDelay: "0.65s"
             }}
           >
-            <img src="/assets/rar.png" alt="rightarr" width={isMobile?32:40} height={isMobile?32:40} />
+            <img src="/assets/rar.png" alt="rightarr" width={isMobile?32:80} height={isMobile?32:80} />
           </button>
         </div>
 
@@ -189,7 +185,7 @@ export default function LifeAtIgniteCarousel() {
         .alumniSubSection {
           text-align: center;
           position: relative;
-          margin-bottom:1rem;
+          margin-bottom:3rem;
         }
         .alumniSubSection:before {
           content: "";
@@ -227,28 +223,49 @@ export default function LifeAtIgniteCarousel() {
           background-clip: text;
         }
 
-        /* Desktop defaults */
+        /* Desktop defaults - Increased sizes for 1920px resolution */
         .carousel-images {
-          height: 400px;
-          width: 700px;
+          height: 550px;
+          width: 1020px;
         }
         .prev-img, .next-img {
-          width: 450px;
-          height: 350px;
+          width: 650px;
+          height: 450px;
           object-fit: cover;
           opacity: 0.8;
           transition: all 0.5s ease;
           border-radius: 1rem;
-          top: 20px;
+          border-radius: 30px !important;
+          top: 50px;
         }
-        .prev-img { left: 20px; }
-        .next-img { right: 20px; }
+        .prev-img { left: 40px; }
+        .next-img { right: 40px; }
         .main-img {
-          width: 500px;
-          height: 400px;
+          width: 845px;
+          height: 550px;
+          border-radius: 30px !important;
           object-fit: cover;
           border-radius: 1rem;
           transition: all 0.5s ease;
+        }
+
+        /* Medium screens (1200px to 1600px) */
+        @media (max-width: 1600px) and (min-width: 1200px) {
+          .carousel-images {
+            height: 480px;
+            width: 950px;
+          }
+          .prev-img, .next-img {
+            width: 550px;
+            height: 400px;
+            top: 40px;
+          }
+          .prev-img { left: 30px; }
+          .next-img { right: 30px; }
+          .main-img {
+            width: 650px;
+            height: 480px;
+          }
         }
 
         /* Mobile fixes */

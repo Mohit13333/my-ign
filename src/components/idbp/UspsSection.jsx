@@ -2,19 +2,19 @@
 import React, { useEffect, useState } from "react";
 
 function USPItem({ number, icon, title, desc }) {
-    const [isMobile, setIsMobile] = useState(false);
-  
-    useEffect(() => {  
-      const checkDevice = () => {
-        setIsMobile(window.innerWidth <= 1100);
-      };
-  
-      checkDevice();
-      window.addEventListener('resize', checkDevice);
-  
-      return () => window.removeEventListener('resize', checkDevice);
-    }, []);
-  
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      setIsMobile(window.innerWidth <= 1100);
+    };
+
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+
+    return () => window.removeEventListener('resize', checkDevice);
+  }, []);
+
   return (
     <div
       className="text-start fade-in-section"
@@ -46,19 +46,21 @@ function USPItem({ number, icon, title, desc }) {
           >
             {React.cloneElement(icon, {
               style: {
-                width: isMobile?"100px":"150px",
-                height: isMobile?"100px":"150px",
+                width: isMobile ? "70px" : "150px",
+                height: isMobile ? "70px" : "150px",
                 objectFit: "contain",
                 mixBlendMode: "multiply",
+                marginRight: isMobile? "45px":"0",
+            marginTop:isMobile? "35px":"0",
               },
             })}
           </div>
         </div>
       </div>
       <h3
-        className="fw-bold text-uppercase mb-3 position-relative"
+        className="fw-bold text-uppercase position-relative"
         style={{
-          fontSize: isMobile?"18px":"20px",
+          fontSize: isMobile ? "13px" : "20px",
           lineHeight: "100%",
           background: "linear-gradient(135deg, #161664, #3F88BA)",
           WebkitBackgroundClip: "text",
@@ -66,8 +68,9 @@ function USPItem({ number, icon, title, desc }) {
           backgroundClip: "text",
           color: "transparent",
           zIndex: 1,
-          marginTop: isMobile?"20px":"50px",
+          marginTop: isMobile ? "20px" : "50px",
           borderTop: "1px solid rgba(0, 164, 145, 0.2)",
+          letterSpacing: "2px",
           paddingTop: "10px", // Optional: Adds spacing above text so the border doesn't touch it
         }}
       >
@@ -76,7 +79,7 @@ function USPItem({ number, icon, title, desc }) {
 
       <p
         className="text-muted mt-2"
-        style={{ fontSize: isMobile ? "16px" : "23px", lineHeight: "1.2", color: "#233467" }}
+        style={{ fontSize: isMobile ? "10px" : "23px", lineHeight: "1.2", color: "#233467" }}
       >
         {desc}
       </p>
@@ -177,34 +180,34 @@ function UpsSection() {
         </div>
 
         {/* USP Grid */}
-        <div className="row g-4 mb-5" style={{ margin: "0 -10px" }}>
-          {uspItems.map((item, index) => (
-            <div key={item.number} className="col-6 col-md-3">
-              <USPItem {...item} number={index} />
-            </div>
-          ))}
-        </div>
+        <div className="custom-grid mb-5">
+  {uspItems.map((item, index) => (
+    <div key={item.number} className="grid-item">
+      <USPItem {...item} number={index} />
+    </div>
+  ))}
+</div>
+
 
         {/* CTA Button */}
-        <div
-          className="text-center fade-in-section"
+        <div className="text-center fade-in-section"
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ animationDelay: "0.7s" }}
-        >
+          style={{ animationDelay: "0.7s" }}>
           <button
             className="btn fw-bold d-flex align-items-center mx-auto rounded-pill"
             style={{
-              background: "linear-gradient(90deg, #161664, #3F88BA)",
-              color: "white",
-              padding: "0.8rem 1.8rem",
-              border: "none",
-              transition: "opacity 0.3s ease",
-              fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
+              background: "linear-gradient(90deg,#161664, #3F88BA)",
+              color: 'white',
+              padding: '12px 14px 12px 20px',
+              border: 'none',
+              transition: 'opacity 0.3s ease',
+              letterSpacing: "3px",
+              fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
             }}
-            onMouseEnter={(e) => (e.target.style.opacity = "0.9")}
-            onMouseLeave={(e) => (e.target.style.opacity = "1")}
+            onMouseEnter={(e) => e.target.style.opacity = "0.9"}
+            onMouseLeave={(e) => e.target.style.opacity = "1"}
           >
             MEET OUR TRAINERS
             <div
@@ -213,18 +216,14 @@ function UpsSection() {
               data-scroll-class="is-inview"
               data-scroll-repeat
               style={{
-                width: "clamp(1.5rem, 2vw, 2rem)",
-                height: "clamp(1.5rem, 2vw, 2rem)",
+                width: "2.5rem",
+                height: "2.5rem",
                 background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
                 animationDelay: "0.75s",
+                marginLeft: "2.1rem !important"
               }}
             >
-              <img
-                src="/assets/arrowright.png"
-                alt="arrow right"
-                width={12}
-                height={12}
-              />
+              <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
             </div>
           </button>
         </div>
@@ -240,6 +239,17 @@ function UpsSection() {
           opacity: 1;
           transform: translateY(0);
         }
+          .custom-grid {
+  display: grid;
+  gap: 1.5rem; /* same as g-4 (24px gap) */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns by default (col-6) */
+}
+
+@media (min-width: 768px) {
+  .custom-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on md and up (col-md-3) */
+  }
+}
     .divider {
   height: 1px;
   background: linear-gradient(
