@@ -307,7 +307,8 @@ export default function IgniteAchievements() {
               border: 'none',
               transition: 'opacity 0.3s ease',
               letterSpacing: "3px",
-              fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
+              fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
+              marginTop:isMobile?"auto":"61px !important"
             }}
             onMouseEnter={(e) => e.target.style.opacity = "0.9"}
             onMouseLeave={(e) => e.target.style.opacity = "1"}
