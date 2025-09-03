@@ -10,16 +10,24 @@ const MarqueeBanner = () => {
         className="fade-in-section bannerScroll"
         style={{ animationDelay: "0.4s" }}
       >
-        <b>
-          EXPERT GUIDANCE &nbsp;
-          <b className="dot">●</b> &nbsp; GRADE IMPROVEMENT &nbsp;
-          <b className="dot">●</b> &nbsp; FREE STUDY RESOURCES &nbsp;
-          <b className="dot">●</b> &nbsp; CAREER ADVICE &nbsp;
-          <b className="dot">●</b> &nbsp; EXPERT GUIDANCE &nbsp;
-          <b className="dot">●</b> &nbsp; GRADE IMPROVEMENT
-        </b>
+        <div className="scrollContent">
+          <b>
+            EXPERT GUIDANCE &nbsp;<b className="dot">●</b> &nbsp; GRADE
+            IMPROVEMENT &nbsp;<b className="dot">●</b> &nbsp; FREE STUDY
+            RESOURCES &nbsp;<b className="dot">●</b> &nbsp; CAREER ADVICE &nbsp;
+            <b className="dot">●</b> &nbsp; EXPERT GUIDANCE &nbsp;
+            <b className="dot">●</b> &nbsp; GRADE IMPROVEMENT
+          </b>
+          {/* Duplicate content for infinite scroll */}
+          <b>
+            EXPERT GUIDANCE &nbsp;<b className="dot">●</b> &nbsp; GRADE
+            IMPROVEMENT &nbsp;<b className="dot">●</b> &nbsp; FREE STUDY
+            RESOURCES &nbsp;<b className="dot">●</b> &nbsp; CAREER ADVICE &nbsp;
+            <b className="dot">●</b> &nbsp; EXPERT GUIDANCE &nbsp;
+            <b className="dot">●</b> &nbsp; GRADE IMPROVEMENT
+          </b>
+        </div>
       </div>
-
     </section>
   );
 };

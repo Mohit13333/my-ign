@@ -521,7 +521,7 @@ export default function IgniteAchievements() {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,<br /> <span className="highlight"> CONSECTETUR{" "}</span>
+            LOREM IPSUM DOLOR SIT AMET,<span className="highlight"> CONSECTETUR{" "}</span>
            ADIPISCING
           </h2>
 

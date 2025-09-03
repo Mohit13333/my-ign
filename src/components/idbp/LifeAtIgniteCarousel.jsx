@@ -203,12 +203,12 @@ export default function LifeAtIgniteCarousel() {
           z-index: -1;
         }
         .alumniSubHeading {
-          font-size: 1.6vw;
+          font-size: 28px;
           color: #19245E;
           text-transform: uppercase;
         }
         .alumniTitle {
-          font-size: 2vw;
+          font-size: 2.1875rem;
           font-weight: 700;
           max-width: 50%;
           margin: 30px auto 0 !important;

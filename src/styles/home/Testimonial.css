@@ -62,9 +62,9 @@ margin-bottom: 35px;
 
 .testimonialSection .testimonialTitle {
   color: var(--blue-color);
-  font-size: 2.4vw;
+  font-size: 2.1875rem;
   font-weight: 800;
-  max-width: 40%;
+  max-width: 35%;
   text-transform: uppercase;
   line-height: 1;
   margin: 20px auto;
@@ -323,7 +323,7 @@ margin-bottom: 35px;
   }
   .btntest{
     position:relative;
-    bottom: 2.8rem;
+    bottom: 1.5rem;
   }
   .testimonialSection .testimonialSliderWrap {
   position: relative;
@@ -369,7 +369,7 @@ margin-bottom: 35px;
   }
 
   .testimonialSection .testimonialPagination {
-    margin-top: 80px;
+    margin-top: 75px;
   }
 
   .testimonialSection .testimonialSliderWrap .swiper-button-prev {
@@ -416,11 +416,72 @@ margin-bottom: 35px;
     letter-spacing: 0.8px;
   }
 }
+@media screen and (min-width: 380px) and (max-width: 420px) {
+  .testimonialSection .testimonialText {
+    font-size: 14.5px !important;
+    line-height: 0.9;
+  }
+}
+@media screen and (min-width: 1300px) and (max-width: 1368px) {
+  .testimonialSection .testimonialText {
+    font-size: 16.7px !important;
+    line-height: 0.9;
+  }
+}
 
-@media (max-width: 400px) {
+@media (max-width: 379px) {
   .testimonialSection .testimonialText {
     font-size: 13px;
     line-height: 0.9;
 
+  }
+}
+
+/* Add this CSS to fix 125% scale issues on 1920px resolution */
+
+/* Media query for 1920px at 125% scale (effective viewport ~1536px) */
+@media screen and (min-width: 1536px) and (max-width: 1600px) {
+  .testimonialSection .testimonialSliderWrap {
+    height: 440px; /* Reduced from 550px */
+  }
+
+  .testimonialSection .testimonialSwiper :global(.swiper-wrapper) {
+    height: 360px; /* Reduced from 450px */
+  }
+
+  .testimonialSection .testimonialCard {
+    max-height: 400px; /* Reduced from 500px */
+  }
+
+  .testimonialSection .testimonialText {
+    font-size: 1rem; /* Fixed size instead of 1vw */
+    line-height: 1.5;
+    margin-bottom: 20px; /* Reduced from 24px */
+  }
+
+  .testimonialSection .testimonialTextName {
+    font-size: 0.85rem; /* Fixed size instead of 1vw */
+  }
+
+  .testimonialSection .testimonialTextSubtitle {
+    font-size: 0.8rem; /* Fixed size instead of 1vw */
+  }
+
+  .testimonialSection .testimonialCardText {
+    padding: 30px 40px; /* Reduced from 40px 50px */
+  }
+
+  .testimonialSection .testimonialVideoText {
+    padding: 25px 35px; /* Reduced from 30px 40px */
+    height: 45%; /* Reduced from 50% */
+  }
+
+  .testimonialSection .googleReview {
+    font-size: 18px; /* Fixed size instead of 1.4vw */
+  }
+
+  .testimonialSection .testimonialTitle {
+    font-size: 32px; /* Fixed size instead of 2.1875rem */
+    line-height: 1.1;
   }
 }

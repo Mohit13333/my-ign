@@ -876,14 +876,16 @@ function CourseCard() {
                           An all-year-round MYP program thoughtfully designed to align with each
                           student's unique learning objectives.
                         </p>
-                        <h5 className="fw-bold mb-3" style={{
-                          fontSize: "25px", color: "#2D5AA0", background:
+                        <h5 className="fw-bold fontSizeK mb-3" style={{
+                          fontSize: "25px", 
+                          color: "#2D5AA0", background:
                             "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
                           WebkitBackgroundClip: "text",
                           WebkitTextFillColor: "transparent",
                           fontWeight:600,
                           backgroundClip: "text",
-                          marginLeft:"25px"
+                          marginLeft:"25px",
+                          marginTop:"30px"
                         }}>
                           KEY HIGHLIGHTS
                         </h5>
@@ -907,6 +909,7 @@ function CourseCard() {
                                 paddingLeft: "0",
                                 marginLeft:"25px"
                               }}
+                              className="fontSizeL"
                             >
                               {/* Custom Gradient Bullet */}
                               <span
@@ -930,7 +933,7 @@ function CourseCard() {
                                   WebkitBackgroundClip: "text",
                                   WebkitTextFillColor: "transparent",
                                   backgroundClip: "text",
-                                  marginBlock:"4px",
+                                  marginBlock:"10px",
                                 }}
                               >
                                 {point}
@@ -1248,6 +1251,22 @@ function CourseCard() {
           transition: opacity 0.5s ease-out, transform 0.5s ease-out;
           animation: fadeIn 0.5s ease-out forwards;
         }
+                  @media (min-width: 1200px) and (max-width: 1919px) {
+                  .gradient-text{
+                            font-size:25px !important;
+                  }
+                               .desc{
+          font-size:21px !important;
+          line-height:1.3 !important;
+          vertical-align: middle;        
+        }
+          .fontSizeK{
+          font-size:21px !important;
+          }
+          .fontSizeL{
+          font-size:18px !important;
+          }
+      }
         .desc{
           font-size:25px;
           line-height:1.3 !important;

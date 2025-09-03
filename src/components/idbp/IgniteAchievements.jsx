@@ -48,10 +48,9 @@ export default function IgniteAchievements() {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle"
-              style={{ animationDelay: "0.2s", color: "#19245E !important" }}
+              style={{ animationDelay: "0.2s", color: "#19245E !important",maxWidth:"700px !important" }}
             >
-              LOREM IPSUM DOLOR SIT AMET,
-              <span className="highlight">CONSECTETUR</span> ADIPISCING
+              LOREM IPSUM DOLOR SIT AMET,<span className="highlight">CONSECTETUR</span> ADIPISCING
             </h2>
           </div>
           {/* Subtitle */}

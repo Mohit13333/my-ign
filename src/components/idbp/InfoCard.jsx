@@ -1879,7 +1879,7 @@ export default function InfoCard() {
 
               <div className="d-flex gap-3">
                 <button
-                  className="btn fw-bold text-uppercase d-flex justify-content-between align-items-center shadow"
+                  className="btn btng fw-bold text-uppercase d-flex justify-content-between align-items-center shadow"
                   style={{
                     background: "linear-gradient(to right, #A3CAF5, #E7F6FF)",
                     color: "#273972",
@@ -1888,7 +1888,7 @@ export default function InfoCard() {
                     padding: "10px 14px 10px 20px",
                     boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
                     minWidth: "290px", // ensures spacing looks consistent
-                    marginTop: isMobile ? "auto" : "10px",
+                    marginTop: isMobile ? "auto" : "20px",
                   }}
                 >
                   <span style={{ letterSpacing: "3px" }}>Get A Free Demo</span>
@@ -2334,8 +2334,11 @@ export default function InfoCard() {
         /* NEW: Laptop-specific adjustments (1200px - 1919px) */
         @media (min-width: 1200px) and (max-width: 1919px) {
           .position-relative.overflow-hidden {
-            min-height: 650px !important;
+            min-height: 600px !important;
           }
+            .btng{
+            margin-top:7px !important;
+            }
           
           .left-content {
             padding: 2rem 1.5rem 2rem 2.5rem !important;
@@ -2367,15 +2370,16 @@ export default function InfoCard() {
           }
           
           .form-container {
-            min-height: 580px !important;
-            min-width: auto !important;
+            min-height: 535px !important;
+            min-width: 350px !important;
             width: 105% !important;
             margin-left: -2.5% !important;
+margin-block: 30px !important;
             padding: 1.2rem 1.2rem !important;
           }
           
           .form-heading {
-            font-size: 1rem !important;
+            font-size: 1.35rem !important;
             margin-bottom: 1rem !important;
           }
           
@@ -2600,6 +2604,7 @@ export default function InfoCard() {
             justify-content: space-between !important;
           }
         }
+         }
       `}</style>
     </div>
   );

@@ -1398,6 +1398,7 @@ export default function SubjectsCard() {
   const [isMobile, setIsMobile] = useState(false);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -1412,12 +1413,16 @@ export default function SubjectsCard() {
     return () => window.removeEventListener('resize', checkDevice);
   }, []);
 
-  // Auto scroll effect
+  // Auto scroll effect with smooth transition
   useEffect(() => {
     if (!isAutoScrolling || isPaused) return;
 
     const autoScrollInterval = setInterval(() => {
-      setCurrentIndex((prev) => (prev < subjects.length - 1 ? prev + 1 : 0));
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev < subjects.length - 1 ? prev + 1 : 0));
+        setIsTransitioning(false);
+      }, 150); // Small delay for transition effect
     }, 3000); // Change every 3 seconds
 
     return () => clearInterval(autoScrollInterval);
@@ -1425,21 +1430,33 @@ export default function SubjectsCard() {
 
   const handlePrevious = () => {
     setIsAutoScrolling(false);
-    setCurrentIndex((prev) => (prev > 0 ? prev - 1 : subjects.length - 1));
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev > 0 ? prev - 1 : subjects.length - 1));
+      setIsTransitioning(false);
+    }, 150);
     // Resume auto scroll after 5 seconds of inactivity
     setTimeout(() => setIsAutoScrolling(true), 1500);
   };
 
   const handleNext = () => {
     setIsAutoScrolling(false);
-    setCurrentIndex((prev) => (prev < subjects.length - 1 ? prev + 1 : 0));
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev < subjects.length - 1 ? prev + 1 : 0));
+      setIsTransitioning(false);
+    }, 150);
     // Resume auto scroll after 5 seconds of inactivity
     setTimeout(() => setIsAutoScrolling(true), 1500);
   };
 
   const handleSubjectClick = (index) => {
     setIsAutoScrolling(false);
-    setCurrentIndex(index);
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentIndex(index);
+      setIsTransitioning(false);
+    }, 150);
     // Resume auto scroll after 5 seconds of inactivity
     setTimeout(() => setIsAutoScrolling(true), 1500);
   };
@@ -1536,26 +1553,22 @@ export default function SubjectsCard() {
 
         {/* RIGHT COLUMN */}
         <div className="subjectRight" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          {/* Navigation Buttons - Only show on mobile */}
-          {isMobile && (
-            <>
-              <button
-                className="navButton upButton mt-4"
-                onClick={handlePrevious}
-                aria-label="Previous subject"
-              >
-                <img src="/assets/up.png" alt="up" width={isMobile?40:50} height={isMobile?40:50} />
-              </button>
+          {/* Navigation Buttons - Show on both mobile and desktop */}
+          <button
+            className="navButton upButton mt-4"
+            onClick={handlePrevious}
+            aria-label="Previous subject"
+          >
+            <img src="/assets/up.png" alt="up" width={isMobile?40:50} height={isMobile?40:50} />
+          </button>
 
-              <button
-                className="navButton downButton"
-                onClick={handleNext}
-                aria-label="Next subject"
-              >
-                <img src="/assets/down.png" alt="down" width={isMobile?40:50} height={isMobile?40:50} />
-              </button>
-            </>
-          )}
+          <button
+            className="navButton downButton"
+            onClick={handleNext}
+            aria-label="Next subject"
+          >
+            <img src="/assets/down.png" alt="down" width={isMobile?40:50} height={isMobile?40:50} />
+          </button>
 
           {/* Mobile Layout - Now using centered positioning like desktop */}
           {isMobile ? (
@@ -1564,7 +1577,7 @@ export default function SubjectsCard() {
                 {getMobileVisibleItems().map(({ index, subject, position, isCenter, opacity }) => (
                   <div
                     key={`${index}-${position}`}
-                    className={`mobileSubjectItem ${isCenter ? 'center-item' : ''}`}
+                    className={`mobileSubjectItem ${isCenter ? 'center-item' : ''} ${isTransitioning ? 'transitioning' : ''}`}
                     onClick={() => handleSubjectClick(index)}
                     style={{
                       opacity: opacity,
@@ -1586,7 +1599,7 @@ export default function SubjectsCard() {
                 {getVisibleItems().map(({ index, subject, position, isCenter, opacity }) => (
                   <div
                     key={`${index}-${position}`}
-                    className={`subjectItem ${isCenter ? 'center-item' : ''}`}
+                    className={`subjectItem ${isCenter ? 'center-item' : ''} ${isTransitioning ? 'transitioning' : ''}`}
                     onClick={() => handleSubjectClick(index)}
                     style={{
                       opacity: opacity,
@@ -1709,6 +1722,7 @@ export default function SubjectsCard() {
           flex: 1;
           min-width: 500px;
           max-width: 65%;
+          padding-top:23px;
         }
 
         /* Desktop Layout Styles */
@@ -1741,6 +1755,11 @@ export default function SubjectsCard() {
           transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
+        .subjectItem.transitioning {
+          transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+          filter: blur(1px);
+        }
+
         /* Mobile Layout Styles - Now using same logic as desktop */
         .mobileContainer {
           position: relative;
@@ -1769,6 +1788,11 @@ export default function SubjectsCard() {
           justify-content: center;
           cursor: pointer;
           transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .mobileSubjectItem.transitioning {
+          transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+          filter: blur(1px);
         }
 
         .subjectBubble {
@@ -1838,6 +1862,10 @@ export default function SubjectsCard() {
           background: rgba(255, 255, 255, 0.3);
           border-color: rgba(255, 255, 255, 0.5);
           transform: translateX(-50%) scale(1.05);
+        }
+
+        .navButton:active {
+          transform: translateX(-50%) scale(0.95);
         }
 
         @media (max-width: 1280px) {

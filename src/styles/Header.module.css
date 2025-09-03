@@ -9,6 +9,7 @@
   background: #fff;
   z-index: 99 !important;
   position: relative;
+  padding-bottom: 0px;
 }
 
 header .header_left_content {

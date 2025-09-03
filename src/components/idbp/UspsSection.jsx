@@ -60,7 +60,7 @@ function USPItem({ number, icon, title, desc }) {
       <h3
         className="fw-bold text-uppercase position-relative"
         style={{
-          fontSize: isMobile ? "13px" : "20px",
+          fontSize: isMobile ? "13px" : "19px",
           lineHeight: "100%",
           background: "linear-gradient(135deg, #161664, #3F88BA)",
           WebkitBackgroundClip: "text",
