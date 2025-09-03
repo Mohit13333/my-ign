@@ -1427,21 +1427,21 @@ export default function SubjectsCard() {
     setIsAutoScrolling(false);
     setCurrentIndex((prev) => (prev > 0 ? prev - 1 : subjects.length - 1));
     // Resume auto scroll after 5 seconds of inactivity
-    setTimeout(() => setIsAutoScrolling(true), 2000);
+    setTimeout(() => setIsAutoScrolling(true), 1500);
   };
 
   const handleNext = () => {
     setIsAutoScrolling(false);
     setCurrentIndex((prev) => (prev < subjects.length - 1 ? prev + 1 : 0));
     // Resume auto scroll after 5 seconds of inactivity
-    setTimeout(() => setIsAutoScrolling(true), 2000);
+    setTimeout(() => setIsAutoScrolling(true), 1500);
   };
 
   const handleSubjectClick = (index) => {
     setIsAutoScrolling(false);
     setCurrentIndex(index);
     // Resume auto scroll after 5 seconds of inactivity
-    setTimeout(() => setIsAutoScrolling(true), 2000);
+    setTimeout(() => setIsAutoScrolling(true), 1500);
   };
 
   const handleMouseEnter = () => {

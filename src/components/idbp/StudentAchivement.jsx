@@ -143,47 +143,16 @@ export default function StudentAchievements() {
           </div>
 
           {/* Main title */}
-          <h2
-            className="fw-bold mb-0 fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{
-              animationDelay: "0.3s",
-              fontSize: isMobile ? "23px" : "2.5rem",
-              lineHeight: "1.1",
-              textTransform: "uppercase",
-              marginTop: "3vh"
-            }}
-          >
-            <span
-              style={{
-                background: "#233467",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent"
-              }}
-            >
-              LOREM IPSUM DOLOR SIT AMET,
-            </span>{" "}
-            <span
-              style={{
-                background: "linear-gradient(135deg, #00A491, #003E37)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent"
-              }}
-            >
-              CONSECTETUR
-            </span>{" "}
-            <span
-              style={{
-                background: "#233467",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent"
-              }}
-            >
-              ADIPISCING
-            </span>
-          </h2>
+                 <h2
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section testTitle"
+                style={{ animationDelay: "0.2s" }}
+              >
+                LOREM IPSUM DOLOR SIT AMET,
+               <span className="highlight"> CONSECTETUR </span>ADIPISCING
+              </h2>
         </div>
 
         {/* Slider Section */}

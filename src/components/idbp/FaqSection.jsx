@@ -296,7 +296,7 @@ const FAQSection = () => {
       data-scroll-repeat
       style={{
         marginBottom: isMobile?"40px":"96px",
-         maxWidth: "90vw",
+        maxWidth: isMobile?"95vw":"90vw",
         backgroundImage: 'url("/assets/faqbg.png")',
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -332,7 +332,7 @@ const FAQSection = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.2s",color:"#19245E",fontWeight:800,marginBottom:"20px",fontSize:isMobile?"25px":"2.5rem" }}
+              style={{ animationDelay: "0.2s",color:"#19245E",fontWeight:800,marginBottom:"20px",fontSize:isMobile?"20px":"2.5rem" }}
             >
               LOREM IPSUM DOLOR SIT AMET,
               <span className="highlight"> CONSECTETUR</span> ADIPISCING

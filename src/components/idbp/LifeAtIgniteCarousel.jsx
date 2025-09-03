@@ -332,10 +332,10 @@ export default function LifeAtIgniteCarousel() {
         }
         @media (max-width: 575px) {
           .alumniSubHeading {
-            font-size: 20px;
+            font-size: 18px;
           }
           .alumniTitle {
-            font-size: 25px;
+            font-size: 20px;
           }
           .carousel-images {
             height: 350px;

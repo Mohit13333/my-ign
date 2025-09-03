@@ -97,8 +97,8 @@ body {
 /* Mobile */
 @media (max-width: 575px) {
   .SubHeading {
-    font-size: 20px;
-    padding: 0 20px;
+    font-size: 18px;
+    padding: 0 22px;
   }
 
   .SubHeading:before,

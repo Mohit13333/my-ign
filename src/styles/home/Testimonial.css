@@ -6,11 +6,11 @@
 }
 
 .testimonialSection .testimonialHeader {
-  margin: 50px 0;
+  margin: 20px 0;
 }
 
 .testimonialSection .testimonialBgBox {
-  margin: 40px auto 60px auto;
+margin-bottom: 35px;
   position: relative;
   z-index: 1;
 }
@@ -74,7 +74,7 @@
   font-size: 1.4vw;
   color: var(--blue-color);
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
 }
 
 .testimonialSection .googleReview span {
@@ -89,6 +89,7 @@
 
 .testimonialSection .testimonialSliderWrap {
   position: relative;
+  height: 550px;
   z-index: 2;
 }
 
@@ -320,6 +321,15 @@
   .testimonialSection .testimonialRect {
     height: 70px !important;
   }
+  .btntest{
+    position:relative;
+    bottom: 2.8rem;
+  }
+  .testimonialSection .testimonialSliderWrap {
+  position: relative;
+  height: 385px;
+  z-index: 2;
+}
 
   .testimonialSection .testimonialRect:nth-child(1) {
     max-width: 30%;
@@ -351,6 +361,11 @@
   .testimonialSection .testimonialText {
     font-size: 1rem;
     line-height: 1.5;
+    display: -webkit-box;
+  -webkit-line-clamp: 17; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   }
 
   .testimonialSection .testimonialPagination {

@@ -221,7 +221,7 @@
 //           <div className="testimonialPagination"></div>
 //         </div>
 //         <style jsx>{`
-        
+
 //         .testimonialSection .testimonialCard {
 //   background: #fff;
 //   border-radius: 32px;
@@ -278,7 +278,7 @@
 //   .testimonialSection .testimonialCardText {
 //     height: 400px;
 //   }
-  
+
 //   .testimonialSection .testimonialText {
 //     font-size: 1rem;
 //   }
@@ -319,9 +319,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
   Pagination,
-  EffectCoverflow,
-  Scrollbar,
-  Mousewheel,
 } from "swiper/modules";
 
 
@@ -458,14 +455,14 @@ export default function Testimonial({ }) {
               el: ".testimonialPagination",
             }}
             breakpoints={{
-              0: { slidesPerView: 2 , slidesPerGroup:2},
+              0: { slidesPerView: 2, slidesPerGroup: 2 },
               576: { slidesPerView: 2 },
               992: { slidesPerView: 3 },
               1200: { slidesPerView: 4 },
             }}
             className="testimonialSwiper"
           >
-          
+
 
             {testimonialData.map((item, idx) => (
               <SwiperSlide key={idx}>
@@ -516,6 +513,7 @@ export default function Testimonial({ }) {
             <img
               src="/images/right-arrow-blue.png"
               alt="Prev"
+              className="btntest"
               style={{ transform: "rotate(180deg)" }}
               width={32}
               height={32}
@@ -525,6 +523,7 @@ export default function Testimonial({ }) {
             <img
               src="/images/right-arrow-blue.png"
               alt="Next"
+              className="btntest"
               width={32}
               height={32}
             />

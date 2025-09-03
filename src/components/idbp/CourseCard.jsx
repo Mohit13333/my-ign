@@ -972,7 +972,7 @@ function CourseCard() {
 
       {/* Mobile Version */}
       <div className="mobile-version py-4 px-3">
-        <div className="container-fluid">
+        <div className="">
           {/* Mobile Header */}
           <div className="text-center mb-4">
             <div
@@ -986,35 +986,16 @@ function CourseCard() {
               </div>
             </div>
 
-            <h2 className="fw-bold mb-0" style={{ fontSize: "25px", marginTop: "24px", lineHeight: "1.2" }}>
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #161664,#3F88BA)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
+              <h2
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat="true"
+                className="fade-in-section testTitle"
+                style={{ animationDelay: "0.2s" }}
               >
                 LOREM IPSUM DOLOR SIT AMET,
-              </span>{" "}
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #161664,#3F88BA)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                CONSECTETUR {" "}
-              </span>
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #00A491, #003E37)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                ADIPISCING
-              </span>
-            </h2>
+               <span className="highlight"> CONSECTETUR </span>ADIPISCING
+              </h2>
           </div>
 
           {/* Mobile Cards */}

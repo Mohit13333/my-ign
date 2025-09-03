@@ -1929,7 +1929,7 @@ export default function InfoCard() {
               />
 
               <div
-                className="w-100 p-4 text-white form-container"
+                className="w-100 text-white form-container"
                 style={{
                   borderRadius: "40px",
                   backgroundImage: "url('/assets/idbprect.png')",
@@ -2490,7 +2490,7 @@ export default function InfoCard() {
           }
 
           h1 {
-            font-size: 1.5rem !important;
+            font-size: 20px !important;
             line-height: 1.2 !important;
             text-align: center !important;
             margin-bottom: 1rem !important;
@@ -2572,7 +2572,7 @@ export default function InfoCard() {
           }
 
           .form-container h2 {
-            font-size: .9rem !important;
+            font-size: 1.2rem !important;
             text-align: center !important;
             line-height: 1.2 !important;
             margin-bottom: 1.2rem !important;
@@ -2594,7 +2594,7 @@ export default function InfoCard() {
 
           .form-container .btn {
             font-size: 0.85rem !important;
-            padding: 12px 24px !important;
+            padding: 12px 12px 12px 24px!important;
             max-width: none !important;
             display: flex !important;
             justify-content: space-between !important;
