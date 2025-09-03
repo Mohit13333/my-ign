@@ -16,7 +16,7 @@ export default function IgniteAchievements() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <div className=" py-md-5 py-4 fade-in-section" data-scroll
+    <div className=" pt-md-5 fade-in-section" data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{ animationDelay: "0.1s" }}>
@@ -24,7 +24,7 @@ export default function IgniteAchievements() {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: isMobile ? "90vw" : '70vw', animationDelay: "0.15s", margin: "0 auto" }}>
+        style={{ maxWidth: isMobile ? "90vw" : '70vw', animationDelay: "0.15s", margin: "0 auto",paddingBlock:"48px", }}>
 
         {/* Header Section */}
         <div className="text-center mb-md-5 mb-4 fade-in-section"

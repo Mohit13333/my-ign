@@ -79,7 +79,7 @@ function USPItem({ number, icon, title, desc }) {
 
       <p
         className="text-muted mt-2"
-        style={{ fontSize: isMobile ? "10px" : "23px", lineHeight: "1.2", color: "#233467" }}
+        style={{ fontSize: isMobile ? "10px" : "20px", lineHeight: "1.2", color: "#233467" }}
       >
         {desc}
       </p>

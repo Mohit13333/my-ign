@@ -226,23 +226,37 @@ export default function LifeAtIgniteCarousel() {
         /* Desktop defaults - Increased sizes for 1920px resolution */
         .carousel-images {
           height: 550px;
-          width: 1020px;
+          width: 1000px;
         }
         .prev-img, .next-img {
           width: 650px;
           height: 450px;
           object-fit: cover;
-          opacity: 0.8;
+          opacity: 20%;
+          filter: brightness(1.2) contrast(0.6) saturate(0.5);
+          position: relative;
           transition: all 0.5s ease;
           border-radius: 1rem;
           border-radius: 30px !important;
           top: 50px;
+          opacity: 20% !important;
+        }
+        .prev-img::after, .next-img::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 30px;
+          pointer-events: none;
         }
         .prev-img { left: 40px; }
         .next-img { right: 40px; }
         .main-img {
-          width: 845px;
-          height: 550px;
+          width: 820px;
+          height: 520px;
           border-radius: 30px !important;
           object-fit: cover;
           border-radius: 1rem;

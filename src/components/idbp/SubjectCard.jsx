@@ -1396,6 +1396,8 @@ export default function SubjectsCard() {
   const [currentIndex, setCurrentIndex] = useState(2); // Start with the highlighted one
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -1410,39 +1412,78 @@ export default function SubjectsCard() {
     return () => window.removeEventListener('resize', checkDevice);
   }, []);
 
+  // Auto scroll effect
+  useEffect(() => {
+    if (!isAutoScrolling || isPaused) return;
+
+    const autoScrollInterval = setInterval(() => {
+      setCurrentIndex((prev) => (prev < subjects.length - 1 ? prev + 1 : 0));
+    }, 3000); // Change every 3 seconds
+
+    return () => clearInterval(autoScrollInterval);
+  }, [isAutoScrolling, isPaused, subjects.length]);
+
   const handlePrevious = () => {
+    setIsAutoScrolling(false);
     setCurrentIndex((prev) => (prev > 0 ? prev - 1 : subjects.length - 1));
+    // Resume auto scroll after 5 seconds of inactivity
+    setTimeout(() => setIsAutoScrolling(true), 2000);
   };
 
   const handleNext = () => {
+    setIsAutoScrolling(false);
     setCurrentIndex((prev) => (prev < subjects.length - 1 ? prev + 1 : 0));
+    // Resume auto scroll after 5 seconds of inactivity
+    setTimeout(() => setIsAutoScrolling(true), 2000);
   };
 
   const handleSubjectClick = (index) => {
+    setIsAutoScrolling(false);
     setCurrentIndex(index);
+    // Resume auto scroll after 5 seconds of inactivity
+    setTimeout(() => setIsAutoScrolling(true), 2000);
   };
 
-  // Mobile version: Function to get the display order with current subject in center
-  const getDisplayOrder = () => {
-    const totalSubjects = subjects.length;
-    const displayOrder = [];
-    
-    // Calculate positions relative to center
-    for (let i = 0; i < totalSubjects; i++) {
-      const relativeIndex = (i - currentIndex + totalSubjects) % totalSubjects;
-      const actualIndex = (currentIndex + relativeIndex) % totalSubjects;
-      displayOrder.push({
-        index: actualIndex,
-        position: relativeIndex,
-        isCenter: relativeIndex === 0
-      });
-    }
-    
-    return displayOrder;
+  const handleMouseEnter = () => {
+    setIsPaused(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsPaused(false);
   };
 
   // Desktop version: Get visible items with proper positioning and opacity
   const getVisibleItems = () => {
+    const visibleItems = [];
+    const totalVisible = 5; // Show 5 items (2 above, center, 2 below)
+    
+    for (let i = 0; i < totalVisible; i++) {
+      const relativePosition = i - 2; // -2, -1, 0, 1, 2
+      const actualIndex = (currentIndex + relativePosition + subjects.length) % subjects.length;
+      
+      let opacity;
+      if (relativePosition === 0) {
+        opacity = 1; // Center item
+      } else if (Math.abs(relativePosition) === 1) {
+        opacity = 0.6; // Adjacent items (one level up/down)
+      } else {
+        opacity = 0.3; // Far items (two levels up/down)
+      }
+      
+      visibleItems.push({
+        index: actualIndex,
+        subject: subjects[actualIndex],
+        position: relativePosition,
+        isCenter: relativePosition === 0,
+        opacity: opacity
+      });
+    }
+    
+    return visibleItems;
+  };
+
+  // Mobile version: Use same logic as desktop but with mobile-specific spacing
+  const getMobileVisibleItems = () => {
     const visibleItems = [];
     const totalVisible = 5; // Show 5 items (2 above, center, 2 below)
     
@@ -1494,7 +1535,7 @@ export default function SubjectsCard() {
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="subjectRight">
+        <div className="subjectRight" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {/* Navigation Buttons - Only show on mobile */}
           {isMobile && (
             <>
@@ -1516,32 +1557,26 @@ export default function SubjectsCard() {
             </>
           )}
 
-          {/* Mobile Layout */}
+          {/* Mobile Layout - Now using centered positioning like desktop */}
           {isMobile ? (
             <div className="mobileContainer">
-              <div className="subjectBubblesGrid">
-                {getDisplayOrder().map(({ index, position, isCenter }, displayIndex) => {
-                  const subject = subjects[index];
-                  const isActive = isCenter;
-                  
-                  return (
-                    <div
-                      key={`${index}-${displayIndex}`}
-                      className={`subjectBubbleRow ${isActive ? 'active' : ''}`}
-                    >
-                      <div
-                        className={`subjectBubble ${isActive ? 'highlighted' : ''}`}
-                        onClick={() => handleSubjectClick(index)}
-                        style={{
-                          opacity: isActive ? 1 : 0.4,
-                          transition: 'all 0.3s ease'
-                        }}
-                      >
-                        {subject}
-                      </div>
+              <div className="mobileSubjectsList">
+                {getMobileVisibleItems().map(({ index, subject, position, isCenter, opacity }) => (
+                  <div
+                    key={`${index}-${position}`}
+                    className={`mobileSubjectItem ${isCenter ? 'center-item' : ''}`}
+                    onClick={() => handleSubjectClick(index)}
+                    style={{
+                      opacity: opacity,
+                      transform: `translateY(${position * 50}px)`,
+                      zIndex: isCenter ? 10 : 5 - Math.abs(position)
+                    }}
+                  >
+                    <div className={`subjectBubble ${isCenter ? 'highlighted' : ''}`}>
+                      {subject}
                     </div>
-                  );
-                })}
+                  </div>
+                ))}
               </div>
             </div>
           ) : (
@@ -1615,7 +1650,7 @@ export default function SubjectsCard() {
         }
 
         .rect-2 {
-          top: 82%;
+          top: 78%;
           left: -5%;
           width: 16vw;
           height: 10vh;
@@ -1657,7 +1692,7 @@ export default function SubjectsCard() {
 
         .subjectTitle {
           color: white;
-          font-size: 1.8vw;
+          font-size: 29px;
           font-weight: 800;
           line-height: 1.2;
           text-transform: uppercase;
@@ -1703,10 +1738,10 @@ export default function SubjectsCard() {
           display: flex;
           justify-content: center;
           cursor: pointer;
-          transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        /* Mobile Layout Styles */
+        /* Mobile Layout Styles - Now using same logic as desktop */
         .mobileContainer {
           position: relative;
           width: 100%;
@@ -1718,26 +1753,22 @@ export default function SubjectsCard() {
           overflow: hidden;
         }
 
-        .subjectBubblesGrid {
+        .mobileSubjectsList {
+          position: relative;
+          width: 100%;
+          height: 100%;
           display: flex;
-          flex-direction: column;
-          gap: 25px;
           align-items: center;
           justify-content: center;
-          width: 100%;
-          position: relative;
-          z-index: 1;
-          padding: 20px 0;
         }
 
-        .subjectBubbleRow {
-          display: flex;
-          gap: 30px;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          z-index: 1;
+        .mobileSubjectItem {
+          position: absolute;
           width: 100%;
+          display: flex;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .subjectBubble {
@@ -1745,7 +1776,7 @@ export default function SubjectsCard() {
           font-size: 1.2vw;
           font-weight: 500;
           padding: 15px 40px;
-          transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           user-select: none;
           text-align: center;
           letter-spacing: 0.02em;
@@ -1761,15 +1792,16 @@ export default function SubjectsCard() {
         .subjectBubble:hover:not(.highlighted) {
           background-color: rgba(255, 255, 255, 0.2);
           box-shadow: 2px 2px 5px 0 rgba(31, 60, 104, 0.3);
+          transform: scale(1.02);
         }
 
         .subjectBubble.highlighted {
           background: linear-gradient(90deg, #d0e8ff, #a8cfff) !important;
           color: #0d2344 !important;
           font-weight: 700 !important;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.25) !important;
           border: 2px solid #a8cfff !important;
-          transform: scale(1.05);
+          transform: scale(1.08);
         }
 
         .navButton {
@@ -1848,12 +1880,8 @@ export default function SubjectsCard() {
             height: 250px;
           }
 
-          .subjectBubblesGrid {
-            gap: 20px;
-          }
-
-          .subjectBubbleRow {
-            gap: 10px;
+          .mobileContainer {
+            height: 250px;
           }
         }
 
@@ -1890,21 +1918,9 @@ export default function SubjectsCard() {
             height: 280px;
           }
 
-          .subjectBubblesGrid {
-            width: 100%;
-            gap: 18px;
-            align-items: center;
-            padding: 10px 0;
-          }
-
-          .subjectBubbleRow {
-            gap: 12px;
-            justify-content: center;
-          }
-
           .subjectBubble {
             text-align: center;
-            font-size: 14px !important; /* Reduced from 1rem */
+            font-size: 14px !important;
             padding: 12px 30px;
           }
 
@@ -1926,15 +1942,11 @@ export default function SubjectsCard() {
         @media (max-width: 767px) {
           .subjectBubble {
             padding: 8px 15px 12px 15px !important;
-            font-size: 13px !important; /* Further reduced */
+            font-size: 13px !important;
           }
           
           .mobileContainer {
             height: 250px;
-          }
-          
-          .subjectBubblesGrid {
-            gap: 15px;
           }
           
           .rect-1 {
@@ -1979,23 +1991,18 @@ export default function SubjectsCard() {
             min-width: auto;
           }
 
-          .subjectBubbleRow {
-            flex-wrap: wrap;
-            justify-content: center;
-          }
-
           .subjectBubble {
-            padding: 10px 25px !important; /* Adjusted padding */
+            padding: 10px 25px !important;
             white-space: normal;
             text-align: center;
-            font-size: 12px !important; /* Further reduced */
+            font-size: 12px !important;
           }
         }
 
         @media (max-width: 420px) {
           .subjectBubble {
             padding: 8px 20px !important;
-            font-size: 11px !important; /* Even smaller for very small screens */
+            font-size: 11px !important;
           }
         }
       `}</style>

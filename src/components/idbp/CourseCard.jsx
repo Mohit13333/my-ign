@@ -845,6 +845,7 @@ function CourseCard() {
                       color: "#3F88BA",
                       transform: hoveredIndex === index ? 'rotate(180deg) scale(1.1)' : 'rotate(0deg) scale(1)',
                       transition: 'all 0.3s ease-out',
+                      marginRight:"25px",
                     }}
                   >
                     {activeIndex === index ? <Minus size={20} /> : <Plus size={20} />}
@@ -871,16 +872,18 @@ function CourseCard() {
                           animation: 'fadeIn 0.6s ease-out', // Changed from slideInLeft to fadeIn
                         }}
                       >
-                        <p className="desc" style={{ lineHeight: "40px", marginLeft: "0", paddingLeft: "0" }}>
+                        <p className="desc" style={{ lineHeight: "1.3", marginLeft: "25px", paddingLeft: "0" }}>
                           An all-year-round MYP program thoughtfully designed to align with each
                           student's unique learning objectives.
                         </p>
                         <h5 className="fw-bold mb-3" style={{
-                          fontSize: "2.2rem", color: "#2D5AA0", background:
+                          fontSize: "25px", color: "#2D5AA0", background:
                             "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
                           WebkitBackgroundClip: "text",
                           WebkitTextFillColor: "transparent",
+                          fontWeight:600,
                           backgroundClip: "text",
+                          marginLeft:"25px"
                         }}>
                           KEY HIGHLIGHTS
                         </h5>
@@ -894,37 +897,40 @@ function CourseCard() {
                             <li
                               key={i}
                               style={{
-                                fontSize: "30px",
-                                fontWeight: "bold",
+                                fontSize: "22px",
+                                fontWeight: "500",
                                 display: "flex",
                                 alignItems: "flex-start",
-                                gap: "10px",
+                                gap: "20px",
                                 animation: `fadeIn 0.4s ease-out ${i * 0.1}s both`, // Changed from slideInUp to fadeIn
                                 marginLeft: "0",
                                 paddingLeft: "0",
+                                marginLeft:"25px"
                               }}
                             >
                               {/* Custom Gradient Bullet */}
                               <span
                                 style={{
-                                  width: "12px",
-                                  height: "12px",
+                                  width: "10px",
+                                  height: "10px",
                                   borderRadius: "50%",
                                   background:
                                     "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
                                   flexShrink: 0,
-                                  marginTop: "10px",
+                                  marginTop: "15px",
                                 }}
                               ></span>
 
                               {/* Gradient Text */}
                               <span
                                 style={{
+                                  letterSpacing:"1px",
                                   background:
                                     "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
                                   WebkitBackgroundClip: "text",
                                   WebkitTextFillColor: "transparent",
                                   backgroundClip: "text",
+                                  marginBlock:"4px",
                                 }}
                               >
                                 {point}
@@ -946,8 +952,8 @@ function CourseCard() {
                           alt="Students studying together"
                           className="img-fluid image1"
                           style={{
-                            height: "622px",
-                            width: "654px",
+                            height: "400px",
+                            width: "500px",
                             objectFit: "cover",
                             boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
                             transform: hoveredIndex === index ? 'scale(1.02)' : 'scale(1)',
@@ -980,7 +986,7 @@ function CourseCard() {
               </div>
             </div>
 
-            <h2 className="fw-bold mb-0" style={{ fontSize: "25px", marginTop: "10px", lineHeight: "1.2" }}>
+            <h2 className="fw-bold mb-0" style={{ fontSize: "25px", marginTop: "24px", lineHeight: "1.2" }}>
               <span
                 style={{
                   background: "linear-gradient(135deg, #161664,#3F88BA)",
@@ -1262,8 +1268,8 @@ function CourseCard() {
           animation: fadeIn 0.5s ease-out forwards;
         }
         .desc{
-          font-size:30px;
-          line-height:40px !important;
+          font-size:25px;
+          line-height:1.3 !important;
           vertical-align: middle;        
         }
         
@@ -1361,8 +1367,9 @@ function CourseCard() {
           background-clip: text;
           color: transparent;
           font-weight:600;
-          font-size:40px;
+          font-size:30px;
           line-height:1.2;
+          margin-left:25px;
         }
 
         /* Desktop Version */
