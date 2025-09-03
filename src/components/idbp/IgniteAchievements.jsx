@@ -109,7 +109,7 @@ export default function IgniteAchievements() {
                   background: "linear-gradient(90deg, #00A491, #003E37)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: isMobile ? "18px" : "25px"
+                  fontSize: isMobile ? "17px" : "25px"
                 }}>
                   LOREM IPSUM DOLOR
                 </h3>
@@ -163,7 +163,7 @@ export default function IgniteAchievements() {
                   background: "linear-gradient(90deg,#161664, #3F88BA)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: isMobile ? "18px" : "25px"
+                  fontSize: isMobile ? "17px" : "25px"
                 }}>
                   LOREM IPSUM DOLOR
                 </h3>
@@ -217,7 +217,7 @@ export default function IgniteAchievements() {
                   background: "linear-gradient(90deg,#161664, #3F88BA)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: isMobile ? "18px" : "25px"
+                  fontSize: isMobile ? "17px" : "25px"
                 }}>
                   LOREM IPSUM DOLOR
                 </h3>
@@ -271,7 +271,7 @@ export default function IgniteAchievements() {
                   background: "linear-gradient(90deg, #00A491, #003E37)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: isMobile ? "18px" : "25px"
+                  fontSize: isMobile ? "17px" : "25px"
                 }}>
                   LOREM IPSUM DOLOR
                 </h3>
