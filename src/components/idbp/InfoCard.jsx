@@ -2622,6 +2622,21 @@ margin-block: 30px !important;
     margin-left: 1rem !important;
   }
 }
+        @media (min-width: 768px) {
+  .cust-text {
+    padding:  10px 14px 10px 20px !important;
+    transition: opacity 0.3s ease !important;
+    letter-spacing: 1px !important;
+    font-size: clamp(1rem, 1.1vw, 1.1rem) !important;
+  }
+
+  .custom-height {
+    width: 40px !important;
+    height: 40px !important;
+    animation-delay: 0.75s !important;
+    margin-left: 1rem !important;
+  }
+}
       `}</style>
     </div>
   );
