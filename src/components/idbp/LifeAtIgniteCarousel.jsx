@@ -56,7 +56,7 @@ export default function LifeAtIgniteCarousel() {
     <div className=" overflow-hidden fade-in-section" data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      style={{ animationDelay: "0.1s", marginBlock:isMobile?"40px":"96px",paddingBlock:isMobile?"40px":"0" }}>
+      style={{ animationDelay: "0.1s", marginBlock:isMobile?"40px":"96px",paddingBottom:isMobile?"40px":"0" }}>
       <div className="container fade-in-section"
         data-scroll
         data-scroll-class="is-inview"

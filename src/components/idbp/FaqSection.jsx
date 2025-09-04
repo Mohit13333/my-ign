@@ -332,7 +332,7 @@ const FAQSection = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.2s",color:"#19245E",fontWeight:800,marginBottom:"20px",fontSize:isMobile?"20px":"2.1875rem" }}
+              style={{ animationDelay: "0.2s",color:"#19245E",fontWeight:800,marginBlock:"20px",fontSize:isMobile?"20px":"2.1875rem" }}
             >
               LOREM IPSUM DOLOR SIT AMET,
               <span className="highlight"> CONSECTETUR</span> ADIPISCING

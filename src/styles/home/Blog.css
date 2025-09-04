@@ -183,6 +183,11 @@
     width: 150px;
     height: 200px;
   }
+  .blogSection {
+  padding: 60px 0 40px 0 !important;
+  background: #fff;
+  width: 100%;
+}
 }
 @media (max-width: 440px) {
   .blogSection .blogCard {

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -52,7 +53,7 @@ const FAQSection = () => {
       data-scroll-repeat
       style={{
         marginBottom: isMobile?"40px":"96px",
-         maxWidth: "90vw",
+        maxWidth: isMobile?"95vw":"90vw",
         backgroundImage: 'url("/assets/faqbg.png")',
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -67,7 +68,7 @@ const FAQSection = () => {
         data-scroll-class="is-inview"
         data-scroll-repeat
         style={{
-          padding: isMobile ? "2rem 1rem" : "3rem 2rem",
+          padding: isMobile ? "2rem 1rem" : "3rem 5rem",
           display: "flex",
           alignItems: "center", // vertical center
           minHeight: "60vh", // keep section height
@@ -78,7 +79,7 @@ const FAQSection = () => {
           <div className={`col-lg-6 d-flex flex-column justify-content-center ${isMobile ? 'text-center' : ''}`}>
             {/* FAQ Header */}
             <div className="testimonialHeader" style={{ marginBottom: isMobile ? "10px" : "20px" }}>
-              <span className="SubHeading">FAQS
+              <span className="SubHeading" style={{fontSize:isMobile?"":"28px !important"}}>FAQS
               </span>
             </div>
 
@@ -88,7 +89,7 @@ const FAQSection = () => {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.2s",color:"#19245E",fontWeight:800,marginBottom:"20px",fontSize:isMobile?"25px":"2.5rem" }}
+              style={{ animationDelay: "0.2s",color:"#19245E",fontWeight:800,marginBottom:"20px",fontSize:isMobile?"20px":"2.1875rem" }}
             >
               LOREM IPSUM DOLOR SIT AMET,
               <span className="highlight"> CONSECTETUR</span> ADIPISCING
@@ -150,7 +151,6 @@ const FAQSection = () => {
                     marginBottom: isMobile ? "10px" : "20px",
                     transition: "all 0.3s ease-in-out",
                     maxHeight: openIndex === index ? "10rem" : "0",
-                    paddingBottom: openIndex === index ? "1rem" : "0",
                   }}
                 >
                   <p

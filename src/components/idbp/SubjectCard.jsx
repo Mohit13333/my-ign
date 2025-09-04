@@ -2092,7 +2092,7 @@ export default function SubjectsCard() {
   const visibleItems = createInfiniteItems();
 
   return (
-    <div className={`subjectSection ${isVisible ? 'fade-in' : ''}`} style={{ marginTop: isMobile ? "25px" : "90px", marginBottom: isMobile ? "50px" : "0" }}>
+    <div className={`subjectSection ${isVisible ? 'fade-in' : ''}`} style={{ marginTop: isMobile ? "10px" : "90px", marginBottom: isMobile ? "50px" : "0" }}>
       <div className="subjectSectionInner">
         {/* Background decorative rectangles */}
         <div className="testimonialRect rect-1" style={{ background: 'rgba(255,255,255,0.1)', borderRadius: '20px' }} />

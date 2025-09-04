@@ -24,7 +24,7 @@ export default function IgniteAchievements() {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: isMobile ? "95vw" : '70vw', animationDelay: "0.15s", margin: "0 auto", padding: "28px 0px 48px 0px", }}>
+        style={{ maxWidth: isMobile ? "95vw" : '70vw', animationDelay: "0.15s", margin: "0 auto", padding: isMobile?"40px 0px 48px 0px":"28px 0px 48px 0px", }}>
 
         {/* Header Section */}
         <div className="text-center mb-md-5 mb-4 fade-in-section"
@@ -369,11 +369,16 @@ export default function IgniteAchievements() {
   .cust-text {
     background: linear-gradient(90deg, #161664, #3F88BA) !important;
     color: white !important;
-    padding: 10px 10px 10px 20px !important;
+    padding: 8px 8px 8px 13px !important;
     border: none !important;
-    transition: opacity 0.3s ease !important;
+    -webkit-transition: opacity .3s ease !important;
+    -moz-transition: opacity.3s ease!important;
+    -o-transition: opacity.3s ease!important;
+    transition: opacity .3s ease !important;
     letter-spacing: 1px !important;
-    font-size: clamp(1rem, 1.1vw, 1.1rem) !important;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem) !important;
+    margin-top: 45px !important;
+    font-weight:600 !important;
   }
 
   .custom-height {
