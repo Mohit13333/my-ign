@@ -4,6 +4,7 @@ const benefits = [
     {
         title: 'EARN COLLEGE CREDITS',
         icon: '/assets/1lgo.png',
+        mobileIcon: '/assets/1lgo.png',
         upbutton: "/assets/brup.svg",
         downButton: "/assets/brdown.png",
         text: `Missing out on a chance that helps you set foot on your dream campus doesn't seem apt, right? Your AP score fetch you the much-needed advantage over other applicants in the entrance procedure.`,
@@ -11,6 +12,7 @@ const benefits = [
     {
         title: 'UNIVERSITY READY PROFILES',
         icon: '/assets/2lgo.png',
+        mobileIcon: '/assets/moun2.png',
         text: `Research proves that AP students are better prepared for university. We agree! They're more likely to develop the right skills, get familiar with environment, & stand out with college-ready proficiency.`,
         upbutton: "/assets/grup.svg",
         downButton: "/assets/grdown.png",
@@ -18,6 +20,7 @@ const benefits = [
     {
         title: 'DISPLAY SUBJECT PROFICIENCY',
         icon: '/assets/3lgo.png',
+        mobileIcon: '/assets/3lgo.png',
         text: `Taking AP exams allow students to study a subject in depth which leads to developing full competency in the discipline. Disconnecting your ideal career path in the due process helps find the right path moving ahead.`,
         upbutton: "/assets/brup.svg",
         downButton: "/assets/brdown.png",
@@ -25,6 +28,7 @@ const benefits = [
     {
         title: 'UNIQUE COLLEGE APPLICATION',
         icon: '/assets/4lgo.png',
+        mobileIcon: '/assets/moun4.png',
         text: `Your AP score transcripted in your college application automatically highlights a sense of commitment coming from you. This in turn boosts your chances of securing credit & placement from top universities.`,
         upbutton: "/assets/grup.svg",
         downButton: "/assets/grdown.png",
@@ -50,34 +54,40 @@ const APBenefits = () => {
         setOpenIndex(openIndex === index ? null : index);
     };
     return (
-        <div className='mx-auto' style={{ maxWidth: "90vw", border: "none !important", overflow: "hidden !important", marginBottom: "96px" }}>
+        <div className='mx-auto' style={{ maxWidth: "90vw", border: "none !important", overflow: "hidden !important", marginBlock: "70px" }}>
             <div className="d-flex align-items-center justify-content-center mb-md-4 mb-3">
-                <div className="SubHeading testSubheading" style={{fontSize: isMobile ? "17.5px" : "30px"}}>WHY DO STUDENTS CHOOSE APS?
+                <div className="SubHeading testSubheading" style={{ fontSize: isMobile ? "17.5px" : "30px", marginBottom: isMobile ? "20px" : "20px" }}>WHY DO STUDENTS CHOOSE APS?
                 </div>
             </div>
             <div className="cards">
                 {benefits.map((item, index) => (
                     <div
-                    className={`card1 ${index % 2 === 1 ? 'greenBg' : 'blueBg'} ${openIndex === index ? 'open' : ''} `}
-                    key={index}
-                >
-                    <img src={item.icon} alt="icon" className="icon" />
-                    <h3 className="title">{item.title}</h3>
-                    <p className="text">{item.text}</p>
-                    
-                    {/* Mobile toggle button */}
-                    <button
-                        className="toggle-btn"
-                        onClick={() => toggleCard(index)}
-                        aria-label="Toggle"
+                        className={`card1 ${index % 2 === 1 ? 'greenBg' : 'blueBg'} ${openIndex === index ? 'open' : ''} `}
+                        key={index}
                     >
-                        <img
-                            src={openIndex === index ? item.upbutton : item.downButton}
-                            alt="Toggle Icon"
-                            className="toggle-icon"
-                        />
-                    </button>
-                </div>
+                        <div className="icon-container">
+                            <img
+                                src={isMobile ? item.mobileIcon : item.icon}
+                                alt="icon"
+                                className="icon"
+                            />                        </div>
+                        <h3 className={`title ${isMobile && index % 2 === 1 ? 'mobile-even' : ''}`}>
+                            {item.title}</h3>
+                        <p className="text">{item.text}</p>
+
+                        {/* Mobile toggle button */}
+                        <button
+                            className="toggle-btn"
+                            onClick={() => toggleCard(index)}
+                            aria-label="Toggle"
+                        >
+                            <img
+                                src={openIndex === index ? item.upbutton : item.downButton}
+                                alt="Toggle Icon"
+                                className="toggle-icon"
+                            />
+                        </button>
+                    </div>
                 ))}
             </div>
             <style jsx>{`
@@ -97,7 +107,7 @@ const APBenefits = () => {
         display: flex;
         justify-content: center;
         flex-wrap: nowrap;
-        gap: 28px;
+        gap: 65px;
         padding-bottom: 20px;
         scrollbar-width: none; /* Firefox */
         -ms-overflow-style: none; /* IE and Edge */
@@ -109,7 +119,7 @@ const APBenefits = () => {
 
     .card1 {
         border-radius: 24px;
-        padding: 36px 30px;
+        padding: 35px 30px 20px 30px;
         min-width: 320px;
         width: 100%;
         text-align: left;
@@ -119,6 +129,8 @@ const APBenefits = () => {
         transform: translateY(0); /* Changed from translateY(20px) */
         position: relative;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
 
     /* REMOVED .card1.is-inview CLASS */
@@ -141,30 +153,45 @@ const APBenefits = () => {
         background-position: center;
     }
 
+    .icon-container {
+        display: block;
+    }
+
     .icon {
-        width: 115px;
-        height: 125px;
-        margin-bottom: 24px;
+width: 100px;
+    height: 100px;
+        object-fit: contain;
+        margin-bottom:22px;
+        margin-top:20px;
     }
 
     .title {
-        font-size: 22px;
+        font-size: 26px;
         font-weight: 700;
-        margin-bottom: 18px;
-        background: linear-gradient(to right, #3F88BA, #161664);
+margin-block: 10px;
+        background: linear-gradient(to right, #161664, #3F88BA);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         color: transparent;
         line-height: 1.3;
     }
+            .title.mobile-even {
+        background: linear-gradient(to right, #003E37, #00A491);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
 
     .text {
-        font-size: 16px;
-        line-height: 1.7;
-        color: #333;
-        font-weight: 400;
-        margin-bottom: 20px;
+        font-size: 19px;
+        line-height: 1.5;
+        color: #233467;
+        font-weight: 500;
+        margin-block:22px;
+        letter-spacing: 2px;
+        flex: 2;
     }
 
     .toggle-btn {
@@ -213,7 +240,8 @@ const APBenefits = () => {
         
         .title {
             font-size: 20px;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
+            min-height: 60px;
         }
         
         .text {
@@ -221,9 +249,8 @@ const APBenefits = () => {
         }
         
         .icon {
-            width: 110px;
-            height: 120px;
-            margin-bottom: 22px;
+            width: 70px;
+            height: 70px;
         }
     }
 
@@ -241,6 +268,7 @@ const APBenefits = () => {
         
         .title {
             font-size: 19px;
+            min-height: 56px;
         }
         
         .text {
@@ -248,8 +276,8 @@ const APBenefits = () => {
         }
         
         .icon {
-            width: 100px;
-            height: 110px;
+            width: 65px;
+            height: 65px;
         }
     }
 
@@ -262,12 +290,13 @@ const APBenefits = () => {
             padding: 0 20px;
         }
 
-    .greenBg {
-        background-image: url('/assets/uniap.png') !important;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+        .greenBg {
+            background-image: url('/assets/uniap.png') !important;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        
         .card1 {
             min-width: unset;
             width: 100%;
@@ -277,19 +306,25 @@ const APBenefits = () => {
             border-radius: 20px;
             margin: 0;
             position: relative;
+            display: block; /* Reset flex for mobile */
+        }
+        
+        .icon-container {
+            display: block;
+            text-align: center;
         }
         
         .icon {
-            width: 80px;
-            height: 90px;
-            margin: 0 auto 20px auto;
-            display: block;
+            width: 70px;
+            height: 70px;
         }
         
         .title {
             font-size: 18px;
             margin-bottom: 15px;
             text-align: center;
+            flex: none; /* Reset flex for mobile */
+            min-height: auto;
         }
         
         .text {
@@ -303,6 +338,7 @@ const APBenefits = () => {
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
+            flex: none; /* Reset flex for mobile */
         }
 
         .card1.open .text {
@@ -327,17 +363,16 @@ const APBenefits = () => {
         }
 
         .card1 {
-            padding: 25px 20px 45px 20px;
+            padding: 5px 15px 20px 15px;
         }
         
         .icon {
-            width: 70px;
-            height: 80px;
-            margin-bottom: 15px;
+            width: 60px;
+            height: 60px;
         }
         
         .title {
-            font-size: 16px;
+            font-size: 15px;
             margin-bottom: 12px;
         }
         
