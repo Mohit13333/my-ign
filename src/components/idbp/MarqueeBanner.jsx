@@ -1,12 +1,5 @@
 import React from "react";
 
-const items = [
-  "EXPERT GUIDANCE",
-  "GRADE IMPROVEMENT",
-  "FREE STUDY RESOURCES",
-  "CAREER ADVICE",
-];
-
 const MarqueeBanner = () => {
   return (
     <section>
@@ -18,15 +11,21 @@ const MarqueeBanner = () => {
         style={{ animationDelay: "0.4s" }}
       >
         <div className="scrollContent">
-          {/* Repeat twice for infinite effect */}
-          {[...Array(2)].map((_, i) =>
-            items.map((text, idx) => (
-              <div className="scrollItem" key={`${i}-${idx}`}>
-                {text}
-                <span className="dot">●</span>
-              </div>
-            ))
-          )}
+          <b>
+            EXPERT GUIDANCE &nbsp;<b className="dot">●</b> &nbsp; GRADE
+            IMPROVEMENT &nbsp;<b className="dot">●</b> &nbsp; FREE STUDY
+            RESOURCES &nbsp;<b className="dot">●</b> &nbsp; CAREER ADVICE &nbsp;
+            <b className="dot">●</b> &nbsp; EXPERT GUIDANCE &nbsp;
+            <b className="dot">●</b> &nbsp; GRADE IMPROVEMENT
+          </b>
+          {/* Duplicate content for infinite scroll */}
+          <b>
+            EXPERT GUIDANCE &nbsp;<b className="dot">●</b> &nbsp; GRADE
+            IMPROVEMENT &nbsp;<b className="dot">●</b> &nbsp; FREE STUDY
+            RESOURCES &nbsp;<b className="dot">●</b> &nbsp; CAREER ADVICE &nbsp;
+            <b className="dot">●</b> &nbsp; EXPERT GUIDANCE &nbsp;
+            <b className="dot">●</b> &nbsp; GRADE IMPROVEMENT
+          </b>
         </div>
       </div>
     </section>

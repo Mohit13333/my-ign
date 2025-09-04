@@ -11,40 +11,24 @@
 
 .scrollContent {
   display: flex;
-  gap: 4rem; /* equal space between items */
   width: max-content;
   animation: bannerScrollAnim 28s linear infinite;
 }
 
-.scrollItem {
-  display: flex;
-  align-items: center;
+.bannerScroll b {
+  display: inline-block;
+  margin: 0;
+  white-space: nowrap;
   font-family: inherit;
+  padding: 5px 0;
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.25em;
+  color: #e6f6ff;
   text-transform: uppercase;
-  white-space: nowrap;
-
-  /* gradient text */
-  background: linear-gradient(90deg, #A3CAF5, #E7F6FF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  line-height: 60px;
+  padding-right: 4rem; /* gap between repeats */
 }
-
-.scrollItem .dot {
-  margin: 0 1.5rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  background: linear-gradient(90deg, #EDFFF4, #A6EAC7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-}
-
 
 @keyframes bannerScrollAnim {
   0% {
@@ -59,7 +43,7 @@
   .bannerScroll {
     margin: 40px 0;
   }
-  .scrollItem {
+  .bannerScroll b {
     font-size: 1rem;
     line-height: 40px;
   }
