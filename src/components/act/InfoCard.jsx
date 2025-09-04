@@ -817,7 +817,7 @@ margin-block: 30px !important;
             justify-content: space-around !important;
             align-items: center !important;
             gap: 0.5rem !important;
-            padding: 1.5rem 1.6rem !important;
+            padding: 0.8rem 1.6rem!important;
             margin-bottom: 1.5rem !important;
             background: rgba(255,255,255,0.03)!important;
           }
