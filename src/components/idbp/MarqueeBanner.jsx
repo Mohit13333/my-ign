@@ -1,5 +1,12 @@
 import React from "react";
 
+const items = [
+  "EXPERT GUIDANCE",
+  "GRADE IMPROVEMENT",
+  "FREE STUDY RESOURCES",
+  "CAREER ADVICE",
+];
+
 const MarqueeBanner = () => {
   return (
     <section>
@@ -7,25 +14,19 @@ const MarqueeBanner = () => {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat="true"
-        className="fade-in-section bannerScroll"
+        className="fade-in-section bannerScroll1"
         style={{ animationDelay: "0.4s" }}
       >
-        <div className="scrollContent">
-          <b>
-            EXPERT GUIDANCE &nbsp;<b className="dot">●</b> &nbsp; GRADE
-            IMPROVEMENT &nbsp;<b className="dot">●</b> &nbsp; FREE STUDY
-            RESOURCES &nbsp;<b className="dot">●</b> &nbsp; CAREER ADVICE &nbsp;
-            <b className="dot">●</b> &nbsp; EXPERT GUIDANCE &nbsp;
-            <b className="dot">●</b> &nbsp; GRADE IMPROVEMENT
-          </b>
-          {/* Duplicate content for infinite scroll */}
-          <b>
-            EXPERT GUIDANCE &nbsp;<b className="dot">●</b> &nbsp; GRADE
-            IMPROVEMENT &nbsp;<b className="dot">●</b> &nbsp; FREE STUDY
-            RESOURCES &nbsp;<b className="dot">●</b> &nbsp; CAREER ADVICE &nbsp;
-            <b className="dot">●</b> &nbsp; EXPERT GUIDANCE &nbsp;
-            <b className="dot">●</b> &nbsp; GRADE IMPROVEMENT
-          </b>
+        <div className="scrollContent1">
+          {/* Repeat twice for infinite effect */}
+          {[...Array(2)].map((_, i) =>
+            items.map((text, idx) => (
+              <div className="scrollItem1" key={`${i}-${idx}`}>
+                {text}
+                <span className="dot">●</span>
+              </div>
+            ))
+          )}
         </div>
       </div>
     </section>
