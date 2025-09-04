@@ -2098,6 +2098,7 @@ export default function SubjectsCard() {
         <div className="testimonialRect rect-1" style={{ background: 'rgba(255,255,255,0.1)', borderRadius: '20px' }} />
         <div className="testimonialRect rect-2" style={{ background: 'rgba(255,255,255,0.08)', borderRadius: '20px' }} />
         <div className="testimonialRect rect-3" style={{ background: 'rgba(255,255,255,0.06)', borderRadius: '20px' }} />
+        <div className="testimonialRect rect-4" style={{ background: 'rgba(255,255,255,0.06)', borderRadius: '20px' }} />
 
         {/* LEFT COLUMN */}
         <div className="subjectLeft">
@@ -2208,6 +2209,12 @@ export default function SubjectsCard() {
           bottom: 20%;
           right: -9%;
           width: 13vw;
+          height: 10vh;
+        }
+        .rect-4 {
+          top: 4%;
+          right: -9%;
+          width: 20vw;
           height: 10vh;
         }
 
@@ -2481,6 +2488,9 @@ export default function SubjectsCard() {
           }
           
           .rect-2 {
+            display: none;
+          }
+          .rect-4 {
             display: none;
           }
 
