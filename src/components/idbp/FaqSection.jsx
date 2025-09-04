@@ -339,7 +339,7 @@ const FAQSection = () => {
             </h2>
 
             <p
-              style={{ color: "#64748b", maxWidth: isMobile ? "100%" : "28rem", fontSize: isMobile ? "16px" : "20px", lineHeight: isMobile ? "1.5" : "1.2", margin: isMobile ? "0 auto" : "0", paddingLeft: isMobile ? "0.5rem" : "0", paddingRight: isMobile ? "0.5rem" : "0", marginBottom: isMobile ? "10px" : "20px" }}
+              style={{ color: "#64748b", maxWidth: isMobile ? "100%" : "28rem", fontSize: isMobile ? "16px" : "20px", lineHeight: isMobile ? "1.5" : "1.2", margin: isMobile ? "0 auto" : "0", paddingLeft: isMobile ? "0.5rem" : "0", paddingRight: isMobile ? "0.5rem" : "0", marginBottom: isMobile ? "15px" : "20px" }}
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.

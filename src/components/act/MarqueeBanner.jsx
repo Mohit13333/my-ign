@@ -22,8 +22,7 @@ const MarqueeBanner = () => {
           {[...Array(2)].map((_, i) =>
             items.map((text, idx) => (
               <div className="scrollItem1" key={`${i}-${idx}`}>
-                {text}
-                <span className="dot">●</span>
+                <span className="dot">●</span> {text}
               </div>
             ))
           )}

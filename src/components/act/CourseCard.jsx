@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState } from "react";
 import { Plus, Minus, ChevronDown, ChevronUp } from "lucide-react";
@@ -261,7 +260,7 @@ function CourseCard() {
       </div>
 
       {/* Mobile Version */}
-      <div className="mobile-version py-4 px-3">
+      <div className="mobile-version px-3">
         <div className="">
           {/* Mobile Header */}
           <div className="text-center mb-4">

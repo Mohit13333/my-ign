@@ -66,8 +66,8 @@ export default function InfoCard() {
                   fontSize: "2.6rem",
                 }}
               >
-                ACT Tutors In Dubai,<br/> For Assured High Scores
-              </h1>
+                ACT Tutors In Dubai,<br/>
+                For Assured High Scores              </h1>
               <div className="divider"></div>
 
               <p
@@ -118,7 +118,7 @@ export default function InfoCard() {
                     <Image
                       src="/assets/medal.png"
                       alt="Grade Support"
-                      width={isMobile ? 24 : 32}
+                      width={isMobile ? 20 : 32}
                       height={isMobile ? 30 : 45}
                       className="icon-img"
                     />
@@ -141,7 +141,7 @@ export default function InfoCard() {
                     <Image
                       src="/assets/person.png"
                       alt="Learning Mode"
-                      width={isMobile ? 24 : 30}
+                      width={isMobile ? 20 : 30}
                       height={isMobile ? 30 : 45}
                       className="icon-img"
                     />
@@ -160,12 +160,12 @@ export default function InfoCard() {
                     <Image
                       src="/assets/location.png"
                       alt="Location"
-                      width={isMobile ? 24 : 32}
-                      height={isMobile ? 30 : 40}
+                      width={isMobile ? 22 : 32}
+                      height={isMobile ? 28 : 40}
                       className="icon-img"
                     />
                   </div>
-                  Dubai <br /> (DIFC, JLT)
+                 <span className="fontd"> Dubai <br /> (DIFC, JLT)</span>
                 </div>
               </div>
 
@@ -196,7 +196,7 @@ export default function InfoCard() {
                     marginTop: isMobile ? "auto" : "20px",
                   }}
                 >
-                  <span style={{ letterSpacing: "3px" }}>Get A Free Demo</span>
+                  <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>Get A Free Demo</span>
                   <img
                     src="/assets/rar.png"
                     alt="right"
@@ -789,7 +789,6 @@ margin-block: 30px !important;
           .col-lg-8 {
             order: 1 !important;
             margin-top: 3rem !important;
-            margin-bottom: 2rem !important;
             padding: 2rem 1.5rem !important;
           }
 
@@ -820,7 +819,7 @@ margin-block: 30px !important;
             gap: 0.5rem !important;
             padding: 1.5rem 1.6rem !important;
             margin-bottom: 1.5rem !important;
-            background: rgba(255,255,255,.07) !important;
+            background: rgba(255,255,255,0.03)!important;
           }
 
           .info-col {
@@ -913,11 +912,17 @@ margin-block: 30px !important;
          }
         @media (max-width: 575px) {
   .cust-text {
-    padding: 10px 10px 10px 20px !important;
+    padding: 8px 8px 8px 13px !important;
     border: none !important;
-    transition: opacity 0.3s ease !important;
+    -webkit-transition: opacity .3s ease !important;
+    -moz-transition: opacity.3s ease!important;
+    -o-transition: opacity.3s ease!important;
+    transition: opacity .3s ease !important;
     letter-spacing: 1px !important;
-    font-size: clamp(1rem, 1.1vw, 1.1rem) !important;
+    font-size: max(1rem, min(1.1vw, 1.1rem)) !important;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem) !important;
+    margin-top: 10px !important;
+        min-width: auto !important;
   }
 
   .custom-height {
@@ -942,6 +947,24 @@ margin-block: 30px !important;
     margin-left: 1rem !important;
   }
 }
+          @media (max-width: 380px) {
+                .info-col {
+            border-right: 1px solid rgba(255, 255, 255, 0.3) !important;
+            padding-right: 0.8rem !important;
+            flex: 1 !important;
+            font-size: 0.6rem !important;
+            line-height: 1.2 !important;
+          }
+                      .icon-img {
+            width: 15px !important;
+            height: 15px !important;
+          }
+            .fontd{
+                        font-size: 0.6rem !important;
+            line-height: 1.2 !important;
+            }
+      }
+
       `}</style>
     </div>
   );

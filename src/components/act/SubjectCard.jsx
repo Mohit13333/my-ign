@@ -1,6 +1,20 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function SubjectsCard() {
+    const [isMobile, setIsMobile] = useState(false);
+  
+    useEffect(() => {
+      const checkDevice = () => {
+        setIsMobile(window.innerWidth <= 1100);
+      };
+  
+      checkDevice();
+      window.addEventListener('resize', checkDevice);
+  
+      return () => window.removeEventListener('resize', checkDevice);
+    }, []);
   const sections = [
     { name: "English", questions: 75, time: "45 Minutes", score: "0-36" },
     { name: "Maths", questions: 60, time: "60 Minutes", score: "0-36" },
@@ -13,8 +27,8 @@ export default function SubjectsCard() {
     <div
       className="mx-auto fade-in-section"
       style={{
-        maxWidth: "90vw",
-        padding: "2rem",
+        maxWidth: isMobile?"95vw":"85vw",
+        marginBlock:isMobile?"48px":"70px",
         background: "white"
       }}
       data-scroll
@@ -43,7 +57,7 @@ export default function SubjectsCard() {
         <table
           style={{
             width: "100%",
-            textAlign: "center",
+            textAlign: "left",
             borderCollapse: "collapse",
           }}
         >
@@ -59,7 +73,7 @@ export default function SubjectsCard() {
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
                 letterSpacing: "0.05em",
-                fontSize: "1rem",
+                fontSize:isMobile?"1.2rem": "1.81rem",
                 fontWeight: "700",
                 borderRight: "1px solid rgba(63, 136, 186, 0.3)",
                 textTransform: "uppercase"
@@ -73,7 +87,7 @@ export default function SubjectsCard() {
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
                 letterSpacing: "0.05em",
-                fontSize: "1rem",
+                fontSize:isMobile?"1.2rem": "1.81rem",
                 fontWeight: "700",
                 borderRight: "1px solid rgba(63, 136, 186, 0.3)",
                 textTransform: "uppercase"
@@ -87,7 +101,7 @@ export default function SubjectsCard() {
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
                 letterSpacing: "0.05em",
-                fontSize: "1rem",
+                fontSize:isMobile?"1.2rem": "1.81rem",
                 fontWeight: "700",
                 borderRight: "1px solid rgba(63, 136, 186, 0.3)",
                 textTransform: "uppercase"
@@ -101,7 +115,7 @@ export default function SubjectsCard() {
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
                 letterSpacing: "0.05em",
-                fontSize: "1rem",
+                fontSize:isMobile?"1.2rem": "1.81rem",
                 fontWeight: "700",
                 textTransform: "uppercase"
               }}>
@@ -124,32 +138,48 @@ export default function SubjectsCard() {
                 }}
               >
                 <td style={{
-                  padding: "1rem",
+                  padding:isMobile? "1.3rem":"1.7rem",
                   borderRight: "1px solid rgba(63, 136, 186, 0.2)",
-                  fontSize: "1rem",
-                  fontWeight: "600"
+                  fontSize: isMobile?"1.3rem":"1.6rem",
+                  fontWeight: "600",
+                      backgroundClip: "text",
+    WebkitBackgroundClip: "text",
+    color: "transparent",
+    backgroundImage: "linear-gradient(90deg, #161664, #3F88BA)"
                 }}>
                   {sec.name}
                 </td>
                 <td style={{
-                  padding: "1rem",
+                  padding:isMobile? "1.3rem":"1.7rem",
                   borderRight: "1px solid rgba(63, 136, 186, 0.2)",
-                  fontSize: "1rem",
+                  fontSize: isMobile?"1.3rem":"1.6rem",
+                      backgroundClip: "text",
+    WebkitBackgroundClip: "text",
+    color: "transparent",
+    backgroundImage: "linear-gradient(90deg, #161664, #3F88BA)",
                   fontWeight: "600"
                 }}>
                   {sec.questions}
                 </td>
                 <td style={{
-                  padding: "1rem",
+                  padding:isMobile? "1.3rem":"1.7rem",
                   borderRight: "1px solid rgba(63, 136, 186, 0.2)",
-                  fontSize: "1rem",
+                  fontSize: isMobile?"1.3rem":"1.6rem",
+                      backgroundClip: "text",
+    WebkitBackgroundClip: "text",
+    color: "transparent",
+    backgroundImage: "linear-gradient(90deg, #161664, #3F88BA)",
                   fontWeight: "600"
                 }}>
                   {sec.time}
                 </td>
                 <td style={{
-                  padding: "1rem",
-                  fontSize: "1rem",
+                  padding:isMobile? "1.3rem":"1.7rem",
+                  fontSize: isMobile?"1.3rem":"1.6rem",
+                      backgroundClip: isMobile?"1.3rem":"t.6ext",
+    WebkitBackgroundClip: "text",
+    color: "transparent",
+    backgroundImage: "linear-gradient(90deg, #161664, #3F88BA)",
                   fontWeight: "600"
                 }}>
                   {sec.score}
@@ -204,12 +234,35 @@ export default function SubjectsCard() {
         @media (max-width: 480px) {
           table th, table td {
             padding: 0.6rem 0.4rem !important;
-            font-size: 0.8rem !important;
+            font-size: 1rem!important;
           }
                .act-heading {
             font-size: 0.9rem !important;
           }
         }
+          .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hide scrollbar on mobile */
+  @media (max-width: 768px) {
+    .table-container {
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE 10+ */
+    }
+    .table-container::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+
+    /* 👇 Force all table content to stay in one line */
+    table th,
+    table td {
+      white-space: nowrap;
+      padding: 1.2rem 1rem !important; /* more spacing */
+      font-size: 1.3rem !important;   /* keep big font */
+    }
+  }
       `}</style>
     </div>
   );

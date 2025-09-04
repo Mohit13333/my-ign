@@ -119,7 +119,7 @@ export default function StudentAchievements() {
       data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      style={{ animationDelay: "0.1s", maxWidth: "90vw", margin: "96px auto" }}
+      style={{ animationDelay: "0.1s", maxWidth: "90vw", margin: "95px auto 70px auto" }}
     >
       <div className="container px-4">
         {/* Header Section */}

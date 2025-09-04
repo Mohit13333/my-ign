@@ -56,11 +56,7 @@ export default function SubjectsCard1({ }) {
             className="subjects-card1-bg-rect"
           />
           <img
-            data-scroll
-            data-scroll-class="is-clipped"
-            data-scroll-repeat="true"
-            data-scroll-offset="-10%"
-            src="/images/rectangle-bg5.png"
+            src="/assets/lb.png"
             alt="bg-shape"
             className="subjects-card1-bg-rect"
           />
@@ -68,7 +64,7 @@ export default function SubjectsCard1({ }) {
             data-scroll
             data-scroll-class="is-clipped"
             data-scroll-offset="-10%"
-            src="/images/rectangle-bg4.png"
+            src="/assets/rm.png"
             alt="bg-shape"
             className="subjects-card1-bg-rect"
           />
@@ -112,7 +108,7 @@ export default function SubjectsCard1({ }) {
           background: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
           background-size: cover;
           background-position: center;
-          padding: 150px 30px;
+          padding: 85px 30px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -137,17 +133,21 @@ export default function SubjectsCard1({ }) {
         }
 
         .subjects-card1-section .subjects-card1-bg-rect:nth-child(2) {
-          top: 25%;
-          left: 20px;
+          bottom: 13%;
+    left: -1px;
         }
 
         .subjects-card1-section .subjects-card1-bg-rect:nth-child(3) {
-          width: 150px;
-          object-fit: fill;
-          object-position: left;
-          border-radius: 0 20px 20px 0;
-          bottom: 15%;
-          left: 20px;
+width: 257px;
+    -o-object-fit: fill;
+    object-fit: fill;
+    -o-object-position: left;
+    object-position: left;
+    -webkit-border-radius: 0 20px 20px 0;
+    -moz-border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0;
+    bottom: 43%;
+    right: -14px;
         }
 
         .subjects-card1-section .subjects-card1-right {
@@ -181,26 +181,45 @@ export default function SubjectsCard1({ }) {
           flex-wrap: nowrap; /* Prevent wrapping to maintain row structure */
         }
 
-        .subjects-card1-section .subjects-card1-bubble {
-          border: 1px solid #FFFFFF;
-          border-radius: 40px;
-          color: var(--green-text);
-          font-size: 1.4vw;
-          font-weight: 400;
-          padding: 10px 55px;
-          cursor: pointer;
-          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-          box-shadow: none;
-          margin-bottom: 0;
-          user-select: none;
-          min-width: 120px;
-          text-align: center;
-          letter-spacing: 0.02em;
-          outline: none;
-          position: relative;
-          z-index: 1;
-          flex-shrink: 1; /* Allow bubbles to shrink if needed */
-        }
+ .subjects-card1-section .subjects-card1-bubble {
+  position: relative;
+  border-radius: 40px;
+  color: var(--green-text);
+  font-size: 1.4vw;
+  font-weight: 400;
+  padding: 10px 55px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none;
+  margin-bottom: 0;
+  user-select: none;
+  min-width: 120px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  outline: none;
+  z-index: 1;
+  flex-shrink: 1;
+  background: transparent; /* inside stays transparent */
+  border: 1px solid transparent;
+}
+
+/* Gradient border using pseudo-element */
+.subjects-card1-section .subjects-card1-bubble::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  padding: 2px;
+  background: linear-gradient(275.93deg, #EDFFF4 18.79%, #A6EAC7 114.24%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1; /* keep it behind text */
+}
+
 
         .subjects-card1-section .subjects-card1-bubble:hover {
           color: var(--white-color);
@@ -237,7 +256,7 @@ export default function SubjectsCard1({ }) {
             flex-direction: column;
             align-items: center;
             gap: 32px;
-            padding: 70px 20px;
+            padding: 47px 20px;
           }
 
           .subjects-card1-section .subjects-card1-bubble {
@@ -248,6 +267,7 @@ export default function SubjectsCard1({ }) {
             width: 100%;
             top: 40px;
             left: 0;
+            display:none;
           }
 
           .subjects-card1-section .subjects-card1-bubbles-grid {
@@ -273,13 +293,19 @@ export default function SubjectsCard1({ }) {
 
         @media (max-width: 575px) {
           .subjects-card1-section .subjects-card1-bg-rect:nth-child(2) {
-            top: 42%;
+            top: 14%;
             left: 0;
-            width: 15%;
+            width: 32%;
             height: 55px;
             object-fit: cover;
             border-radius: 0 20px 20px 0;
           }
+                    .subjects-card1-section .container {
+          width: 100%;
+          max-width: 95vw !important;
+          margin: 0 auto;
+          padding: 0;
+        }
 
           .subjects-card1-section .subjects-card1-bg-rect:nth-child(3) {
             bottom: 8%;
@@ -308,7 +334,8 @@ export default function SubjectsCard1({ }) {
           }
 
           .subjects-card1-section .subjects-card1-bg-rect:nth-child(2) {
-            top: 40%;
+           top: 14%;
+        width: 96px
           }
 
           .subjects-card1-section .subjects-card1-bg-rect:nth-child(3) {
