@@ -75,6 +75,14 @@ export default function Accordion() {
           font-size: 0.95rem;
           line-height: 1.5;
         }
+                  @media (max-width: 575px) {
+                          .card {
+          max-width:95vw;
+          color: white;
+          padding: 10px;
+          transition: all 0.3s ease;
+        }
+            }
       `}</style>
         </div>
     );
