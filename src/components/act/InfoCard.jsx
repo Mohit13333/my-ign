@@ -238,7 +238,7 @@ export default function InfoCard() {
                 className="w-100 text-white form-container"
                 style={{
                   borderRadius: "40px",
-                  backgroundImage: "url('/assets/idbprect.png')",
+                  backgroundImage: "url('/assets/actf.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
