@@ -403,7 +403,7 @@
 //   const getDisplayOrder = () => {
 //     const totalSubjects = subjects.length;
 //     const displayOrder = [];
-    
+
 //     // Calculate positions relative to center
 //     for (let i = 0; i < totalSubjects; i++) {
 //       const relativeIndex = (i - currentIndex + totalSubjects) % totalSubjects;
@@ -414,7 +414,7 @@
 //         isCenter: relativeIndex === 0
 //       });
 //     }
-    
+
 //     return displayOrder;
 //   };
 
@@ -468,7 +468,7 @@
 //             {getDisplayOrder().map(({ index, position, isCenter }, displayIndex) => {
 //               const subject = subjects[index];
 //               const isActive = isCenter;
-              
+
 //               return (
 //                 <div
 //                   key={`${index}-${displayIndex}`}
@@ -500,12 +500,12 @@
 //           transform: translateY(20px);
 //           transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 //         }
-        
+
 //         .subjectSection.fade-in {
 //           opacity: 1;
 //           transform: translateY(0);
 //         }
-        
+
 //         .subjectSectionInner {
 //           background: linear-gradient(135deg, #1F3C68, #265A90);
 //           background-size: cover;
@@ -530,7 +530,7 @@
 //           z-index: 2;
 //           border-radius: 20px;
 //         }
-        
+
 //         .rect-1 {
 //           top: 3%;
 //           left: -8%;
@@ -707,7 +707,7 @@
 //           .subjectBubble {
 //             padding: 12px 45px;
 //           }
-          
+
 //           .navButton {
 //             width: 45px;
 //             height: 45px;
@@ -808,18 +808,18 @@
 //             padding: 8px 15px 12px 15px !important;
 //             font-size: 16px !important;
 //           }
-          
+
 //           .subjectBubblesGrid {
 //             gap: 15px;
 //           }
-          
+
 //           .rect-1 {
 //             top: 3%;
 //             left: -8%;
 //             width: 30vw;
 //             height: 7vh;
 //           }
-          
+
 //           .rect-2 {
 //             display: none;
 //           }
@@ -920,11 +920,11 @@
 //   const getVisibleItems = () => {
 //     const visibleItems = [];
 //     const totalVisible = 5; // Show 5 items (2 above, center, 2 below)
-    
+
 //     for (let i = 0; i < totalVisible; i++) {
 //       const relativePosition = i - 2; // -2, -1, 0, 1, 2
 //       const actualIndex = (currentIndex + relativePosition + subjects.length) % subjects.length;
-      
+
 //       let opacity;
 //       if (relativePosition === 0) {
 //         opacity = 1; // Center item
@@ -933,7 +933,7 @@
 //       } else {
 //         opacity = 0.3; // Far items (two levels up/down)
 //       }
-      
+
 //       visibleItems.push({
 //         index: actualIndex,
 //         subject: subjects[actualIndex],
@@ -942,7 +942,7 @@
 //         opacity: opacity
 //       });
 //     }
-    
+
 //     return visibleItems;
 //   };
 
@@ -953,7 +953,7 @@
 //         <div className="testimonialRect rect-1" style={{background: 'rgba(255,255,255,0.1)', borderRadius: '20px'}} />
 //         <div className="testimonialRect rect-2" style={{background: 'rgba(255,255,255,0.08)', borderRadius: '20px'}} />
 //         <div className="testimonialRect rect-3" style={{background: 'rgba(255,255,255,0.06)', borderRadius: '20px'}} />
-        
+
 //         {/* LEFT COLUMN */}
 //         <div className="subjectLeft">
 //           {/* Header */}
@@ -1023,12 +1023,12 @@
 //           transform: translateY(20px);
 //           transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 //         }
-        
+
 //         .subjectSection.fade-in {
 //           opacity: 1;
 //           transform: translateY(0);
 //         }
-        
+
 //         .subjectSectionInner {
 //           background: linear-gradient(135deg, #1F3C68, #265A90);
 //           background-size: cover;
@@ -1051,7 +1051,7 @@
 //           pointer-events: none;
 //           z-index: 1;
 //         }
-        
+
 //         .rect-1 {
 //           top: 3%;
 //           left: -8%;
@@ -1221,7 +1221,7 @@
 //           .subjectBubble {
 //             padding: 12px 45px;
 //           }
-          
+
 //           .navButton {
 //             width: 45px;
 //             height: 45px;
@@ -1264,7 +1264,7 @@
 //             gap: 32px;
 //             padding: 75px 20px;
 //           }
-          
+
 //           .subjectLeft {
 //             margin-left: 0;
 //             width: 100%;
@@ -1313,18 +1313,18 @@
 //             padding: 8px 20px !important;
 //             font-size: 14px !important;
 //           }
-          
+
 //           .centerContainer {
 //             height: 250px;
 //           }
-          
+
 //           .rect-1 {
 //             top: 3%;
 //             left: -8%;
 //             width: 30vw;
 //             height: 7vh;
 //           }
-          
+
 //           .rect-2 {
 //             display: none;
 //           }
@@ -1473,11 +1473,11 @@ export default function SubjectsCard() {
   const getVisibleItems = () => {
     const visibleItems = [];
     const totalVisible = 5; // Show 5 items (2 above, center, 2 below)
-    
+
     for (let i = 0; i < totalVisible; i++) {
       const relativePosition = i - 2; // -2, -1, 0, 1, 2
       const actualIndex = (currentIndex + relativePosition + subjects.length) % subjects.length;
-      
+
       let opacity;
       if (relativePosition === 0) {
         opacity = 1; // Center item
@@ -1486,7 +1486,7 @@ export default function SubjectsCard() {
       } else {
         opacity = 0.3; // Far items (two levels up/down)
       }
-      
+
       visibleItems.push({
         index: actualIndex,
         subject: subjects[actualIndex],
@@ -1495,7 +1495,7 @@ export default function SubjectsCard() {
         opacity: opacity
       });
     }
-    
+
     return visibleItems;
   };
 
@@ -1503,11 +1503,11 @@ export default function SubjectsCard() {
   const getMobileVisibleItems = () => {
     const visibleItems = [];
     const totalVisible = 5; // Show 5 items (2 above, center, 2 below)
-    
+
     for (let i = 0; i < totalVisible; i++) {
       const relativePosition = i - 2; // -2, -1, 0, 1, 2
       const actualIndex = (currentIndex + relativePosition + subjects.length) % subjects.length;
-      
+
       let opacity;
       if (relativePosition === 0) {
         opacity = 1; // Center item
@@ -1516,7 +1516,7 @@ export default function SubjectsCard() {
       } else {
         opacity = 0.3; // Far items (two levels up/down)
       }
-      
+
       visibleItems.push({
         index: actualIndex,
         subject: subjects[actualIndex],
@@ -1525,18 +1525,18 @@ export default function SubjectsCard() {
         opacity: opacity
       });
     }
-    
+
     return visibleItems;
   };
 
   return (
-    <div className={`subjectSection ${isVisible ? 'fade-in' : ''}`} style={{marginTop:isMobile?"40px":"90px"}}>
+    <div className={`subjectSection ${isVisible ? 'fade-in' : ''}`} style={{ marginTop: isMobile ? "25px" : "90px",marginBottom: isMobile ? "50px" : "0" }}>
       <div className="subjectSectionInner">
         {/* Background decorative rectangles */}
-        <div className="testimonialRect rect-1" style={{background: 'rgba(255,255,255,0.1)', borderRadius: '20px'}} />
-        <div className="testimonialRect rect-2" style={{background: 'rgba(255,255,255,0.08)', borderRadius: '20px'}} />
-        <div className="testimonialRect rect-3" style={{background: 'rgba(255,255,255,0.06)', borderRadius: '20px'}} />
-        
+        <div className="testimonialRect rect-1" style={{ background: 'rgba(255,255,255,0.1)', borderRadius: '20px' }} />
+        <div className="testimonialRect rect-2" style={{ background: 'rgba(255,255,255,0.08)', borderRadius: '20px' }} />
+        <div className="testimonialRect rect-3" style={{ background: 'rgba(255,255,255,0.06)', borderRadius: '20px' }} />
+
         {/* LEFT COLUMN */}
         <div className="subjectLeft">
           {/* Header */}
@@ -1559,7 +1559,7 @@ export default function SubjectsCard() {
             onClick={handlePrevious}
             aria-label="Previous subject"
           >
-            <img src="/assets/up.png" alt="up" width={isMobile?40:50} height={isMobile?40:50} />
+            <img src="/assets/up.png" alt="up" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
           </button>
 
           <button
@@ -1567,7 +1567,7 @@ export default function SubjectsCard() {
             onClick={handleNext}
             aria-label="Next subject"
           >
-            <img src="/assets/down.png" alt="down" width={isMobile?40:50} height={isMobile?40:50} />
+            <img src="/assets/down.png" alt="down" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
           </button>
 
           {/* Mobile Layout - Now using centered positioning like desktop */}
@@ -1918,7 +1918,7 @@ export default function SubjectsCard() {
             flex-direction: column;
             align-items: center;
             gap: 32px;
-            padding: 75px 20px;
+            padding:41px 20px 85px 20px;
           }
           
           .subjectLeft {
@@ -1999,10 +1999,11 @@ export default function SubjectsCard() {
             width: 35px;
             height: 35px;
             font-size: 14px;
+            margin-top: 34px !important;
           }
 
           .subjectRight {
-            padding: 15px 0 !important;
+            padding: 40px 0 3px 0 !important;
           }
 
           .upButton {
