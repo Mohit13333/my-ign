@@ -1393,7 +1393,7 @@ export default function SubjectsCard() {
     "IGCSE Further Math"
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(2); // Start with the highlighted one
+  const [currentIndex, setCurrentIndex] = useState(2);
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
@@ -1413,7 +1413,7 @@ export default function SubjectsCard() {
     return () => window.removeEventListener('resize', checkDevice);
   }, []);
 
-  // Auto scroll effect with smooth transition
+  // Auto scroll effect
   useEffect(() => {
     if (!isAutoScrolling || isPaused) return;
 
@@ -1422,8 +1422,8 @@ export default function SubjectsCard() {
       setTimeout(() => {
         setCurrentIndex((prev) => (prev < subjects.length - 1 ? prev + 1 : 0));
         setIsTransitioning(false);
-      }, 150); // Small delay for transition effect
-    }, 3000); // Change every 3 seconds
+      }, 300);
+    }, 3000);
 
     return () => clearInterval(autoScrollInterval);
   }, [isAutoScrolling, isPaused, subjects.length]);
@@ -1434,8 +1434,7 @@ export default function SubjectsCard() {
     setTimeout(() => {
       setCurrentIndex((prev) => (prev > 0 ? prev - 1 : subjects.length - 1));
       setIsTransitioning(false);
-    }, 150);
-    // Resume auto scroll after 5 seconds of inactivity
+    }, 300);
     setTimeout(() => setIsAutoScrolling(true), 1500);
   };
 
@@ -1445,19 +1444,18 @@ export default function SubjectsCard() {
     setTimeout(() => {
       setCurrentIndex((prev) => (prev < subjects.length - 1 ? prev + 1 : 0));
       setIsTransitioning(false);
-    }, 150);
-    // Resume auto scroll after 5 seconds of inactivity
+    }, 300);
     setTimeout(() => setIsAutoScrolling(true), 1500);
   };
 
   const handleSubjectClick = (index) => {
+    if (index === currentIndex) return;
     setIsAutoScrolling(false);
     setIsTransitioning(true);
     setTimeout(() => {
       setCurrentIndex(index);
       setIsTransitioning(false);
-    }, 150);
-    // Resume auto scroll after 5 seconds of inactivity
+    }, 300);
     setTimeout(() => setIsAutoScrolling(true), 1500);
   };
 
@@ -1469,68 +1467,52 @@ export default function SubjectsCard() {
     setIsPaused(false);
   };
 
-  // Desktop version: Get visible items with proper positioning and opacity
-  const getVisibleItems = () => {
-    const visibleItems = [];
-    const totalVisible = 5; // Show 5 items (2 above, center, 2 below)
-
-    for (let i = 0; i < totalVisible; i++) {
-      const relativePosition = i - 2; // -2, -1, 0, 1, 2
-      const actualIndex = (currentIndex + relativePosition + subjects.length) % subjects.length;
-
+  // Create infinite scroll items
+  const createInfiniteItems = () => {
+    // Create extended array for smooth infinite scrolling
+    const extendedSubjects = [...subjects, ...subjects, ...subjects];
+    const centerOffset = subjects.length; // Start from middle array
+    
+    return extendedSubjects.map((subject, index) => {
+      const actualIndex = index % subjects.length;
+      const relativePosition = index - (centerOffset + currentIndex);
+      
+      // Only show items within reasonable distance
+      if (Math.abs(relativePosition) > 6) return null;
+      
       let opacity;
+      let scale = 1;
+      
       if (relativePosition === 0) {
-        opacity = 1; // Center item
+        opacity = 1;
+        scale = 1.08;
       } else if (Math.abs(relativePosition) === 1) {
-        opacity = 0.6; // Adjacent items (one level up/down)
+        opacity = 0.6;
+        scale = 1;
+      } else if (Math.abs(relativePosition) === 2) {
+        opacity = 0.3;
+        scale = 0.95;
       } else {
-        opacity = 0.3; // Far items (two levels up/down)
+        opacity = 0.15;
+        scale = 0.9;
       }
 
-      visibleItems.push({
+      return {
+        key: `${actualIndex}-${index}`,
         index: actualIndex,
-        subject: subjects[actualIndex],
+        subject: subject,
         position: relativePosition,
         isCenter: relativePosition === 0,
-        opacity: opacity
-      });
-    }
-
-    return visibleItems;
+        opacity: opacity,
+        scale: scale
+      };
+    }).filter(Boolean);
   };
 
-  // Mobile version: Use same logic as desktop but with mobile-specific spacing
-  const getMobileVisibleItems = () => {
-    const visibleItems = [];
-    const totalVisible = 5; // Show 5 items (2 above, center, 2 below)
-
-    for (let i = 0; i < totalVisible; i++) {
-      const relativePosition = i - 2; // -2, -1, 0, 1, 2
-      const actualIndex = (currentIndex + relativePosition + subjects.length) % subjects.length;
-
-      let opacity;
-      if (relativePosition === 0) {
-        opacity = 1; // Center item
-      } else if (Math.abs(relativePosition) === 1) {
-        opacity = 0.6; // Adjacent items (one level up/down)
-      } else {
-        opacity = 0.3; // Far items (two levels up/down)
-      }
-
-      visibleItems.push({
-        index: actualIndex,
-        subject: subjects[actualIndex],
-        position: relativePosition,
-        isCenter: relativePosition === 0,
-        opacity: opacity
-      });
-    }
-
-    return visibleItems;
-  };
+  const visibleItems = createInfiniteItems();
 
   return (
-    <div className={`subjectSection ${isVisible ? 'fade-in' : ''}`} style={{ marginTop: isMobile ? "25px" : "90px",marginBottom: isMobile ? "50px" : "0" }}>
+    <div className={`subjectSection ${isVisible ? 'fade-in' : ''}`} style={{ marginTop: isMobile ? "25px" : "90px", marginBottom: isMobile ? "50px" : "0" }}>
       <div className="subjectSectionInner">
         {/* Background decorative rectangles */}
         <div className="testimonialRect rect-1" style={{ background: 'rgba(255,255,255,0.1)', borderRadius: '20px' }} />
@@ -1539,21 +1521,18 @@ export default function SubjectsCard() {
 
         {/* LEFT COLUMN */}
         <div className="subjectLeft">
-          {/* Header */}
           <span className="subjectHeader">
             <span className="SubHeading">Subjects</span>
           </span>
-
-          {/* Heading */}
           <h2 className="subjectTitle">
             LOREM IPSUM DOLOR SIT AMET,
             CONSECTETUR ADIPISCING
           </h2>
         </div>
 
-        {/* RIGHT COLUMN */}
+        {/* RIGHT COLUMN - Fixed Container */}
         <div className="subjectRight" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          {/* Navigation Buttons - Show on both mobile and desktop */}
+          {/* Navigation Buttons */}
           <button
             className="navButton upButton mt-4"
             onClick={handlePrevious}
@@ -1570,51 +1549,27 @@ export default function SubjectsCard() {
             <img src="/assets/down.png" alt="down" width={isMobile ? 40 : 50} height={isMobile ? 40 : 50} />
           </button>
 
-          {/* Mobile Layout - Now using centered positioning like desktop */}
-          {isMobile ? (
-            <div className="mobileContainer">
-              <div className="mobileSubjectsList">
-                {getMobileVisibleItems().map(({ index, subject, position, isCenter, opacity }) => (
-                  <div
-                    key={`${index}-${position}`}
-                    className={`mobileSubjectItem ${isCenter ? 'center-item' : ''} ${isTransitioning ? 'transitioning' : ''}`}
-                    onClick={() => handleSubjectClick(index)}
-                    style={{
-                      opacity: opacity,
-                      transform: `translateY(${position * 50}px)`,
-                      zIndex: isCenter ? 10 : 5 - Math.abs(position)
-                    }}
-                  >
-                    <div className={`subjectBubble ${isCenter ? 'highlighted' : ''}`}>
-                      {subject}
-                    </div>
+          {/* Fixed Container for Infinite Scroll */}
+          <div className="fixedScrollContainer">
+            <div className="scrollingContent">
+              {visibleItems.map(({ key, index, subject, position, isCenter, opacity, scale }) => (
+                <div
+                  key={key}
+                  className={`scrollItem ${isCenter ? 'center-item' : ''} ${isTransitioning ? 'transitioning' : ''}`}
+                  onClick={() => handleSubjectClick(index)}
+                  style={{
+                    opacity: opacity,
+                    transform: `translateY(${position * (isMobile ? 50 : 60)}px) scale(${scale})`,
+                    zIndex: isCenter ? 10 : Math.max(1, 5 - Math.abs(position))
+                  }}
+                >
+                  <div className={`subjectBubble ${isCenter ? 'highlighted' : ''}`}>
+                    {subject}
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          ) : (
-            /* Desktop Layout - Static Container for Center Item */
-            <div className="centerContainer">
-              <div className="subjectsList">
-                {getVisibleItems().map(({ index, subject, position, isCenter, opacity }) => (
-                  <div
-                    key={`${index}-${position}`}
-                    className={`subjectItem ${isCenter ? 'center-item' : ''} ${isTransitioning ? 'transitioning' : ''}`}
-                    onClick={() => handleSubjectClick(index)}
-                    style={{
-                      opacity: opacity,
-                      transform: `translateY(${position * 60}px)`,
-                      zIndex: isCenter ? 10 : 5 - Math.abs(position)
-                    }}
-                  >
-                    <div className={`subjectBubble ${isCenter ? 'highlighted' : ''}`}>
-                      {subject}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+          </div>
         </div>
       </div>
 
@@ -1722,11 +1677,11 @@ export default function SubjectsCard() {
           flex: 1;
           min-width: 500px;
           max-width: 65%;
-          padding-top:23px;
+          padding-top: 23px;
         }
 
-        /* Desktop Layout Styles */
-        .centerContainer {
+        /* Fixed Container for Infinite Scroll */
+        .fixedScrollContainer {
           position: relative;
           width: 100%;
           max-width: 700px;
@@ -1737,7 +1692,7 @@ export default function SubjectsCard() {
           overflow: hidden;
         }
 
-        .subjectsList {
+        .scrollingContent {
           position: relative;
           width: 100%;
           height: 100%;
@@ -1746,53 +1701,18 @@ export default function SubjectsCard() {
           justify-content: center;
         }
 
-        .subjectItem {
+        .scrollItem {
           position: absolute;
           width: 100%;
           display: flex;
           justify-content: center;
           cursor: pointer;
-          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          will-change: transform, opacity;
         }
 
-        .subjectItem.transitioning {
-          transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
-          filter: blur(1px);
-        }
-
-        /* Mobile Layout Styles - Now using same logic as desktop */
-        .mobileContainer {
-          position: relative;
-          width: 100%;
-          max-width: 600px;
-          height: 300px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          overflow: hidden;
-        }
-
-        .mobileSubjectsList {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-
-        .mobileSubjectItem {
-          position: absolute;
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          cursor: pointer;
-          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .mobileSubjectItem.transitioning {
-          transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
-          filter: blur(1px);
+        .scrollItem.transitioning {
+          transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
         }
 
         .subjectBubble {
@@ -1800,7 +1720,7 @@ export default function SubjectsCard() {
           font-size: 1.2vw;
           font-weight: 500;
           padding: 15px 40px;
-          transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
           user-select: none;
           text-align: center;
           letter-spacing: 0.02em;
@@ -1825,7 +1745,6 @@ export default function SubjectsCard() {
           font-weight: 700 !important;
           box-shadow: 0 4px 12px rgba(0,0,0,0.25) !important;
           border: 2px solid #a8cfff !important;
-          transform: scale(1.08);
         }
 
         .navButton {
@@ -1886,7 +1805,7 @@ export default function SubjectsCard() {
           }
 
           .subjectTitle {
-          width: 358px;
+            width: 358px;
             font-size: 18px !important;
             line-height: 1.4;
           }
@@ -1904,11 +1823,7 @@ export default function SubjectsCard() {
             font-size: 18px !important;
           }
 
-          .centerContainer {
-            height: 250px;
-          }
-
-          .mobileContainer {
+          .fixedScrollContainer {
             height: 250px;
           }
         }
@@ -1918,7 +1833,7 @@ export default function SubjectsCard() {
             flex-direction: column;
             align-items: center;
             gap: 32px;
-            padding:41px 20px 85px 20px;
+            padding: 41px 20px 85px 20px;
           }
           
           .subjectLeft {
@@ -1942,8 +1857,9 @@ export default function SubjectsCard() {
             max-width: 100%;
           }
 
-          .mobileContainer {
+          .fixedScrollContainer {
             height: 280px;
+            max-width: 600px;
           }
 
           .subjectBubble {
@@ -1973,7 +1889,7 @@ export default function SubjectsCard() {
             font-size: 13px !important;
           }
           
-          .mobileContainer {
+          .fixedScrollContainer {
             height: 250px;
           }
           

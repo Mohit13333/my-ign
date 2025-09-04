@@ -23,7 +23,7 @@ function USPItem({ number, icon, title, desc }) {
       data-scroll-repeat
       style={{ animationDelay: `${0.2 + number * 0.05}s`, padding: "0 10px" }}
     >
-      <div className="d-flex align-items-start mb-4">
+      <div className="d-flex align-items-start">
         <div
           className="bg-teal rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0"
           style={{
@@ -51,7 +51,6 @@ function USPItem({ number, icon, title, desc }) {
                 objectFit: "contain",
                 mixBlendMode: "multiply",
                 marginRight: isMobile? "45px":"0",
-            marginTop:isMobile? "35px":"0",
               },
             })}
           </div>
@@ -68,7 +67,7 @@ function USPItem({ number, icon, title, desc }) {
           backgroundClip: "text",
           color: "transparent",
           zIndex: 1,
-          marginTop: isMobile ? "20px" : "50px",
+          marginTop: isMobile ? "0" : "50px",
           borderTop: "1px solid rgba(0, 164, 145, 0.2)",
           letterSpacing: "2px",
           paddingTop: "10px", // Optional: Adds spacing above text so the border doesn't touch it
@@ -196,7 +195,7 @@ function UpsSection() {
           data-scroll-repeat
           style={{ animationDelay: "0.7s" }}>
           <button
-            className="btn fw-bold d-flex align-items-center mx-auto rounded-pill"
+            className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
             style={{
               background: "linear-gradient(90deg,#161664, #3F88BA)",
               color: 'white',
@@ -211,7 +210,7 @@ function UpsSection() {
           >
             MEET OUR TRAINERS
             <div
-              className="ms-3 rounded-circle d-flex align-items-center justify-content-center fade-in-section"
+              className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
@@ -220,7 +219,7 @@ function UpsSection() {
                 height: "2.5rem",
                 background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
                 animationDelay: "0.75s",
-                marginLeft: "2.1rem !important"
+                marginLeft: "2.1rem"
               }}
             >
               <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
@@ -264,6 +263,29 @@ function UpsSection() {
             font-size: 22px !important;
           }
         }
+@media (max-width: 575px) {
+          .custom-grid {
+  gap: .5rem;
+}
+  .cust-text {
+    background: linear-gradient(90deg, #161664, #3F88BA) !important;
+    color: white !important;
+    padding: 10px 10px 10px 20px !important;
+    border: none !important;
+    transition: opacity 0.3s ease !important;
+    letter-spacing: 1px !important;
+    font-size: clamp(1rem, 1.1vw, 1.1rem) !important;
+  }
+
+  .custom-height {
+    width: 30px !important;
+    height: 30px !important;
+    background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
+    animation-delay: 0.75s !important;
+    margin-left: 1rem !important;
+  }
+}
+
       `}</style>
     </div>
   );

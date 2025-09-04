@@ -394,7 +394,6 @@ const FAQSection = () => {
                     marginBottom: isMobile ? "10px" : "20px",
                     transition: "all 0.3s ease-in-out",
                     maxHeight: openIndex === index ? "10rem" : "0",
-                    paddingBottom: openIndex === index ? "1rem" : "0",
                   }}
                 >
                   <p

@@ -24,7 +24,7 @@ export default function IgniteAchievements() {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: isMobile ? "95vw" : '70vw', animationDelay: "0.15s", margin: "0 auto",padding:"28px 0px 48px 0px", }}>
+        style={{ maxWidth: isMobile ? "95vw" : '70vw', animationDelay: "0.15s", margin: "0 auto", padding: "28px 0px 48px 0px", }}>
 
         {/* Header Section */}
         <div className="text-center mb-md-5 mb-4 fade-in-section"
@@ -48,7 +48,7 @@ export default function IgniteAchievements() {
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle"
-              style={{ animationDelay: "0.2s", color: "#19245E !important",maxWidth:"700px !important" }}
+              style={{ animationDelay: "0.2s", color: "#19245E !important", maxWidth: "700px !important" }}
             >
               LOREM IPSUM DOLOR SIT AMET,<span className="highlight">CONSECTETUR</span> ADIPISCING
             </h2>
@@ -63,7 +63,7 @@ export default function IgniteAchievements() {
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               animationDelay: "0.45s",
-              fontSize: isMobile ? "16px" : "23px"
+              fontSize: isMobile ? "14px" : "23px"
             }}>
             Choosing us means partnering with experienced coaches
             <br className="d-none d-md-block" />
@@ -80,12 +80,12 @@ export default function IgniteAchievements() {
             data-scroll-class="is-inview"
             data-scroll-repeat
             style={{ animationDelay: "0.5s" }}>
-            <div className="p-md-4 p-3 d-flex flex-md-row flex-column align-items-center" style={{
+            <div className="p-md-4 px-3 py-2 d-flex flex-md-row flex-column align-items-center" style={{
               backgroundImage: "url('/assets/linear1.png')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               borderRadius: '1.5rem',
-              minHeight: '180px'
+              minHeight: isMobile ? "0" : '180px',
             }}>
               <div className="flex-shrink-0 me-md-4 mb-md-0 ">
                 <div className="fw-bold" style={{
@@ -93,8 +93,9 @@ export default function IgniteAchievements() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   borderRadius: "40px",
-                  fontSize: isMobile ? "60px" : "80px",
+                  fontSize: isMobile ? "40px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
+                  marginRight: isMobile ? "65px" : "0px",
                 }}>60%</div>
               </div>
               <div
@@ -108,7 +109,7 @@ export default function IgniteAchievements() {
                   background: "linear-gradient(90deg, #00A491, #003E37)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: isMobile ? "17px" : "25px"
+                  fontSize: isMobile ? "13px" : "25px"
                 }}>
                   LOREM IPSUM DOLOR
                 </h3>
@@ -134,12 +135,12 @@ export default function IgniteAchievements() {
             data-scroll-class="is-inview"
             data-scroll-repeat
             style={{ animationDelay: "0.55s" }}>
-            <div className="p-md-4 p-3 d-flex flex-md-row flex-column align-items-center" style={{
+            <div className="p-md-4 px-3 py-2 d-flex flex-md-row flex-column align-items-center" style={{
               backgroundImage: "url('/assets/linear2.png')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               borderRadius: '1.5rem',
-              minHeight: '180px'
+              minHeight: isMobile ? "0" : '180px',
             }}>
               <div className="flex-shrink-0 me-md-4 mb-md-0 ">
                 <div className="fw-bold" style={{
@@ -147,8 +148,9 @@ export default function IgniteAchievements() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   borderRadius: "40px",
-                  fontSize: isMobile ? "60px" : "80px",
+                  fontSize: isMobile ? "40px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
+                  marginRight: isMobile ? "65px" : "0px",
                 }}>30+</div>
               </div>
               <div
@@ -162,7 +164,7 @@ export default function IgniteAchievements() {
                   background: "linear-gradient(90deg,#161664, #3F88BA)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: isMobile ? "17px" : "25px"
+                  fontSize: isMobile ? "13px" : "25px"
                 }}>
                   LOREM IPSUM DOLOR
                 </h3>
@@ -188,12 +190,12 @@ export default function IgniteAchievements() {
             data-scroll-class="is-inview"
             data-scroll-repeat
             style={{ animationDelay: "0.6s" }}>
-            <div className="p-md-4 p-3 d-flex flex-md-row flex-column align-items-center" style={{
+            <div className="p-md-4 px-3 py-2 d-flex flex-md-row flex-column align-items-center" style={{
               backgroundImage: "url('/assets/linear3.png')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               borderRadius: '1.5rem',
-              minHeight: '180px'
+              minHeight: isMobile ? "0" : '180px',
             }}>
               <div className="flex-shrink-0 me-md-4 mb-md-0 ">
                 <div className="fw-bold" style={{
@@ -201,8 +203,9 @@ export default function IgniteAchievements() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   borderRadius: "40px",
-                  fontSize: isMobile ? "60px" : "80px",
+                  fontSize: isMobile ? "40px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
+                  marginRight: isMobile ? "65px" : "0px",
                 }}>60%</div>
               </div>
               <div
@@ -216,7 +219,7 @@ export default function IgniteAchievements() {
                   background: "linear-gradient(90deg,#161664, #3F88BA)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: isMobile ? "17px" : "25px"
+                  fontSize: isMobile ? "13px" : "25px"
                 }}>
                   LOREM IPSUM DOLOR
                 </h3>
@@ -242,12 +245,12 @@ export default function IgniteAchievements() {
             data-scroll-class="is-inview"
             data-scroll-repeat
             style={{ animationDelay: "0.65s" }}>
-            <div className="p-md-4 p-3 d-flex flex-md-row flex-column align-items-center" style={{
+            <div className="p-md-4 px-3 py-2 d-flex flex-md-row flex-column align-items-center" style={{
               backgroundImage: "url('/assets/linear4.png')",
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               borderRadius: '1.5rem',
-              minHeight: '180px'
+              minHeight: isMobile ? "0" : '180px',
             }}>
               <div className="flex-shrink-0 me-md-4 mb-md-0 ">
                 <div className="fw-bold" style={{
@@ -255,8 +258,9 @@ export default function IgniteAchievements() {
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   borderRadius: "40px",
-                  fontSize: isMobile ? "60px" : "80px",
+                  fontSize: isMobile ? "40px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
+                  marginRight: isMobile ? "65px" : "0px",
                 }}>30+</div>
               </div>
               <div
@@ -270,7 +274,7 @@ export default function IgniteAchievements() {
                   background: "linear-gradient(90deg, #00A491, #003E37)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
-                  fontSize: isMobile ? "17px" : "25px"
+                  fontSize: isMobile ? "13px" : "25px"
                 }}>
                   LOREM IPSUM DOLOR
                 </h3>
@@ -298,7 +302,7 @@ export default function IgniteAchievements() {
           data-scroll-repeat
           style={{ animationDelay: "0.7s" }}>
           <button
-            className="btn fw-bold d-flex align-items-center mx-auto rounded-pill"
+            className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
             style={{
               background: "linear-gradient(90deg,#161664, #3F88BA)",
               color: 'white',
@@ -307,14 +311,14 @@ export default function IgniteAchievements() {
               transition: 'opacity 0.3s ease',
               letterSpacing: "3px",
               fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
-              marginTop:isMobile?"auto":"61px !important"
+              marginTop: isMobile ? "auto" : "61px !important"
             }}
             onMouseEnter={(e) => e.target.style.opacity = "0.9"}
             onMouseLeave={(e) => e.target.style.opacity = "1"}
           >
             GET A FREE DEMO
             <div
-              className="ms-3 rounded-circle d-flex align-items-center justify-content-center fade-in-section"
+              className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
@@ -323,7 +327,7 @@ export default function IgniteAchievements() {
                 height: "2.5rem",
                 background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
                 animationDelay: "0.75s",
-                marginLeft: "2.1rem !important"
+                marginLeft: "2.1rem "
               }}
             >
               <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
@@ -361,6 +365,46 @@ export default function IgniteAchievements() {
 }
 
         }
+@media (max-width: 575px) {
+  .cust-text {
+    background: linear-gradient(90deg, #161664, #3F88BA) !important;
+    color: white !important;
+    padding: 10px 10px 10px 20px !important;
+    border: none !important;
+    transition: opacity 0.3s ease !important;
+    letter-spacing: 1px !important;
+    font-size: clamp(1rem, 1.1vw, 1.1rem) !important;
+  }
+
+  .custom-height {
+    width: 30px !important;
+    height: 30px !important;
+    background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
+    animation-delay: 0.75s !important;
+    margin-left: 1rem !important;
+  }
+}
+  @media (min-width: 768px) {
+  .cust-text {
+    background: linear-gradient(90deg, #161664, #3F88BA) !important;
+    color: white !important;
+    padding: 12px 14px 12px 20px !important;
+    border: none !important;
+    transition: opacity 0.3s ease !important;
+    letter-spacing: 3px !important;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem) !important;
+    margin-top: 61px !important;
+  }
+
+  .custom-height {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
+    animation-delay: 0.75s !important;
+    margin-left: 2.1rem !important;
+  }
+}
+
       `}</style>
     </div>
   );

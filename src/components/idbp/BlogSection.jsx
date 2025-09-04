@@ -1014,7 +1014,7 @@ const Blog = () => {
     return (
         <section className="blogSection">
             <div className="container">
-                <div className="row gap-5 gap-lg-0">
+                <div className="row gap-3 gap-lg-0">
                     <div className="col-12 col-lg-4 blogLeft">
                         <div
                             className="fade-in-section blogHeadingRow"

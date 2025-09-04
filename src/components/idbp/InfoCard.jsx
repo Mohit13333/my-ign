@@ -1879,7 +1879,7 @@ export default function InfoCard() {
 
               <div className="d-flex gap-3">
                 <button
-                  className="btn btng fw-bold text-uppercase d-flex justify-content-between align-items-center shadow"
+                  className="btn cust-text btng fw-bold text-uppercase d-flex justify-content-between align-items-center shadow"
                   style={{
                     background: "linear-gradient(to right, #A3CAF5, #E7F6FF)",
                     color: "#273972",
@@ -1895,6 +1895,7 @@ export default function InfoCard() {
                   <img
                     src="/assets/rar.png"
                     alt="right"
+                    className="custom-height"
                     width={35}
                     height={35}
                   />
@@ -2512,9 +2513,9 @@ margin-block: 30px !important;
             justify-content: space-around !important;
             align-items: center !important;
             gap: 0.5rem !important;
-            padding: 1.5rem 1rem !important;
+            padding: 1.5rem 1.6rem !important;
             margin-bottom: 1.5rem !important;
-            background: rgba(255, 255, 255, 0.15) !important;
+            background: rgba(255,255,255,.07) !important;
           }
 
           .info-col {
@@ -2605,6 +2606,22 @@ margin-block: 30px !important;
           }
         }
          }
+        @media (max-width: 575px) {
+  .cust-text {
+    padding: 10px 10px 10px 20px !important;
+    border: none !important;
+    transition: opacity 0.3s ease !important;
+    letter-spacing: 1px !important;
+    font-size: clamp(1rem, 1.1vw, 1.1rem) !important;
+  }
+
+  .custom-height {
+    width: 30px !important;
+    height: 30px !important;
+    animation-delay: 0.75s !important;
+    margin-left: 1rem !important;
+  }
+}
       `}</style>
     </div>
   );
