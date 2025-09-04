@@ -98,7 +98,7 @@ body {
 @media (max-width: 575px) {
   .SubHeading {
     font-size: 18px;
-    padding: 0 22px;
+    padding: 0 24px;
   }
 
   .SubHeading:before,
