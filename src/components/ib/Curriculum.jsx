@@ -441,7 +441,7 @@ export default function IBCurriculumStages() {
   gap: .5rem;
 }
   .container1{
-  max-width:95vw !important;
+  max-width:90vw !important;
   margin:0 auto !important;
   }
   .cust-text {

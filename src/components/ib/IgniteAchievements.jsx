@@ -6,7 +6,7 @@
 //       data-scroll-class="is-inview"
 //       data-scroll-repeat
 //       style={{ animationDelay: "0.1s" }}>
-//       <div className=" marginign fade-in-section"
+//       <div className="container fade-in-section"
 //         data-scroll
 //         data-scroll-class="is-inview"
 //         data-scroll-repeat
@@ -494,7 +494,7 @@ export default function IgniteAchievements() {
     return () => window.removeEventListener('resize', checkDevice);
   }, []);
   return (
-    <div className="fade-in-section marginign " data-scroll
+    <div className=" py-md-5 py-4 fade-in-section" data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{ animationDelay: "0.1s" }}>
@@ -550,8 +550,8 @@ export default function IgniteAchievements() {
           data-scroll-repeat
           style={{ animationDelay: "0.5s" }}>
 
-          {/* Desktop Stats  marginign */}
-          <div className="desktop-stats- marginign">
+          {/* Desktop Stats Container */}
+          <div className="desktop-stats-container">
             {/* Left Side Content - Header + Button */}
             <div className="left-content">
               {/* Desktop Header */}
@@ -671,7 +671,8 @@ export default function IgniteAchievements() {
                   <div className="stat-number teal-text">60%</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title teal-text">OF RICH TUTORING EXPERIENCE</h4>
+                    <h4 className="stat-title teal-text">LOREM IPSUM DOLOR</h4>
+                    <p className="stat-description">Lorem ipsum dolor sit amet, consectetur elit.</p>
                   </div>
                 </div>
 
@@ -680,7 +681,8 @@ export default function IgniteAchievements() {
                   <div className="stat-number blue-text">30+</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title blue-text">TRULY HAPPY STUDENTS FROM UAE</h4>
+                    <h4 className="stat-title blue-text">LOREM IPSUM DOLOR</h4>
+                    <p className="stat-description">Lorem ipsum dolor sit amet, consectetur elit.</p>
                   </div>
                 </div>
               </div>
@@ -692,7 +694,8 @@ export default function IgniteAchievements() {
                   <div className="stat-number blue-text">60%</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title blue-text">OF RICH TUTORING EXPERIENCE</h4>
+                    <h4 className="stat-title blue-text">LOREM IPSUM DOLOR</h4>
+                    <p className="stat-description">Lorem ipsum dolor sit amet, consectetur elit.</p>
                   </div>
                 </div>
 
@@ -701,7 +704,8 @@ export default function IgniteAchievements() {
                   <div className="stat-number teal-text">30+</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title teal-text">TRULY HAPPY STUDENTS FROM UAE</h4>
+                    <h4 className="stat-title teal-text">LOREM IPSUM DOLOR</h4>
+                    <p className="stat-description">Lorem ipsum dolor sit amet, consectetur elit.</p>
                   </div>
                 </div>
               </div>
@@ -804,14 +808,14 @@ export default function IgniteAchievements() {
         }
         
         .blue-text {
-          background: linear-gradient(90deg, #3F88BA, #161664);
+          background: linear-gradient(90deg, #161664, #3F88BA);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
 
         /* Desktop Layout */
-        .desktop-stats- marginign {
+        .desktop-stats-container {
           display: flex;
           align-items: flex-start;
           gap: 3rem;
@@ -820,63 +824,79 @@ export default function IgniteAchievements() {
         
         .left-content {
           flex: 0 0 45%;
-          /* No background color for left side */
+          margin-top: 2.5rem;
         }
         
- .stats-grid-desktop {
-  flex: 1;
-  background: url("/assets/Rectangle125.png") no-repeat center/cover;
-  border-radius: 20px;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
+        .stats-grid-desktop {
+          flex: 1;
+          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          border-radius: 20px;
+          padding: 3rem;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          justify-content: center;
+        }
 
         
         .stats-row {
           display: flex;
-          gap: 2rem;
+          gap: 4rem;
         }
         
         .stat-card-desktop {
           flex: 1;
           display: flex;
           flex-direction: column;
-          text-align: center;
           gap: 1rem;
         }
         
         .stat-number {
-          font-size: 4rem;
+          font-size: 4.5rem;
           font-weight: 800;
           line-height: 1;
+          margin-bottom: 0.5rem;
         }
         
- .stat-divider {
-  width: 9vw;
-  height: 1px;
-  background: linear-gradient(to right, #00A491, #003E37);
+.stat-divider {
+  width: auto;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 164, 145, 0.2),
+    rgba(0, 62, 55, 0.2)
+  );
   border-radius: 2px;
-  margin: 0 auto;
 }
+
+
 
         
         .stat-content {
           flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
         }
         
         .stat-title {
-          font-size: 1rem;
+          font-size: 1.8rem;
           font-weight: 700;
           line-height: 1.2;
           margin: 0;
           text-transform: uppercase;
         }
 
+        .stat-description {
+          font-size: 1.5rem;
+          line-height: 1.3;
+          margin: 0;
+          color: #666;
+        }
+
         /* Mobile Layout */
         .stats-grid-mobile {
-  background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          background: url("/assets/Rectangle125.png") no-repeat center/cover;
           border-radius: 20px;
           padding: 2rem;
         }
@@ -919,9 +939,6 @@ export default function IgniteAchievements() {
           .custom-grid {
   gap: .5rem;
 }
-  .marginign{
-  marginTop: 7rem !important;
-  }
   .cust-text {
     background: linear-gradient(90deg, #161664, #3F88BA) !important;
     color: white !important;
@@ -945,6 +962,85 @@ export default function IgniteAchievements() {
     margin-left: 1rem !important;
   }
 }
+  @media screen and (min-width: 1300px) and (max-width: 1600px) {
+   .desktop-stats-container {
+          display: flex;
+          align-items: flex-start;
+          gap: 3rem;
+          min-height: 400px;
+        }
+        
+        .left-content {
+          flex: 0 0 45%;
+          margin-top: 0rem;
+        }
+        
+        .stats-grid-desktop {
+          flex: 1;
+          background: url("/assets/Rectangle125.png") no-repeat center/cover;
+          border-radius: 20px;
+          padding: 2rem;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          justify-content: center;
+        }
+
+        
+        .stats-row {
+          display: flex;
+          gap: 2rem;
+        }
+        
+        .stat-card-desktop {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+        
+        .stat-number {
+          font-size: 3rem;
+          font-weight: 800;
+          line-height: 1;
+          margin-bottom: 0.5rem;
+        }
+        
+.stat-divider {
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 164, 145, 0.2),
+    rgba(0, 62, 55, 0.2)
+  );
+  border-radius: 2px;
+}
+
+
+        
+        .stat-content {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        
+        .stat-title {
+          font-size: 1.3rem;
+          font-weight: 700;
+          line-height: 1.2;
+          margin: 0;
+          text-transform: uppercase;
+        }
+
+        .stat-description {
+          font-size: 1.1rem;
+          line-height: 1.3;
+          margin: 0;
+          color: #666;
+        }
+      }
       `}</style>
     </div>
   );
