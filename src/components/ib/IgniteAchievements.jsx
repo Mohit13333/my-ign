@@ -6,7 +6,7 @@
 //       data-scroll-class="is-inview"
 //       data-scroll-repeat
 //       style={{ animationDelay: "0.1s" }}>
-//       <div className="container fade-in-section"
+//       <div className=" marginign fade-in-section"
 //         data-scroll
 //         data-scroll-class="is-inview"
 //         data-scroll-repeat
@@ -494,7 +494,7 @@ export default function IgniteAchievements() {
     return () => window.removeEventListener('resize', checkDevice);
   }, []);
   return (
-    <div className=" py-md-5 py-4 fade-in-section" data-scroll
+    <div className="fade-in-section marginign " data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{ animationDelay: "0.1s" }}>
@@ -511,10 +511,10 @@ export default function IgniteAchievements() {
           data-scroll-repeat
           style={{ animationDelay: "0.2s" }}>
           <div className="SubHeading testSubheading">IGNITE ACHIEVEMENTS
-              </div>
+          </div>
 
           {/* Main Title */}
-            <h2
+          <h2
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
@@ -522,7 +522,7 @@ export default function IgniteAchievements() {
             style={{ animationDelay: "0.2s" }}
           >
             LOREM IPSUM DOLOR SIT AMET,<br /> <span className="highlight"> CONSECTETUR{" "}</span>
-           ADIPISCING
+            ADIPISCING
           </h2>
 
           {/* Subtitle */}
@@ -550,8 +550,8 @@ export default function IgniteAchievements() {
           data-scroll-repeat
           style={{ animationDelay: "0.5s" }}>
 
-          {/* Desktop Stats Container */}
-          <div className="desktop-stats-container">
+          {/* Desktop Stats  marginign */}
+          <div className="desktop-stats- marginign">
             {/* Left Side Content - Header + Button */}
             <div className="left-content">
               {/* Desktop Header */}
@@ -562,51 +562,51 @@ export default function IgniteAchievements() {
                 </div>
 
                 {/* Main Title */}
-              <h2
-  className="fw-bold fade-in-section"
-  data-scroll
-  data-scroll-class="is-inview"
-  data-scroll-repeat
-  style={{
-    background: "#19245E",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    animationDelay: "0.35s",
-    fontSize: "2rem",
-    margin: 0, // ✅ removes the margin
-  }}
->
-  LOREM IPSUM DOLOR SIT AMET,
-</h2>
+                <h2
+                  className="fw-bold fade-in-section"
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat
+                  style={{
+                    background: "#19245E",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    animationDelay: "0.35s",
+                    fontSize: "2rem",
+                    margin: 0, // ✅ removes the margin
+                  }}
+                >
+                  LOREM IPSUM DOLOR SIT AMET,
+                </h2>
 
-<h2
-  className="fw-bold fade-in-section"
-  data-scroll
-  data-scroll-class="is-inview"
-  data-scroll-repeat
-  style={{
-    background: "linear-gradient(90deg, #00A491, #003E37)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    animationDelay: "0.4s",
-    fontSize: "2rem",
-    margin: 0, // ✅ removes the margin
-  }}
->
-  CONSECTETUR{" "}
-  <span
-    style={{
-      background: "#19245E",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      animationDelay: "0.4s",
-      fontSize: "2rem",
-      margin: 0, // ✅ removes margin inside span (not needed, but safe)
-    }}
-  >
-    ADIPISCING
-  </span>
-</h2>
+                <h2
+                  className="fw-bold fade-in-section"
+                  data-scroll
+                  data-scroll-class="is-inview"
+                  data-scroll-repeat
+                  style={{
+                    background: "linear-gradient(90deg, #00A491, #003E37)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    animationDelay: "0.4s",
+                    fontSize: "2rem",
+                    margin: 0, // ✅ removes the margin
+                  }}
+                >
+                  CONSECTETUR{" "}
+                  <span
+                    style={{
+                      background: "#19245E",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      animationDelay: "0.4s",
+                      fontSize: "2rem",
+                      margin: 0, // ✅ removes margin inside span (not needed, but safe)
+                    }}
+                  >
+                    ADIPISCING
+                  </span>
+                </h2>
 
 
                 {/* Subtitle */}
@@ -620,35 +620,43 @@ export default function IgniteAchievements() {
                     WebkitTextFillColor: "transparent",
                     animationDelay: "0.45s",
                     fontSize: "1.2rem",
-                    marginTop:"16px",
+                    marginTop: "16px",
                   }}>
-                  Choosing us means partnering with experienced coaches<br/> who are dedicated to unlocking your potential.
+                  Choosing us means partnering with experienced coaches<br /> who are dedicated to unlocking your potential.
                 </p>
               </div>
 
               {/* CTA Button */}
               <div className="mb-4">
                 <button
-                  className="btn fw-bold d-flex align-items-center rounded-pill"
+                  className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
                   style={{
                     background: "linear-gradient(90deg,#161664, #3F88BA)",
                     color: 'white',
-                    padding: '1rem 2rem',
+                    padding: '12px 14px 12px 20px',
                     border: 'none',
                     transition: 'opacity 0.3s ease',
-                    fontSize: "1.1rem"
+                    letterSpacing: "3px",
+                    fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
                   }}
                   onMouseEnter={(e) => e.target.style.opacity = "0.9"}
                   onMouseLeave={(e) => e.target.style.opacity = "1"}
                 >
-                  GET A FREE DEMO
+                  GET FREE DEMO
                   <div
-                    className="ms-3 rounded-circle d-flex align-items-center justify-content-center"
+                    className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
+                    data-scroll
+                    data-scroll-class="is-inview"
+                    data-scroll-repeat
+                    style={{
+                      width: "2.5rem",
+                      height: "2.5rem",
+                      background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                      animationDelay: "0.75s",
+                      marginLeft: "2.1rem"
+                    }}
                   >
-                    <img src="/assets/colr.png" alt="rightar" style={{
-                      width: '2rem',
-                      height: '2rem',
-                    }} />
+                    <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
                   </div>
                 </button>
               </div>
@@ -710,29 +718,33 @@ export default function IgniteAchievements() {
 
           {/* Mobile CTA Button */}
           <div className="text-center mb-4">
-            <button
-              className="btn fw-bold d-flex align-items-center mx-auto rounded-pill"
-              style={{
-                background: "linear-gradient(90deg,#161664, #3F88BA)",
-                color: 'white',
-                padding: '0.8rem 1.8rem',
-                border: 'none',
-                transition: 'opacity 0.3s ease',
-                fontSize: "1rem"
-              }}
-              onMouseEnter={(e) => e.target.style.opacity = "0.9"}
-              onMouseLeave={(e) => e.target.style.opacity = "1"}
-            >
-              GET A FREE DEMO
-              <div
-                className="ms-3 rounded-circle d-flex align-items-center justify-content-center"
-              >
-                <img src="/assets/colr.png" alt="rightar" style={{
-                  width: '2rem',
-                  height: '2rem',
-                }} />
-              </div>
-            </button>
+                <button
+                  className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
+                  style={{
+                    background: "linear-gradient(90deg,#161664, #3F88BA)",
+                    color: 'white',
+                    padding: '12px 14px 12px 20px',
+                    border: 'none',
+                    transition: 'opacity 0.3s ease',
+                    letterSpacing: "3px",
+                    fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
+                  }}
+                  onMouseEnter={(e) => e.target.style.opacity = "0.9"}
+                  onMouseLeave={(e) => e.target.style.opacity = "1"}
+                >
+                  GET FREE DEMO
+                  <div
+                    className="custom-height rounded-circle d-flex align-items-center justify-content-center"
+                    style={{
+                      width: "2.5rem",
+                      height: "2.5rem",
+                      background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                      marginLeft: "2.1rem"
+                    }}
+                  >
+                    <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+                  </div>
+                </button>
           </div>
 
           {/* Mobile Stats - 2x2 Grid */}
@@ -799,7 +811,7 @@ export default function IgniteAchievements() {
         }
 
         /* Desktop Layout */
-        .desktop-stats-container {
+        .desktop-stats- marginign {
           display: flex;
           align-items: flex-start;
           gap: 3rem;
@@ -903,6 +915,36 @@ export default function IgniteAchievements() {
             padding: 1.5rem;
           }
         }
+          @media (max-width: 575px) {
+          .custom-grid {
+  gap: .5rem;
+}
+  .marginign{
+  marginTop: 7rem !important;
+  }
+  .cust-text {
+    background: linear-gradient(90deg, #161664, #3F88BA) !important;
+    color: white !important;
+    padding: 8px 8px 8px 13px !important;
+    border: none !important;
+    -webkit-transition: opacity .3s ease !important;
+    -moz-transition: opacity.3s ease!important;
+    -o-transition: opacity.3s ease!important;
+    transition: opacity .3s ease !important;
+    letter-spacing: 1px !important;
+    font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
+    margin-top: 55px !important;
+    font-weight:600 !important;
+  }
+
+  .custom-height {
+    width: 30px !important;
+    height: 30px !important;
+    background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
+    animation-delay: 0.75s !important;
+    margin-left: 1rem !important;
+  }
+}
       `}</style>
     </div>
   );

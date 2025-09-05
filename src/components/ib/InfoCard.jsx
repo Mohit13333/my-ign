@@ -117,8 +117,8 @@ INTERNATIONAL BACCALAUREATE TUTORS IN DUBAI              </h1>
                     <Image
                       src="/assets/medal.png"
                       alt="Grade Support"
-                      width={isMobile ? 20 : 32}
-                      height={isMobile ? 30 : 45}
+                      width={isMobile ? 16 : 32}
+                      height={isMobile ? 25 : 45}
                       className="icon-img"
                     />
                   </div>
@@ -140,8 +140,8 @@ INTERNATIONAL BACCALAUREATE TUTORS IN DUBAI              </h1>
                     <Image
                       src="/assets/person.png"
                       alt="Learning Mode"
-                      width={isMobile ? 20 : 30}
-                      height={isMobile ? 30 : 45}
+                      width={isMobile ? 16 : 30}
+                      height={isMobile ? 25 : 45}
                       className="icon-img"
                     />
                   </div>
@@ -159,8 +159,8 @@ INTERNATIONAL BACCALAUREATE TUTORS IN DUBAI              </h1>
                     <Image
                       src="/assets/location.png"
                       alt="Location"
-                      width={isMobile ? 22 : 32}
-                      height={isMobile ? 28 : 40}
+                      width={isMobile ? 18 : 32}
+                      height={isMobile ? 25 : 40}
                       className="icon-img"
                     />
                   </div>
@@ -739,7 +739,7 @@ margin-block: 30px !important;
 
         @media (max-width: 576px) {
           .info-row {
-            font-size: 0.75rem !important;
+            font-size: 0.5rem !important;
           }
           .icon-img {
             width: 20px !important;
@@ -828,7 +828,7 @@ margin-block: 30px !important;
           }
 
           h1 {
-            font-size: 20px !important;
+            font-size: 27px !important;
             line-height: 1.2 !important;
             text-align: center !important;
             margin-bottom: 1rem !important;
@@ -969,6 +969,13 @@ margin-block: 30px !important;
         .btng{
         min-width:180px !important;
         }
+          .info-col {
+            border-right: 1px solid rgba(255, 255, 255, 0.3) !important;
+            padding-right: 1.8rem !important;
+            font-size: 0.5rem !important;
+            flex:none !important;
+            line-height: 1.2 !important;
+          }
       }
 
         @media (min-width: 768px) {

@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function IBCurriculumStages() {
   return (
     <div
-      className="py-5 overflow-hidden fade-in-section"
+      className="overflow-hidden fade-in-section container1"
       data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
@@ -20,7 +20,6 @@ export default function IBCurriculumStages() {
       >
         <div
           className="curriculumSubSection"
-          style={{ padding: "30px 0", marginBottom: "3rem" }}
         >
           <div className="SubHeading testSubheading">
             STAGES OF THE CURRICULUM
@@ -46,7 +45,6 @@ export default function IBCurriculumStages() {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: "90vw", animationDelay: "0.4s" }}
       >
         <div className="cards-container">
           {/* IBDP Card */}
@@ -76,44 +74,33 @@ export default function IBCurriculumStages() {
               </div>
             </div>
             <div
-              className="text-center fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
-              style={{ animationDelay: "0.7s" }}
+              className="text-center"
             >
               <button
-                className="btn fw-bold d-flex rounded-pill"
+                className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
                 style={{
                   background: "linear-gradient(90deg, #00A491, #003E37)",
-                  color: "white",
-                  padding: "0.8rem 1.8rem",
-                  border: "none",
-                  transition: "opacity 0.3s ease",
-                  fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
+                  color: 'white',
+                  padding: '12px 14px 12px 20px',
+                  border: 'none',
+                  transition: 'opacity 0.3s ease',
+                  letterSpacing: "3px",
+                  fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
                 }}
-                onMouseEnter={(e) => (e.target.style.opacity = "0.9")}
-                onMouseLeave={(e) => (e.target.style.opacity = "1")}
+                onMouseEnter={(e) => e.target.style.opacity = "0.9"}
+                onMouseLeave={(e) => e.target.style.opacity = "1"}
               >
                 EXPLORE 3 COURSES
                 <div
-                  className="ms-3 rounded-circle d-flex align-items-center justify-content-center fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
+                  className="custom-height rounded-circle d-flex align-items-center justify-content-center"
                   style={{
-                    width: "clamp(1.5rem, 2vw, 2rem)",
-                    height: "clamp(1.5rem, 2vw, 2rem)",
+                    width: "2.5rem",
+                    height: "2.5rem",
                     background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                    animationDelay: "0.75s",
+                    marginLeft: "2.1rem"
                   }}
                 >
-                  <img
-                    src="/assets/arrowright.png"
-                    alt="arrright"
-                    width={12}
-                    height={12}
-                  />
+                  <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
                 </div>
               </button>
             </div>
@@ -121,11 +108,7 @@ export default function IBCurriculumStages() {
 
           {/* MYP Card */}
           <div
-            className="card1 card-myp fade-in-section"
-            data-scroll
-            data-scroll-class="is-inview"
-            data-scroll-repeat
-            style={{ animationDelay: "0.55s" }}
+            className="card1 card-myp"
           >
             <div>
               <div className="card-title2 card-title-myp">
@@ -158,44 +141,33 @@ export default function IBCurriculumStages() {
               </div>
             </div>
             <div
-              className="text-center fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
-              style={{ animationDelay: "0.7s" }}
+              className="text-center"
             >
               <button
-                className="btn fw-bold d-flex rounded-pill"
+                className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
                 style={{
-                   background: "linear-gradient(90deg,#161664, #3F88BA)",
-                  color: "white",
-                  padding: "0.8rem 1.8rem",
-                  border: "none",
-                  transition: "opacity 0.3s ease",
-                  fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
+                  background: "linear-gradient(90deg,#161664, #3F88BA)",
+                  color: 'white',
+                  padding: '12px 14px 12px 20px',
+                  border: 'none',
+                  transition: 'opacity 0.3s ease',
+                  letterSpacing: "3px",
+                  fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
                 }}
-                onMouseEnter={(e) => (e.target.style.opacity = "0.9")}
-                onMouseLeave={(e) => (e.target.style.opacity = "1")}
+                onMouseEnter={(e) => e.target.style.opacity = "0.9"}
+                onMouseLeave={(e) => e.target.style.opacity = "1"}
               >
                 EXPLORE 3 COURSES
                 <div
-                  className="ms-3 rounded-circle d-flex align-items-center justify-content-center fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
+                  className="custom-height rounded-circle d-flex align-items-center justify-content-center"
                   style={{
-                    width: "clamp(1.5rem, 2vw, 2rem)",
-                    height: "clamp(1.5rem, 2vw, 2rem)",
+                    width: "2.5rem",
+                    height: "2.5rem",
                     background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                    animationDelay: "0.75s",
+                    marginLeft: "2.1rem"
                   }}
                 >
-                  <img
-                    src="/assets/arrowright.png"
-                    alt="arrright"
-                    width={12}
-                    height={12}
-                  />
+                  <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
                 </div>
               </button>
             </div>
@@ -204,6 +176,10 @@ export default function IBCurriculumStages() {
       </div>
 
       <style jsx>{`
+        .container1{
+  max-width:90vw !important;
+  margin:0 auto !important;
+  }
         .fade-in-section {
           opacity: 0;
           transform: translateY(20px);
@@ -394,11 +370,19 @@ export default function IBCurriculumStages() {
             grid-template-columns: 1fr;
             gap: 1.5rem;
           }
+            .card1{
+            padding:30px 40px;
+                min-height: auto;        /* remove forced height */
+    justify-content: flex-start; 
+            }
+      .card-description {
+    margin-bottom: 20px; /* keep some spacing before button */
+  }
           .program {
-            font-size: 44px!important
+            font-size: 35px!important
           }
           .program1 {
-            font-size: 44px!important
+            font-size: 35px!important
           }
           .curriculumSubHeading {
             font-size: 1.2rem;
@@ -437,14 +421,14 @@ export default function IBCurriculumStages() {
           }
 
           .card-title {
-            font-size: 30px;
+            font-size: 25px;
           }
           .card-title2 {
-            font-size: 30px;
+            font-size: 25px;
           }
 
           .card-description {
-            font-size: 17px;
+            font-size: 16px;
           }
 
           .explore-button {
@@ -452,6 +436,37 @@ export default function IBCurriculumStages() {
             font-size: 14px;
           }
         }
+          @media (max-width: 575px) {
+          .custom-grid {
+  gap: .5rem;
+}
+  .container1{
+  max-width:95vw !important;
+  margin:0 auto !important;
+  }
+  .cust-text {
+                  background: linear-gradient(90deg, #00A491, #003E37),
+    color: white !important;
+    padding: 8px 8px 8px 13px !important;
+    border: none !important;
+    -webkit-transition: opacity .3s ease !important;
+    -moz-transition: opacity.3s ease!important;
+    -o-transition: opacity.3s ease!important;
+    transition: opacity .3s ease !important;
+    letter-spacing: 1px !important;
+    font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
+    margin-top: 45px !important;
+    font-weight:600 !important;
+  }
+
+  .custom-height {
+    width: 30px !important;
+    height: 30px !important;
+    background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
+    animation-delay: 0.75s !important;
+    margin-left: 1rem !important;
+  }
+}
       `}</style>
     </div>
   );
