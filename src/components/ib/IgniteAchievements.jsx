@@ -933,7 +933,7 @@ export default function IgniteAchievements() {
     transition: opacity .3s ease !important;
     letter-spacing: 1px !important;
     font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
-    margin-top: 55px !important;
+    margin-block: 30px !important;
     font-weight:600 !important;
   }
 
