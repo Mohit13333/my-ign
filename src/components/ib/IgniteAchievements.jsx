@@ -815,23 +815,23 @@ export default function IgniteAchievements() {
         }
 
         /* Desktop Layout */
-        .desktop-stats-container {
+ .desktop-stats-container {
           display: flex;
           align-items: flex-start;
           gap: 3rem;
-          min-height: 500px;
+          min-height: 400px;
         }
         
         .left-content {
           flex: 0 0 45%;
-          margin-top: 4.5rem;
+          margin-top: 3.4rem;
         }
         
         .stats-grid-desktop {
           flex: 1;
           background: url("/assets/Rectangle125.png") no-repeat center/cover;
           border-radius: 20px;
-          padding: 3rem;
+          padding: 2rem;
           display: flex;
           flex-direction: column;
           gap: 2rem;
@@ -841,7 +841,7 @@ export default function IgniteAchievements() {
         
         .stats-row {
           display: flex;
-          gap: 4rem;
+          gap: 2rem;
         }
         
         .stat-card-desktop {
@@ -852,14 +852,14 @@ export default function IgniteAchievements() {
         }
         
         .stat-number {
-          font-size: 4.5rem;
+          font-size: 3.3rem;
           font-weight: 800;
           line-height: 1;
           margin-bottom: 0.5rem;
         }
         
 .stat-divider {
-  width: auto;
+  width: 250px;
   height: 2px;
   background: linear-gradient(
     to right,
@@ -868,7 +868,6 @@ export default function IgniteAchievements() {
   );
   border-radius: 2px;
 }
-
 
 
         
@@ -880,7 +879,7 @@ export default function IgniteAchievements() {
         }
         
         .stat-title {
-          font-size: 1.8rem;
+          font-size: 1.5rem;
           font-weight: 700;
           line-height: 1.2;
           margin: 0;
@@ -888,7 +887,7 @@ export default function IgniteAchievements() {
         }
 
         .stat-description {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           line-height: 1.3;
           margin: 0;
           color: #666;
