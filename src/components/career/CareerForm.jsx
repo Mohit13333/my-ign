@@ -217,7 +217,7 @@ SUBMIT            <div
                 width: "2.5rem",
                 height: "2.5rem",
                 background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                marginLeft: "2.1rem"
+                marginLeft: "2.5rem"
               }}
             >
               <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
@@ -284,7 +284,7 @@ font-size: 2.5rem;
           background: transparent;
           outline: none;
           font-size: 16px;
-          color: #0d2344;
+          color: #233467;
           font-family: 'Montserrat', sans-serif;
           appearance: none;
           -webkit-appearance: none;
@@ -306,22 +306,25 @@ font-size: 2.5rem;
           border-bottom: 1px solid #161664;
           padding-bottom: 12px;
         }
-        .phone-input img:first-child {
-          width: 45px;
-          height: 35px;
-        }
+.phone-input img:first-child {
+  width: 45px;
+  height: 35px;
+  border-radius: 8px; /* adjust value as needed */
+}
+
         .phone-input select {
           border: none;
           background: #D9D9D980;
           border-radius: 4px !important;
-          font-size: 14px;
-          color: #0d2344;
+          font-size: 20px;
+          color: #233467;
           width: auto;
-          min-width: 70px;
+          min-width: 80px;
           padding: 4px 8px;
           appearance: none;
           -webkit-appearance: none;
           -moz-appearance: none;
+          font-weight: 800;
         }
 
         .dropdown-arrow {
@@ -395,10 +398,11 @@ font-size: 2.5rem;
         }
 
         .file-note {
-          font-size: 14px;
-          color: #161664;
-          margin-bottom: 15px;
-          text-align: center;
+     font-size: 15px;
+    color: #161664;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
         }
 
  
@@ -408,8 +412,8 @@ font-size: 2.5rem;
           border-radius: 20px;
           text-align: center;
           cursor: pointer;
-          font-weight: 600;
-          font-size: 20px;
+          font-weight: 800;
+          font-size: 22px;
           background: rgba(255, 255, 255, 0.6);
           transition: all 0.3s ease;
           color: #161664;
@@ -590,13 +594,26 @@ font-size: 2.5rem;
     margin-top: 45px !important;
     font-weight:600 !important;
   }
-
+  .phone-input select {
+          border: none;
+          background: #D9D9D980;
+          border-radius: 4px !important;
+          font-size: 14px;
+          color: #233467;
+          width: auto;
+          min-width: 70px;
+          padding: 4px 8px;
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          font-weight: 800;
+        }
   .custom-height {
     width: 30px !important;
     height: 30px !important;
     background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
     animation-delay: 0.75s !important;
-    margin-left: 1rem !important;
+    margin-left: 3rem !important;
   }
 }
       `}</style>

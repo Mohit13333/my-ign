@@ -396,7 +396,7 @@ height: 20px;
           line-height: 1.4;
         }
         .ignite-section {
-     padding: 60px 20px;
+     padding: 5px 20px;
           max-width:100%;
         margin: 40px auto;          
           font-family: 'Montserrat', sans-serif;

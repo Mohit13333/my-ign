@@ -88,6 +88,7 @@ font-size: 1.35vw;
               margin: 0 auto;
             }
             h2 {
+            margin:0 !important;
               font-size: 6.33vw !important;
               font-weight: 800 !important;
               line-height: 36px !important;
