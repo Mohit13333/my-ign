@@ -983,7 +983,7 @@ export default function IgniteAchievements() {
         
         .left-content {
           flex: 0 0 45%;
-          margin-top: 0rem;
+          margin-top: 3.4rem;
         }
         
         .stats-grid-desktop {
