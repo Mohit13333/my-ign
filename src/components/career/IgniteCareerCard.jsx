@@ -118,8 +118,8 @@ export default function IgniteCareerCard() {
   font-family: 'Monstra', sans-serif;
 }
 .icon-height{
-width: 25px;
-height: 25px;
+width: 30px;
+height: 30px;
 }
         .ignite-section {
      padding: 20px 20px;
@@ -139,6 +139,7 @@ height: 25px;
 
         .ignite-left {
           padding-right: 20px;
+          margin-top: 2rem;
         }
 
         .fade-in-section {
@@ -158,7 +159,7 @@ height: 25px;
           justify-content: flex-start;
           gap: 15px;
           margin-top:20px;
-          margin-bottom: 25px;
+          margin-bottom: 20px;
         }
 
         .header-title {
@@ -199,7 +200,7 @@ height: 25px;
           font-weight: 800;
           color: #233467;
           line-height: 1.2;
-          margin: 0 0 12px 0;
+          margin: 0;
         }
 
         .green-text {
@@ -214,8 +215,7 @@ height: 25px;
           color: #7a8ca3;
           margin: 0 0 18px 0;
           line-height: 1.6;
-          margin-top: 5%;
-          margin-bottom: 5%;
+         margin-block:20px;
           max-width: 90%;
         }
 
@@ -273,7 +273,7 @@ height: 25px;
     #A3CAF5 93.4%
   );
   border-radius: 15px;
-  padding: 20px;
+  padding: 35px 60px 35px 60px;
   display: flex;
   align-items: flex-start;
   gap: 12px;
@@ -281,7 +281,7 @@ height: 25px;
 }
 
         .check-box span {
-          font-size: 17px;
+          font-size: 23px;
           color: #2C5F7D;
           font-weight: 500;
           line-height: 1.4;
@@ -365,6 +365,26 @@ height: 25px;
             font-size: 19px !important;
             padding: 0 4px;
           }
+             .check-box {
+  background: linear-gradient(
+    269.48deg,
+    rgba(231, 246, 255, 0) 2.74%,
+    #A3CAF5 93.4%
+  );
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+}
+
+      .check-box span {
+          font-size: 17px;
+          color: #2C5F7D;
+          font-weight: 500;
+          line-height: 1.4;
+        }
             .icon-height{
 width: 20px;
 height: 20px;

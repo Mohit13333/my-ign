@@ -194,11 +194,8 @@ export default function CareerForm() {
         </div>
 
 
-        <div className="text-center fade-in-section"
-          data-scroll
-          data-scroll-class="is-inview"
-          data-scroll-repeat
-          style={{ animationDelay: "0.7s" }}>
+        <div className="text-center"
+        >
           <button
             className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
             style={{
@@ -215,15 +212,11 @@ export default function CareerForm() {
             onMouseLeave={(e) => e.target.style.opacity = "1"}
           >
 SUBMIT            <div
-              className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
+              className="custom-height rounded-circle d-flex align-items-center justify-content-center"
               style={{
                 width: "2.5rem",
                 height: "2.5rem",
                 background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                animationDelay: "0.75s",
                 marginLeft: "2.1rem"
               }}
             >
