@@ -112,7 +112,65 @@ const APBenefits = () => {
         scrollbar-width: none; /* Firefox */
         -ms-overflow-style: none; /* IE and Edge */
     }
+@media screen and (min-width: 1536px) and (max-width: 1600px) {
+.cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 20px;
+        padding-bottom: 20px;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+    }
+        
+    .icon {
+width: 70px !important;
+    height: 70px !important;
+        object-fit: contain;
+        margin-bottom:22px;
+        margin-top:20px;
+    }
 
+    .title {
+        font-size: 20px !important;
+        font-weight: 700;
+margin-block: 10px;
+        background: linear-gradient(to right, #161664, #3F88BA);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        line-height: 1.3;
+    }
+            .title.mobile-even {
+        background: linear-gradient(to right, #003E37, #00A491);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .text {
+        font-size: 15px !important;
+        line-height: 1.5;
+        color: #233467;
+        font-weight: 500;
+        margin-block:22px;
+        letter-spacing: 2px;
+        flex: 2;
+    }
+  }
+//     @media screen and (min-width: 1300px) and (max-width: 1535px {
+// .cards {
+//         display: flex;
+//         justify-content: center;
+//         flex-wrap: nowrap;
+//         gap: 20px;
+//         padding-bottom: 20px;
+//         scrollbar-width: none; /* Firefox */
+//         -ms-overflow-style: none; /* IE and Edge */
+//     }
+//   }
     .cards::-webkit-scrollbar {
         display: none; /* Chrome, Safari, Opera */
     }

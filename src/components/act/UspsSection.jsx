@@ -277,7 +277,7 @@ function UpsSection() {
     -o-transition: opacity.3s ease!important;
     transition: opacity .3s ease !important;
     letter-spacing: 1px !important;
-    font-size: clamp(0.8rem, 1.1vw, 1.1rem) !important;
+    font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
     margin-top: 45px !important;
     font-weight:600 !important;
   }

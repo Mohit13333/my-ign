@@ -329,8 +329,8 @@ width: 257px;
 
         @media (max-width: 420px) {
           .subjects-card1-section .subjects-card1-bubble {
-            padding: 8px 15px;
-            font-size: 12px;
+          padding: 8px 4px !important;
+        font-size: 8px !important;
           }
 
           .subjects-card1-section .subjects-card1-bg-rect:nth-child(2) {

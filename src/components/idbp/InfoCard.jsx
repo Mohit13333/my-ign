@@ -3568,19 +3568,17 @@ margin-block: 30px !important;
          }
         @media (max-width: 575px) {
   .cust-text {
-    padding: 8px 8px 8px 13px !important;
+    padding: 8px 8px 8px 8px !important;
     border: none !important;
     -webkit-transition: opacity .3s ease !important;
     -moz-transition: opacity.3s ease!important;
     -o-transition: opacity.3s ease!important;
     transition: opacity .3s ease !important;
     letter-spacing: 1px !important;
-    font-size: max(1rem, min(1.1vw, 1.1rem)) !important;
-    font-size: clamp(0.9rem, 1.1vw, 1.1rem) !important;
-    margin-top: 10px !important;
-        min-width: auto !important;
+    font-size: clamp(.7rem, 1.1vw, 1.1rem) !important;
+    margin-top: 6px!important;
+    min-width: auto !important;
   }
-
   .custom-height {
     width: 30px !important;
     height: 30px !important;
