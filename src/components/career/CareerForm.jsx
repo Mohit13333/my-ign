@@ -200,34 +200,34 @@ export default function CareerForm() {
           data-scroll-repeat
           style={{ animationDelay: "0.7s" }}>
           <button
-            type="submit"
-            className="btn fw-bold d-flex align-items-center mx-auto rounded-pill"
+            className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
             style={{
-               background: "linear-gradient(90deg,#161664, #3F88BA)",
+              background: "linear-gradient(90deg,#161664, #3F88BA)",
               color: 'white',
-              padding: '0.8rem 1.8rem',
+              padding: '6px 6px 6px 27px',
               border: 'none',
               transition: 'opacity 0.3s ease',
-              fontSize: "16px",
-              marginTop: '1rem'
+              letterSpacing: "3px",
+              fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
+              marginTop: "65px"
             }}
             onMouseEnter={(e) => e.target.style.opacity = "0.9"}
             onMouseLeave={(e) => e.target.style.opacity = "1"}
           >
-            SUBMIT
-            <div
-              className="ms-3 rounded-circle d-flex align-items-center justify-content-center fade-in-section"
+SUBMIT            <div
+              className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat
               style={{
-                width: '32px',
-                height: '32px',
+                width: "2.5rem",
+                height: "2.5rem",
                 background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                animationDelay: "0.75s"
+                animationDelay: "0.75s",
+                marginLeft: "2.1rem"
               }}
             >
-              <img src="/assets/arrowright.png" alt="arrright" width={12} height={12} />
+              <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
             </div>
           </button>
         </div>
@@ -245,7 +245,7 @@ export default function CareerForm() {
           max-width: 90vw;
           margin: auto;
           text-align: center;
-          padding: 40px 20px;
+          padding: 50px 20px;
   font-family: 'Montserrat', sans-serif;
         }
 
@@ -265,7 +265,7 @@ font-size: 2.5rem;
 
         .career-form {
           margin-top: 30px;
-          padding: 12rem;
+          padding: 6rem;
           border-radius: 30px;
           text-align: left;
           background: linear-gradient(135deg, #e8f4f8 0%, #f0f8f0 100%);
@@ -274,11 +274,10 @@ font-size: 2.5rem;
 
         label {
           display: block;
-          font-size: 24px;
-          font-size: 40px;
+          font-size: 30px;
           font-weight: 700;
           color: #161664;
-          margin-top: 20px;
+          margin-top: 40px;
           margin-bottom: 8px;
           text-transform: uppercase;
           letter-spacing: 0.5px;
@@ -315,8 +314,8 @@ font-size: 2.5rem;
           padding-bottom: 12px;
         }
         .phone-input img:first-child {
-          width: 24px;
-          height: 18px;
+          width: 45px;
+          height: 35px;
         }
         .phone-input select {
           border: none;
@@ -366,7 +365,7 @@ font-size: 2.5rem;
 
         .two-col {
           display: flex;
-          gap: 30px;
+          gap: 100px;
           margin-top: 0;
         }
         .two-col div {
@@ -412,12 +411,12 @@ font-size: 2.5rem;
  
         .file-upload {
           border: 1px solid #161664;
-          padding: 20px 35px;
-          border-radius: 40px;
+          padding: 20px 65px;
+          border-radius: 20px;
           text-align: center;
           cursor: pointer;
           font-weight: 600;
-          font-size: 16px;
+          font-size: 20px;
           background: rgba(255, 255, 255, 0.6);
           transition: all 0.3s ease;
           color: #161664;
@@ -572,6 +571,41 @@ font-size: 2.5rem;
             right: -6px;
           }
         }
+          @media (max-width: 575px) {
+          
+        .career-section {
+          max-width: 90vw;
+          margin: auto;
+          text-align: center;
+          padding: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+        }
+          .custom-grid {
+  gap: .5rem;
+}
+  .cust-text {
+    background: linear-gradient(90deg, #161664, #3F88BA) !important;
+    color: white !important;
+    padding: 8px 8px 8px 13px !important;
+    border: none !important;
+    -webkit-transition: opacity .3s ease !important;
+    -moz-transition: opacity.3s ease!important;
+    -o-transition: opacity.3s ease!important;
+    transition: opacity .3s ease !important;
+    letter-spacing: 1px !important;
+    font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
+    margin-top: 45px !important;
+    font-weight:600 !important;
+  }
+
+  .custom-height {
+    width: 30px !important;
+    height: 30px !important;
+    background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
+    animation-delay: 0.75s !important;
+    margin-left: 1rem !important;
+  }
+}
       `}</style>
     </section>
   );

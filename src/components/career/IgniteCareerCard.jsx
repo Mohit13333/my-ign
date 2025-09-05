@@ -87,17 +87,18 @@ export default function IgniteCareerCard() {
           >
             <div className="check-box d-flex justify-content-between">
 
-              {/* First item */}
-              <div className="d-flex align-items-start gap-2">
-                <img src="/assets/check.png" alt="check" width={30} height={30} />
-                <span>Lorem ipsum dolor<br />sit amet, consectetur.</span>
-              </div>
+   {/* First item */}
+<div className="d-flex align-items-center gap-3">
+  <img src="/assets/check.png" alt="check" className="icon-height" />
+  <span>Lorem ipsum dolor<br />sit amet, consectetur.</span>
+</div>
 
-              {/* Second item */}
-              <div className="d-flex align-items-start gap-2">
-                <img src="/assets/check.png" alt="check" width={30} height={30} />
-                <span className="spanText">Lorem ipsum dolor<br />sit amet, consectetur.</span>
-              </div>
+{/* Second item */}
+<div className="d-flex align-items-center gap-3">
+  <img src="/assets/check.png" alt="check" className="icon-height" />
+  <span className="spanText">Lorem ipsum dolor<br />sit amet, consectetur.</span>
+</div>
+
 
             </div>
           </div>
@@ -116,9 +117,12 @@ export default function IgniteCareerCard() {
 .my-text {
   font-family: 'Monstra', sans-serif;
 }
-
+.icon-height{
+width: 25px;
+height: 25px;
+}
         .ignite-section {
-     padding: 60px 20px;
+     padding: 20px 20px;
           max-width:88vw;
         margin: 40px auto;          
           font-family: 'Montserrat', sans-serif;
@@ -221,7 +225,7 @@ export default function IgniteCareerCard() {
           background: linear-gradient(90deg, #00A491, #003E37);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;          
-          line-height: 35px;
+          line-height: 1.2;
           letter-spacing: 5%;
           margin-top: 5%;
           margin-bottom: 5%;
@@ -234,7 +238,7 @@ export default function IgniteCareerCard() {
           font-weight:600;
           color: #7a8ca3;
           margin: 0 0 18px 0;
-          line-height: 1.6;
+          line-height: 1.4;
           max-width: 90%;
         }
 
@@ -262,30 +266,22 @@ export default function IgniteCareerCard() {
           margin-top: 20px;
         }
 
-        .check-box {
-          background: url("/assets/Rectangle154.png") no-repeat center/cover;
-          border-radius: 15px;
-          padding: 20px;
-          display: flex;
-          align-items: flex-start;
-          gap: 12px;
-          flex: 1;
-        }
-
-        .check-circle {
-          width: 28px;
-          height: 28px;
-          background: linear-gradient(180deg, #3F88BA 0%, #161664 100%);
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-          margin-top: 2px;
-        }
+ .check-box {
+  background: linear-gradient(
+    269.48deg,
+    rgba(231, 246, 255, 0) 2.74%,
+    #A3CAF5 93.4%
+  );
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+}
 
         .check-box span {
-          font-size: 1vwrem;
+          font-size: 17px;
           color: #2C5F7D;
           font-weight: 500;
           line-height: 1.4;
@@ -369,12 +365,365 @@ export default function IgniteCareerCard() {
             font-size: 19px !important;
             padding: 0 4px;
           }
-
+            .icon-height{
+width: 20px;
+height: 20px;
+}
+   .check-box span {
+          font-size: 10px;
+          color: #2C5F7D;
+          font-weight: 500;
+          line-height: 1.4;
+        }
+        .ignite-section {
+     padding: 60px 20px;
+          max-width:100%;
+        margin: 40px auto;          
+          font-family: 'Montserrat', sans-serif;
+        }
           .header-title img {
             width: 12px !important;
             height: 15px !important;
           }
         }
+          @media screen and (min-width: 1536px) and (max-width: 1600px) {
+                  .ignite-section {
+     padding: 60px 20px;
+          max-width:88vw;
+        margin: 40px auto;          
+          font-family: 'Montserrat', sans-serif;
+        }
+.icon-height{
+width: 20px;
+height: 20px;
+}
+        .ignite-container {
+          max-width: 90vw;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 80px;
+          align-items: flex-start;
+        }
+
+        .ignite-left {
+          padding-right: 20px;
+          margin-top: 2rem;
+        }
+
+        .fade-in-section {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        .fade-in-section.is-inview {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
+        .subtitle-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 15px;
+          margin-block: 15px;
+        }
+
+        .header-title {
+          font-size: 25px;
+          line-height:1;
+          font-weight: 600;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          white-space: nowrap;
+        }
+
+        .menu-lines {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+        }
+
+        .line {
+          width: 20px;
+          height: 2px;
+          background: #00A491;
+          display: block;
+        }
+
+        .ignite-subtitle {
+          font-size: 30px;
+          font-weight: 700;
+          color: #2C5F7D;
+          letter-spacing: 1;
+          margin: 0;
+        }
+
+        .ignite-main-title {
+          font-size: 2rem !important;
+          font-weight: 800;
+          color: #233467;
+          line-height: 1.2;
+        }
+
+        .green-text {
+          background: linear-gradient(90deg, #00A491, #003E37);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .ignite-description {
+          font-size: 1vw;
+          font-weight:600;
+          color: #7a8ca3;
+          margin: 0 0 18px 0;
+          line-height: 1.6;
+          margin-block:15px;
+          max-width: 90%;
+        }
+
+        .ignite-secondary-title {
+          font-size: 1.2vw;
+          font-weight: 800;
+          background: linear-gradient(90deg, #00A491, #003E37);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;          
+          line-height: 1.2;
+          letter-spacing: 5%;
+          margin-top: 5%;
+          margin-bottom: 5%;
+          margin: 0 0 15px 0;
+          text-transform: uppercase;
+        }
+
+        .ignite-short-description {
+      font-size: 1vw;
+          font-weight:600;
+          color: #7a8ca3;
+          margin: 0 0 18px 0;
+          line-height: 1.3;
+          max-width: 90%;
+        }
+
+        .ignite-right {
+          position: relative;
+        }
+
+        .image-container {
+          position: relative;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-image {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 20px;
+        }
+
+        .check-boxes-container {
+          display: flex;
+          gap: 10px;
+          margin-top: 20px;
+        }
+
+.check-box {
+  background: linear-gradient(
+    269.48deg,
+    rgba(231, 246, 255, 0) 2.74%,
+    #A3CAF5 93.4%
+  );
+  border-radius: 15px;
+  padding:20px 45px 20px 45px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+}
+
+
+        .check-box span {
+          font-size: 15px;
+          color: #233467;
+          font-weight: 500;
+          line-height: 1.4;
+        }
+      }
+         @media screen and (min-width: 1200px) and (max-width: 1500px) {
+                  .ignite-section {
+     padding: 60px 20px;
+          max-width:88vw;
+        margin: 40px auto;          
+          font-family: 'Montserrat', sans-serif;
+        }
+.icon-height{
+width: 20px;
+height: 20px;
+}
+        .ignite-container {
+          max-width: 90vw;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 80px;
+          align-items: flex-start;
+        }
+
+        .ignite-left {
+          padding-right: 20px;
+          margin-top: 2rem;
+        }
+
+        .fade-in-section {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        
+        .fade-in-section.is-inview {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
+        .subtitle-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 15px;
+          margin-block: 15px;
+        }
+
+        .header-title {
+          font-size: 20px;
+          line-height:1;
+          font-weight: 600;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          white-space: nowrap;
+        }
+
+        .menu-lines {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+        }
+
+        .line {
+          width: 20px;
+          height: 2px;
+          background: #00A491;
+          display: block;
+        }
+
+        .ignite-subtitle {
+          font-size: 25px;
+          font-weight: 700;
+          color: #2C5F7D;
+          letter-spacing: 1;
+          margin: 0;
+        }
+
+        .ignite-main-title {
+          font-size: 1.5rem !important;
+          font-weight: 800;
+          color: #233467;
+          line-height: 1.2;
+        }
+
+        .green-text {
+          background: linear-gradient(90deg, #00A491, #003E37);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .ignite-description {
+          font-size: 1vw;
+          font-weight:600;
+          color: #7a8ca3;
+          margin: 0 0 18px 0;
+          line-height: 1.6;
+          margin-block:15px;
+          max-width: 90%;
+        }
+
+        .ignite-secondary-title {
+          font-size: 1.2vw;
+          font-weight: 800;
+          background: linear-gradient(90deg, #00A491, #003E37);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;          
+          line-height: 1.2;
+          letter-spacing: 5%;
+          margin-top: 5%;
+          margin-bottom: 5%;
+          margin: 0 0 15px 0;
+          text-transform: uppercase;
+        }
+
+        .ignite-short-description {
+      font-size: 1vw;
+          font-weight:600;
+          color: #7a8ca3;
+          margin: 0 0 18px 0;
+          line-height: 1.3;
+          max-width: 90%;
+        }
+
+        .ignite-right {
+          position: relative;
+        }
+
+        .image-container {
+          position: relative;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-image {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 20px;
+        }
+
+        .check-boxes-container {
+          display: flex;
+          gap: 10px;
+          margin-top: 20px;
+        }
+
+.check-box {
+  background: linear-gradient(
+    269.48deg,
+    rgba(231, 246, 255, 0) 2.74%,
+    #A3CAF5 93.4%
+  );
+  border-radius: 15px;
+  padding:20px 30px 20px 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+}
+
+
+        .check-box span {
+          font-size: 12px;
+          color: #233467;
+          font-weight: 500;
+          line-height: 1.4;
+        }
+      }
       `}</style>
     </section>
   );

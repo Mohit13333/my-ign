@@ -69,14 +69,14 @@ export default function CareersBanner() {
           }
 
           .heading {
-            margin: 0;
+            margin: 0px 0px 0px 70px;
 font-size: 3.33vw; 
             font-weight: 800;
             line-height:70px;
           }
 
           .subHeading {
-            margin: 0;
+            margin: 0px 0px 0px 70px;
 font-size: 1.35vw;
             font-weight:800;
             opacity: 0.8;
