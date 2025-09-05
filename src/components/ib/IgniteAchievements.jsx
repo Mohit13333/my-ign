@@ -494,7 +494,7 @@ export default function IgniteAchievements() {
     return () => window.removeEventListener('resize', checkDevice);
   }, []);
   return (
-    <div className=" py-md-5 py-4 fade-in-section" data-scroll
+    <div className=" py-md-5 mobileign fade-in-section" data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{ animationDelay: "0.1s" }}>
@@ -824,7 +824,7 @@ export default function IgniteAchievements() {
         
         .left-content {
           flex: 0 0 45%;
-          margin-top: 2.5rem;
+          margin-top: 4.5rem;
         }
         
         .stats-grid-desktop {
@@ -921,6 +921,14 @@ export default function IgniteAchievements() {
           text-transform: uppercase;
         }
 
+                @media (min-width: 1900) {
+                        .left-content {
+          flex: 0 0 45%;
+          margin-top: 3.5rem !important;
+        }
+                }
+
+
         /* Responsive adjustments */
         @media (max-width: 575px) {
           .stat-card-mobile .stat-number {
@@ -936,6 +944,9 @@ export default function IgniteAchievements() {
           }
         }
           @media (max-width: 575px) {
+          .mobileign{
+          margin-top: 4rem !important;
+          }
           .custom-grid {
   gap: .5rem;
 }

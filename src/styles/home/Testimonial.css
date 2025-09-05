@@ -323,7 +323,7 @@ margin-bottom: 35px;
   }
   .btntest{
     position:relative;
-    bottom: 1.5rem;
+    bottom: .5rem;
   }
   .testimonialSection .testimonialSliderWrap {
   position: relative;
@@ -485,9 +485,9 @@ margin-bottom: 35px;
     line-height: 1.1;
   }
 }
-@media (max-width: 361px) {
+@media (max-width: 390px) {
     .btntest {
         position: relative;
-        bottom: 3rem;
+        bottom: 2rem;
     }
 }
