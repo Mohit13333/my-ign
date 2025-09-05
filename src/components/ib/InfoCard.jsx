@@ -103,13 +103,9 @@ INTERNATIONAL BACCALAUREATE TUTORS IN DUBAI              </h1>
 
               >
                 <div
-                  className="d-flex flex-column align-items-center text-center text-white  fade-in-section info-col"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
+                  className="d-flex flex-column align-items-center text-center text-white info-col"
                   style={{
                     borderRight: "1px solid rgba(255, 255, 255, 0.3)",
-                    animationDelay: "0.35s",
                     paddingRight: isMobile ? "16px" : "3.7rem",
                   }}
                 >
@@ -126,13 +122,9 @@ INTERNATIONAL BACCALAUREATE TUTORS IN DUBAI              </h1>
                 </div>
 
                 <div
-                  className="d-flex flex-column align-items-center text-center text-white fade-in-section info-col"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
+                  className="d-flex flex-column align-items-center text-center text-white info-col"
                   style={{
                     borderRight: "1px solid rgba(255, 255, 255, 0.3)",
-                    animationDelay: "0.4s",
                     paddingRight: isMobile ? "16px" : "4rem",
                   }}
                 >
@@ -149,10 +141,7 @@ INTERNATIONAL BACCALAUREATE TUTORS IN DUBAI              </h1>
                 </div>
 
                 <div
-                  className="d-flex flex-column align-items-center text-center text-white fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
+                  className="d-flex flex-column align-items-center text-center text-white"
                   style={{ animationDelay: "0.45s" }}
                 >
                   <div className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
