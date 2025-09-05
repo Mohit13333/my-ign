@@ -96,7 +96,7 @@ export default function SubjectsCard1({ }) {
         /* Subject Section  */
         .subjects-card1-section {
           width: 100%;
-          padding: 70px 0 80px 0;
+          padding: 70px 0 0 0;
         }
 
         .subjects-card1-section .container {
@@ -318,7 +318,7 @@ width: 257px;
           }
       .subjects-card1-section {
           width: 100%;
-          padding:100px 0 80px 0;
+          padding:70px 0 80px 0;
         }
           .subjects-card1-section .subjects-card1-inner {
             padding: 65px 12px;
