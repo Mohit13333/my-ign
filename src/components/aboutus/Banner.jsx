@@ -45,7 +45,7 @@ export default function AboutBanner() {
           max-width: 90vw;
           width: 100%;
           height: calc(90vw / 2.98); /* desktop aspect ratio */
-          margin: auto;
+          margin: 40px auto;
           border-radius: 12px;
           overflow: hidden;
           background-image: url("/assets/aboutbanner.jpg");
