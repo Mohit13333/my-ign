@@ -510,7 +510,7 @@ export default function IgniteAchievements() {
           data-scroll-class="is-inview"
           data-scroll-repeat
           style={{ animationDelay: "0.2s" }}>
-          <div className="SubHeading testSubheading">IGNITE ACHIEVEMENTS
+          <div className="SubHeading testSubheading">OUR ACHIEVEMENTS
           </div>
 
           {/* Main Title */}
@@ -518,11 +518,11 @@ export default function IgniteAchievements() {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
-            className="fade-in-section testTitle"
+            className="fade-in-section testTitle text-uppercase"
             style={{ animationDelay: "0.2s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,<br /> <span className="highlight"> CONSECTETUR{" "}</span>
-            ADIPISCING
+            Powering Progress Through<br /> <span className="highlight"> Results{" "}</span>
+            That Matter
           </h2>
 
           {/* Subtitle */}
@@ -538,8 +538,7 @@ export default function IgniteAchievements() {
               fontSize: "0.9rem",
               lineHeight: isMobile ? "1.3" : "1.2",
             }}>
-            Choosing us means partnering with experienced coaches
-            who are dedicated to unlocking your potential.
+          We’ve built every achievement through the progress, effort, & dedication of our IBDP students over the years.
           </p>
         </div>
 
@@ -557,13 +556,13 @@ export default function IgniteAchievements() {
               {/* Desktop Header */}
               <div className="mb-4">
                 <div className="mb-3">
-                  <div className="SubHeading testSubheading">IGNITE ACHIEVEMENTS
+                  <div className="SubHeading testSubheading">OUR ACHIEVEMENTS
                   </div>
                 </div>
 
                 {/* Main Title */}
                 <h2
-                  className="fw-bold fade-in-section"
+                  className="fw-bold fade-in-section text-uppercase"
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat
@@ -576,11 +575,11 @@ export default function IgniteAchievements() {
                     margin: 0, // ✅ removes the margin
                   }}
                 >
-                  LOREM IPSUM DOLOR SIT AMET,
+                  Powering Progress Through
                 </h2>
 
                 <h2
-                  className="fw-bold fade-in-section"
+                  className="fw-bold fade-in-section text-uppercase"
                   data-scroll
                   data-scroll-class="is-inview"
                   data-scroll-repeat
@@ -593,7 +592,7 @@ export default function IgniteAchievements() {
                     margin: 0, // ✅ removes the margin
                   }}
                 >
-                  CONSECTETUR{" "}
+                  Results{" "}
                   <span
                     style={{
                       background: "#19245E",
@@ -604,7 +603,7 @@ export default function IgniteAchievements() {
                       margin: 0, // ✅ removes margin inside span (not needed, but safe)
                     }}
                   >
-                    ADIPISCING
+                     That Matter
                   </span>
                 </h2>
 
@@ -622,7 +621,7 @@ export default function IgniteAchievements() {
                     fontSize: "1.2rem",
                     marginTop: "16px",
                   }}>
-                  Choosing us means partnering with experienced coaches<br /> who are dedicated to unlocking your potential.
+                  We’ve built every achievement through the progress, effort, <br /> & dedication of our IBDP students over the years.
                 </p>
               </div>
 
@@ -668,21 +667,21 @@ export default function IgniteAchievements() {
               <div className="stats-row">
                 {/* Stat 1 */}
                 <div className="stat-card-desktop">
-                  <div className="stat-number teal-text">60%</div>
+                  <div className="stat-number teal-text">10+</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title teal-text">LOREM IPSUM DOLOR</h4>
-                    <p className="stat-description">Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <h4 className="stat-title teal-text">Years Of Experience</h4>
+                    <p className="stat-description">Proven expertise in guiding students toward excellence</p>
                   </div>
                 </div>
 
                 {/* Stat 2 */}
                 <div className="stat-card-desktop">
-                  <div className="stat-number blue-text">30+</div>
+                  <div className="stat-number blue-text">1K+</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title blue-text">LOREM IPSUM DOLOR</h4>
-                    <p className="stat-description">Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <h4 className="stat-title blue-text">Exam Prep Resources</h4>
+                    <p className="stat-description">Extensive IB-specific guides to master every subject</p>
                   </div>
                 </div>
               </div>
@@ -691,21 +690,21 @@ export default function IgniteAchievements() {
               <div className="stats-row">
                 {/* Stat 3 */}
                 <div className="stat-card-desktop">
-                  <div className="stat-number blue-text">60%</div>
+                  <div className="stat-number blue-text">7/7</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title blue-text">LOREM IPSUM DOLOR</h4>
-                    <p className="stat-description">Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <h4 className="stat-title blue-text">Scores Across Subjects</h4>
+                    <p className="stat-description">Strategic IB tutoring that helps you aim for perfection</p>
                   </div>
                 </div>
 
                 {/* Stat 4 */}
                 <div className="stat-card-desktop">
-                  <div className="stat-number teal-text">30+</div>
+                  <div className="stat-number teal-text">2K+</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title teal-text">LOREM IPSUM DOLOR</h4>
-                    <p className="stat-description">Lorem ipsum dolor sit amet, consectetur elit.</p>
+                    <h4 className="stat-title teal-text">Student Success Stories</h4>
+                    <p className="stat-description">Proven results through focused IB student journeys</p>
                   </div>
                 </div>
               </div>
@@ -722,33 +721,33 @@ export default function IgniteAchievements() {
 
           {/* Mobile CTA Button */}
           <div className="text-center mb-4">
-                <button
-                  className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
-                  style={{
-                    background: "linear-gradient(90deg,#161664, #3F88BA)",
-                    color: 'white',
-                    padding: '12px 14px 12px 20px',
-                    border: 'none',
-                    transition: 'opacity 0.3s ease',
-                    letterSpacing: "3px",
-                    fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
-                  }}
-                  onMouseEnter={(e) => e.target.style.opacity = "0.9"}
-                  onMouseLeave={(e) => e.target.style.opacity = "1"}
-                >
-                  GET FREE DEMO
-                  <div
-                    className="custom-height rounded-circle d-flex align-items-center justify-content-center"
-                    style={{
-                      width: "2.5rem",
-                      height: "2.5rem",
-                      background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                      marginLeft: "2.1rem"
-                    }}
-                  >
-                    <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
-                  </div>
-                </button>
+            <button
+              className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
+              style={{
+                background: "linear-gradient(90deg,#161664, #3F88BA)",
+                color: 'white',
+                padding: '12px 14px 12px 20px',
+                border: 'none',
+                transition: 'opacity 0.3s ease',
+                letterSpacing: "3px",
+                fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
+              }}
+              onMouseEnter={(e) => e.target.style.opacity = "0.9"}
+              onMouseLeave={(e) => e.target.style.opacity = "1"}
+            >
+              GET FREE DEMO
+              <div
+                className="custom-height rounded-circle d-flex align-items-center justify-content-center"
+                style={{
+                  width: "2.5rem",
+                  height: "2.5rem",
+                  background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                  marginLeft: "2.1rem"
+                }}
+              >
+                <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+              </div>
+            </button>
           </div>
 
           {/* Mobile Stats - 2x2 Grid */}

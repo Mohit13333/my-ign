@@ -32,8 +32,8 @@ export default function IBCurriculumStages() {
               className="fade-in-section testTitle"
               style={{ animationDelay: "0.2s" }}
             >
-              STAGES OF INTERNATIONAL BACCALAUREATE SUPPORTED BY{" "}
-              <span className="highlight">BY IGNITE</span>
+              Step-By-Step Guidance Through The IB Curriculum{" "}
+              <span className="highlight">IB Curriculum</span>
             </h2>
           </div>
         </div>
@@ -67,42 +67,45 @@ export default function IBCurriculumStages() {
               </div>
               <div className="divider"></div>
               <div className="card-description">
-                We provide comprehensive academic support through our customized
-                IB curriculum courses, giving students access to high-end
-                learning with experienced and certified IB tutors across various
-                IB subjects.
+                Ignite’s expert IBDP tutors provide tailored guidance, curated resources, & exam-focused strategies to help students master all 6 subject groups. With focused support, we empower learners to excel academically.
               </div>
             </div>
             <div
               className="text-center"
             >
-              <button
-                className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
-                style={{
-                  background: "linear-gradient(90deg, #00A491, #003E37)",
-                  color: 'white',
-                  padding: '12px 14px 12px 20px',
-                  border: 'none',
-                  transition: 'opacity 0.3s ease',
-                  letterSpacing: "3px",
-                  fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
-                }}
-                onMouseEnter={(e) => e.target.style.opacity = "0.9"}
-                onMouseLeave={(e) => e.target.style.opacity = "1"}
+              <a
+                href="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai/"
+                style={{ textDecoration: "none" }}
               >
-                EXPLORE 3 COURSES
-                <div
-                  className="custom-height rounded-circle d-flex align-items-center justify-content-center"
+                <button
+                  className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
                   style={{
-                    width: "2.5rem",
-                    height: "2.5rem",
-                    background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                    marginLeft: "2.1rem"
+                    background: "linear-gradient(90deg, #00A491, #003E37)",
+                    color: "white",
+                    padding: "12px 14px 12px 20px",
+                    border: "none",
+                    transition: "opacity 0.3s ease",
+                    letterSpacing: "3px",
+                    fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
                   }}
+                  onMouseEnter={(e) => (e.target.style.opacity = "0.9")}
+                  onMouseLeave={(e) => (e.target.style.opacity = "1")}
                 >
-                  <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
-                </div>
-              </button>
+                  EXPLORE 4 COURSES
+                  <div
+                    className="custom-height rounded-circle d-flex align-items-center justify-content-center"
+                    style={{
+                      width: "2.5rem",
+                      height: "2.5rem",
+                      background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                      marginLeft: "2.1rem",
+                    }}
+                  >
+                    <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+                  </div>
+                </button>
+              </a>
+
             </div>
           </div>
 
@@ -134,42 +137,44 @@ export default function IBCurriculumStages() {
               </div>
               <div className="divider"></div>
               <div className="card-description">
-                We provide comprehensive academic support through our customized
-                IB curriculum courses, giving students access to high-end
-                learning with experienced and certified IB tutors across various
-                IB subjects.
+                MYP tutors at Ignite help students build a strong foundation in their subjects & apply concepts to real-world contexts. With focused exam prep & strategic support, we guide learners to excel in e-assessments & beyond.
               </div>
             </div>
             <div
               className="text-center"
             >
-              <button
-                className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
-                style={{
-                  background: "linear-gradient(90deg,#161664, #3F88BA)",
-                  color: 'white',
-                  padding: '12px 14px 12px 20px',
-                  border: 'none',
-                  transition: 'opacity 0.3s ease',
-                  letterSpacing: "3px",
-                  fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
-                }}
-                onMouseEnter={(e) => e.target.style.opacity = "0.9"}
-                onMouseLeave={(e) => e.target.style.opacity = "1"}
+              <a
+                href="https://ignitetraininginstitute.com/courses/myp-tutors-in-dubai/"
+                style={{ textDecoration: "none" }}
               >
-                EXPLORE 3 COURSES
-                <div
-                  className="custom-height rounded-circle d-flex align-items-center justify-content-center"
+                <button
+                  className="btn cust-text fw-bold d-flex align-items-center rounded-pill"
                   style={{
-                    width: "2.5rem",
-                    height: "2.5rem",
-                    background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                    marginLeft: "2.1rem"
+                    background: "linear-gradient(90deg,#161664, #3F88BA)",
+                    color: "white",
+                    padding: "12px 14px 12px 20px",
+                    border: "none",
+                    transition: "opacity 0.3s ease",
+                    letterSpacing: "3px",
+                    fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
                   }}
+                  onMouseEnter={(e) => (e.target.style.opacity = "0.9")}
+                  onMouseLeave={(e) => (e.target.style.opacity = "1")}
                 >
-                  <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
-                </div>
-              </button>
+                  EXPLORE 2 COURSES
+                  <div
+                    className="custom-height rounded-circle d-flex align-items-center justify-content-center"
+                    style={{
+                      width: "2.5rem",
+                      height: "2.5rem",
+                      background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                      marginLeft: "2.1rem",
+                    }}
+                  >
+                    <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+                  </div>
+                </button>
+              </a>
             </div>
           </div>
         </div>

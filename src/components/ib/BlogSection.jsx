@@ -41,9 +41,8 @@ const Blog = () => {
                             className="fade-in-section blogTitle"
                             style={{ animationDelay: "0.2s" }}
                         >
-                            LOREM IPSUM DOLOR
-                            SIT AMET, CONSECTETUR
-                            <span className="blogHighlight"> ADIPISCING</span>
+                            Explore Expert Tips, Study Hacks & Student
+                            <span className="blogHighlight"> Stories</span>
                         </h2>
                         <div
                             data-scroll
@@ -54,21 +53,27 @@ const Blog = () => {
                         >
                             LOREM IPSUM DOLOR SIT AMET
                         </div>
-                        <button
-                            data-scroll
-                            data-scroll-class="is-inview"
-                            data-scroll-repeat="true"
-                            className="blogAllBtn buttonBlue fade-in-section"
-                            style={{ animationDelay: "0.4s" }}
+                        <a
+                            href="https://ignitetraininginstitute.com/blog/"
+                            style={{ textDecoration: "none" }}
                         >
-                            VIEW ALL BLOGS
-                            <img
-                                src="/images/right-arrow-skyblue.png"
-                                alt="arrow"
-                                width={24}
-                                height={24}
-                            />
-                        </button>
+                            <button
+                                data-scroll
+                                data-scroll-class="is-inview"
+                                data-scroll-repeat="true"
+                                className="blogAllBtn buttonBlue fade-in-section"
+                                style={{ animationDelay: "0.4s" }}
+                            >
+                                VIEW ALL BLOGS
+                                <img
+                                    src="/images/right-arrow-skyblue.png"
+                                    alt="arrow"
+                                    width={24}
+                                    height={24}
+                                />
+                            </button>
+                        </a>
+
                     </div>
 
                     <div className="col-12 col-lg-8 blogRight">

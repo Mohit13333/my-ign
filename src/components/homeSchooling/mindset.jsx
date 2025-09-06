@@ -334,7 +334,7 @@
 //           .card-title {
 //             font-size: 25px;
 //           }
-          
+
 //           .desc {
 //             font-size: 19px;
 //             font-weight500:
@@ -364,7 +364,7 @@ export default function HomeschoolingMindset() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   const toggleCard = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -467,7 +467,7 @@ export default function HomeschoolingMindset() {
         .mindset-section {
           text-align: center;
           padding: 2rem 1rem;
-          max-width: 1200px;
+          max-width: 1500px;
           margin: 0 auto;
         }
         
@@ -475,6 +475,7 @@ export default function HomeschoolingMindset() {
           width:1px;
           height:60px;
           background-color:#233467;
+          opacity:0.2;
         }
 
         .title {
@@ -655,7 +656,7 @@ export default function HomeschoolingMindset() {
         @media (min-width: 768px) {
           .cards-container {
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            gap: 3rem;
           }
 
           .title {
@@ -671,13 +672,14 @@ export default function HomeschoolingMindset() {
           }
 
           .icon-container {
-            width: 80px;
-            height: 80px;
+            width: 90px;
+            height: 90px;
           }
 
           .icon {
-            width: 70px;
-            height: 70px;
+          width: 80px;
+        height: 80px;
+        margin-bottom: 27px;
           }
 
           .text-content {
@@ -700,7 +702,7 @@ export default function HomeschoolingMindset() {
 
         @media (min-width: 1024px) {
           .card-title {
-            font-size: 25px;
+            font-size: 26px;
           }
           
           .desc {

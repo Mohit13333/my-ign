@@ -66,7 +66,7 @@ export default function InfoCard() {
                   fontSize: "2.6rem",
                 }}
               >
-INTERNATIONAL BACCALAUREATE TUTORS IN DUBAI              </h1>
+{isMobile? "IB Tutors In Dubai, UAE For Academic Excellence": "IB Tutors In Dubai, UAE For Student Success"}          </h1>
               <div className="divider"></div>
 
               <p
@@ -82,7 +82,7 @@ INTERNATIONAL BACCALAUREATE TUTORS IN DUBAI              </h1>
                   marginTop: "19px"
                 }}
               >
-                LOREM IPSUM DOLOR SIT AMET
+                Expert Help At Every IB Milestone
               </p>
 
               <div
@@ -167,57 +167,66 @@ INTERNATIONAL BACCALAUREATE TUTORS IN DUBAI              </h1>
                   opacity: "0.9",
                 }}
               >
-                            We provide comprehensive academic support through our customized
-                IB curriculum courses, giving students access to high-end
-                learning with experienced and certified IB tutors across various
-                IB subjects.         </p>
+                            We provide comprehensive academic support through our customized IB curriculum courses, giving students access to high-end learning with experienced & certified IB tutors across various IB subjects.       </p>
 
-              <div className="buttonf">
-                <button
-                  className="btn cust-text btng fw-bold text-uppercase d-flex justify-content-between align-items-center shadow"
-                  style={{
-                    background: "linear-gradient(to right, #A3CAF5, #E7F6FF)",
-                    color: "#273972",
-                    borderRadius: "40px",
-                    fontSize: "1rem",
-                    padding: "10px 14px 10px 20px",
-                    boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
-                    minWidth: "290px", // ensures spacing looks consistent
-                    marginTop: isMobile ? "auto" : "20px",
-                  }}
-                >
-                  <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>IGCSE TUTORS</span>
-                  <img
-                    src="/assets/rar.png"
-                    alt="right"
-                    className="custom-height"
-                    width={35}
-                    height={35}
-                  />
-                </button>
-                <button
-                  className="btn cust-text btng fw-bold text-uppercase d-flex justify-content-between align-items-center shadow"
-                  style={{
-                    background: "linear-gradient(to right, #A3CAF5, #E7F6FF)",
-                    color: "#273972",
-                    borderRadius: "40px",
-                    fontSize: "1rem",
-                    padding: "10px 14px 10px 20px",
-                    boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
-                    minWidth: "290px", // ensures spacing looks consistent
-                    marginTop: isMobile ? "auto" : "20px",
-                  }}
-                >
-                  <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>A-LEVELS TUTORS</span>
-                  <img
-                    src="/assets/rar.png"
-                    alt="right"
-                    className="custom-height"
-                    width={35}
-                    height={35}
-                  />
-                </button>
-              </div>
+            <div className="buttonf">
+  <a
+    href="https://ignitetraininginstitute.com/courses/ibdp-tutors-in-dubai/"
+    style={{ textDecoration: "none" }}
+  >
+    <button
+      className="btn cust-text btng fw-bold text-uppercase d-flex justify-content-between align-items-center shadow"
+      style={{
+        background: "linear-gradient(to right, #A3CAF5, #E7F6FF)",
+        color: "#273972",
+        borderRadius: "40px",
+        fontSize: "1rem",
+        padding: "10px 14px 10px 20px",
+        boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
+        minWidth: "290px", // ensures spacing looks consistent
+        marginTop: isMobile ? "auto" : "20px",
+      }}
+    >
+      <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>IBDP TUTORS</span>
+      <img
+        src="/assets/rar.png"
+        alt="right"
+        className="custom-height"
+        width={35}
+        height={35}
+      />
+    </button>
+  </a>
+
+  <a
+    href="https://ignitetraininginstitute.com/courses/myp-tutors-in-dubai/"
+    style={{ textDecoration: "none" }}
+  >
+    <button
+      className="btn cust-text btng fw-bold text-uppercase d-flex justify-content-between align-items-center shadow"
+      style={{
+        background: "linear-gradient(to right, #A3CAF5, #E7F6FF)",
+        color: "#273972",
+        borderRadius: "40px",
+        fontSize: "1rem",
+        padding: "10px 14px 10px 20px",
+        boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
+        minWidth: "290px", // ensures spacing looks consistent
+        marginTop: isMobile ? "auto" : "20px",
+      }}
+    >
+      <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>IB MYP TUTORS</span>
+      <img
+        src="/assets/rar.png"
+        alt="right"
+        className="custom-height"
+        width={35}
+        height={35}
+      />
+    </button>
+  </a>
+</div>
+
 
             </div>
 

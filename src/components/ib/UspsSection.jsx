@@ -163,7 +163,7 @@ function UpsSection() {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading">USPs</div>
+              <div className="SubHeading testSubheading">OUR PROMISE</div>
             </div>
             <h2
               data-scroll
@@ -172,7 +172,7 @@ function UpsSection() {
               className="fade-in-section testTitle"
               style={{ animationDelay: "0.2s" }}
             >
-              LOREM IPSUM DOLOR SIT AMET,<span className="highlight"> CONSECTETUR</span> ADIPISCING
+              What Do Students Get From <span className="highlight"> Ignite's</span> IB Support?
 
             </h2>
           </div>

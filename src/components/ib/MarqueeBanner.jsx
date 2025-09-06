@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 
 const items = [
   "EXPERT GUIDANCE",
+  "TAILORED STUDY RESOURCES",
+  "PROGRESS TRACKING",
+  "PROVEN REAL RESULTS",
   "GRADE IMPROVEMENT",
-  "FREE STUDY RESOURCES",
-  "CAREER ADVICE",
 ];
+
 
 const MarqueeBanner = () => {
     const [isMobile, setIsMobile] = useState(false);

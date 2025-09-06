@@ -4,22 +4,22 @@ const advantages = [
     {
         title: 'EMPOWERS STUDENTS OUTLOOK',
         icon: '/assets/unioun.png',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     },
     {
         title: 'STRONG CONNECTION WITH PARENTS',
         icon: '/assets/heartg.png',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     },
     {
         title: 'BETTER FOCUS & FLEXIBILITY',
         icon: '/assets/unioun.png',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     },
     {
         title: 'CUSTOMIZED LEARNING',
         icon: '/assets/heartg.png',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     }
 ];
 
@@ -37,7 +37,7 @@ const AdvantagesCarousel = () => {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
-    
+
     const nextSlide = () => {
         if (isMobile) {
             setCurrentSlide((prev) =>
@@ -179,7 +179,7 @@ const AdvantagesCarousel = () => {
                                         WebkitTextFillColor: "transparent"
                                     }}
                                 >
-                TRADITIONAL
+                                    TRADITIONAL
                                 </span>{" "}
                                 <span
                                     style={{
@@ -188,7 +188,7 @@ const AdvantagesCarousel = () => {
                                         WebkitTextFillColor: "transparent"
                                     }}
                                 >
-                                     PROCESSES
+                                    PROCESSES
                                 </span>
                             </h2>
                             <p className="desktop-subtitle">
@@ -198,10 +198,10 @@ const AdvantagesCarousel = () => {
                             </p>
                             <div className="carousel-controls">
                                 <button className="carousel-btn prev" onClick={prevSlide}>
-                                    <img src="/assets/rigtarr2.png" alt="previous" width={30} height={30} />
+                                    <img src="/assets/rigtarr2.png" alt="previous" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
                                 </button>
                                 <button className="carousel-btn next" onClick={nextSlide}>
-                                    <img src="/assets/leftarr2.png" alt="next" width={30} height={30} />
+                                    <img src="/assets/leftarr2.png" alt="next" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
                                 </button>
                             </div>
                         </div>
@@ -228,7 +228,7 @@ const AdvantagesCarousel = () => {
                         </div>
                     </div>
                 </div>
-                
+
                 {/* Centered dot indicators for desktop */}
                 <div className="desktop-carousel-dots">
                     {advantages.map((_, index) => (
@@ -378,7 +378,7 @@ const AdvantagesCarousel = () => {
                     }
 
                     .desktop-left {
-                        flex: 0 0 400px;
+                        flex:0 0 500px;
                     }
 
                     .desktop-title {
@@ -393,7 +393,7 @@ const AdvantagesCarousel = () => {
                         font-size: 18px;
                         color:#233467;
                         line-height: 1.6;
-                        margin-bottom: 30px;
+                        margin-block: 20px;
                     }
 
                     .carousel-controls {
@@ -420,7 +420,7 @@ const AdvantagesCarousel = () => {
                         overflow: hidden;
                         border-radius: 20px;
                         background: transparent;
-                        height: 500px;
+                        height: 600px;
                         position: relative;
                     }
 
@@ -429,24 +429,18 @@ const AdvantagesCarousel = () => {
                         flex-direction: row;
                         transition: transform 0.5s ease;
                         height: 100%;
-                        gap: 28px;
+                        gap: 5rem;
                     }
 
                     .desktop-card {
-                        flex: 0 0 320px;
-                        padding: 36px 30px;
+                        flex: 0 0 400px;
+                        padding: 15px 30px 30px 30px;
                         display: flex;
                         flex-direction: column;
-                        justify-content: center;
+                        justify-content: space-around;
                         text-align: left;
                         border-radius: 24px;
-                        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
                         transition: transform 0.3s ease;
-                    }
-
-                    .desktop-card:hover {
-                        transform: translateY(-8px);
-                        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
                     }
 
                     .blueBg {
@@ -464,7 +458,7 @@ const AdvantagesCarousel = () => {
                     }
 
                     .desktop-card-icon {
-                        margin-bottom: 24px;
+                        margin-block: 25px;
                     }
 
                     .desktop-card-icon img {
@@ -473,23 +467,22 @@ const AdvantagesCarousel = () => {
                     }
 
                     .desktop-card-title {
-                        font-size: 22px;
+                        font-size: 28px;
                         font-weight: 700;
-                        color: #2c5282;
                         margin-bottom: 18px;
                         line-height: 1.3;
-                        background: linear-gradient(to right, #3F88BA, #161664);
+                        background: linear-gradient(to right, #161664, #3F88BA);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         background-clip: text;
                     }
 
                     .desktop-card-text {
-                        font-size: 16px;
-                        color: #333;
-                        line-height: 1.7;
-                        margin: 0;
-                        font-weight: 400;
+                              font-size: 18px;
+        color: #233467;
+        line-height: 1.6;
+        margin: 0;
+        font-weight: 600;
                     }
 
                     .desktop-carousel-dots {
@@ -508,16 +501,18 @@ const AdvantagesCarousel = () => {
                     }
 
                     .dot-rect {
-                        width: 20px;
+                        width: 10px;
                         height: 3px;
                         background: #cbd5e0;
-                        border-radius:30px;
+                        border-radius:40px;
                         cursor: pointer;
                         transition: all 0.3s ease;
                     }
 
                     .dot-rect.active {
-                        background: #2c5282;
+                        background: gray;
+                         width: 25px;
+                        height: 3px;
                     }
                 }
             `}</style>

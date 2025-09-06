@@ -23,24 +23,29 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      question: "LOREM IPSUM DOLOR SIT AMET?",
+      question: "What subjects does Ignite offer tutoring for in the IB?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "Ignite provides expert tutoring across all IB subjects, including Mathematics AA & AI, Sciences (Physics, Chemistry, Biology), English, Economics, Business Management, & more, covering both HL & SL levels.",
     },
     {
-      question: "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR?",
+      question: "Is the tutoring aligned with the IB exam board requirements?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "Yes, IB tutoring at Ignite is fully aligned with the latest IB curriculum standards & assessment criteria, including guidance on IAs, EEs, & TOK components.",
     },
     {
-      question: "LOREM IPSUM DOLOR SIT AMET?",
+      question: "Can I try a session before enrolling in a full course?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "Absolutely. Ignite offers a free demo class so that students & parents can experience the teaching style before making a decision.",
     },
     {
-      question: "LOREM IPSUM DOLOR SIT AMET?",
+      question: "Do you offer one-on-one or group tutoring options?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "Ignite offers both one-on-one & small group tutoring (SGT) formats to suit different learning preferences, ensuring personalized attention and academic support.",
+    },
+    {
+      question: "Is online IB tutoring available for students outside Dubai?",
+      answer:
+        "Yes, Ignite provides flexible online IB tutoring for students in the UAE and beyond, with live interactive sessions, past paper practice, and exam-focused guidance.",
     },
   ];
 
@@ -51,8 +56,8 @@ const FAQSection = () => {
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{
-        marginBottom: isMobile?"40px":"96px",
-        maxWidth: isMobile?"95vw":"90vw",
+        marginBottom: isMobile ? "40px" : "96px",
+        maxWidth: isMobile ? "95vw" : "90vw",
         backgroundImage: 'url("/assets/faqbg.png")',
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -78,17 +83,17 @@ const FAQSection = () => {
           <div className={`col-lg-6 d-flex flex-column justify-content-center ${isMobile ? 'text-center' : ''}`}>
             {/* FAQ Header */}
             <div className="testimonialHeader" style={{ marginBottom: isMobile ? "10px" : "20px" }}>
-              <span className="SubHeading" style={{fontSize:isMobile?"":"28px !important"}}>FAQS
+              <span className="SubHeading" style={{ fontSize: isMobile ? "" : "28px !important" }}>FAQS
               </span>
             </div>
 
             {/* Main Title */}
-       <h2
+            <h2
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section"
-              style={{ animationDelay: "0.2s",color:"#19245E",fontWeight:800,marginBlock:"20px",fontSize:isMobile?"20px":"2.1875rem" }}
+              style={{ animationDelay: "0.2s", color: "#19245E", fontWeight: 800, marginBlock: "20px", fontSize: isMobile ? "20px" : "2.1875rem" }}
             >
               LOREM IPSUM DOLOR SIT AMET,
               <span className="highlight"> CONSECTETUR</span> ADIPISCING
@@ -122,7 +127,7 @@ const FAQSection = () => {
                 >
                   <span
                     className="fw-bold h5 lh-sm mb-0"
-                    style={{ color: "#1e3a8a", fontSize: isMobile ? "1.1rem" : "25px", lineHeight: "100%", letterSpacing: "1%", width:"90%" }}
+                    style={{ color: "#1e3a8a", fontSize: isMobile ? "1.1rem" : "25px", lineHeight: "100%", letterSpacing: "1%", width: "90%" }}
                   >
                     {faq.question}
                   </span>

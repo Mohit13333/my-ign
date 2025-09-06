@@ -1,13 +1,14 @@
 import React from "react";
 
 const subjectRows = [
-  ["Math IB Analysis & Approaches (AA) "],
-  ["Math Applications & Interpretations (AI)"],
-  ["Physics", "Chemistry", "Biology"],
-  ["Computer Science", "Business Management"],
-  ["Economics", "French Ab Initio & B", "Spanish"],
-  ["English Language & Literature"],
+  ["IB Math AA - Analysis & Approaches"],
+  ["IB Math AI - Applications & Interpretations"],
+  ["IB Physics", "IB Chemistry", "IB Biology"],
+  ["IB Computer Science", "IB Business Management"],
+  ["IB Economics", "IB French Ab Initio & B", "IB Spanish Ab Initio & B"],
+  ["IB English Language & Literature", "IB Psychology"],
 ];
+
 
 export default function SubjectsCard1({ }) {
   return (
@@ -31,7 +32,7 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">Subject
+            <div className="SubHeading testSubheading">SUBJECTS WE SUPPORT
             </div>
           </div>
           <h2
@@ -41,8 +42,8 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,<br />
-            CONSECTETUR <span className="highlight">ADIPISCING</span>
+            Tutoring That Makes Every<br/>
+             <span className="highlight"> IBDP Subject</span> Clear (HL & SL)
           </h2>
         </div>
       </div>
