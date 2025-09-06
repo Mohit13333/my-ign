@@ -267,26 +267,32 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      question: "LOREM IPSUM DOLOR SIT AMET?",
+      question: "What is the focus of IBDP tutoring at Ignite Training Institute?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "Ignite’s IBDP tutoring focuses on subject mastery, IA and EE guidance, and exam techniques. The program is designed to support students through both Year 1 & Year 2 of the Diploma Programme.",
     },
     {
-      question: "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR?",
+      question: "Do Ignite’s tutors have experience with all IBDP subjects?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "Yes, Ignite’s tutors are subject specialists with extensive experience across all IBDP Group 1 to Group 6 subjects, including HL & SL levels, as well as core components like TOK & EE.",
     },
     {
-      question: "LOREM IPSUM DOLOR SIT AMET?",
+      question: "How is the IBDP tutoring customized for each student?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "Each student receives a personalized tutoring plan based on their subject combination, academic goals, & learning pace. Tutors adjust the content & approach accordingly to support the individual progress of the students.",
     },
     {
-      question: "LOREM IPSUM DOLOR SIT AMET?",
+      question: "Are there regular assessments or feedback provided?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "Yes, students receive regular assessments, mock tests, & detailed feedback to help them identify areas of improvement & track their performance consistently.",
+    },
+    {
+      question: "Can I attend a demo class before enrolling for IBDP?",
+      answer:
+        "Definitely, Ignite offers a free demo class so students & parents can evaluate the teaching approach & personalized approach before starting the full course.",
     },
   ];
+
 
   return (
     <div
@@ -295,8 +301,8 @@ const FAQSection = () => {
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{
-        marginBottom: isMobile?"40px":"96px",
-        maxWidth: isMobile?"95vw":"90vw",
+        marginBottom: isMobile ? "40px" : "96px",
+        maxWidth: isMobile ? "95vw" : "90vw",
         backgroundImage: 'url("/assets/faqbg.png")',
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -322,27 +328,25 @@ const FAQSection = () => {
           <div className={`col-lg-6 d-flex flex-column justify-content-center ${isMobile ? 'text-center' : ''}`}>
             {/* FAQ Header */}
             <div className="testimonialHeader" style={{ marginBottom: isMobile ? "10px" : "20px" }}>
-              <span className="SubHeading" style={{fontSize:isMobile?"":"28px !important"}}>FAQS
+              <span className="SubHeading" style={{ fontSize: isMobile ? "" : "28px !important" }}>FAQS
               </span>
             </div>
 
             {/* Main Title */}
-       <h2
+            <h2
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section"
-              style={{ animationDelay: "0.2s",color:"#19245E",fontWeight:800,marginBlock:"20px",fontSize:isMobile?"20px":"2.1875rem" }}
+              className="fade-in-section text-uppercase"
+              style={{ animationDelay: "0.2s", color: "#19245E", fontWeight: 800, marginBlock: "20px", fontSize: isMobile ? "20px" : "2.1875rem" }}
             >
-              LOREM IPSUM DOLOR SIT AMET,
-              <span className="highlight"> CONSECTETUR</span> ADIPISCING
+              What is the focus of IBDP tutoring at<span className="highlight"> Ignite</span> Training Institute?
             </h2>
 
             <p
               style={{ color: "#64748b", maxWidth: isMobile ? "100%" : "28rem", fontSize: isMobile ? "16px" : "20px", lineHeight: isMobile ? "1.5" : "1.2", margin: isMobile ? "0 auto" : "0", paddingLeft: isMobile ? "0.5rem" : "0", paddingRight: isMobile ? "0.5rem" : "0", marginBottom: isMobile ? "15px" : "20px" }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ignite’s IBDP tutoring focuses on subject mastery, IA and EE guidance, and exam techniques. The program is designed to support students through both Year 1 & Year 2 of the Diploma Programme.
             </p>
           </div>
 
@@ -366,7 +370,7 @@ const FAQSection = () => {
                 >
                   <span
                     className="fw-bold h5 lh-sm mb-0"
-                    style={{ color: "#1e3a8a", fontSize: isMobile ? "1.1rem" : "25px", lineHeight: "100%", letterSpacing: "1%", width:"90%" }}
+                    style={{ color: "#1e3a8a", fontSize: isMobile ? "1.1rem" : "25px", lineHeight: "100%", letterSpacing: "1%", width: "90%" }}
                   >
                     {faq.question}
                   </span>

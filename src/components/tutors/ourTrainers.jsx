@@ -1886,7 +1886,7 @@ useEffect(() => {
                       <div
                         data-color={t.color}
                         className={` trainerCard ${isActive ? "activeTrainer" : "inactiveTrainer"}`}
-                        style={{ animationDelay: 0.2 }}
+                        style={{ animationDelay: 0.2,width:"365px",marginRight:"36px" }}
                       >
                         <div className="trainerName">{t.name}</div>
                         <div className="trainerImgWrap">

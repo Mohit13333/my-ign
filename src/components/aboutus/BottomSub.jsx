@@ -168,7 +168,7 @@ export default function CallToAction() {
             color: 'white',
             padding: '1rem 1.5rem',
             borderRadius: '9999px',
-            fontSize: '1rem',
+            fontSize: '12px',
             fontWeight: '500',
             cursor: 'pointer',
             width: '100%',
@@ -211,7 +211,7 @@ export default function CallToAction() {
                             <button
                                 style={{ ...styles.button }}
                             >
-                                <span>JOIN A FREE DEMO</span>
+                                <span>explore our tutoring course</span>
                                 <div style={{ ...styles.buttonIcon }}>
                                     <ArrowRight size={20} />
                                 </div>

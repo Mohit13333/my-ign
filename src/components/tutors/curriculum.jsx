@@ -14,7 +14,7 @@ const IBCurriculumStages = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <div>
+    <div style={{marginBlock:isMobile?"10px":"100px"}}>
       <section className="achievementsSection pb-0" style={{ position: 'relative' }}>
         <div className="container">
           <div className="achievementsHeadings">
@@ -212,23 +212,23 @@ padding-inline:70px !important;
 
         .rect-1 {
 top: -53px;
-    right: 0;
+    right: 54px;
     width: 608px;
-    height: 88px;
+    height: 102px;
         }
 
         .rect-2 {
           top: 62%;
           left: 0;
            width: 428px;
-          height: 88px;
+          height: 102px;
         }
 
         .rect-3 {
-bottom: -293%;
-    right: 0;
-    width: 632px;
-    height: 88px;
+    bottom: -293%;
+    right: 6rem;
+    width: 750px;
+    height: 102px;
         }
 
 .achievementsHeadings {
@@ -357,7 +357,7 @@ bottom: -293%;
 .curriculum-info h1 {
   color: rgba(35, 52, 103, 1);
   font-size: 23px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 0;
 }
 .achievements-name::after {
@@ -785,7 +785,7 @@ padding-inline:0 !important;
 .curriculum-col {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  padding: 30px;
+  padding: 30px 30px 50px 30px;
   padding-right: 100px;
 }
 .curriculum-col-left {

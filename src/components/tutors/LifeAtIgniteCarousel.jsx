@@ -3,30 +3,26 @@ import { useEffect, useState } from "react";
 
 export default function LifeAtIgniteCarousel() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const images = [
     {
-      url: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      url: "/assets/igncra.jpg",
       alt: "Modern library with bookshelves and seating area",
     },
     {
-      url: "https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      url: "/assets/igncra.jpg",
       alt: "Modern office workspace with computers",
     },
     {
-      url: "https://images.pexels.com/photos/416320/pexels-photo-416320.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      url: "/assets/igncra.jpg",
       alt: "Collaborative meeting room",
     },
     {
-      url: "https://images.pexels.com/photos/1181534/pexels-photo-1181534.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      url: "/assets/igncra.jpg",
       alt: "Creative workspace with plants",
     },
-    {
-      url: "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      alt: "Modern break room and lounge area",
-    },
-  ];  
+  ];
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
@@ -60,7 +56,7 @@ export default function LifeAtIgniteCarousel() {
     <div className=" overflow-hidden fade-in-section" data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      style={{ animationDelay: "0.1s", marginBlock:isMobile?"40px":"96px",paddingBlock:isMobile?"40px":"0" }}>
+      style={{ animationDelay: "0.1s", marginBlock: isMobile ? "40px" : "96px", paddingBottom: isMobile ? "40px" : "0" }}>
       <div className="container fade-in-section"
         data-scroll
         data-scroll-class="is-inview"
@@ -84,9 +80,8 @@ export default function LifeAtIgniteCarousel() {
             className="fade-in-section alumniTitle"
             style={{ margin: "24px 0 0 0", animationDelay: "0.3s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,<span className="alumniHighlight">  consectetur </span> 
-           ADIPISCING
-          </h2>
+            This Is What Learning Really <span className="alumniHighlight">  Looks </span>
+            Like At Ignite          </h2>
         </div>
 
         {/* Carousel */}
@@ -94,7 +89,7 @@ export default function LifeAtIgniteCarousel() {
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ maxWidth: '800px', animationDelay: "0.4s" }}>
+          style={{ maxWidth: '1200px', animationDelay: "0.4s" }}>
           {/* Left Arrow */}
           <button
             onClick={prevImage}
@@ -104,14 +99,14 @@ export default function LifeAtIgniteCarousel() {
             data-scroll-repeat
             style={{
               zIndex: 10,
-              left: '-8rem',
+              left: '-4rem',
               width: '3rem',
               height: '3rem',
               transition: 'background-color 0.3s ease',
               animationDelay: "0.45s"
             }}
           >
-            <img src="/assets/lar.png" alt="leftarr" width={isMobile?32:40} height={isMobile?32:40} />
+            <img src="/assets/lar.png" alt="leftarr" width={isMobile ? 32 : 80} height={isMobile ? 32 : 80} />
           </button>
 
           {/* Stacked Images */}
@@ -151,14 +146,14 @@ export default function LifeAtIgniteCarousel() {
             data-scroll-repeat
             style={{
               zIndex: 10,
-              right: '-8rem',
+              right: '-4rem',
               width: '3rem',
               height: '3rem',
               transition: 'background-color 0.3s ease',
               animationDelay: "0.65s"
             }}
           >
-            <img src="/assets/rar.png" alt="rightarr" width={isMobile?32:40} height={isMobile?32:40} />
+            <img src="/assets/rar.png" alt="rightarr" width={isMobile ? 32 : 80} height={isMobile ? 32 : 80} />
           </button>
         </div>
 
@@ -168,9 +163,8 @@ export default function LifeAtIgniteCarousel() {
           data-scroll-class="is-inview"
           data-scroll-repeat
           style={{ animationDelay: "0.7s" }}>
-          <p className="mx-auto" style={{ maxWidth: '40rem',fontSize:isMobile?"16px":"23px" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore.
+          <p className="mx-auto" style={{ maxWidth: '40rem', fontSize: isMobile ? "16px" : "23px" }}>
+            Experience the energy, connections, & everyday learnings that define student life & growth at Ignite.
           </p>
         </div>
       </div>
@@ -189,7 +183,7 @@ export default function LifeAtIgniteCarousel() {
         .alumniSubSection {
           text-align: center;
           position: relative;
-          margin-bottom:1rem;
+          margin-bottom:3rem;
         }
         .alumniSubSection:before {
           content: "";
@@ -207,12 +201,12 @@ export default function LifeAtIgniteCarousel() {
           z-index: -1;
         }
         .alumniSubHeading {
-          font-size: 1.6vw;
+          font-size: 28px;
           color: #19245E;
           text-transform: uppercase;
         }
         .alumniTitle {
-          font-size: 2vw;
+          font-size: 2.1875rem;
           font-weight: 700;
           max-width: 50%;
           margin: 30px auto 0 !important;
@@ -227,28 +221,63 @@ export default function LifeAtIgniteCarousel() {
           background-clip: text;
         }
 
-        /* Desktop defaults */
+        /* Desktop defaults - Increased sizes for 1920px resolution */
         .carousel-images {
-          height: 400px;
-          width: 700px;
+          height: 550px;
+          width: 1000px;
         }
         .prev-img, .next-img {
-          width: 450px;
-          height: 350px;
+          width: 650px;
+          height: 450px;
           object-fit: cover;
-          opacity: 0.8;
+          opacity: 20%;
+          filter: brightness(1.2) contrast(0.6) saturate(0.5);
+          position: relative;
           transition: all 0.5s ease;
           border-radius: 1rem;
-          top: 20px;
+          border-radius: 30px !important;
+          top: 50px;
+          opacity: 20% !important;
         }
-        .prev-img { left: 20px; }
-        .next-img { right: 20px; }
+        .prev-img::after, .next-img::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 30px;
+          pointer-events: none;
+        }
+        .prev-img { left: 40px; }
+        .next-img { right: 40px; }
         .main-img {
-          width: 500px;
-          height: 400px;
+          width: 820px;
+          height: 520px;
+          border-radius: 30px !important;
           object-fit: cover;
           border-radius: 1rem;
           transition: all 0.5s ease;
+        }
+
+        /* Medium screens (1200px to 1600px) */
+        @media (max-width: 1600px) and (min-width: 1200px) {
+          .carousel-images {
+            height: 480px;
+            width: 950px;
+          }
+          .prev-img, .next-img {
+            width: 550px;
+            height: 400px;
+            top: 40px;
+          }
+          .prev-img { left: 30px; }
+          .next-img { right: 30px; }
+          .main-img {
+            width: 650px;
+            height: 480px;
+          }
         }
 
         /* Mobile fixes */
@@ -301,10 +330,10 @@ export default function LifeAtIgniteCarousel() {
         }
         @media (max-width: 575px) {
           .alumniSubHeading {
-            font-size: 20px;
+            font-size: 18px;
           }
           .alumniTitle {
-            font-size: 25px;
+            font-size: 20px;
           }
           .carousel-images {
             height: 350px;

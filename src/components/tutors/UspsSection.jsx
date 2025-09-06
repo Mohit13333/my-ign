@@ -2,19 +2,19 @@
 import React, { useEffect, useState } from "react";
 
 function USPItem({ number, icon, title, desc }) {
-    const [isMobile, setIsMobile] = useState(false);
-  
-    useEffect(() => {  
-      const checkDevice = () => {
-        setIsMobile(window.innerWidth <= 1100);
-      };
-  
-      checkDevice();
-      window.addEventListener('resize', checkDevice);
-  
-      return () => window.removeEventListener('resize', checkDevice);
-    }, []);
-  
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      setIsMobile(window.innerWidth <= 1100);
+    };
+
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+
+    return () => window.removeEventListener('resize', checkDevice);
+  }, []);
+
   return (
     <div
       className="text-start fade-in-section"
@@ -23,7 +23,7 @@ function USPItem({ number, icon, title, desc }) {
       data-scroll-repeat
       style={{ animationDelay: `${0.2 + number * 0.05}s`, padding: "0 10px" }}
     >
-      <div className="d-flex align-items-start mb-4">
+      <div className="d-flex align-items-start">
         <div
           className="bg-teal rounded-circle d-flex align-items-center justify-content-center me-3 flex-shrink-0"
           style={{
@@ -46,19 +46,20 @@ function USPItem({ number, icon, title, desc }) {
           >
             {React.cloneElement(icon, {
               style: {
-                width: isMobile?"100px":"150px",
-                height: isMobile?"100px":"150px",
+                width: isMobile ? "70px" : "150px",
+                height: isMobile ? "70px" : "150px",
                 objectFit: "contain",
                 mixBlendMode: "multiply",
+                marginRight: isMobile ? "45px" : "0",
               },
             })}
           </div>
         </div>
       </div>
       <h3
-        className="fw-bold text-uppercase mb-3 position-relative"
+        className="fw-bold text-uppercase position-relative"
         style={{
-          fontSize: isMobile?"18px":"20px",
+          fontSize: isMobile ? "13px" : "19px",
           lineHeight: "100%",
           background: "linear-gradient(135deg, #161664, #3F88BA)",
           WebkitBackgroundClip: "text",
@@ -66,8 +67,9 @@ function USPItem({ number, icon, title, desc }) {
           backgroundClip: "text",
           color: "transparent",
           zIndex: 1,
-          marginTop: isMobile?"20px":"50px",
+          marginTop: isMobile ? "0" : "50px",
           borderTop: "1px solid rgba(0, 164, 145, 0.2)",
+          letterSpacing: "2px",
           paddingTop: "10px", // Optional: Adds spacing above text so the border doesn't touch it
         }}
       >
@@ -76,7 +78,7 @@ function USPItem({ number, icon, title, desc }) {
 
       <p
         className="text-muted mt-2"
-        style={{ fontSize: isMobile ? "16px" : "23px", lineHeight: "1.2", color: "#233467" }}
+        style={{ fontSize: isMobile ? "10px" : "20px", lineHeight: "1.2", color: "#233467" }}
       >
         {desc}
       </p>
@@ -161,29 +163,30 @@ function UpsSection() {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading">USPs</div>
+              <div className="SubHeading testSubheading">OUR PROMISE</div>
             </div>
             <h2
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section testTitle"
+              className="fade-in-section testTitle text-uppercase"
               style={{ animationDelay: "0.2s" }}
             >
-              LOREM IPSUM DOLOR SIT AMET,<span className="highlight"> CONSECTETUR</span> ADIPISCING
+              What Do Students Get From<span className="highlight"> Ignite's</span> IBDP Support?
 
             </h2>
           </div>
         </div>
 
         {/* USP Grid */}
-        <div className="row g-4 mb-5" style={{ margin: "0 -10px" }}>
+        <div className="custom-grid mb-5">
           {uspItems.map((item, index) => (
-            <div key={item.number} className="col-6 col-md-3">
+            <div key={item.number} className="grid-item">
               <USPItem {...item} number={index} />
             </div>
           ))}
         </div>
+
 
         {/* CTA Button */}
         <div
@@ -193,40 +196,42 @@ function UpsSection() {
           data-scroll-repeat
           style={{ animationDelay: "0.7s" }}
         >
-          <button
-            className="btn fw-bold d-flex align-items-center mx-auto rounded-pill"
-            style={{
-              background: "linear-gradient(90deg, #161664, #3F88BA)",
-              color: "white",
-              padding: "0.8rem 1.8rem",
-              border: "none",
-              transition: "opacity 0.3s ease",
-              fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
-            }}
-            onMouseEnter={(e) => (e.target.style.opacity = "0.9")}
-            onMouseLeave={(e) => (e.target.style.opacity = "1")}
+          <a
+            href="https://ignitetraininginstitute.com/about-us/"
+            style={{ textDecoration: "none" }}
           >
-            MEET OUR TRAINERS
-            <div
-              className="ms-3 rounded-circle d-flex align-items-center justify-content-center fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
+            <button
+              className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
               style={{
-                width: "clamp(1.5rem, 2vw, 2rem)",
-                height: "clamp(1.5rem, 2vw, 2rem)",
-                background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                animationDelay: "0.75s",
+                background: "linear-gradient(90deg,#161664, #3F88BA)",
+                color: "white",
+                padding: "12px 14px 12px 20px",
+                border: "none",
+                transition: "opacity 0.3s ease",
+                letterSpacing: "3px",
+                fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
               }}
+              onMouseEnter={(e) => (e.target.style.opacity = "0.9")}
+              onMouseLeave={(e) => (e.target.style.opacity = "1")}
             >
-              <img
-                src="/assets/arrowright.png"
-                alt="arrow right"
-                width={12}
-                height={12}
-              />
-            </div>
-          </button>
+              KNOW MORE ABOUT IGNITE
+              <div
+                className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
+                style={{
+                  width: "2.5rem",
+                  height: "2.5rem",
+                  background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                  animationDelay: "0.75s",
+                  marginLeft: "2.1rem",
+                }}
+              >
+                <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+              </div>
+            </button>
+          </a>
         </div>
       </div>
 
@@ -240,6 +245,17 @@ function UpsSection() {
           opacity: 1;
           transform: translateY(0);
         }
+          .custom-grid {
+  display: grid;
+  gap: 1.5rem; /* same as g-4 (24px gap) */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns by default (col-6) */
+}
+
+@media (min-width: 768px) {
+  .custom-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on md and up (col-md-3) */
+  }
+}
     .divider {
   height: 1px;
   background: linear-gradient(
@@ -254,6 +270,34 @@ function UpsSection() {
             font-size: 22px !important;
           }
         }
+@media (max-width: 575px) {
+          .custom-grid {
+  gap: .5rem;
+}
+  .cust-text {
+    background: linear-gradient(90deg, #161664, #3F88BA) !important;
+    color: white !important;
+    padding: 8px 8px 8px 13px !important;
+    border: none !important;
+    -webkit-transition: opacity .3s ease !important;
+    -moz-transition: opacity.3s ease!important;
+    -o-transition: opacity.3s ease!important;
+    transition: opacity .3s ease !important;
+    letter-spacing: 1px !important;
+    font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
+    margin-top: 45px !important;
+    font-weight:600 !important;
+  }
+
+  .custom-height {
+    width: 30px !important;
+    height: 30px !important;
+    background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
+    animation-delay: 0.75s !important;
+    margin-left: 1rem !important;
+  }
+}
+
       `}</style>
     </div>
   );

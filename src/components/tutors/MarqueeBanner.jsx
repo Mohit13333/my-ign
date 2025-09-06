@@ -2,9 +2,10 @@ import React from "react";
 
 const items = [
   "EXPERT GUIDANCE",
-  "GRADE IMPROVEMENT",
-  "FREE STUDY RESOURCES",
-  "CAREER ADVICE",
+  "TAILORED STUDY RESOURCES",
+  "PROGRESS TRACKING",
+  "PROVEN REAL RESULTS",
+  "GRADE IMPROVEMENT"
 ];
 
 const MarqueeBanner = () => {

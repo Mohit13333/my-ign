@@ -1,38 +1,38 @@
 import Image from 'next/image'
 import React from 'react'
 
-const IBCurriculumStages= () => {
+const IBCurriculumStages = () => {
   return (
-    <div>     
-           <section className="achievementsSection pb-0">
-          <div className="container">
-            <div className="achievementsHeadings">
-              <div
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section"
-                style={{ animationDelay: "0.1s" }}
-              >
-                <h4 className="SubHeading">
-                        WHAT CURRICULUM & STANDARDISED TESTS WE OFFER?
-                </h4>
-              </div>
-              <div
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section"
-                style={{ animationDelay: "0.25s" }}
-              >
-                <h1 className="achievementsTitle">
-                  Lorem ipsum dolor sit amet, <br></br>{" "}
-                  <span className="highlight"> consectetur</span> adipiscing{" "}
-                </h1>
-              </div>
+    <div>
+      <section className="achievementsSection pb-0">
+        <div className="container">
+          <div className="achievementsHeadings">
+            <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section"
+              style={{ animationDelay: "0.1s" }}
+            >
+              <h4 className="SubHeading">
+                WHAT CURRICULUM & STANDARDISED TESTS WE OFFER?
+              </h4>
+            </div>
+            <div
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section"
+              style={{ animationDelay: "0.25s" }}
+            >
+              <h1 className="achievementsTitle">
+                Lorem ipsum dolor sit amet, <br></br>{" "}
+                <span className="highlight"> consectetur</span> adipiscing{" "}
+              </h1>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
       <section className="achievementsSection">
         <div className="container">
           <div className="row gy-5">
@@ -63,7 +63,7 @@ const IBCurriculumStages= () => {
                   <div className="col-lg-6">
                     <div className="curriculum-info">
                       <Image
-                        src="/assets/check-inactive.webp"
+                        src="/assets/check-inactive-blue.webp"
                         width={30}
                         height={30}
                         quality={100}
@@ -74,7 +74,7 @@ const IBCurriculumStages= () => {
                   <div className="col-lg-6">
                     <div className="curriculum-info">
                       <Image
-                        src="/assets/check-inactive.webp"
+                        src="/assets/check-inactive-blue.webp"
                         width={30}
                         height={30}
                         quality={100}
@@ -85,7 +85,7 @@ const IBCurriculumStages= () => {
                   <div className="col-lg-6">
                     <div className="curriculum-info">
                       <Image
-                        src="/assets/check-inactive.webp"
+                        src="/assets/check-inactive-blue.webp"
                         width={30}
                         height={30}
                         quality={100}
@@ -96,7 +96,7 @@ const IBCurriculumStages= () => {
                   <div className="col-lg-6">
                     <div className="curriculum-info">
                       <Image
-                        src="/assets/check-inactive.webp"
+                        src="/assets/check-inactive-blue.webp"
                         width={30}
                         height={30}
                         quality={100}
@@ -325,8 +325,8 @@ const IBCurriculumStages= () => {
 }
 .curriculum-info h1 {
   color: rgba(35, 52, 103, 1);
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 500;
   margin-bottom: 0;
 }
 .achievements-name::after {
@@ -644,8 +644,8 @@ const IBCurriculumStages= () => {
   letter-spacing: 0%;
   vertical-align: middle;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
-  -webkit-background-clip: text;
+  background: linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* Optional for cross-browser support */
   background-clip: text;
@@ -709,8 +709,7 @@ const IBCurriculumStages= () => {
 .curriculum-col {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  padding: 30px;
-  padding-right: 100px;
+  padding: 40px 80px;
 }
 .curriculum-col-left{
 background: linear-gradient(235.04deg, #EDFFF4 45.21%, #A6EAC7 95.86%);
@@ -822,7 +821,7 @@ background: linear-gradient(235.04deg, #EDFFF4 45.21%, #A6EAC7 95.86%);
   font-size: 2rem;
 }
 }`}</style>
-      </div>
+    </div>
   )
 }
 
