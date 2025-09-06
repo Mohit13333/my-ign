@@ -161,12 +161,12 @@ const Learning = () => {
             <img
               src="/assets/rigtarr2.png"
               alt="previous"
-              width={25}
-              height={25}
+              width={isMobile ? 25 : 50}
+              height={isMobile ? 25 : 50}
             />
           </button>
           <button className="mobile-carousel-btn next" onClick={nextSlide}>
-            <img src="/assets/leftarr2.png" alt="next" width={25} height={25} />
+            <img src="/assets/leftarr2.png" alt="next" width={isMobile ? 25 : 50} height={isMobile ? 25 : 50} />
           </button>
         </div>
 
@@ -187,10 +187,8 @@ const Learning = () => {
         <div className="desktop-header">
           <div className="desktop-content">
             <div className="desktop-left">
-              <div className="testimonialHeader">
-                <span className="SubHeading">
-                  HOW IS LEARNING WITH US DIFFRENT
-                </span>
+              <div className="testimonialHeader" style={{ marginTop: "15%" }}>
+                <span className="SubHeading">ADVANTAGES</span>
               </div>
               <h2
                 className="fw-bold mb-0 fade-in-section"
@@ -199,63 +197,51 @@ const Learning = () => {
                 data-scroll-repeat
                 style={{
                   animationDelay: "0.3s",
-                  fontSize: isMobile ? "1.5rem" : "1.7rem",
+                  fontSize: isMobile ? "1.5rem" : "2rem",
                   lineHeight: "1.1",
                   textTransform: "uppercase",
-                  marginTop: "3vh",
+                  marginTop: "3vh"
                 }}
               >
                 <span
                   style={{
-                    background: "#19245E",
+                    background: "linear-gradient(135deg,#161664, #3F88BA)",
                     WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
+                    WebkitTextFillColor: "transparent"
                   }}
                 >
-                  LOREM IPSUM DOLOR SIT AMET,
+                  ADVANTAGES OF HOMESCHOOLING OVER
                 </span>{" "}
                 <span
                   style={{
                     background: "linear-gradient(135deg, #00A491, #003E37)",
                     WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
+                    WebkitTextFillColor: "transparent"
                   }}
                 >
-                  CONSECTETUR
+                  TRADITIONAL
                 </span>{" "}
                 <span
                   style={{
-                    background: "#19245E",
+                    background: "linear-gradient(135deg, #3F88BA, #161664)",
                     WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
+                    WebkitTextFillColor: "transparent"
                   }}
                 >
-                  ADIPISCING
+                  PROCESSES
                 </span>
               </h2>
               <p className="desktop-subtitle">
-                Choosing us means partnering with
-                <br />
-                experienced coaches who are dedicated to
-                <br />
+                Choosing us means partnering with<br />
+                experienced coaches who are dedicated to<br />
                 unlocking your potential.
               </p>
               <div className="carousel-controls">
                 <button className="carousel-btn prev" onClick={prevSlide}>
-                  <img
-                    src="/assets/rigtarr2.png"
-                    alt="previous"
-                    width={30}
-                    height={30}
-                  />
+                  <img src="/assets/rigtarr2.png" alt="previous" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
                 </button>
                 <button className="carousel-btn next" onClick={nextSlide}>
-                  <img
-                    src="/assets/leftarr2.png"
-                    alt="next"
-                    width={30}
-                    height={30}
-                  />
+                  <img src="/assets/leftarr2.png" alt="next" width={isMobile ? 30 : 50} height={isMobile ? 30 : 50} />
                 </button>
               </div>
             </div>
@@ -382,7 +368,7 @@ const Learning = () => {
         }
 
         .mobile-dot-rect {
-          width: 20px;
+          width: 10px;
           height: 3px;
           background: #cbd5e0;
           border-radius: 30px;
@@ -391,7 +377,9 @@ const Learning = () => {
         }
 
         .mobile-dot-rect.active {
-          background: #2c5282;
+          width: 25px;
+          height: 3px;
+          background: gray;
         }
 
         .mobile-carousel-btn {
@@ -458,97 +446,98 @@ const Learning = () => {
         }
 
         /* Desktop Layout */
-        @media (min-width: 768px) {
-          .mobile-layout {
-            display: none;
-          }
+       @media (min-width: 768px) {
+                    .mobile-layout {
+                        display: none;
+                    }
 
-          .desktop-layout {
-            display: block;
-          }
+                    .desktop-layout {
+                        display: block;
+                    }
 
-          .advantages-container {
-            padding: 60px 40px;
-            margin: 0 auto;
-          }
+                    .advantages-container {
+                        padding: 60px 40px;
+                        max-width: 90vw;
+                        margin: 0 auto;
+                    }
 
-          .desktop-header {
-            width: 100%;
-          }
+                    .desktop-header {
+                        width: 100%;
+                    }
 
-          .desktop-content {
-            display: flex;
-            gap: 60px;
-            align-items: flex-start;
-          }
+                    .desktop-content {
+                        display: flex;
+                        gap: 60px;
+                        align-items: flex-start;
+                    }
 
-          .desktop-left {
-            flex: 0 0 400px;
-          }
+                    .desktop-left {
+                        flex:0 0 500px;
+                    }
 
-          .desktop-title {
-            font-size: 32px;
-            font-weight: 700;
-            color: #2c5282;
-            line-height: 1.2;
-            margin: 0 0 20px 0;
-          }
+                    .desktop-title {
+                        font-size: 32px;
+                        font-weight: 700;
+                        color: #2c5282;
+                        line-height: 1.2;
+                        margin: 0 0 20px 0;
+                    }
 
-          .desktop-subtitle {
-            font-size: 18px;
-            color: #233467;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            margin-top: 30px;
-            font-weight:500;
-          }
+                    .desktop-subtitle {
+                        font-size: 18px;
+                        color:#233467;
+                        line-height: 1.6;
+                        margin-block: 20px;
+                    }
 
-          .carousel-controls {
-            display: flex;
-            gap: 15px;
-            border: none !important;
-          }
+                    .carousel-controls {
+                        display: flex;
+                        gap: 15px;
+                        border:none !important;
+                    }
 
-          .carousel-btn {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: none !important;
-            background: none !important;
-          }
+                    .carousel-btn {
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border:none !important;
+                        background:none !important;
+                    }
 
-          .desktop-right {
-            flex: 1;
-            position: relative;
-          }
+                    .desktop-right {
+                        flex: 1;
+                        position: relative;
+                    }
 
-          .desktop-cards-container {
-            overflow-x: hidden;
-            border-radius: 20px;
-            background: transparent;
-            height: 500px;
-            position: relative;
-          }
+                    .desktop-cards-container {
+                        overflow: hidden;
+                        border-radius: 20px;
+                        background: transparent;
+                        height: 600px;
+                        position: relative;
+                    }
 
-          .desktop-cards {
-            display: flex;
-            flex-direction: row;
-            height: 100%;
-            gap: 28px;
-          }
+                    .desktop-cards {
+                        display: flex;
+                        flex-direction: row;
+                        transition: transform 0.5s ease;
+                        height: 100%;
+                        gap: 5rem;
+                    }
 
-          .desktop-card {
-            flex: 0 0 320px;
-            padding: 36px 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: left;
-            border-radius: 24px;
-            transition: transform 0.3s ease;
-          }
+                    .desktop-card {
+                        flex: 0 0 400px;
+                        padding: 15px 30px 30px 30px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        text-align: left;
+                        border-radius: 24px;
+                        transition: transform 0.3s ease;
+                    }
 
+            
           .blueBg {
             background-image: url("/assets/bluebg.png");
             background-size: cover;
@@ -563,7 +552,7 @@ const Learning = () => {
             background-position: center;
           }
 
-          .desktop-card-icon {
+            .desktop-card-icon {
             margin-bottom: 19px;
             width: 90px;
             height: 90px;
@@ -578,56 +567,55 @@ const Learning = () => {
             object-fit: contain;
           }
 
-          .desktop-card-title {
-            font-size: 20px;
-            font-weight: 800;
-            color: #2c5282;
-            margin-bottom: 18px;
-            line-height: 1.3;
-            background: linear-gradient(to right, #161664,#3F88BA);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-          }
+                    .desktop-card-title {
+                        font-size: 28px;
+                        font-weight: 700;
+                        margin-bottom: 18px;
+                        line-height: 1.3;
+                        background: linear-gradient(to right, #161664, #3F88BA);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                    }
 
-          .desktop-card-text {
-            font-size: 21px;
-            color: #233467;
-            line-height: 36px;
-            margin: 0;
-            font-weight:500;
-          }
+                    .desktop-card-text {
+                              font-size: 18px;
+        color: #233467;
+        line-height: 1.6;
+        margin: 0;
+        font-weight: 600;
+                    }
 
-          .desktop-carousel-dots {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 30px;
-            width: 100%;
-          }
+                    .desktop-carousel-dots {
+                        display: flex;
+                        justify-content: center;
+                        gap: 10px;
+                        margin-top: 30px;
+                        width: 100%;
+                    }
 
-          .carousel-dots {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-          }
+                    .carousel-dots {
+                        display: flex;
+                        justify-content: center;
+                        gap: 10px;
+                        margin-top: 20px;
+                    }
 
-          .dot-rect {
-            width: 10px;
-            height: 3px;
-            background: #cbd5e0;
-            border-radius: 40px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-          }
+                    .dot-rect {
+                        width: 10px;
+                        height: 3px;
+                        background: #cbd5e0;
+                        border-radius:40px;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                    }
 
-          .dot-rect.active {
-           width: 25px;
-            height: 3px;
-            background: gray;
-          }
-        }
+                    .dot-rect.active {
+                        background: gray;
+                         width: 25px;
+                        height: 3px;
+                    }
+                }
       `}</style>
     </div>
   );
