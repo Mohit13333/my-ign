@@ -160,20 +160,20 @@ export default function IgniteAboutCard() {
           </div>
         </div>
       </div>
-
-      <div className="text-center mt-3 fade-in-section"
+      <div className="text-center fade-in-section"
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
         style={{ animationDelay: "0.7s" }}>
         <button
-          className="btn fw-bold d-flex align-items-center mx-auto rounded-pill"
+          className="btn cust-text fw-bold mt-5 d-flex align-items-center mx-auto rounded-pill"
           style={{
-            background: "linear-gradient(90deg, #161664, #3F88BA)",
+            background: "linear-gradient(90deg,#161664, #3F88BA)",
             color: 'white',
-            padding: '0.8rem 1.8rem',
+            padding: '12px 14px 12px 20px',
             border: 'none',
             transition: 'opacity 0.3s ease',
+            letterSpacing: "3px",
             fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
           }}
           onMouseEnter={(e) => e.target.style.opacity = "0.9"}
@@ -181,18 +181,19 @@ export default function IgniteAboutCard() {
         >
           GET IN TOUCH
           <div
-            className="ms-3 rounded-circle d-flex align-items-center justify-content-center fade-in-section"
+            className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
             style={{
-              width: 'clamp(1.5rem, 2vw, 2rem)',
-              height: 'clamp(1.5rem, 2vw, 2rem)',
+              width: "2.5rem",
+              height: "2.5rem",
               background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-              animationDelay: "0.75s"
+              animationDelay: "0.75s",
+              marginLeft: "2.1rem"
             }}
           >
-            <img src="/assets/fadb.png" alt="btn" width={isMobile ? 30 : 32} height={isMobile ? 30 : 32} />
+            <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
           </div>
         </button>
       </div>
@@ -394,7 +395,7 @@ export default function IgniteAboutCard() {
         }
 
         .check-box {
-          background: url("/assets/fullrect.png") no-repeat center/cover;
+background: linear-gradient(269.51deg, rgba(231, 246, 255, 0) -9.55%, rgba(163, 202, 245, 0.35) 92.85%);
           border-radius: 15px;
           padding: 20px;
           display: flex;
@@ -440,17 +441,19 @@ export default function IgniteAboutCard() {
           transform: translateX(-50%);
           width: 120%; /* 👈 make it longer than text (100% = equal to text, 120% = 20% longer) */
           height: 1px; /* thickness of underline */
-          background-color: gray; /* pick your color */
+          background-color: #212529; /* pick your color */
           border-radius: 2px; /* smooth edges */
+          opacity: 0.2; /* make it a bit lighter */
         }
 
         .heading-subtitle {
-          font-size: 23px;
-          text-align: center;
-          color: #2c5f7d;
-          margin: 0;
-          line-height: 1.4;
-        }
+          font-size: 18px;
+    text-align: center;
+    color: #233467;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 500;
+}
 
         .gradient-text {
           background: linear-gradient(to right, #161664, #3f88ba);
@@ -585,6 +588,33 @@ export default function IgniteAboutCard() {
             font-size: 13px;
           }
         }
+          @media (max-width: 575px) {
+          .custom-grid {
+  gap: .5rem;
+}
+  .cust-text {
+    background: linear-gradient(90deg, #161664, #3F88BA) !important;
+    color: white !important;
+    padding: 8px 8px 8px 13px !important;
+    border: none !important;
+    -webkit-transition: opacity .3s ease !important;
+    -moz-transition: opacity.3s ease!important;
+    -o-transition: opacity.3s ease!important;
+    transition: opacity .3s ease !important;
+    letter-spacing: 1px !important;
+    font-size: clamp(0.7rem, 1.1vw, 1.1rem) !important;
+    margin-top: 45px !important;
+    font-weight:600 !important;
+  }
+
+  .custom-height {
+    width: 30px !important;
+    height: 30px !important;
+    background: linear-gradient(90deg, #E7F6FF, #A3CAF5) !important;
+    animation-delay: 0.75s !important;
+    margin-left: 1rem !important;
+  }
+}
       `}</style>
     </section>
   );
