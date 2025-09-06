@@ -614,16 +614,18 @@ const Learning = () => {
           }
 
           .dot-rect {
-            width: 20px;
+            width: 10px;
             height: 3px;
             background: #cbd5e0;
-            border-radius: 30px;
+            border-radius: 40px;
             cursor: pointer;
             transition: all 0.3s ease;
           }
 
           .dot-rect.active {
-            background: #2c5282;
+           width: 25px;
+            height: 3px;
+            background: gray;
           }
         }
       `}</style>
