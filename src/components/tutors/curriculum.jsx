@@ -52,18 +52,16 @@ const IBCurriculumStages = () => {
         />      </section>
       <section className="achievementsSection" style={{ position: 'relative' }}>
         <div className="container">
-          <div className="row gy-5">
+          <div className="row pading-in gy-5">
             <div className="col-lg-6">
               <div
                 className="curriculum-col curriculum-col-left"
                 style={{ borderRadius: 20 }}
               >
                 <p
-                  className="curriculum-section-heading1 text-center"
+                  className="curriculum-section-heading1"
                   style={{
                     fontSize: "35px",
-                    borderBottomColor: "grey",
-                    borderBottomWidth: 1,
                   }}
                 >
                   CURRICULUMS
@@ -71,17 +69,17 @@ const IBCurriculumStages = () => {
                 <div
                   style={{
                     border: "1px solid rgba(35, 52, 103, 1)",
-                    width: 300,
+                    maxWidth: isMobile?300:300,
+                    margin:isMobile?"0 auto": "0",
                     opacity: ".25",
-                    margin: "auto auto 40px",
                   }}
                 />
                 <div className="curriculum-content">
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={30}
-                      height={30}
+                      width={isMobile?20:30}
+                      height={isMobile?20:30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
@@ -90,8 +88,8 @@ const IBCurriculumStages = () => {
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={30}
-                      height={30}
+                      width={isMobile?20:30}
+                      height={isMobile?20:30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
@@ -100,8 +98,8 @@ const IBCurriculumStages = () => {
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={30}
-                      height={30}
+                      width={isMobile?20:30}
+                      height={isMobile?20:30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
@@ -110,8 +108,8 @@ const IBCurriculumStages = () => {
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={30}
-                      height={30}
+                      width={isMobile?20:30}
+                      height={isMobile?20:30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
@@ -126,11 +124,9 @@ const IBCurriculumStages = () => {
                 style={{ borderRadius: 20 }}
               >
                 <p
-                  className="curriculum-section-heading2 text-center"
+                  className="curriculum-section-heading2"
                   style={{
                     fontSize: "35px",
-                    borderBottomColor: "grey",
-                    borderBottomWidth: 1,
                     borderRadius: 0,
                   }}
                 >
@@ -139,17 +135,17 @@ const IBCurriculumStages = () => {
                 <div
                   style={{
                     border: "1px solid rgba(35, 52, 103, 1)",
-                    width: 300,
+                    maxWidth: isMobile?300:300,
+                    margin:isMobile?"0 auto": "0",
                     opacity: ".25",
-                    margin: "auto auto 40px",
                   }}
                 />
                 <div className="curriculum-content">
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={30}
-                      height={30}
+                      width={isMobile?20:30}
+                      height={isMobile?20:30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
@@ -158,8 +154,8 @@ const IBCurriculumStages = () => {
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={30}
-                      height={30}
+                      width={isMobile?20:30}
+                      height={isMobile?20:30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
@@ -168,8 +164,8 @@ const IBCurriculumStages = () => {
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={30}
-                      height={30}
+                      width={isMobile?20:30}
+                      height={isMobile?20:30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
@@ -178,8 +174,8 @@ const IBCurriculumStages = () => {
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={30}
-                      height={30}
+                      width={isMobile?20:30}
+                      height={isMobile?20:30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
@@ -192,6 +188,16 @@ const IBCurriculumStages = () => {
         </div>
       </section>
       <style jsx>{`
+/* Container width fix */
+.container {
+  max-width: 1500px !important;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.pading-in{
+padding-inline:70px !important;
+}
 /* Header */
 .achievementsSection {
   padding: 70px 0;
@@ -452,6 +458,9 @@ bottom: -293%;
     padding: 15px;
     min-height: 200px;
   }
+    .pading-in{
+padding-inline:0 !important;
+}
 
   .achievements-score {
     font-size: 1.5rem;
@@ -670,10 +679,10 @@ bottom: -293%;
     font-size: 16px;
   }
   .curriculum-section-heading1 {
-    font-size: 22px !important;
+    font-size: 19px !important;
   }
   .curriculum-section-heading2 {
-    font-size: 22px !important;
+    font-size: 19px !important;
   }
   .achievementsTitle {
     font-size: 23px;
@@ -752,7 +761,27 @@ bottom: -293%;
   color: transparent;
   margin-bottom: 60px;
 }
-
+  @media (max-width: 400px) {
+    .rect-2 {
+        top: 137%;
+        left: 24px;
+        width: 226px;
+        height: 55px;
+    }
+        .rect-1 {
+        top: 268%;
+        right: -44px;
+        width: 157px;
+        height: 55px;
+}
+        
+.rect-3{
+        top: 234%;
+              right: 328px;
+        width: 167px;
+        height: 72px;
+    }
+      }
 .curriculum-col {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -836,6 +865,7 @@ bottom: -293%;
   .curriculum-section-heading2 {
   font-weight: 700;
   font-size: 2rem;
+  text-align: center;
   }
 
   .achievements-score {
@@ -859,6 +889,7 @@ bottom: -293%;
 }
 .curriculum-section-heading1{
   font-size: 2rem;
+  text-align: center;
 }
 }`}</style>
     </div>

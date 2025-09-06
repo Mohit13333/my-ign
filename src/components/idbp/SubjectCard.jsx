@@ -1472,17 +1472,17 @@
 //     // Create extended array for smooth infinite scrolling
 //     const extendedSubjects = [...subjects, ...subjects, ...subjects];
 //     const centerOffset = subjects.length; // Start from middle array
-    
+
 //     return extendedSubjects.map((subject, index) => {
 //       const actualIndex = index % subjects.length;
 //       const relativePosition = index - (centerOffset + currentIndex);
-      
+
 //       // Only show items within reasonable distance
 //       if (Math.abs(relativePosition) > 6) return null;
-      
+
 //       let opacity;
 //       let scale = 1;
-      
+
 //       if (relativePosition === 0) {
 //         opacity = 1;
 //         scale = 1.08;
@@ -1581,12 +1581,12 @@
 //           transform: translateY(20px);
 //           transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 //         }
-        
+
 //         .subjectSection.fade-in {
 //           opacity: 1;
 //           transform: translateY(0);
 //         }
-        
+
 //         .subjectSectionInner {
 //           background: linear-gradient(135deg, #1F3C68, #265A90);
 //           background-size: cover;
@@ -1609,7 +1609,7 @@
 //           pointer-events: none;
 //           z-index: 1;
 //         }
-        
+
 //         .rect-1 {
 //           top: 3%;
 //           left: -8%;
@@ -1791,7 +1791,7 @@
 //           .subjectBubble {
 //             padding: 12px 45px;
 //           }
-          
+
 //           .navButton {
 //             width: 45px;
 //             height: 45px;
@@ -1835,7 +1835,7 @@
 //             gap: 32px;
 //             padding: 41px 20px 85px 20px;
 //           }
-          
+
 //           .subjectLeft {
 //             margin-left: 0;
 //             width: 100%;
@@ -1888,18 +1888,18 @@
 //             padding: 8px 15px 12px 15px !important;
 //             font-size: 13px !important;
 //           }
-          
+
 //           .fixedScrollContainer {
 //             height: 250px;
 //           }
-          
+
 //           .rect-1 {
 //             top: 3%;
 //             left: -8%;
 //             width: 30vw;
 //             height: 7vh;
 //           }
-          
+
 //           .rect-2 {
 //             display: none;
 //           }
@@ -1959,11 +1959,18 @@ import React, { useState, useEffect } from "react";
 
 export default function SubjectsCard() {
   const subjects = [
-    "IGCSE Environmental Management (EVM)",
-    "IGCSE/GCSE Double Award Science",
-    "IGCSE/GCSE Double Award Science",
-    "Combined Science",
-    "IGCSE Further Math"
+    "IB Math AA - Analysis & Approaches",
+    "IB Math AI - Applications & Interpretations",
+    "IB Physics",
+    "IB Chemistry",
+    "IB Biology",
+    "IB Computer Science",
+    "IB Business Management",
+    "IB Economics",
+    "IB English Language & Literature",
+    "IB French Ab Initio & B",
+    "IB Spanish Ab Initio & B",
+    "IB Psychology"
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -2024,7 +2031,7 @@ export default function SubjectsCard() {
   const handleSubjectClick = (actualIndex) => {
     const currentActualIndex = ((currentIndex % subjects.length) + subjects.length) % subjects.length;
     if (actualIndex === currentActualIndex) return;
-    
+
     setIsAutoScrolling(false);
     setIsTransitioning(true);
     setTimeout(() => {
@@ -2053,14 +2060,14 @@ export default function SubjectsCard() {
   const createInfiniteItems = () => {
     const items = [];
     const visibleRange = 7; // Show 7 items on each side of center
-    
+
     for (let i = -visibleRange; i <= visibleRange; i++) {
       const actualIndex = ((currentIndex + i) % subjects.length + subjects.length) % subjects.length;
       const subject = subjects[actualIndex];
-      
+
       let opacity;
       let scale = 1;
-      
+
       if (i === 0) {
         opacity = 1;
         scale = 1.08;
@@ -2085,7 +2092,7 @@ export default function SubjectsCard() {
         scale: scale
       });
     }
-    
+
     return items;
   };
 
@@ -2103,11 +2110,10 @@ export default function SubjectsCard() {
         {/* LEFT COLUMN */}
         <div className="subjectLeft">
           <span className="subjectHeader">
-            <span className="SubHeading">Subjects</span>
+            <span className="SubHeading">SUBJECTS</span>
           </span>
           <h2 className="subjectTitle">
-            LOREM IPSUM DOLOR SIT AMET,
-            CONSECTETUR ADIPISCING
+            Tutoring That Makes Every IBDP Subject Clear (HL & SL)
           </h2>
         </div>
 

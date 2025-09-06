@@ -50,7 +50,7 @@ function USPItem({ number, icon, title, desc }) {
                 height: isMobile ? "70px" : "150px",
                 objectFit: "contain",
                 mixBlendMode: "multiply",
-                marginRight: isMobile? "45px":"0",
+                marginRight: isMobile ? "45px" : "0",
               },
             })}
           </div>
@@ -163,16 +163,16 @@ function UpsSection() {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading">USPs</div>
+              <div className="SubHeading testSubheading">OUR PROMISE</div>
             </div>
             <h2
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section testTitle"
+              className="fade-in-section testTitle text-uppercase"
               style={{ animationDelay: "0.2s" }}
             >
-              LOREM IPSUM DOLOR SIT AMET,<span className="highlight"> CONSECTETUR</span> ADIPISCING
+              What Do Students Get From<span className="highlight"> Ignite's</span> IBDP Support?
 
             </h2>
           </div>
@@ -180,51 +180,58 @@ function UpsSection() {
 
         {/* USP Grid */}
         <div className="custom-grid mb-5">
-  {uspItems.map((item, index) => (
-    <div key={item.number} className="grid-item">
-      <USPItem {...item} number={index} />
-    </div>
-  ))}
-</div>
+          {uspItems.map((item, index) => (
+            <div key={item.number} className="grid-item">
+              <USPItem {...item} number={index} />
+            </div>
+          ))}
+        </div>
 
 
         {/* CTA Button */}
-        <div className="text-center fade-in-section"
+        <div
+          className="text-center fade-in-section"
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ animationDelay: "0.7s" }}>
-          <button
-            className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
-            style={{
-              background: "linear-gradient(90deg,#161664, #3F88BA)",
-              color: 'white',
-              padding: '12px 14px 12px 20px',
-              border: 'none',
-              transition: 'opacity 0.3s ease',
-              letterSpacing: "3px",
-              fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
-            }}
-            onMouseEnter={(e) => e.target.style.opacity = "0.9"}
-            onMouseLeave={(e) => e.target.style.opacity = "1"}
+          style={{ animationDelay: "0.7s" }}
+        >
+          <a
+            href="https://ignitetraininginstitute.com/about-us/"
+            style={{ textDecoration: "none" }}
           >
-            MEET OUR TRAINERS
-            <div
-              className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
+            <button
+              className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
               style={{
-                width: "2.5rem",
-                height: "2.5rem",
-                background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                animationDelay: "0.75s",
-                marginLeft: "2.1rem"
+                background: "linear-gradient(90deg,#161664, #3F88BA)",
+                color: "white",
+                padding: "12px 14px 12px 20px",
+                border: "none",
+                transition: "opacity 0.3s ease",
+                letterSpacing: "3px",
+                fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
               }}
+              onMouseEnter={(e) => (e.target.style.opacity = "0.9")}
+              onMouseLeave={(e) => (e.target.style.opacity = "1")}
             >
-              <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
-            </div>
-          </button>
+              KNOW MORE ABOUT IGNITE
+              <div
+                className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
+                style={{
+                  width: "2.5rem",
+                  height: "2.5rem",
+                  background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                  animationDelay: "0.75s",
+                  marginLeft: "2.1rem",
+                }}
+              >
+                <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+              </div>
+            </button>
+          </a>
         </div>
       </div>
 

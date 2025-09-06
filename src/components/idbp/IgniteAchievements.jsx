@@ -24,7 +24,7 @@ export default function IgniteAchievements() {
         data-scroll
         data-scroll-class="is-inview"
         data-scroll-repeat
-        style={{ maxWidth: isMobile ? "95vw" : '70vw', animationDelay: "0.15s", margin: "0 auto", padding: isMobile?"40px 0px 48px 0px":"28px 0px 48px 0px", }}>
+        style={{ maxWidth: isMobile ? "95vw" : '70vw', animationDelay: "0.15s", margin: "0 auto", padding: isMobile ? "40px 0px 48px 0px" : "28px 0px 48px 0px", }}>
 
         {/* Header Section */}
         <div className="text-center mb-md-5 mb-4 fade-in-section"
@@ -40,7 +40,7 @@ export default function IgniteAchievements() {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading">IGNITE ACHIEVEMENTS
+              <div className="SubHeading testSubheading">OUR ACHIEVEMENTS
               </div>
             </div>
             <h2
@@ -50,7 +50,7 @@ export default function IgniteAchievements() {
               className="fade-in-section testTitle"
               style={{ animationDelay: "0.2s", color: "#19245E !important", maxWidth: "700px !important" }}
             >
-              LOREM IPSUM DOLOR SIT AMET,<span className="highlight">CONSECTETUR</span> ADIPISCING
+              Powering Progress Through <span className="highlight">Results</span> That Matter
             </h2>
           </div>
           {/* Subtitle */}
@@ -65,9 +65,8 @@ export default function IgniteAchievements() {
               animationDelay: "0.45s",
               fontSize: isMobile ? "14px" : "23px"
             }}>
-            Choosing us means partnering with experienced coaches
-            <br className="d-none d-md-block" />
-            who are dedicated to unlocking your potential.
+            We’ve built every achievement through the progress, effort,          <br className="d-none d-md-block" />
+            & dedication of our IBDP students over the years.
           </p>
         </div>
 
@@ -96,7 +95,7 @@ export default function IgniteAchievements() {
                   fontSize: isMobile ? "40px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
                   marginRight: isMobile ? "65px" : "0px",
-                }}>60%</div>
+                }}>10+</div>
               </div>
               <div
                 className="border-md-start ps-md-4 ps-0 mt-md-0 mt-2 pt-md-0 pt-2"
@@ -111,7 +110,7 @@ export default function IgniteAchievements() {
                   WebkitTextFillColor: "transparent",
                   fontSize: isMobile ? "13px" : "25px"
                 }}>
-                  LOREM IPSUM DOLOR
+                  Years Of Experience
                 </h3>
                 <p
                   className="text-muted m-0 d-none d-md-block"
@@ -120,10 +119,8 @@ export default function IgniteAchievements() {
                     lineHeight: '1.2'
                   }}
                 >
-                  Lorem ipsum dolor sit amet,
-                  <br />
-                  consectetur elit.
-                </p>
+                  Proven expertise in guiding                  <br />
+                  students toward growth                 </p>
 
               </div>
             </div>
@@ -151,7 +148,7 @@ export default function IgniteAchievements() {
                   fontSize: isMobile ? "40px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
                   marginRight: isMobile ? "65px" : "0px",
-                }}>30+</div>
+                }}>1k+</div>
               </div>
               <div
                 className="border-md-start ps-md-4 ps-0 mt-md-0 mt-2 pt-md-0 pt-2"
@@ -166,8 +163,7 @@ export default function IgniteAchievements() {
                   WebkitTextFillColor: "transparent",
                   fontSize: isMobile ? "13px" : "25px"
                 }}>
-                  LOREM IPSUM DOLOR
-                </h3>
+                  Exam Prep Resources                </h3>
                 <p
                   className="text-muted m-0 d-none d-md-block"
                   style={{
@@ -175,9 +171,9 @@ export default function IgniteAchievements() {
                     lineHeight: '1.2'
                   }}
                 >
-                  Lorem ipsum dolor sit amet,
+                  Extensive IBDP-specific guides
                   <br />
-                  consectetur elit.
+                  to master all subjects
                 </p>
 
               </div>
@@ -206,7 +202,7 @@ export default function IgniteAchievements() {
                   fontSize: isMobile ? "40px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
                   marginRight: isMobile ? "65px" : "0px",
-                }}>60%</div>
+                }}>7/7</div>
               </div>
               <div
                 className="border-md-start ps-md-4 ps-0 mt-md-0 mt-2 pt-md-0 pt-2"
@@ -221,7 +217,7 @@ export default function IgniteAchievements() {
                   WebkitTextFillColor: "transparent",
                   fontSize: isMobile ? "13px" : "25px"
                 }}>
-                  LOREM IPSUM DOLOR
+                  Scores Across Subjects
                 </h3>
                 <p
                   className="text-muted m-0 d-none d-md-block"
@@ -230,9 +226,9 @@ export default function IgniteAchievements() {
                     lineHeight: '1.2'
                   }}
                 >
-                  Lorem ipsum dolor sit amet,
+                  Strategic tutoring that helps
                   <br />
-                  consectetur elit.
+                  you aim for excellence
                 </p>
 
               </div>
@@ -261,7 +257,7 @@ export default function IgniteAchievements() {
                   fontSize: isMobile ? "40px" : "80px",
                   paddingLeft: isMobile ? "0" : "20px",
                   marginRight: isMobile ? "65px" : "0px",
-                }}>30+</div>
+                }}>2k+</div>
               </div>
               <div
                 className="border-md-start ps-md-4 ps-0 mt-md-0 mt-2 pt-md-0 pt-2"
@@ -276,7 +272,7 @@ export default function IgniteAchievements() {
                   WebkitTextFillColor: "transparent",
                   fontSize: isMobile ? "13px" : "25px"
                 }}>
-                  LOREM IPSUM DOLOR
+                  Student Success Stories
                 </h3>
                 <p
                   className="text-muted m-0 d-none d-md-block"
@@ -285,9 +281,9 @@ export default function IgniteAchievements() {
                     lineHeight: '1.4'
                   }}
                 >
-                  Lorem ipsum dolor sit amet,
+                  Consistent results through
                   <br />
-                  consectetur elit.
+                  guided student journeys
                 </p>
 
               </div>

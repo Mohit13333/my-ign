@@ -41,8 +41,8 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,
-              <br /><span className="highlight"> CONSECTETUR</span> ADIPISCING
+            LOREM IPSUM DOLOR SIT AMET,<br />
+            CONSECTETUR <span className="highlight">ADIPISCING</span>
           </h2>
         </div>
       </div>
@@ -58,11 +58,7 @@ export default function SubjectsCard1({ }) {
             className="subjects-card1-bg-rect"
           />
           <img
-            data-scroll
-            data-scroll-class="is-clipped"
-            data-scroll-repeat="true"
-            data-scroll-offset="-10%"
-            src="/images/rectangle-bg5.png"
+            src="/assets/rm.png"
             alt="bg-shape"
             className="subjects-card1-bg-rect"
           />
@@ -70,7 +66,7 @@ export default function SubjectsCard1({ }) {
             data-scroll
             data-scroll-class="is-clipped"
             data-scroll-offset="-10%"
-            src="/images/rectangle-bg4.png"
+            src="/assets/rm.png"
             alt="bg-shape"
             className="subjects-card1-bg-rect"
           />
@@ -100,7 +96,7 @@ export default function SubjectsCard1({ }) {
         /* Subject Section  */
         .subjects-card1-section {
           width: 100%;
-          padding: 50px 0 80px 0;
+          padding: 70px 0 0 0;
         }
 
         .subjects-card1-section .container {
@@ -111,16 +107,10 @@ export default function SubjectsCard1({ }) {
         }
 
         .subjects-card1-section .subjects-card1-inner {
-border: 1px solid;
-
-border-image-source: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
-
-
-background: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
-
+          background: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
           background-size: cover;
           background-position: center;
-          padding: 150px 30px;
+          padding: 85px 30px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -145,17 +135,21 @@ background: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
         }
 
         .subjects-card1-section .subjects-card1-bg-rect:nth-child(2) {
-          top: 25%;
-          left: 20px;
+          bottom: 13%;
+    right: -1px;
         }
 
         .subjects-card1-section .subjects-card1-bg-rect:nth-child(3) {
-          width: 150px;
-          object-fit: fill;
-          object-position: left;
-          border-radius: 0 20px 20px 0;
-          bottom: 15%;
-          left: 20px;
+width: 257px;
+    -o-object-fit: fill;
+    object-fit: fill;
+    -o-object-position: left;
+    object-position: left;
+    -webkit-border-radius: 0 20px 20px 0;
+    -moz-border-radius: 0 20px 20px 0;
+    border-radius: 0 20px 20px 0;
+    bottom: 75%;
+    right: -14px;
         }
 
         .subjects-card1-section .subjects-card1-right {
@@ -189,26 +183,45 @@ background: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
           flex-wrap: nowrap; /* Prevent wrapping to maintain row structure */
         }
 
-        .subjects-card1-section .subjects-card1-bubble {
-          border: 1px solid #FFFFFF;
-          border-radius: 40px;
-          color: var(--green-text);
-          font-size: 1.4vw;
-          font-weight: 400;
-          padding: 10px 55px;
-          cursor: pointer;
-          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-          box-shadow: none;
-          margin-bottom: 0;
-          user-select: none;
-          min-width: 120px;
-          text-align: center;
-          letter-spacing: 0.02em;
-          outline: none;
-          position: relative;
-          z-index: 1;
-          flex-shrink: 1; /* Allow bubbles to shrink if needed */
-        }
+ .subjects-card1-section .subjects-card1-bubble {
+  position: relative;
+  border-radius: 40px;
+  color: var(--green-text);
+  font-size: 1.4vw;
+  font-weight: 400;
+  padding: 10px 55px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: none;
+  margin-bottom: 0;
+  user-select: none;
+  min-width: 120px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  outline: none;
+  z-index: 1;
+  flex-shrink: 1;
+  background: transparent; /* inside stays transparent */
+  border: 1px solid transparent;
+}
+
+/* Gradient border using pseudo-element */
+.subjects-card1-section .subjects-card1-bubble::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  padding: 2px;
+  background: linear-gradient(275.93deg, #EDFFF4 18.79%, #A6EAC7 114.24%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1; /* keep it behind text */
+}
+
 
         .subjects-card1-section .subjects-card1-bubble:hover {
           color: var(--white-color);
@@ -245,7 +258,7 @@ background: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
             flex-direction: column;
             align-items: center;
             gap: 32px;
-            padding: 70px 20px;
+            padding: 47px 20px;
           }
 
           .subjects-card1-section .subjects-card1-bubble {
@@ -256,6 +269,7 @@ background: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
             width: 100%;
             top: 40px;
             left: 0;
+            display:none;
           }
 
           .subjects-card1-section .subjects-card1-bubbles-grid {
@@ -268,22 +282,53 @@ background: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
         }
 
         @media (max-width: 767px) {
-          .subjects-card1-section .subjects-card1-bubble {
-            padding: 5px 15px 10px 15px;
-            font-size: 16px;
-            min-width: auto; /* Remove min-width constraint on mobile */
+          .subjects-card1-section .container {
+            max-width: 95%;
+            padding: 0 10px;
+          }
+
+          .subjects-card1-section .subjects-card1-inner {
+            padding: 40px 15px;
+            border-radius: 25px;
+          }
+
+          .subjects-card1-section .subjects-card1-bubbles-grid {
+            gap: 12px;
+            width: 100%;
           }
 
           .subjects-card1-section .subjects-card1-bubble-row {
-            gap: 8px; /* Smaller gap on mobile */
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+
+          .subjects-card1-section .subjects-card1-bubble {
+            padding: 8px 16px;
+            font-size: 14px;
+            min-width: auto;
+            flex-shrink: 0;
           }
         }
 
         @media (max-width: 575px) {
+          .subjects-card1-section .container {
+            max-width: 95%;
+            padding: 0 10px;
+          }
+      .subjects-card1-section {
+          width: 100%;
+          padding:70px 0 80px 0;
+        }
+          .subjects-card1-section .subjects-card1-inner {
+            padding: 65px 12px;
+            border-radius: 20px;
+          }
+
           .subjects-card1-section .subjects-card1-bg-rect:nth-child(2) {
-            top: 42%;
+            top: 2%;
             left: 0;
-            width: 15%;
+            width: 32%;
             height: 55px;
             object-fit: cover;
             border-radius: 0 20px 20px 0;
@@ -298,33 +343,57 @@ background: linear-gradient(90deg, #00A491 0%, #003E37 127.82%);
             rotate: 180deg;
           }
 
+          .subjects-card1-section .subjects-card1-bubbles-grid {
+            gap: 10px;
+          }
+
           .subjects-card1-section .subjects-card1-bubble-row {
-            justify-content: center;
-            gap: 6px; /* Even smaller gap for very small screens */
+            gap: 6px;
+            flex-wrap: wrap;
           }
 
           .subjects-card1-section .subjects-card1-bubble {
-            padding: 8px 20px; /* Smaller padding */
-            font-size: 14px;
+            padding: 6px 12px;
+            font-size: 12px;
+            border-radius: 25px;
           }
         }
 
         @media (max-width: 420px) {
-          .subjects-card1-section .subjects-card1-bubble {
-            padding: 8px 15px;
-            font-size: 12px;
+          .subjects-card1-section .container {
+            max-width: 98%;
+            padding: 0 5px;
+          }
+
+          .subjects-card1-section .subjects-card1-inner {
+            padding: 80px 8px;
+            border-radius: 15px;
           }
 
           .subjects-card1-section .subjects-card1-bg-rect:nth-child(2) {
-            top: 40%;
+            top: 3%;
+            width: 96px;
           }
 
           .subjects-card1-section .subjects-card1-bg-rect:nth-child(3) {
-            bottom: 14%;
+bottom: 4%;
+        width: 160px;
+        right: -13px;
+                  }
+
+          .subjects-card1-section .subjects-card1-bubbles-grid {
+            gap: 20px;
           }
 
           .subjects-card1-section .subjects-card1-bubble-row {
-            gap: 5px;
+            gap: 13px;
+            flex-wrap: wrap;
+          }
+
+          .subjects-card1-section .subjects-card1-bubble {
+            padding:11px 13px;
+            font-size: 11px;
+            border-radius: 20px;
           }
         }
       `}</style>

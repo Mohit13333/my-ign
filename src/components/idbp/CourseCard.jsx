@@ -22,27 +22,27 @@
 
 //   const accordionItems = [
 //     {
-//       title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
+//       title: "Bespoke One-On-One Tutoring For IBDP",
 //       bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.3) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
 //       mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
 //     },
 //     {
-//       title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
+//       title: "Bespoke One-On-One Tutoring For IBDP",
 //       bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.5) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
 //       mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
 //     },
 //     {
-//       title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
+//       title: "Bespoke One-On-One Tutoring For IBDP",
 //       bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.7) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
 //       mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
 //     },
 //     {
-//       title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
+//       title: "Bespoke One-On-One Tutoring For IBDP",
 //       bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 1) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
 //       mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
 //     },
 //     {
-//       title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
+//       title: "Bespoke One-On-One Tutoring For IBDP",
 //       bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 1) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
 //       mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
 //     },
@@ -550,14 +550,14 @@
 //           line-height:40px !important;
 //           vertical-align: middle;        
 //         }
-        
+
 //         @keyframes fadeIn {
 //           to {
 //             opacity: 1;
 //             transform: translateY(0);
 //           }
 //         }
-        
+
 //         @keyframes slideDown {
 //           from {
 //             opacity: 0;
@@ -570,7 +570,7 @@
 //             max-height: 1000px;
 //           }
 //         }
-        
+
 //         @keyframes slideInLeft {
 //           from {
 //             opacity: 0;
@@ -581,7 +581,7 @@
 //             transform: translateX(0);
 //           }
 //         }
-        
+
 //         @keyframes slideInRight {
 //           from {
 //             opacity: 0;
@@ -592,7 +592,7 @@
 //             transform: translateX(0);
 //           }
 //         }
-        
+
 //         @keyframes slideInUp {
 //           from {
 //             opacity: 0;
@@ -603,7 +603,7 @@
 //             transform: translateY(0);
 //           }
 //         }
-        
+
 //         @keyframes expandCard {
 //           from {
 //             opacity: 0;
@@ -614,7 +614,7 @@
 //             transform: translateY(0) scale(1);
 //           }
 //         }
-        
+
 //         @keyframes fadeInUp {
 //           from {
 //             opacity: 0;
@@ -625,7 +625,7 @@
 //             transform: translateY(0);
 //           }
 //         }
-        
+
 //         @keyframes expandWidth {
 //           from {
 //             width: 0;
@@ -634,7 +634,7 @@
 //             width: 100%;
 //           }
 //         }
-        
+
 //         .image1{
 //           border-radius:30px !important;
 //         }
@@ -653,7 +653,7 @@
 //         .desktop-version {
 //           display: block;
 //         }
-        
+
 //         .mobile-version {
 //           display: none;
 //         }
@@ -663,20 +663,20 @@
 //           .desktop-version {
 //             display: none;
 //           }
-          
+
 //           .mobile-version {
 //             display: block;
 //           }
-          
+
 //           .mobile-card-header {
 //             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 //           }
-          
+
 //           .mobile-card-header:hover {
 //             transform: translateY(-4px) scale(1.02);
 //             box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 //           }
-          
+
 //           .mobile-expanded-content {
 //             animation: slideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 //           }
@@ -688,11 +688,11 @@
 //             padding: 1rem !important;
 //             min-height: 70px !important;
 //           }
-          
+
 //           .mobile-card-header span:first-child {
 //             font-size: 1.5rem !important;
 //           }
-          
+
 //           .mobile-card-header span:nth-child(2) {
 //             font-size: 18px !important;
 //           }
@@ -736,29 +736,60 @@ function CourseCard() {
 
   const accordionItems = [
     {
-      title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
+      title: "Bespoke One-On-One Tutoring For IBDP",
       bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.3) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
       mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
+      highlights: [
+        "Year-round personalized support for IB Diploma students",
+        "Customized lesson plans and flexible scheduling",
+        "One-on-one attention with pace-adapted learning",
+        "Continuous progress tracking through review and feedback",
+        "Guidance on internal assessments (IA) & extended essay (EE)",
+        "Regular evaluation through unit tests and mock exams"
+      ],
+      description: "A year-long IBDP course tailored to meet individual learning goals. Each student begins with a diagnostic assessment to identify their strengths and learning needs. This flexible program supports students at their own pace with focused guidance throughout the academic year."
     },
     {
-      title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
+      title: "IBDP Finals Prep Program In Groups",
       bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.5) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
       mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
+      highlights: [
+        "Full IBDP syllabus coverage under experts’ guidance",
+        "Small group training (3-6) for students’ writing finals in May",
+        "Structured exam preparation plan spanning 10 months",
+        "Problem-based learning aligned with IBDP-style questions",
+        "Series of mock exams conducted in real exam-like settings",
+        "In-depth paper reviews sessions for critical improvement"
+      ],
+      description: "A comprehensive 9-month program, running from August to April, is ideal for students entering the 2nd year of their Diploma Programme. With 80+ hours of focused training per subject, the course is well-balanced with expert tutoring, regular testing, and targeted review sessions."
     },
     {
-      title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
+      title: "Pre IBDP Summer Bridge Course",
       bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.7) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
       mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
+      highlights: [
+        "Introduction to IBDP-style questions, grading, and expectations",
+        "Concept-focused training on essential topics across subjects",
+        "Complete first-term syllabus coverage with expert mentors",
+        "Small group sessions (3–6 students) starting IBDP in September",
+        "Guidance on Internal Assessments (IA) and Extended Essay (EE)",
+        "End-of-summer assessments to track progress and readiness"
+      ],
+      description: "A 6-week head-start program in July and August designed to build a strong foundation in key IBDP concepts. With 24 hours of subject-wise training, this course is ideal for students transitioning into the IBDP, especially those coming from other curricula, preparing them for this demanding phase."
     },
     {
-      title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
+      title: "IBDP Spring Revision Course",
       bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 1) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
       mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
-    },
-    {
-      title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
-      bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 1) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
-      mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
+      highlights: [
+        "Targeted concept training in high-difficulty topics",
+        "Practice with unit-wise past paper questions",
+        "Mock exam series conducted under exam-like conditions",
+        "Structured progress through tutoring, testing, and review",
+        "In-depth past paper analysis and feedback sessions",
+        "Predicted paper solutions for high success rates"
+      ],
+      description: "A focused 2-week intensive revision program held in March and April during the final school break, right before exams. With 16 hours of expert-led training in each IBDP subject, this course delivers a powerful recap of key concepts and sharpens exam readiness through rigorous practice with IBDP-style questions."
     },
   ];
 
@@ -786,8 +817,8 @@ function CourseCard() {
                 className="fade-in-section testTitle"
                 style={{ animationDelay: "0.2s" }}
               >
-                LOREM IPSUM DOLOR SIT AMET,
-               <span className="highlight"> CONSECTETUR </span>ADIPISCING
+                Learning Starts Here With
+                <span className="highlight">  Tailored  </span>IBDP Courses
               </h2>
             </div>
           </div>
@@ -802,7 +833,7 @@ function CourseCard() {
             }}
           >
             {accordionItems.map((item, index) => (
-              <div 
+              <div
                 key={index}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
@@ -819,7 +850,7 @@ function CourseCard() {
                   style={{
                     background: activeIndex === index
                       ? "linear-gradient(90deg, #EDFFF4, #A6EAC7)"
-                      : hoveredIndex === index 
+                      : hoveredIndex === index
                         ? "linear-gradient(90deg, rgba(237, 255, 244, 0.8), rgba(166, 234, 199, 0.8))"
                         : item.bg,
                     cursor: "pointer",
@@ -831,8 +862,8 @@ function CourseCard() {
                   }}
                   onClick={() => toggleAccordion(index)}
                 >
-                  <span 
-                    className="gradient-text py-3"
+                  <span
+                    className="gradient-text py-3 text-uppercase"
                     style={{
                       transform: hoveredIndex === index ? 'translateX(10px)' : 'translateX(0)',
                       transition: 'transform 0.3s ease-out',
@@ -840,12 +871,12 @@ function CourseCard() {
                   >
                     {item.title}
                   </span>
-                  <span 
-                    style={{ 
+                  <span
+                    style={{
                       color: "#3F88BA",
                       transform: hoveredIndex === index ? 'rotate(180deg) scale(1.1)' : 'rotate(0deg) scale(1)',
                       transition: 'all 0.3s ease-out',
-                      marginRight:"25px",
+                      marginRight: "25px",
                     }}
                   >
                     {activeIndex === index ? <Minus size={20} /> : <Plus size={20} />}
@@ -862,40 +893,33 @@ function CourseCard() {
                       fontSize: "0.95rem",
                       animation: 'slideDown 0.5s ease-out',
                     }}
-
                   >
                     <div className="row g-4">
                       {/* Left Text */}
-                      <div 
-                        className="col-md-6 ps-4" // Added ps-4 for consistent padding
+                      <div
+                        className="col-md-6 ps-4"
                         style={{
-                          animation: 'fadeIn 0.6s ease-out', // Changed from slideInLeft to fadeIn
+                          animation: 'fadeIn 0.6s ease-out',
                         }}
                       >
                         <p className="desc" style={{ lineHeight: "1.3", marginLeft: "25px", paddingLeft: "0" }}>
-                          An all-year-round MYP program thoughtfully designed to align with each
-                          student's unique learning objectives.
+                          {item.description}
                         </p>
                         <h5 className="fw-bold fontSizeK mb-3" style={{
-                          fontSize: "25px", 
-                          color: "#2D5AA0", background:
-                            "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
+                          fontSize: "25px",
+                          color: "#2D5AA0",
+                          background: "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
                           WebkitBackgroundClip: "text",
                           WebkitTextFillColor: "transparent",
-                          fontWeight:600,
+                          fontWeight: 600,
                           backgroundClip: "text",
-                          marginLeft:"25px",
-                          marginTop:"30px"
+                          marginLeft: "25px",
+                          marginTop: "30px"
                         }}>
                           KEY HIGHLIGHTS
                         </h5>
                         <ul className="list-unstyled" style={{ fontSize: "0.9rem", color: "#374151", paddingLeft: "0" }}>
-                          {[
-                            "Year-round personalized support for MYP students.",
-                            "Customized lessons & flexible learning schedules.",
-                            "One-on-one attention and personalized learning pace.",
-                            "Continuous progress tracking with detailed feedback.",
-                          ].map((point, i) => (
+                          {item.highlights.map((point, i) => (
                             <li
                               key={i}
                               style={{
@@ -904,10 +928,10 @@ function CourseCard() {
                                 display: "flex",
                                 alignItems: "flex-start",
                                 gap: "20px",
-                                animation: `fadeIn 0.4s ease-out ${i * 0.1}s both`, // Changed from slideInUp to fadeIn
+                                animation: `fadeIn 0.4s ease-out ${i * 0.1}s both`,
                                 marginLeft: "0",
                                 paddingLeft: "0",
-                                marginLeft:"25px"
+                                marginLeft: "25px"
                               }}
                               className="fontSizeL"
                             >
@@ -917,8 +941,7 @@ function CourseCard() {
                                   width: "10px",
                                   height: "10px",
                                   borderRadius: "50%",
-                                  background:
-                                    "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
+                                  background: "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
                                   flexShrink: 0,
                                   marginTop: "15px",
                                 }}
@@ -927,13 +950,12 @@ function CourseCard() {
                               {/* Gradient Text */}
                               <span
                                 style={{
-                                  letterSpacing:"1px",
-                                  background:
-                                    "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
+                                  letterSpacing: "1px",
+                                  background: "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
                                   WebkitBackgroundClip: "text",
                                   WebkitTextFillColor: "transparent",
                                   backgroundClip: "text",
-                                  marginBlock:"10px",
+                                  marginBlock: "10px",
                                 }}
                               >
                                 {point}
@@ -944,7 +966,7 @@ function CourseCard() {
                       </div>
 
                       {/* Right Image */}
-                      <div 
+                      <div
                         className="col-md-6 d-flex justify-content-center align-items-center"
                         style={{
                           animation: 'fadeIn 0.6s ease-out', // Changed from slideInRight to fadeIn
@@ -989,16 +1011,16 @@ function CourseCard() {
               </div>
             </div>
 
-              <h2
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s" }}
-              >
-                LOREM IPSUM DOLOR SIT AMET,
-               <span className="highlight"> CONSECTETUR </span>ADIPISCING
-              </h2>
+            <h2
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section testTitle"
+              style={{ animationDelay: "0.2s" }}
+            >
+              LOREM IPSUM DOLOR SIT AMET,
+              <span className="highlight"> CONSECTETUR </span>ADIPISCING
+            </h2>
           </div>
 
           {/* Mobile Cards */}
@@ -1121,9 +1143,9 @@ function CourseCard() {
                             }}
                           >
                             <span>0{index + 1}.</span>
-                            <span 
-                              onClick={() => toggleAccordion(index)} 
-                              style={{ 
+                            <span
+                              onClick={() => toggleAccordion(index)}
+                              style={{
                                 cursor: "pointer",
                                 transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
                                 transition: 'transform 0.3s ease-out',
@@ -1180,6 +1202,7 @@ function CourseCard() {
                       </div>
 
                       {/* Bottom Light Green Section - seamlessly connected */}
+                      {/* Bottom Light Green Section - seamlessly connected */}
                       <div
                         style={{
                           background: "#E8F5E8",
@@ -1198,18 +1221,13 @@ function CourseCard() {
                         </h5>
 
                         <ul className="list-unstyled" style={{ fontSize: "0.9rem", marginBottom: "0" }}>
-                          {[
-                            "Year-round personalized support for myp students.",
-                            "Customized lessons & flexible learning schedules.",
-                            "One-on-one attention and personalized learning pace.",
-                            "Continuous progress tracking with detailed feedback.",
-                          ].map((point, i) => (
-                            <li 
-                              key={i} 
-                              className="d-flex align-items-start mb-2" 
-                              style={{ 
+                          {item.highlights.slice(0, 4).map((point, i) => (
+                            <li
+                              key={i}
+                              className="d-flex align-items-start mb-2"
+                              style={{
                                 lineHeight: "1.4",
-                                animation: `fadeIn 0.4s ease-out ${0.2 + i * 0.1}s both`, // Changed from slideInUp to fadeIn
+                                animation: `fadeIn 0.4s ease-out ${0.2 + i * 0.1}s both`,
                               }}
                             >
                               <span

@@ -2719,7 +2719,7 @@ export default function InfoCard() {
                   fontSize: "2.6rem",
                 }}
               >
-                IBDP Tutors In Dubai, UAE For Curriculum Excellence
+                {isMobile ? "IBDP Tutors In Dubai, UAE For Curriculum Excellence" : "IBDP Tutors in Dubai, UAE Helping You Excel"}
               </h1>
               <div className="divider"></div>
 
@@ -2736,7 +2736,7 @@ export default function InfoCard() {
                   marginTop: "19px"
                 }}
               >
-                LOREM IPSUM DOLOR SIT AMET
+                Max Out To 45 Scores In IBDP
               </p>
 
               <div
@@ -2757,13 +2757,9 @@ export default function InfoCard() {
 
               >
                 <div
-                  className="d-flex flex-column align-items-center text-center text-white  fade-in-section info-col"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
+                  className="d-flex flex-column align-items-center text-center text-white info-col"
                   style={{
                     borderRight: "1px solid rgba(255, 255, 255, 0.3)",
-                    animationDelay: "0.35s",
                     paddingRight: isMobile ? "16px" : "3.7rem",
                   }}
                 >
@@ -2771,22 +2767,18 @@ export default function InfoCard() {
                     <Image
                       src="/assets/medal.png"
                       alt="Grade Support"
-                      width={isMobile ? 20 : 32}
-                      height={isMobile ? 30 : 45}
+                      width={isMobile ? 16 : 32}
+                      height={isMobile ? 25 : 45}
                       className="icon-img"
                     />
                   </div>
-                  Grade 8 to 12 <br /> Support
+                  Grade 11 to 12 <br /> Support
                 </div>
 
                 <div
-                  className="d-flex flex-column align-items-center text-center text-white fade-in-section info-col"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
+                  className="d-flex flex-column align-items-center text-center text-white info-col"
                   style={{
                     borderRight: "1px solid rgba(255, 255, 255, 0.3)",
-                    animationDelay: "0.4s",
                     paddingRight: isMobile ? "16px" : "4rem",
                   }}
                 >
@@ -2794,8 +2786,8 @@ export default function InfoCard() {
                     <Image
                       src="/assets/person.png"
                       alt="Learning Mode"
-                      width={isMobile ? 20 : 30}
-                      height={isMobile ? 30 : 45}
+                      width={isMobile ? 16 : 30}
+                      height={isMobile ? 25 : 45}
                       className="icon-img"
                     />
                   </div>
@@ -2803,18 +2795,15 @@ export default function InfoCard() {
                 </div>
 
                 <div
-                  className="d-flex flex-column align-items-center text-center text-white fade-in-section"
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat
+                  className="d-flex flex-column align-items-center text-center text-white"
                   style={{ animationDelay: "0.45s" }}
                 >
                   <div className="mb-2 icon-wrap" style={{ color: "#acf2d6" }}>
                     <Image
                       src="/assets/location.png"
                       alt="Location"
-                      width={isMobile ? 22 : 32}
-                      height={isMobile ? 28 : 40}
+                      width={isMobile ? 18 : 32}
+                      height={isMobile ? 25 : 40}
                       className="icon-img"
                     />
                   </div>
@@ -2832,36 +2821,39 @@ export default function InfoCard() {
                   opacity: "0.9",
                 }}
               >
-                We provide comprehensive academic support through our customized
-                IB curriculum courses, giving students access to high-end
-                learning with experienced and certified IB tutors across various
-
-                IB subjects.              </p>
-
+                We specialize in expert tutoring support for the IB Diploma Programme across all subject groups. Our structured approach combines in-depth resources, focused training, & rigorous testing for consistent results.             </p>
               <div className="d-flex gap-3">
-                <button
-                  className="btn cust-text btng fw-bold text-uppercase d-flex justify-content-between align-items-center shadow"
-                  style={{
-                    background: "linear-gradient(to right, #A3CAF5, #E7F6FF)",
-                    color: "#273972",
-                    borderRadius: "40px",
-                    fontSize: "1rem",
-                    padding: "10px 14px 10px 20px",
-                    boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
-                    minWidth: "290px", // ensures spacing looks consistent
-                    marginTop: isMobile ? "auto" : "20px",
-                  }}
+                <a
+                  href="https://ignitetraininginstitute.com/join-free-demo-class/"
+                  style={{ textDecoration: "none" }}
                 >
-                  <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>Get A Free Demo</span>
-                  <img
-                    src="/assets/rar.png"
-                    alt="right"
-                    className="custom-height"
-                    width={35}
-                    height={35}
-                  />
-                </button>
+                  <button
+                    className="btn cust-text btng fw-bold text-uppercase d-flex justify-content-between align-items-center shadow"
+                    style={{
+                      background: "linear-gradient(to right, #A3CAF5, #E7F6FF)",
+                      color: "#273972",
+                      borderRadius: "40px",
+                      fontSize: "1rem",
+                      padding: "10px 14px 10px 20px",
+                      boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
+                      minWidth: "290px", // ensures spacing looks consistent
+                      marginTop: isMobile ? "auto" : "20px",
+                    }}
+                  >
+                    <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>
+                      Get A Free Demo
+                    </span>
+                    <img
+                      src="/assets/rar.png"
+                      alt="right"
+                      className="custom-height"
+                      width={35}
+                      height={35}
+                    />
+                  </button>
+                </a>
               </div>
+
 
             </div>
 
