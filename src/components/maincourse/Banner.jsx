@@ -452,7 +452,7 @@ export default function TutoringCourses() {
         }
 
         .card-title {
-          color: #1f2e66;
+          color: #233467;
           font-weight: 800;
           font-size: ${isMobile ? "0.875rem" : "1.5rem"};
           margin-bottom: 0.25rem;
@@ -465,12 +465,14 @@ export default function TutoringCourses() {
         }
 
         .card-description {
-          color: #4f5a7a;
+          color: #233467;
+          opacity: 0.5;
           font-size: ${isMobile ? "0.55rem" : "1rem"};
           line-height: 1.2;
           margin-bottom: 0.5rem;
           max-width: ${isMobile ? "140px" : "220px"};
           flex-grow: 1;
+          font-weight: 500;
           display: flex;
           align-items: center;
         }
@@ -483,7 +485,7 @@ export default function TutoringCourses() {
         }
 
         .dark-text {
-          color: #1f2e66;
+          color: #233467;
         }
 
         .card-button {
@@ -491,10 +493,10 @@ export default function TutoringCourses() {
           align-items: center;
           justify-content: center;
           gap: 0.2rem;
-          border: 1px solid #1f2e66;
+          border: 1px solid #233467;
           border-radius: 9999px;
-          padding: ${isMobile ? "0.3rem 0.6rem" : "0.75rem 1.5rem"};
-          color: #1f2e66;
+          padding: ${isMobile ? "0.3rem 0.1rem .3rem .6rem" : "0.75rem .5rem .75rem 1.5rem"};
+          color: #233467;
           font-weight: 700;
           letter-spacing: 0.05em;
           font-size: ${isMobile ? "0.55rem" : "0.875rem"};
@@ -866,7 +868,7 @@ export default function TutoringCourses() {
 //         }
 
 //         .card-title {
-//           color: #1f2e66;
+//           color: #233467;
 //           font-weight: 800;
 //           font-size: ${isMobile ? "0.875rem" : "1.5rem"};
 //           margin-bottom: 0.25rem;
@@ -897,7 +899,7 @@ export default function TutoringCourses() {
 //         }
 
 //         .dark-text {
-//           color: #1f2e66;
+//           color: #233467;
 //         }
 
 //         .card-button {
@@ -905,10 +907,10 @@ export default function TutoringCourses() {
 //           align-items: center;
 //           justify-content: center;
 //           gap: 0.2rem;
-//           border: 1px solid #1f2e66;
+//           border: 1px solid #233467;
 //           border-radius: 9999px;
 //           padding: ${isMobile ? "0.3rem 0.6rem" : "0.75rem 1.5rem"};
-//           color: #1f2e66;
+//           color: #233467;
 //           font-weight: 700;
 //           letter-spacing: 0.05em;
 //           font-size: ${isMobile ? "0.55rem" : "0.875rem"};
