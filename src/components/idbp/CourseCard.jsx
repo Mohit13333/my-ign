@@ -817,7 +817,7 @@ function CourseCard() {
                 className="fade-in-section testTitle"
                 style={{ animationDelay: "0.2s" }}
               >
-                Learning Starts Here With
+                Learning Starts Here With<br/>
                 <span className="highlight">  Tailored  </span>IBDP Courses
               </h2>
             </div>
@@ -1018,8 +1018,8 @@ function CourseCard() {
               className="fade-in-section testTitle"
               style={{ animationDelay: "0.2s" }}
             >
-              LOREM IPSUM DOLOR SIT AMET,
-              <span className="highlight"> CONSECTETUR </span>ADIPISCING
+              Learning Starts Here With
+              <span className="highlight">  Tailored  </span>IBDP Courses
             </h2>
           </div>
 
@@ -1041,7 +1041,7 @@ function CourseCard() {
                       borderRadius: "20px",
                       cursor: "pointer",
                       minHeight: "80px",
-                      color: index === 1 ? "#2D5AA0" : "#2D5AA0",
+                      color: "#2D5AA0",
                       position: "relative",
                       boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
                       transform: hoveredIndex === index ? 'translateY(-4px) scale(1.02)' : 'translateY(0) scale(1)',
@@ -1051,35 +1051,24 @@ function CourseCard() {
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
                   >
-                    {/* Left side: index + title */}
+                    {/* Left content (index + title) */}
                     <div className="d-flex flex-column gap-1">
-                      <div className="d-flex justify-content-between align-items-center">
-                        <span
-                          style={{
-                            fontSize: "2rem",
-                            fontWeight: 800,
-                            opacity: "0.7",
-                            borderBottom: "1px solid rgba(22, 22, 100, 0.5)",
-                            width: "50px",
-                            background: "linear-gradient(90deg, #161664, #3F88BA)",
-                            WebkitBackgroundClip: "text",
-                            WebkitTextFillColor: "transparent",
-                            transform: hoveredIndex === index ? 'scale(1.1)' : 'scale(1)',
-                            transition: 'transform 0.3s ease-out',
-                          }}
-                        >
-                          {String(index + 1).padStart(2, "0")}.
-                        </span>
-
-                        <span
-                          style={{
-                            transform: hoveredIndex === index ? 'rotate(180deg) scale(1.1)' : 'rotate(0deg) scale(1)',
-                            transition: 'all 0.3s ease-out',
-                          }}
-                        >
-                          <ChevronDown size={24} />
-                        </span>
-                      </div>
+                      <span
+                        style={{
+                          fontSize: "2rem",
+                          fontWeight: 800,
+                          opacity: "0.7",
+                          borderBottom: "1px solid rgba(22, 22, 100, 0.5)",
+                          width: "50px",
+                          background: "linear-gradient(90deg, #161664, #3F88BA)",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                          transform: hoveredIndex === index ? "scale(1.1)" : "scale(1)",
+                          transition: "transform 0.3s ease-out",
+                        }}
+                      >
+                        {String(index + 1).padStart(2, "0")}.
+                      </span>
 
                       <span
                         style={{
@@ -1096,8 +1085,21 @@ function CourseCard() {
                         {item.title}
                       </span>
                     </div>
-                  </div>
 
+                    {/* Right side: Chevron always sticks to right */}
+                    <span
+                      className="d-flex align-items-center justify-content-center"
+                      style={{
+                        width: "30px",
+                        height: "30px",
+                        flexShrink: 0,
+                        transform: hoveredIndex === index ? "rotate(180deg) scale(1.1)" : "rotate(0deg) scale(1)",
+                        transition: "all 0.3s ease-out",
+                      }}
+                    >
+                      <ChevronDown size={24} />
+                    </span>
+                  </div>
                 )}
 
 
@@ -1184,8 +1186,7 @@ function CourseCard() {
                             fontWeight: "400",
                             animation: 'fadeInUp 0.7s ease-out',
                           }}>
-                            An all-year-round MYP program thoughtfully designed to align with each
-                            student's unique learning objectives.
+                            {item?.description}
                           </p>
                         </div>
 
@@ -1200,9 +1201,6 @@ function CourseCard() {
                           zIndex: 1,
                         }}></div>
                       </div>
-
-                      {/* Bottom Light Green Section - seamlessly connected */}
-                      {/* Bottom Light Green Section - seamlessly connected */}
                       <div
                         style={{
                           background: "#E8F5E8",

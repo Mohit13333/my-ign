@@ -2,38 +2,39 @@ import React, { useEffect, useState } from 'react';
 
 const benefits = [
     {
-        title: 'EARN COLLEGE CREDITS',
-        icon: '/assets/1lgo.png',
-        mobileIcon: '/assets/1lgo.png',
+        title: "Earn College Credits",
+        icon: "/assets/1lgo.png",
+        mobileIcon: "/assets/1lgo.png",
         upbutton: "/assets/brup.svg",
         downButton: "/assets/brdown.png",
-        text: `Missing out on a chance that helps you set foot on your dream campus doesn't seem apt, right? Your AP score fetch you the much-needed advantage over other applicants in the entrance procedure.`,
+        text: `Don't miss the opportunity to gain a real edge in college admissions. Strong AP scores can help you earn credits in advance, giving you a head start on your dream university journey.`,
     },
     {
-        title: 'UNIVERSITY READY PROFILES',
-        icon: '/assets/2lgo.png',
-        mobileIcon: '/assets/moun2.png',
-        text: `Research proves that AP students are better prepared for university. We agree! They're more likely to develop the right skills, get familiar with environment, & stand out with college-ready proficiency.`,
+        title: "University Ready Profiles",
+        icon: "/assets/2lgo.png",
+        mobileIcon: "/assets/moun2.png",
         upbutton: "/assets/grup.svg",
         downButton: "/assets/grdown.png",
+        text: `Studies show AP students are better prepared for university life, & we see that too. They enter with stronger skills, academic confidence, & real-world readiness that helps them thrive from day one.`,
     },
     {
-        title: 'DISPLAY SUBJECT PROFICIENCY',
-        icon: '/assets/3lgo.png',
-        mobileIcon: '/assets/3lgo.png',
-        text: `Taking AP exams allow students to study a subject in depth which leads to developing full competency in the discipline. Disconnecting your ideal career path in the due process helps find the right path moving ahead.`,
+        title: "Display Subject Proficiency",
+        icon: "/assets/3lgo.png",
+        mobileIcon: "/assets/3lgo.png",
         upbutton: "/assets/brup.svg",
         downButton: "/assets/brdown.png",
+        text: `AP exams let students dive deep into subjects, building true mastery. This focused approach strengthens both academic confidence and career clarity—guiding smarter choices for the future.`,
     },
     {
-        title: 'UNIQUE COLLEGE APPLICATION',
-        icon: '/assets/4lgo.png',
-        mobileIcon: '/assets/moun4.png',
-        text: `Your AP score transcripted in your college application automatically highlights a sense of commitment coming from you. This in turn boosts your chances of securing credit & placement from top universities.`,
+        title: "Unique College Application",
+        icon: "/assets/4lgo.png",
+        mobileIcon: "/assets/moun4.png",
         upbutton: "/assets/grup.svg",
         downButton: "/assets/grdown.png",
+        text: `Including AP scores in your application showcases dedication and academic ambition. It helps you stand out and increases your chances of earning credit or advanced placement at top universities.`,
     }
 ];
+
 
 const APBenefits = () => {
     const [openIndex, setOpenIndex] = useState(null);

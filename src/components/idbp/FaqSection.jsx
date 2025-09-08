@@ -340,7 +340,7 @@ const FAQSection = () => {
               className="fade-in-section text-uppercase"
               style={{ animationDelay: "0.2s", color: "#19245E", fontWeight: 800, marginBlock: "20px", fontSize: isMobile ? "20px" : "2.1875rem" }}
             >
-              What is the focus of IBDP tutoring at<span className="highlight"> Ignite</span> Training Institute?
+              What is the focus of IBDP tutoring <br/> at<span className="highlight"> Ignite</span> Training Institute?
             </h2>
 
             <p

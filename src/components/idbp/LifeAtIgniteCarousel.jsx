@@ -80,7 +80,7 @@ export default function LifeAtIgniteCarousel() {
             className="fade-in-section alumniTitle"
             style={{ margin: "24px 0 0 0", animationDelay: "0.3s" }}
           >
-            This Is What Learning Really <span className="alumniHighlight">  Looks </span>
+            This Is What Learning Really <br/><span className="alumniHighlight">  Looks </span>
             Like At Ignite          </h2>
         </div>
 

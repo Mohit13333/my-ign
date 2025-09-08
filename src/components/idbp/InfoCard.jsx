@@ -2719,8 +2719,17 @@ export default function InfoCard() {
                   fontSize: "2.6rem",
                 }}
               >
-                {isMobile ? "IBDP Tutors In Dubai, UAE For Curriculum Excellence" : "IBDP Tutors in Dubai, UAE Helping You Excel"}
+                {isMobile ? (
+                  <>
+                    IBDP Tutors In Dubai, UAE For<br /> Curriculum Excellence
+                  </>
+                ) : (
+                  <>
+                    IBDP Tutors in Dubai,<br /> UAE Helping You Excel
+                  </>
+                )}
               </h1>
+
               <div className="divider"></div>
 
               <p

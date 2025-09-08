@@ -2,12 +2,25 @@ import React, { useState, useEffect } from "react";
 
 export default function SubjectsCard() {
   const subjects = [
+    "AP Calculus AB",
+    "AP Calculus BC",
+    "AP Statistics",
     "AP Physics 1 & 2: Algebra-Based",
     "AP Physics C: Electricity & Magnetism",
-    "AP Computer Science Principles,AP Environmental Science",
+    "AP Physics C: Mechanics",
+    "AP Chemistry",
     "AP Biology",
-    "AP Calculus BC"
+    "AP Computer Science A",
+    "AP Computer Science Principles",
+    "AP Environmental Science",
+    "AP Macroeconomics",
+    "AP Microeconomics",
+    "AP Psychology",
+    "AP English Language And Composition",
+    "AP French Language And Culture",
+    "AP Spanish Language And Culture"
   ];
+
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -67,7 +80,7 @@ export default function SubjectsCard() {
   const handleSubjectClick = (actualIndex) => {
     const currentActualIndex = ((currentIndex % subjects.length) + subjects.length) % subjects.length;
     if (actualIndex === currentActualIndex) return;
-    
+
     setIsAutoScrolling(false);
     setIsTransitioning(true);
     setTimeout(() => {
@@ -96,14 +109,14 @@ export default function SubjectsCard() {
   const createInfiniteItems = () => {
     const items = [];
     const visibleRange = 7; // Show 7 items on each side of center
-    
+
     for (let i = -visibleRange; i <= visibleRange; i++) {
       const actualIndex = ((currentIndex + i) % subjects.length + subjects.length) % subjects.length;
       const subject = subjects[actualIndex];
-      
+
       let opacity;
       let scale = 1;
-      
+
       if (i === 0) {
         opacity = 1;
         scale = 1.08;
@@ -128,7 +141,7 @@ export default function SubjectsCard() {
         scale: scale
       });
     }
-    
+
     return items;
   };
 
@@ -149,8 +162,7 @@ export default function SubjectsCard() {
             <span className="SubHeading">Subjects</span>
           </span>
           <h2 className="subjectTitle">
-            LOREM IPSUM DOLOR SIT AMET,
-            CONSECTETUR ADIPISCING
+            Tutoring That Makes Every AP Subject Clear
           </h2>
         </div>
 

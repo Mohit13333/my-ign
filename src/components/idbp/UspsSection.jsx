@@ -172,7 +172,7 @@ function UpsSection() {
               className="fade-in-section testTitle text-uppercase"
               style={{ animationDelay: "0.2s" }}
             >
-              What Do Students Get From<span className="highlight"> Ignite's</span> IBDP Support?
+              What Do Students Get From<br/><span className="highlight"> Ignite's</span> IBDP Support?
 
             </h2>
           </div>

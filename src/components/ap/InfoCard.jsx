@@ -66,7 +66,16 @@ export default function InfoCard() {
                   fontSize: "2.6rem",
                 }}
               >
-                ADVANCED PLACEMENTS <br /> TUTORS IN DUBAI              </h1>
+                {isMobile ? (
+                  <>
+                    Get Started With <br /> Advanced Placements Tutors In UAE
+                  </>
+                ) : (
+                  <>
+                    AP Tutors In Dubai, UAE <br /> For Confident Exam Prep
+                  </>
+                )}
+              </h1>
               <div className="divider"></div>
 
               <p
@@ -119,7 +128,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  Grade 8 to 12 <br /> Support
+                  Grade 11 to 12 <br /> Support
                 </div>
 
                 <div
@@ -175,31 +184,38 @@ export default function InfoCard() {
                   opacity: "0.9",
                 }}
               >
-                We provide comprehensive academic support through our customized IB curriculum courses, giving students access to high-end learning with experienced and certified IB tutors across various IB subjects.           </p>
-
+                Experience result-driven AP tutoring with programs tailored to each student’s needs. Our AP courses build subject mastery & academic excellence in an interactive environment that prepares students for college.
+              </p>
               <div className="d-flex gap-3">
-                <button
-                  className="btn cust-text btng fw-bold text-uppercase d-flex justify-content-between align-items-center shadow"
-                  style={{
-                    background: "linear-gradient(to right, #A3CAF5, #E7F6FF)",
-                    color: "#273972",
-                    borderRadius: "40px",
-                    fontSize: "1rem",
-                    padding: "10px 14px 10px 20px",
-                    boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
-                    minWidth: "290px", // ensures spacing looks consistent
-                    marginTop: isMobile ? "auto" : "20px",
-                  }}
+                <a
+                  href="https://ignitetraininginstitute.com/join-free-demo-class/"
+                  style={{ textDecoration: "none" }}
                 >
-                  <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>Get A Free Demo</span>
-                  <img
-                    src="/assets/rar.png"
-                    alt="right"
-                    className="custom-height"
-                    width={35}
-                    height={35}
-                  />
-                </button>
+                  <button
+                    className="btn cust-text btng fw-bold text-uppercase d-flex justify-content-between align-items-center shadow"
+                    style={{
+                      background: "linear-gradient(to right, #A3CAF5, #E7F6FF)",
+                      color: "#273972",
+                      borderRadius: "40px",
+                      fontSize: "1rem",
+                      padding: "10px 14px 10px 20px",
+                      boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
+                      minWidth: "290px", // ensures spacing looks consistent
+                      marginTop: isMobile ? "auto" : "20px",
+                    }}
+                  >
+                    <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>
+                      Get A Free Demo
+                    </span>
+                    <img
+                      src="/assets/rar.png"
+                      alt="right"
+                      className="custom-height"
+                      width={35}
+                      height={35}
+                    />
+                  </button>
+                </a>
               </div>
 
             </div>

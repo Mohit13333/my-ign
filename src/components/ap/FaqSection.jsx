@@ -21,28 +21,35 @@ const FAQSection = () => {
     setOpenIndex((prev) => (prev === index ? -1 : index));
   };
 
-  const faqData = [
-    {
-      question: "LOREM IPSUM DOLOR SIT AMET?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-    },
-    {
-      question: "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-    },
-    {
-      question: "LOREM IPSUM DOLOR SIT AMET?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-    },
-    {
-      question: "LOREM IPSUM DOLOR SIT AMET?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-    },
-  ];
+const faqData = [
+  {
+    question: "Which AP subjects does Ignite offer tutoring for?",
+    answer:
+      "Ignite provides expert tutoring support for a wide range of AP subjects, including Calculus (AB & BC), Biology, Chemistry, Physics, English Literature, and more, all taught by experienced AP-certified educators.",
+  },
+  {
+    question: "How is tutoring tailored for each AP subject?",
+    answer:
+      "Each AP tutoring program is customized with subject-specific content, practice exams, past paper solving, and tailored strategies to match the AP curriculum and exam structure for that subject.",
+  },
+  {
+    question: "Is online AP tutoring available in addition to in-person classes?",
+    answer:
+      "Yes, Ignite offers flexible AP tutoring options both online and in person, so students can choose the format that best fits their schedule and learning preferences within the UAE.",
+  },
+  {
+    question: "How does Ignite prepare students for AP exams?",
+    answer:
+      "Tutoring includes regular past paper practice, timed mock exams, detailed feedback, & targeted strategies, helping students master multiple-choice & free-response questions to boost their AP scores.",
+  },
+  {
+    question: "Can I try the tutoring program before enrolling?",
+    answer:
+      "Absolutely. Ignite offers a free demo class so students and parents can assess tutor compatibility, teaching methods, and academic fit before committing to the full program.",
+  },
+];
+
+
 
   return (
     <div
@@ -51,8 +58,8 @@ const FAQSection = () => {
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{
-        marginBottom: isMobile?"40px":"96px",
-        maxWidth: isMobile?"95vw":"90vw",
+        marginBottom: isMobile ? "40px" : "96px",
+        maxWidth: isMobile ? "95vw" : "90vw",
         backgroundImage: 'url("/assets/faqbg.png")',
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -78,28 +85,25 @@ const FAQSection = () => {
           <div className={`col-lg-6 d-flex flex-column justify-content-center ${isMobile ? 'text-center' : ''}`}>
             {/* FAQ Header */}
             <div className="testimonialHeader" style={{ marginBottom: isMobile ? "10px" : "20px" }}>
-              <span className="SubHeading" style={{fontSize:isMobile?"":"28px !important"}}>FAQS
+              <span className="SubHeading" style={{ fontSize: isMobile ? "" : "28px !important" }}>FAQS
               </span>
             </div>
 
             {/* Main Title */}
-       <h2
+            <h2
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section"
-              style={{ animationDelay: "0.2s",color:"#19245E",fontWeight:800,marginBlock:"20px",fontSize:isMobile?"20px":"2.1875rem" }}
+              className="fade-in-section text-uppercase"
+              style={{ animationDelay: "0.2s", color: "#19245E", fontWeight: 800, marginBlock: "20px", fontSize: isMobile ? "20px" : "2.1875rem" }}
             >
-              LOREM IPSUM DOLOR SIT AMET,
-              <span className="highlight"> CONSECTETUR</span> ADIPISCING
+              Which AP subjects does <br/> <span className="highlight"> Ignite</span> offer tutoring for?
             </h2>
 
             <p
               style={{ color: "#64748b", maxWidth: isMobile ? "100%" : "28rem", fontSize: isMobile ? "16px" : "20px", lineHeight: isMobile ? "1.5" : "1.2", margin: isMobile ? "0 auto" : "0", paddingLeft: isMobile ? "0.5rem" : "0", paddingRight: isMobile ? "0.5rem" : "0", marginBottom: isMobile ? "15px" : "20px" }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+Ignite provides expert tutoring support for a wide range of AP subjects, including Calculus (AB & BC), Biology, Chemistry, Physics, English Literature, and more, all taught by experienced AP-certified educators.            </p>
           </div>
 
           {/* Right Section */}
@@ -122,7 +126,7 @@ const FAQSection = () => {
                 >
                   <span
                     className="fw-bold h5 lh-sm mb-0"
-                    style={{ color: "#1e3a8a", fontSize: isMobile ? "1.1rem" : "25px", lineHeight: "100%", letterSpacing: "1%", width:"90%" }}
+                    style={{ color: "#1e3a8a", fontSize: isMobile ? "1.1rem" : "25px", lineHeight: "100%", letterSpacing: "1%", width: "90%" }}
                   >
                     {faq.question}
                   </span>
