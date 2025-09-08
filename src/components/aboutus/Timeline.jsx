@@ -550,26 +550,37 @@ export default function Timeline() {
   // Timeline data
   const timelineData = [
     {
-      year: 2019,
-      description: "The beginning of our journey. We started with a vision to transform how people approach personal development and coaching."
+      year: 2015,
+      description:
+        "Ignite was established with a mission to redefine tutoring through personalized academic support. This foundational year set the stage for a student-first approach, rooted in excellence, empathy, & progress.",
+    },
+    {
+      year: 2018,
+      description:
+        "Within just three years, we completed 8000+ hours of impactful tutoring across subjects & levels. This achievement reflected the growing trust of families in UAE & our unwavering commitment to student success.",
     },
     {
       year: 2020,
-      description: "Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential. We offer personalized strategies, proven methods, and unwavering support to help you navigate challenges."
+      description:
+        "With the opening of our learning center in JLT, Dubai, we brought our vision physically closer to students. These centers became dynamic hubs for academic growth, mentorship, & consistent support.",
     },
     {
       year: 2021,
-      description: "We expanded our services and reached thousands of clients worldwide, establishing ourselves as leaders in the coaching industry."
+      description:
+        "We launched our Homeschooling (Private Candidacy Programme), giving students greater flexibility, expert guidance, & the freedom to learn on their terms. This initiative opened new pathways for academic success.",
     },
     {
       year: 2022,
-      description: "Innovation year - we introduced cutting-edge methodologies and digital platforms to enhance our coaching experience."
+      description:
+        "We expanded our support through University Pathways guidance & Academic Consultations, helping students make informed academic choices, plan effectively with clarity, & prepare confidently for their future.",
     },
     {
-      year: 2023,
-      description: "Global expansion and recognition. Our proven methods gained international acclaim and we opened new coaching centers."
-    }
+      year: 2025,
+      description:
+        "Our growing team of trainers has empowered more students than ever, enabling more diverse learning support. With over 100,000+ teaching hours delivered, we remain committed to shaping the students' academic progress.",
+    },
   ];
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -634,8 +645,7 @@ export default function Timeline() {
                 WebkitTextFillColor: "transparent"
               }}
             >
-              LOREM IPSUM DOLOR SIT AMET,
-            </span>{" "}
+              With Every Step Forward, We've   <br/>        </span>{" "}
             <span
               style={{
                 background: "linear-gradient(135deg, #00A491, #003E37)",
@@ -643,7 +653,7 @@ export default function Timeline() {
                 WebkitTextFillColor: "transparent"
               }}
             >
-              CONSECTETUR
+              Grown
             </span>{" "}
             <span
               style={{
@@ -652,7 +662,7 @@ export default function Timeline() {
                 WebkitTextFillColor: "transparent"
               }}
             >
-              ADIPISCING
+              With Our Students
             </span>
           </h2>
         </div>
@@ -668,7 +678,7 @@ export default function Timeline() {
           {/* Mobile Timeline - Vertical Layout */}
           <div className="mobile-timeline d-md-none">
             {timelineData.map((item, index) => (
-              <div 
+              <div
                 key={item.year}
                 className={`timeline-item ${index === 0 ? 'first' : ''} ${item.year === activeYear ? 'active' : ''} ${index === timelineData.length - 1 ? 'last' : ''}`}
                 onClick={() => handleYearClick(item.year)}
@@ -702,7 +712,7 @@ export default function Timeline() {
             <div className="timeline-line-container">
               <div className="timeline-line">
                 {timelineData.map((item, index) => (
-                  <div 
+                  <div
                     key={item.year}
                     className={`timeline-segment ${item.year === activeYear ? 'active' : ''}`}
                     onClick={() => handleYearClick(item.year)}

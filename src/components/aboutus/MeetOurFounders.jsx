@@ -51,13 +51,12 @@ export default function MeetOurFounders() {
           >
             <span
               style={{
-                background: "linear-gradient(135deg, #3F88BA, #161664)",
+                background: "linear-gradient(135deg, #161664, #3F88BA)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
             >
-              LOREM IPSUM DOLOR SIT AMET,
-            </span>{" "}
+              The Visionaries Behind   <br />     The       </span>{" "}
             <span
               style={{
                 background: "linear-gradient(135deg, #00A491, #003E37)",
@@ -65,16 +64,16 @@ export default function MeetOurFounders() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              CONSECTETUR
+              Ignite's
             </span>{" "}
             <span
               style={{
-                background: "linear-gradient(135deg, #3F88BA, #161664)",
+                background: "linear-gradient(135deg, #161664, #3F88BA)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
             >
-              ADIPISCING
+              Purpose
             </span>
           </h2>
         </div>
@@ -103,14 +102,7 @@ export default function MeetOurFounders() {
               <div className="founder-message">
                 <h3 className="message-title">FOUNDERS MESSAGE</h3>
                 <p className="message-text">
-                  Sumit is the Co-Founder of the Ignite Training Institute. He
-                  holds a B.Sc in IT & has even pursued a Diploma in Advertising
-                  & PR.
-                </p>
-                <p className="message-text">
-                  He brings with himself 9+ years of experience in the UAE's
-                  education industry & the expertise to customize academic
-                  learning programs that align with every student's goals.
+                  Ignite began with a belief: every child holds extraordinary potential, but their journeys differ. Too often, dreams are slowed by roadblocks that could be removed with timely help. We listen first, teach second, customising every step, so our students gain the skills, confidence, and direction to thrive in a world full of possibilities.
                 </p>
               </div>
             </div>
@@ -125,14 +117,7 @@ export default function MeetOurFounders() {
               <div className="founder-message2">
                 <h3 className="message-title2">FOUNDERS MESSAGE</h3>
                 <p className="message-text2">
-                  Mohnish is the Co-Founder of the Ignite Training Institute. He
-                  holds a B.Sc in IT & has even pursued a Diploma in Advertising
-                  & PR.
-                </p>
-                <p className="message-text2">
-                  He brings with himself 9+ years of experience in the UAE's
-                  education industry & the expertise to customize academic
-                  learning programs that align with every student's goals.
+                  For me, education is and always will be the most reliable route to career success. Beyond academics, the very process of learning builds discipline, problem-solving, and resilience. At Ignite, we aim to teach the ability to learn itself, so our students don’t just keep up with change, they lead it.
                 </p>
               </div>
             </div>

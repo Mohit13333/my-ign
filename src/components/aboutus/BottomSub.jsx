@@ -58,7 +58,7 @@ export default function CallToAction() {
             color: 'white',
             marginBottom: '1.5rem',
             lineHeight: '1.1',
-            letterSpacing: '0.02em'
+            letterSpacing: '0.02em',
         },
         paragraph: {
             fontSize: '1.25rem',
@@ -197,21 +197,20 @@ export default function CallToAction() {
 
                 <div style={styles.content}>
                     {/* Desktop Layout */}
-                    <div style={styles.desktopLayout} className="desktop-only">
+                    <div style={styles.desktopLayout} className="desktop-only text-uppercase">
                         <div style={styles.textSection}>
                             <h1 style={styles.heading}>
-                                LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING
+                                Discover Courses That Support Every Step Of Learning
                             </h1>
 
                             <p style={styles.paragraph}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore.
+                                Explore our wide range of tutoring programs, each designed to meet students where they are & guide them forward.
                             </p>
 
                             <button
                                 style={{ ...styles.button }}
                             >
-                                <span>explore our tutoring course</span>
+                                <span className='text-uppercase'>explore our tutoring course</span>
                                 <div style={{ ...styles.buttonIcon }}>
                                     <ArrowRight size={20} />
                                 </div>
@@ -228,22 +227,21 @@ export default function CallToAction() {
                     </div>
 
                     {/* Mobile Layout */}
-                    <div style={styles.mobileLayout} className="mobile-only">
+                    <div style={styles.mobileLayout} className="mobile-only  text-uppercase">
                         <div style={styles.mobileTextSection}>
                             <h1 style={styles.mobileHeading}>
-                                LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING
+                                Discover Courses That Support Every Step Of Learning
                             </h1>
 
                             <p style={styles.mobileParagraph}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore.
+                                Explore our wide range of tutoring programs, each designed to meet students where they are & guide them forward.
                             </p>
 
                             <div style={styles.mobileButtonContainer}>
                                 <button
                                     style={{ ...styles.mobileButton }}
                                 >
-                                    <span style={{ fontSize: "12px !important", opacity: 0.5 }}>EXPLORE OUR TUTORING COURSES</span>
+                                    <span className='text-uppercase' style={{ fontSize: "12px !important", opacity: 0.5 }}>EXPLORE OUR TUTORING COURSES</span>
                                     <div style={{ ...styles.mobileButtonIcon }}>
                                         <ArrowRight size={18} />
                                     </div>

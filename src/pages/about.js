@@ -5,8 +5,8 @@ import Timeline from "@/components/aboutus/Timeline";
 import MeetOurFounders from "@/components/aboutus/MeetOurFounders";
 import { useEffect, useRef } from "react";
 import TutoringHeroSection from "@/components/aboutus/BottomSub";
-import MarqueeBanner from "@/components/act/MarqueeBanner";
-import LifeAtIgniteCarousel from "@/components/ap/LifeAtIgniteCarousel";
+import MarqueeBanner from "@/components/aboutus/MarqueeBanner";
+import LifeAtIgniteCarousel from "@/components/aboutus/LifeAtIgniteCarousel";
 
 const About = () => {
   const scrollRef = useRef(null);

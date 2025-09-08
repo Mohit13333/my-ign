@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
                           WebkitTextFillColor: "transparent",
                         }}
                       >
-                        LOREM IPSUM DOLOR SIT AMET,
+                        A Legacy Of Success Built <br/> On
                       </span>{" "}
                       <span
                         style={{
@@ -67,7 +67,7 @@ export default function WhyChooseUs() {
                           WebkitTextFillColor: "transparent",
                         }}
                       >
-                        CONSECTETUR
+                        Trust
                       </span>{" "}
                       <span
                         style={{
@@ -77,16 +77,13 @@ export default function WhyChooseUs() {
                           WebkitTextFillColor: "transparent",
                         }}
                       >
-                        ADIPISCING
+                        & Learning
                       </span>
                     </h2>
                   </div>
 
                   <p className="description text-center text-md-start">
-                    Choosing us means partnering with experienced coaches who
-                    are dedicated to unlocking your potential. We offer
-                    personalized strategies, proven methods, and unwavering
-                    support to help you navigate challenges.
+                    With expert trainers & tailored methods, we help students grow with purpose & confidently excel in every step of their journey. We ensure every session drives clarity, progress, & measurable growth.
                   </p>
 
                   {/* Statistics */}
@@ -137,13 +134,13 @@ export default function WhyChooseUs() {
                           </svg>
 
                           <div className="progress-text">
-                            <span className="percentage">90%</span>
+                            <span className="percentage">93%</span>
                           </div>
                         </div>
                         <div className="stat-label">
-                          <strong>CLIENT SUCCESS</strong>
+                          <strong>Target Grades</strong>
                           <br />
-                          <strong>RATINGS</strong>
+                          <strong> Achieved</strong>
                         </div>
                       </div>
                     </div>
@@ -189,19 +186,19 @@ export default function WhyChooseUs() {
                               cx="60"
                               cy="60"
                               strokeDasharray="327"
-                              strokeDashoffset="114.45"
+                              strokeDashoffset="32.7"  // 90% filled
                               strokeLinecap="round"
                             />
                           </svg>
 
                           <div className="progress-text">
-                            <span className="percentage1">65%</span>
+                            <span className="percentage1">90%</span>
                           </div>
                         </div>
-                        <div className="stat-label">
-                          <strong>PROJECT</strong>
+                        <div className="stat-label text-uppercase">
+                          <strong>Student Referrals</strong>
                           <br />
-                          <strong>COMPLETED RATIO</strong>
+                          <strong> Rate</strong>
                         </div>
                       </div>
                     </div>

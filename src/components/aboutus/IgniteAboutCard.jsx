@@ -41,7 +41,7 @@ export default function IgniteAboutCard() {
           </div>
 
           <h1
-            className="ignite-main-title fade-in-section"
+            className="ignite-main-title fade-in-section text-uppercase"
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat
@@ -49,9 +49,8 @@ export default function IgniteAboutCard() {
               animationDelay: "0.3s",
             }}
           >
-            LOREM IPSUM DOLOR SIT AMET,
-            <br />
-            CONSECTETUR <span className="green-text">ADIPISCING</span>
+            Not Just Better Grades, A Journey Of
+            Consistent <span className="green-text">Progress</span>
           </h1>
 
           <p
@@ -63,10 +62,7 @@ export default function IgniteAboutCard() {
               animationDelay: "0.3s",
             }}
           >
-            Choosing us means partnering with experienced coaches who are
-            dedicated to unlocking your potential.We offer personalized
-            strategies, proven methods, and unwavering support to help you
-            navigate challenges.
+            Founded in 2015, Ignite Training Institute is dedicated to guiding students on their unique paths. Through personalized tutoring & in-depth expertise, we help students build confidence, strengthen understanding, & reach their full potential.
           </p>
           {/* <h2 className="ignite-secondary-title fade-in-section" data-scroll
             data-scroll-class="is-inview"
@@ -131,21 +127,20 @@ export default function IgniteAboutCard() {
         <div className="check-box d-flex flex-md-row flex-column justify-content-around">
           {/* First item */}
           <div className="d-flex flex-column align-items-center gap-2 mb-4 mb-md-0">
-            <h3 className="heading-title gradient-text">OUR TRAINERS</h3>
+            <h3 className="heading-title gradient-text">TRAINING</h3>
             <p className="heading-subtitle">
-              Choosing us means partnering to
-              <br className="d-none d-md-block" />
-              unlocking your potential.
+              Expert-led sessions focused on               <br className="d-none d-md-block" />
+              concept clarity & real learning.
             </p>
           </div>
 
           {/* Second item */}
           <div className="d-flex flex-column align-items-center gap-2 mb-4 mb-md-0">
-            <h3 className="heading-title gradient-text">OUR RESOURCES</h3>
+            <h3 className="heading-title gradient-text">RESOURCES</h3>
             <p className="heading-subtitle">
-              Choosing us means partnering to
+              Curriculum-aligned materials
               <br className="d-none d-md-block" />
-              unlocking your potential.
+              tailored for effective self-study.
             </p>
           </div>
 
@@ -153,9 +148,8 @@ export default function IgniteAboutCard() {
           <div className="d-flex flex-column align-items-center gap-2">
             <h3 className="heading-title gradient-text">TESTING</h3>
             <p className="heading-subtitle">
-              Choosing us means partnering to
-              <br className="d-none d-md-block" />
-              unlocking your potential.
+              Frequent assessments to track               <br className="d-none d-md-block" />
+              progress & boost performance.
             </p>
           </div>
         </div>
