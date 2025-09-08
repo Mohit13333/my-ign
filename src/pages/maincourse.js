@@ -6,7 +6,6 @@ import MeetOurFounders from "@/components/aboutus/MeetOurFounders";
 import { useEffect, useRef, useState } from "react";
 import TutoringHeroSection from "@/components/aboutus/BottomSub";
 import MarqueeBanner from "@/components/act/MarqueeBanner";
-import LifeAtIgniteCarousel from "@/components/ap/LifeAtIgniteCarousel";
 import TutoringCourses from "@/components/maincourse/Banner";
 import Test from "@/components/maincourse/StandardsedTest";
 import CallToAction from "@/components/maincourse/CallToAction";
@@ -14,6 +13,7 @@ import TrainersMessage from "@/components/maincourse/videoTrainer";
 import Testimonial from "@/components/idbp/ReviewsSection";
 import Learning from "@/components/maincourse/Learning";
 import MainBanner from "@/components/maincourse/MainBanner";
+import LifeAtIgniteCarousel from "@/components/maincourse/LifeAtIgniteCarousel";
 
 const About = () => {
     const scrollRef = useRef(null);

@@ -12,7 +12,7 @@ const testData = [
     title: "ACT",
     img: "/images/test-section1.jpg",
     label: "ACT",
-    details: ["Total Courses: 3", "Online & In-Person"],
+    details: ["Score higher on the ACT with personalized, proven preparation"],
     btn: "VIEW TUTORING COURSE",
   },
   {
@@ -20,7 +20,7 @@ const testData = [
     title: "AP",
     img: "/images/test-section2.jpg",
     label: "ADVANCED PLACEMENTS",
-    details: ["Total Courses: 2", "Online & In-Person"],
+    details: ["Targeted AP tutoring to strengthen concepts & exam readiness"],
     btn: "VIEW TUTORING COURSE",
   },
   {
@@ -28,7 +28,7 @@ const testData = [
     title: "UCAT",
     img: "/images/test-section3.jpg",
     label: "UCAT",
-    details: ["Total Courses: 1", "Online & In-Person"],
+    details: ["Master UCAT strategies with expert guidance & focused test prep"],
     btn: "VIEW TUTORING COURSE",
   },
 ];
@@ -66,8 +66,7 @@ const Test = ({ isMobileSwiper, active, setActive }) => {
             className="fade-in-section testTitle font-sizet1"
             style={{ animationDelay: "0.2s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,
-            CONSECTETUR <span className="highlight">ADIPISCING</span>
+            Score Higher With Test Prep <br/> Methods That Truly <span className="highlight">Work</span>
           </h2>
         </div>
       </div> {/* End container for headings */}

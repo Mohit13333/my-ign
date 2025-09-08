@@ -511,11 +511,13 @@ const TrainersMessage = () => {
             lineHeight: "1.1",
             textTransform: "uppercase",
             marginTop: "3vh",
+            maxWidth: isMobile ? "100%" : "57%",
+            marginInline:"auto",
           }}
         >
           <span
             style={{
-              background: "linear-gradient(135deg, #3F88BA, #161664)",
+              background: "linear-gradient(135deg , #161664, #3F88BA)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -533,7 +535,7 @@ const TrainersMessage = () => {
           </span>{" "}
           <span
             style={{
-              background: "linear-gradient(135deg, #3F88BA, #161664)",
+              background: "linear-gradient(135deg , #161664, #3F88BA)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -590,7 +592,6 @@ const TrainersMessage = () => {
           color: #1b2e5b;
           font-weight: 800;
           font-size: 1.125rem;
-          letter-spacing: 0.2em;
           margin-bottom: 1.5rem;
           user-select: none;
           text-align: center;

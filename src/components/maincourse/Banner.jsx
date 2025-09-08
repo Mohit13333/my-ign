@@ -47,15 +47,15 @@ export default function TutoringCourses() {
               <div className="SubHeading testSubheading">TUTORING COURSES</div>
             </div>
 
-                   <h2
+            <h2
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
               className="fade-in-section testTitle font-sizet"
               style={{ animationDelay: "0.2s" }}
             >
-              LOREM IPSUM DOLOR SIT AMET, <span className="highlight">
-              CONSECTETUR</span> ADIPISCING
+              Courses That Build Confidence & <span className="highlight">
+                Academic</span> Excellence
             </h2>
           </div>
         </section>
@@ -76,9 +76,9 @@ export default function TutoringCourses() {
                       />
                     </div>
                   </div>
-                  <h3 className="card-title">IB</h3>
+                  <h3 className="card-title">IBDP</h3>
                   <p className="card-description">
-                    Transforming lives through tailored coaching for personal success.
+                    Maximize to 7/7 with subject-specific mentors who will help you.
                   </p>
                   <button className="card-button">
                     LEARN MORE
@@ -103,10 +103,9 @@ export default function TutoringCourses() {
                       />
                     </div>
                   </div>
-                  <h3 className="card-title">IBDP</h3>
+                  <h3 className="card-title">IB MYP</h3>
                   <p className="card-description dark-text">
-                    Maximize to 45 points with subject-specific tutors that will help
-                    you.
+                    Kick-start your MYP learning with the best-suited tutor-led courses.
                   </p>
                   <button className="card-button">
                     LEARN MORE
@@ -131,10 +130,9 @@ export default function TutoringCourses() {
                       />
                     </div>
                   </div>
-                  <h3 className="card-title">MYP</h3>
+                  <h3 className="card-title">IGSE</h3>
                   <p className="card-description">
-                    Kick-start your MYP learnings with tutor-led courses that best
-                    suit.
+                    Master your IGCSE subjects with focused, expert-led tutoring support.
                   </p>
                   <button className="card-button">
                     LEARN MORE
@@ -161,9 +159,9 @@ export default function TutoringCourses() {
                       />
                     </div>
                   </div>
-                  <h3 className="card-title">IGCSE</h3>
+                  <h3 className="card-title">A-LEVELS</h3>
                   <p className="card-description">
-                    Get exclusive tutoring support for IGCSE / GCSE qualifications.
+                    Achieve clarity & confidence with structured A-Level learning methods
                   </p>
                   <button className="card-button">
                     LEARN MORE
@@ -188,10 +186,9 @@ export default function TutoringCourses() {
                       />
                     </div>
                   </div>
-                  <h3 className="card-title">A-LEVELS</h3>
+                  <h3 className="card-title">PRIVATE CANDIDACY</h3>
                   <p className="card-description">
-                    Enjoy excellent resources &amp; training under top A-Levels tutors
-                    for all exam boards.
+                    Academic structure & mentoring for self-paced, private exam journeys
                   </p>
                   <button className="card-button">
                     LEARN MORE
@@ -207,8 +204,6 @@ export default function TutoringCourses() {
             </>
           ) : (
             <>
-              {/* Mobile layout - keep as grid */}
-              {/* IB Card */}
               <article className="card1 card-gradient">
                 <div className="icon-container">
                   <div className="icon-circle">
@@ -220,9 +215,9 @@ export default function TutoringCourses() {
                     />
                   </div>
                 </div>
-                <h3 className="card-title">IB</h3>
+                <h3 className="card-title">IBDP</h3>
                 <p className="card-description">
-                  Transforming lives through tailored coaching for personal success.
+                  Maximize to 7/7 with subject-specific mentors who will help you.
                 </p>
                 <button className="card-button">
                   LEARN MORE
@@ -247,10 +242,9 @@ export default function TutoringCourses() {
                     />
                   </div>
                 </div>
-                <h3 className="card-title">IBDP</h3>
+                <h3 className="card-title">IB MYP</h3>
                 <p className="card-description dark-text">
-                  Maximize to 45 points with subject-specific tutors that will help
-                  you.
+                  Kick-start your MYP learning with the best-suited tutor-led courses.
                 </p>
                 <button className="card-button">
                   LEARN MORE
@@ -275,10 +269,9 @@ export default function TutoringCourses() {
                     />
                   </div>
                 </div>
-                <h3 className="card-title">MYP</h3>
+                <h3 className="card-title">IGSE</h3>
                 <p className="card-description">
-                  Kick-start your MYP learnings with tutor-led courses that best
-                  suit.
+                  Master your IGCSE subjects with focused, expert-led tutoring support.
                 </p>
                 <button className="card-button">
                   LEARN MORE
@@ -303,9 +296,9 @@ export default function TutoringCourses() {
                     />
                   </div>
                 </div>
-                <h3 className="card-title">IGCSE</h3>
+                <h3 className="card-title">A-LEVELS</h3>
                 <p className="card-description">
-                  Get exclusive tutoring support for IGCSE / GCSE qualifications.
+                  Achieve clarity & confidence with structured A-Level learning methods
                 </p>
                 <button className="card-button">
                   LEARN MORE
@@ -330,10 +323,9 @@ export default function TutoringCourses() {
                     />
                   </div>
                 </div>
-                <h3 className="card-title">A-LEVELS</h3>
+                <h3 className="card-title">PRIVATE CANDIDACY</h3>
                 <p className="card-description">
-                  Enjoy excellent resources &amp; training under top A-Levels tutors
-                  for all exam boards.
+                  Academic structure & mentoring for self-paced, private exam journeys
                 </p>
                 <button className="card-button">
                   LEARN MORE

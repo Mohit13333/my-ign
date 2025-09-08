@@ -15,7 +15,7 @@ export default function CallToAction() {
     }, []);
     const styles = {
         container: {
-            maxWidth: isMobile?"95vw":"90vw",
+            maxWidth: isMobile ? "95vw" : "90vw",
             borderRadius: "40px",
             margin: "0 auto",
             position: 'relative',
@@ -56,13 +56,15 @@ export default function CallToAction() {
             color: 'white',
             marginBottom: '1.5rem',
             lineHeight: '1.1',
-            letterSpacing: '0.02em'
+            letterSpacing: '0.02em',
+            textTransform: 'uppercase'
         },
         paragraph: {
             fontSize: '1.25rem',
             color: '#d1d5db',
             marginBottom: '2rem',
-            lineHeight: '1.6'
+            lineHeight: '1.6',
+            textTransform: 'uppercase'
         },
         button: {
             display: 'flex',
@@ -118,7 +120,7 @@ export default function CallToAction() {
             boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
             width: '100%',
             objectFit: "cover",
-            width:"300px",
+            width: "300px",
             height: "auto"
         },
         mobileLayout: {
@@ -144,14 +146,16 @@ export default function CallToAction() {
             color: 'white',
             marginBottom: '1.5rem',
             lineHeight: '1.2',
-            textAlign: 'center'
+            textAlign: 'center',
+            textTransform: 'uppercase'
         },
         mobileParagraph: {
             fontSize: '1rem',
             color: '#d1d5db',
             marginBottom: '2rem',
             lineHeight: '1.6',
-            textAlign: 'center'
+            textAlign: 'center',
+            textTransform: 'uppercase'
         },
         mobileButtonContainer: {
             display: 'flex',
@@ -221,24 +225,22 @@ export default function CallToAction() {
                     <div style={styles.desktopLayout} className="desktop-only">
                         <div style={styles.textSection}>
                             <h1 style={styles.heading}>
-                                LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING
+                                Experience Ignite Firsthand, See What Sets Us Apart
                             </h1>
 
                             <p style={styles.paragraph}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore.
+                                Get a glimpse of our teaching style & expert mentors. Discover how Ignite can make a real difference in your journey.
                             </p>
-
-                            <button
-                                style={{ ...styles.button, ...buttonHoverStyle }}
-                                onMouseEnter={() => setIsHovered(true)}
-                                onMouseLeave={() => setIsHovered(false)}
-                            >
-                                <span>JOIN A FREE DEMO</span>
-                                <div style={{ ...styles.buttonIcon, ...buttonIconHoverStyle }}>
-                                    <ArrowRight size={20} />
-                                </div>
-                            </button>
+                            <a href="https://ignitetraininginstitute.com/join-free-demo-class/" target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
+                                <button
+                                    style={{ ...styles.button }}
+                                >
+                                    <span>GET A FREE DEMO</span>
+                                    <div style={{ ...styles.buttonIcon }}>
+                                        <ArrowRight size={20} />
+                                    </div>
+                                </button>
+                            </a>
                         </div>
 
                         <div style={styles.imageSection}>
@@ -254,25 +256,25 @@ export default function CallToAction() {
                     <div style={styles.mobileLayout} className="mobile-only">
                         <div style={styles.mobileTextSection}>
                             <h1 style={styles.mobileHeading}>
-                                LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING
+                                Experience Ignite Firsthand, See What Sets Us Apart
                             </h1>
 
                             <p style={styles.mobileParagraph}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore.
+                                Get a glimpse of our teaching style & expert mentors. Discover how Ignite can make a real difference in your journey.
                             </p>
 
                             <div style={styles.mobileButtonContainer}>
-                                <button
-                                    style={{ ...styles.mobileButton, ...mobileButtonHoverStyle }}
-                                    onMouseEnter={() => setIsMobileHovered(true)}
-                                    onMouseLeave={() => setIsMobileHovered(false)}
-                                >
-                                    <span>JOIN A FREE DEMO</span>
-                                    <div style={{ ...styles.mobileButtonIcon, ...mobileButtonIconHoverStyle }}>
-                                        <ArrowRight size={18} />
-                                    </div>
-                                </button>
+                                <a href="https://ignitetraininginstitute.com/join-free-demo-class/" target="_blank" style={{ textDecoration: 'none' }} rel="noreferrer">
+
+                                    <button
+                                        style={{ ...styles.mobileButton }}
+                                    >
+                                        <span>GET A FREE DEMO</span>
+                                        <div style={{ ...styles.mobileButtonIcon }}>
+                                            <ArrowRight size={18} />
+                                        </div>
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
