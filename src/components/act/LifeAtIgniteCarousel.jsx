@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function LifeAtIgniteCarousel() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const images = [
     {
@@ -22,7 +22,7 @@ export default function LifeAtIgniteCarousel() {
       url: "/assets/igncra.jpg",
       alt: "Creative workspace with plants",
     },
-  ];  
+  ];
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
@@ -56,7 +56,7 @@ export default function LifeAtIgniteCarousel() {
     <div className=" overflow-hidden fade-in-section" data-scroll
       data-scroll-class="is-inview"
       data-scroll-repeat
-      style={{ animationDelay: "0.1s", marginBlock:isMobile?"40px":"96px",paddingBottom:isMobile?"40px":"0" }}>
+      style={{ animationDelay: "0.1s", marginBlock: isMobile ? "40px" : "96px", paddingBottom: isMobile ? "40px" : "0" }}>
       <div className="container fade-in-section"
         data-scroll
         data-scroll-class="is-inview"
@@ -80,9 +80,8 @@ export default function LifeAtIgniteCarousel() {
             className="fade-in-section alumniTitle"
             style={{ margin: "24px 0 0 0", animationDelay: "0.3s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,<span className="alumniHighlight">  consectetur </span> 
-           ADIPISCING
-          </h2>
+            This Is What Learning Really <br /><span className="alumniHighlight">  Looks </span>
+            Like At Ignite          </h2>
         </div>
 
         {/* Carousel */}
@@ -107,7 +106,7 @@ export default function LifeAtIgniteCarousel() {
               animationDelay: "0.45s"
             }}
           >
-            <img src="/assets/lar.png" alt="leftarr" width={isMobile?32:80} height={isMobile?32:80} />
+            <img src="/assets/lar.png" alt="leftarr" width={isMobile ? 32 : 80} height={isMobile ? 32 : 80} />
           </button>
 
           {/* Stacked Images */}
@@ -154,7 +153,7 @@ export default function LifeAtIgniteCarousel() {
               animationDelay: "0.65s"
             }}
           >
-            <img src="/assets/rar.png" alt="rightarr" width={isMobile?32:80} height={isMobile?32:80} />
+            <img src="/assets/rar.png" alt="rightarr" width={isMobile ? 32 : 80} height={isMobile ? 32 : 80} />
           </button>
         </div>
 
@@ -164,9 +163,8 @@ export default function LifeAtIgniteCarousel() {
           data-scroll-class="is-inview"
           data-scroll-repeat
           style={{ animationDelay: "0.7s" }}>
-          <p className="mx-auto" style={{ maxWidth: '40rem',fontSize:isMobile?"16px":"23px" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore.
+          <p className="mx-auto" style={{ maxWidth: '40rem', fontSize: isMobile ? "16px" : "23px" }}>
+            Experience strong academic support & enriching connections that shape student life & growth at Ignite.
           </p>
         </div>
       </div>

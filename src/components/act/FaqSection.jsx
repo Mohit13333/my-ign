@@ -1,246 +1,3 @@
-// "use client";
-
-// import { useEffect, useState } from "react";
-// import { Plus, Minus } from "lucide-react";
-
-// const FAQSection = () => {
-//   const [openIndex, setOpenIndex] = useState(0);
-//   const [isMobile, setIsMobile] = useState(false);
-
-//   useEffect(() => {
-//     const handleResize = () => {
-//       const width = window.innerWidth;
-//       setIsMobile(width < 768);
-//     };
-
-//     handleResize();
-//     window.addEventListener('resize', handleResize);
-//     return () => window.removeEventListener('resize', handleResize);
-//   }, []);
-//   const toggleItem = (index) => {
-//     setOpenIndex((prev) => (prev === index ? -1 : index));
-//   };
-
-//   const faqData = [
-//     {
-//       question: "LOREM IPSUM DOLOR SIT AMET?",
-//       answer:
-//         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-//     },
-//     {
-//       question: "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR?",
-//       answer:
-//         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-//     },
-//     {
-//       question: "LOREM IPSUM DOLOR SIT AMET?",
-//       answer:
-//         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-//     },
-//     {
-//       question: "LOREM IPSUM DOLOR SIT AMET?",
-//       answer:
-//         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-//     },
-//   ];
-
-//   return (
-//     <div
-//       className=" d-flex justify-content-center align-items-center bg-white mx-auto fade-in-section"
-//       data-scroll
-//       data-scroll-class="is-inview"
-//       data-scroll-repeat
-//       style={{
-//         marginBottom: isMobile?"40px":"96px",
-//          maxWidth: "90vw",
-//         backgroundImage: 'url("/assets/faqbg.png")',
-//         backgroundSize: "cover",
-//         backgroundPosition: "center",
-//         backgroundRepeat: "no-repeat",
-//         borderRadius: "3rem",
-
-//       }}
-//     >
-//       <div
-//         className="w-100 overflow-hidden fade-in-section"
-//         data-scroll
-//         data-scroll-class="is-inview"
-//         data-scroll-repeat
-//         style={{
-//           padding: isMobile ? "2rem 1rem" : "3rem 2rem",
-//           display: "flex",
-//           alignItems: "center", // vertical center
-//           minHeight: "60vh", // keep section height
-//         }}
-//       >
-//         <div className="row g-2 w-100 align-items-center">
-//           {/* Left Section */}
-//           <div className={`col-lg-6 d-flex flex-column justify-content-center ${isMobile ? 'text-center' : ''}`}>
-//             {/* FAQ Header */}
-//             <div className="testimonialHeader" style={{ marginBottom: isMobile ? "10px" : "20px" }}>
-//               <span className="SubHeading">FAQS
-//               </span>
-//             </div>
-
-//             {/* Main Title */}
-//        <h2
-//               data-scroll
-//               data-scroll-class="is-inview"
-//               data-scroll-repeat="true"
-//               className="fade-in-section"
-//               style={{ animationDelay: "0.2s",color:"#19245E",fontWeight:800,marginBottom:"20px",fontSize:isMobile?"20px":"2.5rem" }}
-//             >
-//               LOREM IPSUM DOLOR SIT AMET,<br/>
-//               <span className="highlight">CONSECTETUR</span> ADIPISCING
-//             </h2>
-
-//             <p
-//               style={{ color: "#64748b", maxWidth: isMobile ? "100%" : "28rem", fontSize: isMobile ? "16px" : "20px", lineHeight: isMobile ? "1.5" : "1.2", margin: isMobile ? "0 auto" : "0", paddingLeft: isMobile ? "0.5rem" : "0", paddingRight: isMobile ? "0.5rem" : "0", marginBottom: isMobile ? "10px" : "20px" }}
-//             >
-//               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-//               eiusmod tempor incididunt ut labore et dolore magna aliqua.
-//             </p>
-//           </div>
-
-//           {/* Right Section */}
-//           <div className="col-lg-6 d-flex flex-column gap-3 fade-in-section" data-scroll
-//             data-scroll-class="is-inview"
-//             data-scroll-repeat>
-//             {faqData.map((faq, index) => (
-//               <div
-//                 key={index}
-//                 className="border-bottom"
-//                 style={{ borderColor: "#cbd5e1" }}
-//               >
-//                 <button
-//                   onClick={() => toggleItem(index)}
-//                   className="w-100 d-flex justify-content-between align-items-center text-start btn btn-link text-decoration-none p-0"
-//                   style={{
-//                     paddingTop: "1.5rem",
-//                     paddingBottom: "1.5rem",
-//                   }}
-//                 >
-//                   <span
-//                     className="fw-bold h5 lh-sm mb-0"
-//                     style={{ color: "#1e3a8a", fontSize: isMobile ? "1.1rem" : "25px", lineHeight: "100%", letterSpacing: "1%", width:"90%" }}
-//                   >
-//                     {faq.question}
-//                   </span>
-//                   {openIndex === index ? (
-//                     <Minus
-//                       style={{
-//                         color: "#1e3a8a",
-//                         width: isMobile ? "18px" : "22px",
-//                         height: isMobile ? "18px" : "22px",
-//                       }}
-//                     />
-//                   ) : (
-//                     <Plus
-//                       style={{
-//                         color: "#1e3a8a",
-//                         width: isMobile ? "18px" : "22px",
-//                         height: isMobile ? "18px" : "22px",
-//                       }}
-//                     />
-//                   )}
-//                 </button>
-//                 <div
-//                   className="overflow-hidden"
-//                   style={{
-//                     marginBottom: isMobile ? "10px" : "20px",
-//                     transition: "all 0.3s ease-in-out",
-//                     maxHeight: openIndex === index ? "10rem" : "0",
-//                     paddingBottom: openIndex === index ? "1rem" : "0",
-//                   }}
-//                 >
-//                   <p
-//                     style={{
-//                       color: "#64748b",
-//                       paddingRight: "1.5rem",
-//                       fontSize: isMobile ? "0.9rem" : "20px",
-//                       lineHeight: isMobile ? "1.4" : "1.2"
-//                     }}
-//                   >
-//                     {faq.answer}
-//                   </p>
-//                 </div>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-
-//       <style jsx>{`
-//         .fade-in-section {
-//           opacity: 0;
-//           transform: translateY(30px);
-//           transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-//         }
-//         .fade-in-section.is-inview {
-//           opacity: 1;
-//           transform: translateY(0);
-//         }
-//          .SubHeading {
-//   font-size: 30px;
-//   font-weight: 600;
-//   line-height: 1;
-//   text-transform: uppercase;
-//   background: linear-gradient(to left, var(--skyblue-color), var(--blue-color));
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   position: relative;
-//   padding: 0 40px;
-//   display: inline-flex;  /* ✅ ensures proper alignment */
-//   align-items: center;   /* ✅ centers text with icons */
-// }
-
-// .SubHeading:before,
-// .SubHeading:after {
-//   content: "";
-//   width: 18px;   /* ✅ unchanged */
-//   height: 18px;  /* ✅ unchanged */
-//   position: absolute;
-//   top: 50%;                /* center vertically */
-//   transform: translateY(-50%); /* exact middle */
-//   background: url(/images/heading-icon.png);
-//   background-size: contain;
-//   background-repeat: no-repeat;
-// }
-
-// .SubHeading:before {
-//   left: 0;
-// }
-// .SubHeading:after {
-//   right: 0;
-// }
-
-// @media (max-width: 1024px) {
-//   .SubHeading {
-//     font-size: 24px;
-//     padding: 0 40px; /* keep icons same size */
-//   }
-// }
-// @media (max-width: 575px) {
-//   .SubHeading {
-//     font-size: 20px;
-//     padding: 0 40px; /* keep icons same size */
-//   }
-// }
-
-// }`}</style>
-//     </div>
-//   );
-// };
-
-// export default FAQSection;
-
-
-
-
-
-
-
-
 
 "use client";
 
@@ -267,24 +24,34 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      question: "LOREM IPSUM DOLOR SIT AMET?",
+      question: "Which ACT subjects does Ignite offer tutoring for?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "Ignite provides expert tutoring in all ACT components: English, Math, Reading, Science, and the optional Writing section, covering content review, strategies, and exam-specific practice.",
     },
     {
-      question: "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR?",
+      question: "Is the ACT tutoring aligned with official ACT exam formats?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "Yes, our ACT tutoring is fully aligned with official ACT standards, featuring timed practice tests, detailed answer explanations, and training in tackling different question types under exam conditions.",
     },
     {
-      question: "LOREM IPSUM DOLOR SIT AMET?",
+      question: "Are tutoring sessions available in person and online?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "Absolutely! Ignite offers flexible tutoring formats, including in-person sessions in Dubai and nationwide UAE locations, as well as live online classes for remote learners.",
     },
     {
-      question: "LOREM IPSUM DOLOR SIT AMET?",
+      question: "How does Ignite help students improve their ACT scores?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
+        "Students benefit from targeted content review, past paper solving, mock exams, time management drills, and personalized feedback, helping them master all ACT sections for improved scores.",
+    },
+    {
+      question: "How Can Ignite Support You As The Best ACT Tutors In Dubai?",
+      answer:
+        "Ignite Training Institute can support you as the best ACT tutors in Dubai through our comprehensive & ACT-specific tutoring strategies. Our ACT tutoring program is designed to help students achieve their full potential & excel in their academic & professional pursuits.",
+    },
+    {
+      question: "Can I try a session before enrolling in full ACT prep?",
+      answer:
+        "Yes! Ignite offers a free demo class so students and parents can evaluate our teaching methods, meet an instructor, and see if our ACT prep aligns with their goals before enrolling.",
     },
   ];
 
@@ -295,8 +62,8 @@ const FAQSection = () => {
       data-scroll-class="is-inview"
       data-scroll-repeat
       style={{
-        marginBottom: isMobile?"40px":"96px",
-        maxWidth: isMobile?"95vw":"90vw",
+        marginBottom: isMobile ? "40px" : "96px",
+        maxWidth: isMobile ? "95vw" : "90vw",
         backgroundImage: 'url("/assets/faqbg.png")',
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -322,28 +89,25 @@ const FAQSection = () => {
           <div className={`col-lg-6 d-flex flex-column justify-content-center ${isMobile ? 'text-center' : ''}`}>
             {/* FAQ Header */}
             <div className="testimonialHeader" style={{ marginBottom: isMobile ? "10px" : "20px" }}>
-              <span className="SubHeading" style={{fontSize:isMobile?"":"28px !important"}}>FAQS
+              <span className="SubHeading" style={{ fontSize: isMobile ? "" : "28px !important" }}>FAQS
               </span>
             </div>
 
             {/* Main Title */}
-       <h2
+            <h2
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section"
-              style={{ animationDelay: "0.2s",color:"#19245E",fontWeight:800,marginBlock:"20px",fontSize:isMobile?"20px":"2.1875rem" }}
+              className="fade-in-section text-uppercase"
+              style={{ animationDelay: "0.2s", color: "#19245E", fontWeight: 800, marginBlock: "20px", fontSize: isMobile ? "20px" : "2.1875rem" }}
             >
-              LOREM IPSUM DOLOR SIT AMET,
-              <span className="highlight"> CONSECTETUR</span> ADIPISCING
+              Which ACT subjects does  <br /> <span className="highlight"> Ignite</span> offer tutoring for?
             </h2>
 
             <p
               style={{ color: "#64748b", maxWidth: isMobile ? "100%" : "28rem", fontSize: isMobile ? "16px" : "20px", lineHeight: isMobile ? "1.5" : "1.2", margin: isMobile ? "0 auto" : "0", paddingLeft: isMobile ? "0.5rem" : "0", paddingRight: isMobile ? "0.5rem" : "0", marginBottom: isMobile ? "15px" : "20px" }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+              Ignite provides expert tutoring in all ACT components: English, Math, Reading, Science, and the optional Writing section, covering content review, strategies, and exam-specific practice.            </p>
           </div>
 
           {/* Right Section */}
@@ -366,7 +130,7 @@ const FAQSection = () => {
                 >
                   <span
                     className="fw-bold h5 lh-sm mb-0"
-                    style={{ color: "#1e3a8a", fontSize: isMobile ? "1.1rem" : "25px", lineHeight: "100%", letterSpacing: "1%", width:"90%" }}
+                    style={{ color: "#1e3a8a", fontSize: isMobile ? "1.1rem" : "25px", lineHeight: "100%", letterSpacing: "1%", width: "90%" }}
                   >
                     {faq.question}
                   </span>

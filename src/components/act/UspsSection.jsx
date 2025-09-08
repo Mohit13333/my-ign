@@ -50,7 +50,7 @@ function USPItem({ number, icon, title, desc }) {
                 height: isMobile ? "70px" : "150px",
                 objectFit: "contain",
                 mixBlendMode: "multiply",
-                marginRight: isMobile? "45px":"0",
+                marginRight: isMobile ? "45px" : "0",
               },
             })}
           </div>
@@ -91,52 +91,53 @@ function UpsSection() {
     {
       number: "01",
       icon: <img src="/assets/01.png" alt="Icon 01" />,
-      title: "IB-SPECIFIC TUTORS",
-      desc: "Highly qualified IB-specific tutors delivering all-around support.",
+      title: "ACT-Specific Tutors",
+      desc: "Highly qualified ACT-specific tutors delivering all-around support.",
     },
     {
       number: "02",
       icon: <img src="/assets/02.png" alt="Icon 02" />,
-      title: "INDIVIDUAL ATTENTION",
+      title: "Individual Attention",
       desc: "Small group training (SGT) to focus individually on every student.",
     },
     {
       number: "03",
       icon: <img src="/assets/03.png" alt="Icon 03" />,
-      title: "GRADE ASSURANCE",
-      desc: "Better grade assurance with critical testing & review methodology.",
+      title: "Grade Improvement",
+      desc: "Better results assurance with critical testing & review methods.",
     },
     {
       number: "04",
       icon: <img src="/assets/04.png" alt="Icon 04" />,
-      title: "EXAMINATION PREP",
-      desc: "Full IB exam prep with tutoring, resources, testing, & review.",
+      title: "Examination Prep",
+      desc: "Full ACT exam prep with tutoring, resources, testing, & review.",
     },
     {
       number: "05",
       icon: <img src="/assets/05.png" alt="Icon 05" />,
-      title: "STRONG FOUNDATION",
+      title: "Strong Foundation",
       desc: "Focus on fundamentals for an exceptionally strong foundation.",
     },
     {
       number: "06",
       icon: <img src="/assets/06.png" alt="Icon 06" />,
-      title: "STIMULATING ENVIRONMENT",
+      title: "Stimulating Environment",
       desc: "Result-oriented culture ensuring a fun & stimulating environment.",
     },
     {
       number: "07",
       icon: <img src="/assets/07.png" alt="Icon 07" />,
-      title: "STRUCTURED LEARNING",
-      desc: "Problem-based learning covering practical aspects of all units.",
+      title: "Structured Learning",
+      desc: "Comprehensive learning support for all the major ACT sections.",
     },
     {
       number: "08",
       icon: <img src="/assets/08.png" alt="Icon 08" />,
-      title: "PROGRESS TRACKING",
-      desc: "Practice with unit tests & mock exams under exam-like conditions.",
+      title: "Progress Tracking",
+      desc: "Practice with unit tests & mock papers under exam-like conditions.",
     },
   ];
+
 
   return (
     <div
@@ -163,16 +164,16 @@ function UpsSection() {
               className="fade-in-section"
               style={{ animationDelay: "0.1s" }}
             >
-              <div className="SubHeading testSubheading">USPs</div>
+              <div className="SubHeading testSubheading">OUR PROMISE</div>
             </div>
             <h2
               data-scroll
               data-scroll-class="is-inview"
               data-scroll-repeat="true"
-              className="fade-in-section testTitle"
+              className="fade-in-section testTitle text-uppercase"
               style={{ animationDelay: "0.2s" }}
             >
-              LOREM IPSUM DOLOR SIT AMET,<span className="highlight"> CONSECTETUR</span> ADIPISCING
+              What Do Students Get From<br /><span className="highlight"> Ignite's</span> ACT Support?
 
             </h2>
           </div>
@@ -180,51 +181,58 @@ function UpsSection() {
 
         {/* USP Grid */}
         <div className="custom-grid mb-5">
-  {uspItems.map((item, index) => (
-    <div key={item.number} className="grid-item">
-      <USPItem {...item} number={index} />
-    </div>
-  ))}
-</div>
+          {uspItems.map((item, index) => (
+            <div key={item.number} className="grid-item">
+              <USPItem {...item} number={index} />
+            </div>
+          ))}
+        </div>
 
 
         {/* CTA Button */}
-        <div className="text-center fade-in-section"
+        <div
+          className="text-center fade-in-section"
           data-scroll
           data-scroll-class="is-inview"
           data-scroll-repeat
-          style={{ animationDelay: "0.7s" }}>
-          <button
-            className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
-            style={{
-              background: "linear-gradient(90deg,#161664, #3F88BA)",
-              color: 'white',
-              padding: '12px 14px 12px 20px',
-              border: 'none',
-              transition: 'opacity 0.3s ease',
-              letterSpacing: "3px",
-              fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)"
-            }}
-            onMouseEnter={(e) => e.target.style.opacity = "0.9"}
-            onMouseLeave={(e) => e.target.style.opacity = "1"}
+          style={{ animationDelay: "0.7s" }}
+        >
+          <a
+            href="https://ignitetraininginstitute.com/about-us/"
+            style={{ textDecoration: "none" }}
           >
-            MEET OUR TRAINERS
-            <div
-              className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
-              data-scroll
-              data-scroll-class="is-inview"
-              data-scroll-repeat
+            <button
+              className="btn cust-text fw-bold d-flex align-items-center mx-auto rounded-pill"
               style={{
-                width: "2.5rem",
-                height: "2.5rem",
-                background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
-                animationDelay: "0.75s",
-                marginLeft: "2.1rem"
+                background: "linear-gradient(90deg,#161664, #3F88BA)",
+                color: "white",
+                padding: "12px 14px 12px 20px",
+                border: "none",
+                transition: "opacity 0.3s ease",
+                letterSpacing: "3px",
+                fontSize: "clamp(0.9rem, 1.1vw, 1.1rem)",
               }}
+              onMouseEnter={(e) => (e.target.style.opacity = "0.9")}
+              onMouseLeave={(e) => (e.target.style.opacity = "1")}
             >
-              <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
-            </div>
-          </button>
+              KNOW MORE ABOUT IGNITE
+              <div
+                className="custom-height rounded-circle d-flex align-items-center justify-content-center fade-in-section"
+                data-scroll
+                data-scroll-class="is-inview"
+                data-scroll-repeat
+                style={{
+                  width: "2.5rem",
+                  height: "2.5rem",
+                  background: "linear-gradient(90deg, #E7F6FF, #A3CAF5)",
+                  animationDelay: "0.75s",
+                  marginLeft: "2.1rem",
+                }}
+              >
+                <img src="/assets/arrowright.png" alt="arrright" width={16} height={16} />
+              </div>
+            </button>
+          </a>
         </div>
       </div>
 

@@ -29,7 +29,7 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">Subject
+            <div className="SubHeading testSubheading">SUBJECTS WE SUPPORT
             </div>
           </div>
           <h2
@@ -39,8 +39,8 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,<br />
-            CONSECTETUR <span className="highlight">ADIPISCING</span>
+           Tutoring That Makes Every <br /> ACT  <span className="highlight"> Subject </span> 
+              Clear
           </h2>
         </div>
       </div>

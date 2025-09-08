@@ -22,31 +22,37 @@ function CourseCard() {
 
   const accordionItems = [
     {
-      title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
+      title: "Bespoke One-On-One Tutoring For ACT",
       bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.3) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
       mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
+      highlights: [
+        "In-depth preparation for ACT Math, English, and Science sections",
+        "Customized lesson plans and flexible scheduling options",
+        "One-on-one attention and personalized learning pace",
+        "Ongoing progress tracking with expert feedback and reviews",
+        "Access to exclusive, in-house study materials and resources",
+        "Regular unit tests and mock exams for real-time performance review"
+      ],
+      description:
+        "A focused 6-week program designed to strengthen core competencies in specific ACT subjects. This course begins with a personalized diagnostic test to evaluate each student’s current skill set and learning needs, ensuring a tailored approach to mastering key concepts."
     },
     {
-      title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
+      title: "ACT Group Learning Program",
       bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.5) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
       mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
-    },
-    {
-      title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
-      bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 0.7) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
-      mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
-    },
-    {
-      title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
-      bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 1) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
-      mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
-    },
-    {
-      title: "PERSONALIZED BESPOKE TUTORING FOR MYP",
-      bg: "linear-gradient(269.48deg,rgba(231, 246, 255, 1) 2.74%,rgba(163, 202, 245, 0.3) 93.4%)",
-      mobileBg: "linear-gradient(135deg, #E3F2FD, #BBDEFB)",
-    },
+      highlights: [
+        "Full ACT syllabus coverage led by expert tutors",
+        "Structured weekly sessions for learning and testing",
+        "Personalized attention within a small group dynamic",
+        "Access to in-house developed ACT study resources",
+        "Intensive mock test series for real-exam simulation",
+        "Progress tracking through regular review and feedback"
+      ],
+      description:
+        "A results-driven 10-week program designed to provide complete support for ACT readiness in a collaborative group setting. The first 6 weeks focus on building a strong subject foundation, followed by 4 weeks of intensive practice with ACT-style questions, mock exams, essay writing, and live review sessions."
+    }
   ];
+
 
   return (
     <>
@@ -72,8 +78,8 @@ function CourseCard() {
                 className="fade-in-section testTitle"
                 style={{ animationDelay: "0.2s" }}
               >
-                LOREM IPSUM DOLOR SIT AMET,
-               <span className="highlight"> CONSECTETUR </span>ADIPISCING
+                Learning Starts Here With<br />
+                <span className="highlight">  Tailored  </span>ACT Courses
               </h2>
             </div>
           </div>
@@ -88,7 +94,7 @@ function CourseCard() {
             }}
           >
             {accordionItems.map((item, index) => (
-              <div 
+              <div
                 key={index}
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
@@ -105,7 +111,7 @@ function CourseCard() {
                   style={{
                     background: activeIndex === index
                       ? "linear-gradient(90deg, #EDFFF4, #A6EAC7)"
-                      : hoveredIndex === index 
+                      : hoveredIndex === index
                         ? "linear-gradient(90deg, rgba(237, 255, 244, 0.8), rgba(166, 234, 199, 0.8))"
                         : item.bg,
                     cursor: "pointer",
@@ -117,8 +123,8 @@ function CourseCard() {
                   }}
                   onClick={() => toggleAccordion(index)}
                 >
-                  <span 
-                    className="gradient-text py-3"
+                  <span
+                    className="gradient-text py-3 text-uppercase"
                     style={{
                       transform: hoveredIndex === index ? 'translateX(10px)' : 'translateX(0)',
                       transition: 'transform 0.3s ease-out',
@@ -126,12 +132,12 @@ function CourseCard() {
                   >
                     {item.title}
                   </span>
-                  <span 
-                    style={{ 
+                  <span
+                    style={{
                       color: "#3F88BA",
                       transform: hoveredIndex === index ? 'rotate(180deg) scale(1.1)' : 'rotate(0deg) scale(1)',
                       transition: 'all 0.3s ease-out',
-                      marginRight:"25px",
+                      marginRight: "25px",
                     }}
                   >
                     {activeIndex === index ? <Minus size={20} /> : <Plus size={20} />}
@@ -148,40 +154,33 @@ function CourseCard() {
                       fontSize: "0.95rem",
                       animation: 'slideDown 0.5s ease-out',
                     }}
-
                   >
                     <div className="row g-4">
                       {/* Left Text */}
-                      <div 
-                        className="col-md-6 ps-4" // Added ps-4 for consistent padding
+                      <div
+                        className="col-md-6 ps-4"
                         style={{
-                          animation: 'fadeIn 0.6s ease-out', // Changed from slideInLeft to fadeIn
+                          animation: 'fadeIn 0.6s ease-out',
                         }}
                       >
                         <p className="desc" style={{ lineHeight: "1.3", marginLeft: "25px", paddingLeft: "0" }}>
-                          An all-year-round MYP program thoughtfully designed to align with each
-                          student's unique learning objectives.
+                          {item.description}
                         </p>
                         <h5 className="fw-bold fontSizeK mb-3" style={{
-                          fontSize: "25px", 
-                          color: "#2D5AA0", background:
-                            "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
+                          fontSize: "25px",
+                          color: "#2D5AA0",
+                          background: "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
                           WebkitBackgroundClip: "text",
                           WebkitTextFillColor: "transparent",
-                          fontWeight:600,
+                          fontWeight: 600,
                           backgroundClip: "text",
-                          marginLeft:"25px",
-                          marginTop:"30px"
+                          marginLeft: "25px",
+                          marginTop: "30px"
                         }}>
                           KEY HIGHLIGHTS
                         </h5>
                         <ul className="list-unstyled" style={{ fontSize: "0.9rem", color: "#374151", paddingLeft: "0" }}>
-                          {[
-                            "Year-round personalized support for MYP students.",
-                            "Customized lessons & flexible learning schedules.",
-                            "One-on-one attention and personalized learning pace.",
-                            "Continuous progress tracking with detailed feedback.",
-                          ].map((point, i) => (
+                          {item.highlights.map((point, i) => (
                             <li
                               key={i}
                               style={{
@@ -190,10 +189,10 @@ function CourseCard() {
                                 display: "flex",
                                 alignItems: "flex-start",
                                 gap: "20px",
-                                animation: `fadeIn 0.4s ease-out ${i * 0.1}s both`, // Changed from slideInUp to fadeIn
+                                animation: `fadeIn 0.4s ease-out ${i * 0.1}s both`,
                                 marginLeft: "0",
                                 paddingLeft: "0",
-                                marginLeft:"25px"
+                                marginLeft: "25px"
                               }}
                               className="fontSizeL"
                             >
@@ -203,8 +202,7 @@ function CourseCard() {
                                   width: "10px",
                                   height: "10px",
                                   borderRadius: "50%",
-                                  background:
-                                    "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
+                                  background: "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
                                   flexShrink: 0,
                                   marginTop: "15px",
                                 }}
@@ -213,13 +211,12 @@ function CourseCard() {
                               {/* Gradient Text */}
                               <span
                                 style={{
-                                  letterSpacing:"1px",
-                                  background:
-                                    "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
+                                  letterSpacing: "1px",
+                                  background: "linear-gradient(285.71deg, #3F88BA -4.32%, #161664 106.53%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))",
                                   WebkitBackgroundClip: "text",
                                   WebkitTextFillColor: "transparent",
                                   backgroundClip: "text",
-                                  marginBlock:"10px",
+                                  marginBlock: "10px",
                                 }}
                               >
                                 {point}
@@ -230,7 +227,7 @@ function CourseCard() {
                       </div>
 
                       {/* Right Image */}
-                      <div 
+                      <div
                         className="col-md-6 d-flex justify-content-center align-items-center"
                         style={{
                           animation: 'fadeIn 0.6s ease-out', // Changed from slideInRight to fadeIn
@@ -260,7 +257,7 @@ function CourseCard() {
       </div>
 
       {/* Mobile Version */}
-      <div className="mobile-version px-3">
+      <div className="mobile-version py-4 px-3">
         <div className="">
           {/* Mobile Header */}
           <div className="text-center mb-4">
@@ -275,16 +272,16 @@ function CourseCard() {
               </div>
             </div>
 
-              <h2
-                data-scroll
-                data-scroll-class="is-inview"
-                data-scroll-repeat="true"
-                className="fade-in-section testTitle"
-                style={{ animationDelay: "0.2s" }}
-              >
-                LOREM IPSUM DOLOR SIT AMET,
-               <span className="highlight"> CONSECTETUR </span>ADIPISCING
-              </h2>
+            <h2
+              data-scroll
+              data-scroll-class="is-inview"
+              data-scroll-repeat="true"
+              className="fade-in-section testTitle"
+              style={{ animationDelay: "0.2s" }}
+            >
+              Learning Starts Here With
+              <span className="highlight">  Tailored  </span>ACT Courses
+            </h2>
           </div>
 
           {/* Mobile Cards */}
@@ -305,7 +302,7 @@ function CourseCard() {
                       borderRadius: "20px",
                       cursor: "pointer",
                       minHeight: "80px",
-                      color: index === 1 ? "#2D5AA0" : "#2D5AA0",
+                      color: "#2D5AA0",
                       position: "relative",
                       boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
                       transform: hoveredIndex === index ? 'translateY(-4px) scale(1.02)' : 'translateY(0) scale(1)',
@@ -315,35 +312,24 @@ function CourseCard() {
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
                   >
-                    {/* Left side: index + title */}
+                    {/* Left content (index + title) */}
                     <div className="d-flex flex-column gap-1">
-                      <div className="d-flex justify-content-between align-items-center">
-                        <span
-                          style={{
-                            fontSize: "2rem",
-                            fontWeight: 800,
-                            opacity: "0.7",
-                            borderBottom: "1px solid rgba(22, 22, 100, 0.5)",
-                            width: "50px",
-                            background: "linear-gradient(90deg, #161664, #3F88BA)",
-                            WebkitBackgroundClip: "text",
-                            WebkitTextFillColor: "transparent",
-                            transform: hoveredIndex === index ? 'scale(1.1)' : 'scale(1)',
-                            transition: 'transform 0.3s ease-out',
-                          }}
-                        >
-                          {String(index + 1).padStart(2, "0")}.
-                        </span>
-
-                        <span
-                          style={{
-                            transform: hoveredIndex === index ? 'rotate(180deg) scale(1.1)' : 'rotate(0deg) scale(1)',
-                            transition: 'all 0.3s ease-out',
-                          }}
-                        >
-                          <ChevronDown size={24} />
-                        </span>
-                      </div>
+                      <span
+                        style={{
+                          fontSize: "2rem",
+                          fontWeight: 800,
+                          opacity: "0.7",
+                          borderBottom: "1px solid rgba(22, 22, 100, 0.5)",
+                          width: "50px",
+                          background: "linear-gradient(90deg, #161664, #3F88BA)",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                          transform: hoveredIndex === index ? "scale(1.1)" : "scale(1)",
+                          transition: "transform 0.3s ease-out",
+                        }}
+                      >
+                        {String(index + 1).padStart(2, "0")}.
+                      </span>
 
                       <span
                         style={{
@@ -360,8 +346,21 @@ function CourseCard() {
                         {item.title}
                       </span>
                     </div>
-                  </div>
 
+                    {/* Right side: Chevron always sticks to right */}
+                    <span
+                      className="d-flex align-items-center justify-content-center"
+                      style={{
+                        width: "30px",
+                        height: "30px",
+                        flexShrink: 0,
+                        transform: hoveredIndex === index ? "rotate(180deg) scale(1.1)" : "rotate(0deg) scale(1)",
+                        transition: "all 0.3s ease-out",
+                      }}
+                    >
+                      <ChevronDown size={24} />
+                    </span>
+                  </div>
                 )}
 
 
@@ -407,9 +406,9 @@ function CourseCard() {
                             }}
                           >
                             <span>0{index + 1}.</span>
-                            <span 
-                              onClick={() => toggleAccordion(index)} 
-                              style={{ 
+                            <span
+                              onClick={() => toggleAccordion(index)}
+                              style={{
                                 cursor: "pointer",
                                 transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
                                 transition: 'transform 0.3s ease-out',
@@ -448,8 +447,7 @@ function CourseCard() {
                             fontWeight: "400",
                             animation: 'fadeInUp 0.7s ease-out',
                           }}>
-                            An all-year-round MYP program thoughtfully designed to align with each
-                            student's unique learning objectives.
+                            {item?.description}
                           </p>
                         </div>
 
@@ -464,8 +462,6 @@ function CourseCard() {
                           zIndex: 1,
                         }}></div>
                       </div>
-
-                      {/* Bottom Light Green Section - seamlessly connected */}
                       <div
                         style={{
                           background: "#E8F5E8",
@@ -484,18 +480,13 @@ function CourseCard() {
                         </h5>
 
                         <ul className="list-unstyled" style={{ fontSize: "0.9rem", marginBottom: "0" }}>
-                          {[
-                            "Year-round personalized support for myp students.",
-                            "Customized lessons & flexible learning schedules.",
-                            "One-on-one attention and personalized learning pace.",
-                            "Continuous progress tracking with detailed feedback.",
-                          ].map((point, i) => (
-                            <li 
-                              key={i} 
-                              className="d-flex align-items-start mb-2" 
-                              style={{ 
+                          {item.highlights.slice(0, 4).map((point, i) => (
+                            <li
+                              key={i}
+                              className="d-flex align-items-start mb-2"
+                              style={{
                                 lineHeight: "1.4",
-                                animation: `fadeIn 0.4s ease-out ${0.2 + i * 0.1}s both`, // Changed from slideInUp to fadeIn
+                                animation: `fadeIn 0.4s ease-out ${0.2 + i * 0.1}s both`,
                               }}
                             >
                               <span
