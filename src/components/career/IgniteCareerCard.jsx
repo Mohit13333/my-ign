@@ -20,7 +20,7 @@ export default function IgniteCareerCard() {
                 className="fade-in-section"
                 style={{ animationDelay: "0.1s" }}
               >
-                <div className="SubHeading testSubheading">ABOUT IGNITE'S CAREER
+                <div className="SubHeading testSubheading">Work With Ignite
                 </div>
               </div>
             </div>
@@ -31,8 +31,8 @@ export default function IgniteCareerCard() {
             data-scroll-repeat style={{
               animationDelay: "0.3s",
             }}>
-            LOREM IPSUM DOLOR SIT AMET,<br />
-            CONSECTETUR <span className="green-text">ADIPISCING</span>
+            Educate With Passion, <br />
+            Lead <span className="green-text"> With Purpose</span>
           </h1>
 
           <p className="ignite-description fade-in-section" data-scroll
@@ -40,10 +40,7 @@ export default function IgniteCareerCard() {
             data-scroll-repeat style={{
               animationDelay: "0.3s",
             }}>
-            Choosing us means partnering with experienced coaches who
-            are dedicated to unlocking your potential.We offer personalized
-            strategies, proven methods, and unwavering support to help
-            you navigate challenges.
+            At Ignite, tutoring goes beyond the classroom - it's a journey of personal growth, flexibility, & purpose. We’re always seeking passionate educators who believe in the power of teaching & learning. Join our team & grow with us as we inspire students every day.
           </p>
 
           <h2 className="ignite-secondary-title fade-in-section" data-scroll
@@ -51,14 +48,11 @@ export default function IgniteCareerCard() {
             data-scroll-repeat style={{
               animationDelay: "0.3s",
             }}>
-            LOREM IPSUM DOLOR SIT AMET,<br />
-            CONSECTETUR ADIPISCING
+            We Shape Bright Futures <br /> With Care & Commitment
           </h2>
 
           <p className="ignite-short-description">
-            Choosing us means partnering with
-            experienced coaches who are dedicated to
-            unlocking your potential.
+            We empower passionate trainers to shape student journeys while growing through purpose-driven initiatives & a flexible teaching environment.
           </p>
         </div>
 
@@ -87,17 +81,17 @@ export default function IgniteCareerCard() {
           >
             <div className="check-box d-flex justify-content-between">
 
-   {/* First item */}
-<div className="d-flex align-items-center gap-3">
-  <img src="/assets/check.png" alt="check" className="icon-height" />
-  <span>Lorem ipsum dolor<br />sit amet, consectetur.</span>
-</div>
+              {/* First item */}
+              <div className="d-flex align-items-center gap-3">
+                <img src="/assets/check.png" alt="check" className="icon-height" />
+                <span>Empowering students & educators alike</span>
+              </div>
 
-{/* Second item */}
-<div className="d-flex align-items-center gap-3">
-  <img src="/assets/check.png" alt="check" className="icon-height" />
-  <span className="spanText">Lorem ipsum dolor<br />sit amet, consectetur.</span>
-</div>
+              {/* Second item */}
+              <div className="d-flex align-items-center gap-3">
+                <img src="/assets/check.png" alt="check" className="icon-height" />
+                <span className="spanText">Igniting great teaching & deeper learning</span>
+              </div>
 
 
             </div>
