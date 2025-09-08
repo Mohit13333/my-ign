@@ -819,7 +819,7 @@ const TrainersMessage = () => {
           .trainer-name {
             font-size: 0.85rem; /* Increased from 0.65rem */
             bottom: 10px;
-            left: 60px;
+            left: 55px;
           }
 
           .play-button {
