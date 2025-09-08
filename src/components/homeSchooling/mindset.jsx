@@ -371,8 +371,8 @@ export default function HomeschoolingMindset() {
 
   const cards = [
     {
-      title: "CLARITY IN THOUGHT PROCESS",
-      desc: "The best means for a successful homeschooling journey is to clearly identify your approach toward learning. It's important for independent/dependent learners to communicate their needs at various points in time.",
+      title: "Clarity In Thought Process",
+      desc: "A successful journey begins with self-awareness. Whether you're an independent learner or require guidance, recognizing how you learn best & openly communicating your evolving needs lays the foundation for long-term success.",
       color: "blue",
       mobileTitle: "blue",
       mobileColor: "mobileBlue",
@@ -381,8 +381,8 @@ export default function HomeschoolingMindset() {
       downButton: "/assets/brdown.png",
     },
     {
-      title: "CREATE YOUR OWN PROCESSES",
-      desc: "Maximize your potential & grades with self-made working schedules & upgrade to a result-oriented mindset than a process-oriented outlook. Homeschoolers usually find their way out of traditional school processes.",
+      title: "Create Your Own Processes",
+      desc: "Private schooling allows students to move beyond rigid classroom routines & discover what truly works for them. By designing their schedules, setting goals, & embracing a results-driven mindset, they excel on their own terms.",
       color: "green",
       mobileTitle: "green",
       icon: "/assets/2setting.png",
@@ -391,8 +391,8 @@ export default function HomeschoolingMindset() {
       mobileColor: "mobileGreen",
     },
     {
-      title: "EFFECTIVE TIME MANAGEMENT",
-      desc: "You can be the ultimate performer with our support in managing your time the right way. Devoting time to academic learning is as important as focusing on other parts sincerely.",
+      title: "Effective Time Management",
+      desc: "Success as private students hinges on managing time purposefully. We guide students to balance academic focus with extracurricular pursuits & personal growth. This harmony boosts performance, well-being, & lifelong learning skills.",
       color: "green",
       mobileTitle: "blue",
       icon: "/assets/4setting.png",
@@ -401,8 +401,8 @@ export default function HomeschoolingMindset() {
       mobileColor: "mobileBlue",
     },
     {
-      title: "TAKE OWNERSHIP OF ACTIONS",
-      desc: "Beyond learning & self-development, you must understand the gravity of owning your actions & fill in the gap by working hard to secure your future. This will also prepare you for the university.",
+      title: "Take Ownership Of Actions",
+      desc: "Private schooling teaches more than subjects; it instills accountability. Students learn to own their actions & recognize their efforts. This sense of ownership prepares them for the independent demands of university life & beyond.",
       color: "blue",
       icon: "/assets/3setting.png",
       upbutton: "/assets/grup.svg",
@@ -411,6 +411,7 @@ export default function HomeschoolingMindset() {
       mobileTitle: "green",
     },
   ];
+
 
   return (
     <section className="mindset-section">
@@ -421,8 +422,7 @@ export default function HomeschoolingMindset() {
         className="fade-in-section"
         style={{ animationDelay: "0.1s" }}
       >
-        <div className="SubHeading testSubheading" style={{ marginBottom: "30px" }}>Mindset For Opting
-          For Homeschooling
+        <div className="SubHeading testSubheading" style={{ marginBottom: "30px" }}>MINDSET FOR PURSUING PRIVATE SCHOOLING
         </div>
       </div>
       <div className="cards-container">

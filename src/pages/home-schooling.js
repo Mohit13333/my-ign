@@ -1,20 +1,14 @@
-import MovingBanner from '@/components/home/MovingBanner';
-import Testimonial from '@/components/home/Testimonial';
 import Advantages from '@/components/homeSchooling/Advantages';
 import Curriculum from '@/components/homeSchooling/Curriculum';
+import FAQSection from '@/components/homeSchooling/FaqSection';
 import InfoCard from '@/components/homeSchooling/InfoCard';
+import LifeAtIgniteCarousel from '@/components/homeSchooling/LifeAtIgniteCarousel';
+import MarqueeBanner from '@/components/homeSchooling/MarqueeBanner';
 import HomeschoolingMindset from '@/components/homeSchooling/mindset';
 import Accordion from '@/components/idbp/accordian';
 import BlogSection from '@/components/idbp/BlogSection';
-import CourseCard from '@/components/idbp/CourseCard';
-import FAQSection from '@/components/idbp/FaqSection';
-import IgniteAchievements from '@/components/idbp/IgniteAchievements';
-import LifeAtIgniteCarousel from '@/components/idbp/LifeAtIgniteCarousel';
-import MarqueeBanner from '@/components/idbp/MarqueeBanner';
 import ReviewsSection from '@/components/idbp/ReviewsSection';
 import StudentAchievements from '@/components/idbp/StudentAchivement';
-import SubjectsCard from '@/components/idbp/SubjectCard';
-import UspsSection from '@/components/idbp/UspsSection';
 import { useEffect, useRef } from 'react';
 
 const HomeSchooling = () => {

@@ -2,26 +2,37 @@ import React, { useEffect, useState } from 'react';
 
 const advantages = [
     {
-        title: 'EMPOWERS STUDENTS OUTLOOK',
-        icon: '/assets/unioun.png',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+        title: "Flexible Subjects & Curriculum Choices",
+        icon: "/assets/unioun.png",
+        text: "Students can tailor subject combinations across IGCSE, A-Levels, or APs, aligning studies with career aspirations & university admission requirements, while benefiting from unparalleled flexibility & academic freedom.",
     },
     {
-        title: 'STRONG CONNECTION WITH PARENTS',
-        icon: '/assets/heartg.png',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+        title: "Independent & Accelerated Study",
+        icon: "/assets/heartg.png",
+        text: "Private candidates enjoy the flexibility to progress at their own speed, whether catching up or advancing faster, making learning more personalized, efficient, & ideal for high performers balancing academics with other aspirations.",
     },
     {
-        title: 'BETTER FOCUS & FLEXIBILITY',
-        icon: '/assets/unioun.png',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+        title: "Personalized Academic Focus",
+        icon: "/assets/unioun.png",
+        text: "Private candidates can channel their efforts into the subjects that matter most, avoiding unnecessary workload and distractions, and maximizing preparation for future academic success and career pathways.",
     },
     {
-        title: 'CUSTOMIZED LEARNING',
-        icon: '/assets/heartg.png',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
-    }
+        title: "Stronger College Readiness Pathway",
+        icon: "/assets/heartg.png",
+        text: "A personalized private schooling approach equips students to stay academically ahead while preparing more effectively for standardized tests like the ACT, SAT, or AP, boosting their chances of success at top universities worldwide.",
+    },
+    {
+        title: "Cost & Location Advantages",
+        icon: "/assets/unioun.png",
+        text: "It is a cost-effective option that allows students to study from any location. It’s especially valuable for families moving countries or shifting curricula, ensuring accessibility, affordability, & uninterrupted global learning opportunities.",
+    },
+    {
+        title: "Balanced Focus On Extracurriculars",
+        icon: "/assets/heartg.png",
+        text: "Private students benefit from the freedom to dedicate meaningful time to extracurricular pursuits, enhancing creativity, leadership, & overall development. These well-rounded profiles add significant weight to college applications.",
+    },
 ];
+
 
 const AdvantagesCarousel = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -78,7 +89,7 @@ const AdvantagesCarousel = () => {
                             className="fade-in-section"
                             style={{ animationDelay: "0.1s" }}
                         >
-                            <div className="SubHeading testSubheading">ADVANTAGES
+                            <div className="SubHeading testSubheading">WHY STUDENTS CHOOSE PRIVATE CANDIDACY?
                             </div>
                         </div>
 
@@ -103,7 +114,7 @@ const AdvantagesCarousel = () => {
                                     WebkitTextFillColor: "transparent"
                                 }}
                             >
-                                LOREM IPSUM DOLOR SIT AMET,
+                                Breaking Free From The
                             </span>{" "}
                             <span
                                 style={{
@@ -112,7 +123,7 @@ const AdvantagesCarousel = () => {
                                     WebkitTextFillColor: "transparent"
                                 }}
                             >
-                                CONSECTETUR
+                                One-Size-Fits-All
                             </span>{" "}
                             <span
                                 style={{
@@ -121,7 +132,7 @@ const AdvantagesCarousel = () => {
                                     WebkitTextFillColor: "transparent"
                                 }}
                             >
-                                ADIPISCING
+                                Model
                             </span>
                         </h2>
                     </div>
@@ -148,7 +159,7 @@ const AdvantagesCarousel = () => {
                     <div className="desktop-content">
                         <div className="desktop-left">
                             <div className="testimonialHeader" style={{ marginTop: "15%" }}>
-                                <span className="SubHeading">ADVANTAGES</span>
+                                <span className="SubHeading">WHY STUDENTS CHOOSE PRIVATE CANDIDACY?</span>
                             </div>
                             <h2
                                 className="fw-bold mb-0 fade-in-section"
@@ -170,7 +181,7 @@ const AdvantagesCarousel = () => {
                                         WebkitTextFillColor: "transparent"
                                     }}
                                 >
-                                    ADVANTAGES OF HOMESCHOOLING OVER
+                                    Breaking Free From The
                                 </span>{" "}
                                 <span
                                     style={{
@@ -179,7 +190,7 @@ const AdvantagesCarousel = () => {
                                         WebkitTextFillColor: "transparent"
                                     }}
                                 >
-                                    TRADITIONAL
+                                    One-Size-Fits-All
                                 </span>{" "}
                                 <span
                                     style={{
@@ -188,13 +199,11 @@ const AdvantagesCarousel = () => {
                                         WebkitTextFillColor: "transparent"
                                     }}
                                 >
-                                    PROCESSES
+                                    Model
                                 </span>
                             </h2>
                             <p className="desktop-subtitle">
-                                Choosing us means partnering with<br />
-                                experienced coaches who are dedicated to<br />
-                                unlocking your potential.
+                                Empowering students with personalized learning pathways, flexible pacing, & tailored support to nurture individual aspirations.
                             </p>
                             <div className="carousel-controls">
                                 <button className="carousel-btn prev" onClick={prevSlide}>
@@ -515,6 +524,14 @@ const AdvantagesCarousel = () => {
                         height: 3px;
                     }
                 }
+                                    @media (max-width: 480px) {
+                                        .advantages-container {
+                    width: 95vw;
+                    padding: 0px 0px;
+                    margin: 0 auto;
+                }
+                                    }
+
             `}</style>
         </div>
     );

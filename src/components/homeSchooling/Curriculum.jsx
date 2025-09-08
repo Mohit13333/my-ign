@@ -14,7 +14,13 @@ export default function Curriculum() {
             alt="IGCSE"
             className="curriculum-img"
           />
-          <div className="curriculum-label">IGCSE</div>
+          <a
+            href="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai/"
+            className="curriculum-label"
+            style={{ textDecoration: "none" }}
+          >
+            IGCSE
+          </a>
         </div>
 
         {/* A-Levels */}
@@ -24,7 +30,13 @@ export default function Curriculum() {
             alt="A-Levels"
             className="curriculum-img"
           />
-          <div className="curriculum-label">A-LEVELS</div>
+          <a
+            href="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai/"
+            className="curriculum-label"
+            style={{ textDecoration: "none" }}
+          >
+            A-LEVELS
+          </a>
         </div>
 
         {/* AP */}
@@ -34,7 +46,13 @@ export default function Curriculum() {
             alt="AP"
             className="curriculum-img"
           />
-          <div className="curriculum-label">AP</div>
+          <a
+            href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai/"
+            className="curriculum-label"
+            style={{ textDecoration: "none" }}
+          >
+            AP
+          </a>
         </div>
       </div>
 

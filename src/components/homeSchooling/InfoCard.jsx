@@ -66,8 +66,15 @@ export default function InfoCard() {
                   fontSize: "2.6rem",
                 }}
               >
-                Thrive In Your Learning Years With World-Class Homeschoolers In UAE
-              </h1>
+                {isMobile ? (
+                  <>
+                    Thrive Confidently As A Private <br /> Candidate In Dubai, UAE
+                  </>
+                ) : (
+                  <>
+                    Homeschooling In Dubai To <br />Thrive As A Private Candidate
+                  </>
+                )}              </h1>
               <div className="divider"></div>
 
               <p
@@ -83,7 +90,8 @@ export default function InfoCard() {
                   marginTop: "19px"
                 }}
               >
-                LOREM LIPSUM DOLLAR SIT              </p>
+                IGCSE, A Levels, & AP Supported
+              </p>
 
               <div
                 className="d-flex flex-wrap justify-content-evenly p-4 mb-4 fw-semibold fade-in-section info-row"
@@ -118,7 +126,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  Grade 11 to 12 <br /> Support
+                  Online <br /> & In-Person
                 </div>
 
                 <div
@@ -137,7 +145,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  Online <br /> & In-Person
+                  Dubai <br /> (DIFC, JLT)
                 </div>
 
                 <div
@@ -153,7 +161,7 @@ export default function InfoCard() {
                       className="icon-img"
                     />
                   </div>
-                  Excellent <br />  Mentorship
+                  Fits Learning <br /> Into Life
                 </div>
               </div>
 
@@ -167,7 +175,8 @@ export default function InfoCard() {
                   opacity: "0.9",
                 }}
               >
-                We specialize in expert tutoring support for the IB Diploma Programme across all subject groups. Our structured approach combines in-depth resources, focused training, & rigorous testing for consistent results.             </p>
+                Experience customized, expert-led support across IGCSE, A-Levels, & AP as a private candidate. We offer flexible, high-quality education tailored to your goals, ensuring every learner feels seen & empowered.
+              </p>
               <div className="d-flex gap-3">
                 <a
                   href="https://ignitetraininginstitute.com/join-free-demo-class/"
