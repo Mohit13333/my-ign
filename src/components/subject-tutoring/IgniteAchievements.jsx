@@ -44,8 +44,8 @@ export default function IgniteAchievements() {
             className="fade-in-section testTitle text-uppercase"
             style={{ animationDelay: "0.2s" }}
           >
-            Powering Progress Through<br /> <span className="highlight"> Results{" "}</span>
-            That Matter
+            Milestones That Clearly Reflect <br /> <span className="highlight"> Our{" "}</span>
+            Impact
           </h2>
 
           {/* Subtitle */}
@@ -61,7 +61,7 @@ export default function IgniteAchievements() {
               fontSize: "0.9rem",
               lineHeight: isMobile ? "1.3" : "1.2",
             }}>
-          We’ve built every achievement through the progress, effort, & dedication of our IBDP students over the years.
+            Every achievement at Ignite represents the progress & academic growth our students have achieved over the years.
           </p>
         </div>
 
@@ -98,7 +98,7 @@ export default function IgniteAchievements() {
                     margin: 0, // ✅ removes the margin
                   }}
                 >
-                  Powering Progress Through
+                  Milestones That Clearly Reflect
                 </h2>
 
                 <h2
@@ -115,7 +115,7 @@ export default function IgniteAchievements() {
                     margin: 0, // ✅ removes the margin
                   }}
                 >
-                  Results{" "}
+                  Our{" "}
                   <span
                     style={{
                       background: "#19245E",
@@ -126,7 +126,7 @@ export default function IgniteAchievements() {
                       margin: 0, // ✅ removes margin inside span (not needed, but safe)
                     }}
                   >
-                     That Matter
+                    Impact
                   </span>
                 </h2>
 
@@ -144,7 +144,7 @@ export default function IgniteAchievements() {
                     fontSize: "1.2rem",
                     marginTop: "16px",
                   }}>
-                  We’ve built every achievement through the progress, effort, <br /> & dedication of our IBDP students over the years.
+                  Every achievement at Ignite represents the progress & academic <br /> growth our students have achieved over the years.
                 </p>
               </div>
 
@@ -194,7 +194,7 @@ export default function IgniteAchievements() {
                   <div className="stat-divider"></div>
                   <div className="stat-content">
                     <h4 className="stat-title teal-text">Years Of Experience</h4>
-                    <p className="stat-description">Proven expertise in guiding students toward excellence</p>
+                    <p className="stat-description">Proven expertise in guiding students toward success</p>
                   </div>
                 </div>
 
@@ -204,7 +204,7 @@ export default function IgniteAchievements() {
                   <div className="stat-divider"></div>
                   <div className="stat-content">
                     <h4 className="stat-title blue-text">Exam Prep Resources</h4>
-                    <p className="stat-description">Extensive IB-specific guides to master every subject</p>
+                    <p className="stat-description">Extensive learning guides to enhance exam readiness</p>
                   </div>
                 </div>
               </div>
@@ -213,11 +213,11 @@ export default function IgniteAchievements() {
               <div className="stats-row">
                 {/* Stat 3 */}
                 <div className="stat-card-desktop">
-                  <div className="stat-number blue-text">7/7</div>
+                  <div className="stat-number blue-text">100%</div>
                   <div className="stat-divider"></div>
                   <div className="stat-content">
-                    <h4 className="stat-title blue-text">Scores Across Subjects</h4>
-                    <p className="stat-description">Strategic IB tutoring that helps you aim for perfection</p>
+                    <h4 className="stat-title blue-text">Better Grades Achieved</h4>
+                    <p className="stat-description">Strategic tutoring that helps you aim for excellence</p>
                   </div>
                 </div>
 
@@ -227,7 +227,7 @@ export default function IgniteAchievements() {
                   <div className="stat-divider"></div>
                   <div className="stat-content">
                     <h4 className="stat-title teal-text">Student Success Stories</h4>
-                    <p className="stat-description">Proven results through focused IB student journeys</p>
+                    <p className="stat-description">Real results through personalised student journeys</p>
                   </div>
                 </div>
               </div>
@@ -279,14 +279,14 @@ export default function IgniteAchievements() {
             <div className="row g-3 mb-3">
               <div className="col-6">
                 <div className="stat-card-mobile">
-                  <div className="stat-number blue-text">60%</div>
-                  <h4 className="stat-title-mobile blue-text">OF RICH TUTORING EXPERIENCE</h4>
+                  <div className="stat-number blue-text">10+</div>
+                  <h4 className="stat-title-mobile blue-text">Years Of Experience</h4>
                 </div>
               </div>
               <div className="col-6">
                 <div className="stat-card-mobile">
-                  <div className="stat-number teal-text">30+</div>
-                  <h4 className="stat-title-mobile teal-text">TRULY HAPPY STUDENTS FROM UAE</h4>
+                  <div className="stat-number teal-text">1K+</div>
+                  <h4 className="stat-title-mobile teal-text">Exam Prep Resources</h4>
                 </div>
               </div>
             </div>
@@ -295,14 +295,14 @@ export default function IgniteAchievements() {
             <div className="row g-3">
               <div className="col-6">
                 <div className="stat-card-mobile">
-                  <div className="stat-number blue-text">60%</div>
-                  <h4 className="stat-title-mobile blue-text">OF RICH TUTORING EXPERIENCE</h4>
+                  <div className="stat-number blue-text">100%</div>
+                  <h4 className="stat-title-mobile blue-text">Better Grades Achieved</h4>
                 </div>
               </div>
               <div className="col-6">
                 <div className="stat-card-mobile">
-                  <div className="stat-number teal-text">30+</div>
-                  <h4 className="stat-title-mobile teal-text">TRULY HAPPY STUDENTS FROM UAE</h4>
+                  <div className="stat-number teal-text">2K+</div>
+                  <h4 className="stat-title-mobile teal-text">Student Success Stories</h4>
                 </div>
               </div>
             </div>

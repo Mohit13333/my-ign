@@ -30,40 +30,40 @@ const AchievementsCarousel = () => {
       scrollInstanceRef.current = null;
     };
   }, []);
-  const SUBJECTLIST = [
-    {
-      counts: "01.",
-      subjectsName: "ALGORITHMS",
-    },
-    {
-      counts: "02.",
-      subjectsName: "DATA STRUCTURES",
-    },
-    {
-      counts: "03.",
-      subjectsName: "COMPUTATIONAL THINKING",
-    },
-    {
-      counts: "04.",
-      subjectsName: "PROGRAMMING LANGUAGES",
-    },
-    {
-      counts: "05.",
-      subjectsName: "ARCHITECTURE",
-    },
-    {
-      counts: "06.",
-      subjectsName: "DATA TYPE",
-    },
-    {
-      counts: "07.",
-      subjectsName: "BOOLEAN LOGIC",
-    },
-    {
-      counts: "08.",
-      subjectsName: "DATA REPRESENTATION",
-    },
-  ];
+const SUBJECTLIST = [
+  {
+    counts: "01.",
+    subjectsName: "Comprehension Skills",
+  },
+  {
+    counts: "02.",
+    subjectsName: "Analytical & Critical Thinking",
+  },
+  {
+    counts: "03.",
+    subjectsName: "Analytical Writing",
+  },
+  {
+    counts: "04.",
+    subjectsName: "Creative Writing",
+  },
+  {
+    counts: "05.",
+    subjectsName: "Persuasive & Logical Writing",
+  },
+  {
+    counts: "06.",
+    subjectsName: "Advance Vocabulary",
+  },
+  {
+    counts: "07.",
+    subjectsName: "Communication Skills",
+  },
+  {
+    counts: "08.",
+    subjectsName: "Advance Grammar",
+  },
+];
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -90,9 +90,9 @@ const AchievementsCarousel = () => {
             className="fade-in-section"
             style={{ animationDelay: "0.25s" }}
           >
-            <h1 className="achievementsTitle">
-              Lorem ipsum dolor sit amet, <br></br>{" "}
-              <span className="highlight"> consectetur</span> adipiscing{" "}
+            <h1 className="achievementsTitle text-uppercase">
+             Explore Key Areas In The <br></br>{" "}
+              <span className="highlight"> English</span> Syllabus{" "}
             </h1>
           </div>
         </div>
@@ -100,7 +100,7 @@ const AchievementsCarousel = () => {
           {SUBJECTLIST.map((item, indx) => (
             <div className="col-6 col-lg-3">
               <div
-                className="subjects-card"
+                className="subjects-card text-uppercase"
                 key={indx + 1}
                 data-scroll
                 data-scroll-class="is-inview"
