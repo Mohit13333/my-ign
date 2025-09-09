@@ -80,8 +80,9 @@ export default function LifeAtIgniteCarousel() {
             className="fade-in-section alumniTitle"
             style={{ margin: "24px 0 0 0", animationDelay: "0.3s" }}
           >
-            This Is What Learning Really <span className="alumniHighlight">  Looks </span>
-            Like At Ignite          </h2>
+            A Close Glimpse Into <br /><span className="alumniHighlight">  Ignite's  </span>
+            Learning Experience
+          </h2>
         </div>
 
         {/* Carousel */}
@@ -164,7 +165,7 @@ export default function LifeAtIgniteCarousel() {
           data-scroll-repeat
           style={{ animationDelay: "0.7s" }}>
           <p className="mx-auto" style={{ maxWidth: '40rem', fontSize: isMobile ? "16px" : "23px" }}>
-            Experience the energy, connections, & everyday learnings that define student life & growth at Ignite.
+            Experience the energy, connections, & everyday learning that define student life & growth at Ignite.
           </p>
         </div>
       </div>

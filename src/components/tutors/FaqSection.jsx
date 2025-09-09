@@ -267,29 +267,29 @@ const FAQSection = () => {
 
   const faqData = [
     {
-      question: "What is the focus of IBDP tutoring at Ignite Training Institute?",
+      question: "What Qualifications Do Your Tutors Possess?",
       answer:
-        "Ignite’s IBDP tutoring focuses on subject mastery, IA and EE guidance, and exam techniques. The program is designed to support students through both Year 1 & Year 2 of the Diploma Programme.",
+        "Our mentors at Ignite Training Institute are accomplished experts, holding advanced degrees and possessing extensive proficiency in the realm.",
     },
     {
-      question: "Do Ignite’s tutors have experience with all IBDP subjects?",
+      question: "How Are The Tutoring Sessions Conducted?",
       answer:
-        "Yes, Ignite’s tutors are subject specialists with extensive experience across all IBDP Group 1 to Group 6 subjects, including HL & SL levels, as well as core components like TOK & EE.",
+        "Flexible learning options are available, offering both in-person and online tutoring sessions. Students can select their preferred mode of instruction to suit their individual choices.",
     },
     {
-      question: "How is the IBDP tutoring customized for each student?",
+      question: "Do You Offer Group Tutoring For Accounting?",
       answer:
-        "Each student receives a personalized tutoring plan based on their subject combination, academic goals, & learning pace. Tutors adjust the content & approach accordingly to support the individual progress of the students.",
+        "Catering to a range of learning preferences and needs, we offer both individualized one-on-one sessions and dynamic group tutoring choices.",
     },
     {
-      question: "Are there regular assessments or feedback provided?",
+      question: "What Is The Teaching Approach Of Ignite's Tutors?",
       answer:
-        "Yes, students receive regular assessments, mock tests, & detailed feedback to help them identify areas of improvement & track their performance consistently.",
+        "Our tutors use a customized approach tailored to each student’s pace and style, with progress tracked through regular assignments, quizzes, and feedback mechanisms.",
     },
     {
-      question: "Can I attend a demo class before enrolling for IBDP?",
+      question: "How Can I Enroll In Tutoring Sessions With Ignite?",
       answer:
-        "Definitely, Ignite offers a free demo class so students & parents can evaluate the teaching approach & personalized approach before starting the full course.",
+        "Getting started is simple. Schedule your free demo class today, and our team will personally reach out to you within the next 24 hours.",
     },
   ];
 
@@ -340,13 +340,13 @@ const FAQSection = () => {
               className="fade-in-section text-uppercase"
               style={{ animationDelay: "0.2s", color: "#19245E", fontWeight: 800, marginBlock: "20px", fontSize: isMobile ? "20px" : "2.1875rem" }}
             >
-              What is the focus of IBDP tutoring at<span className="highlight"> Ignite</span> Training Institute?
+              What Qualifications Do Your<span className="highlight"> Tutors</span> Possess?
             </h2>
 
             <p
               style={{ color: "#64748b", maxWidth: isMobile ? "100%" : "28rem", fontSize: isMobile ? "16px" : "20px", lineHeight: isMobile ? "1.5" : "1.2", margin: isMobile ? "0 auto" : "0", paddingLeft: isMobile ? "0.5rem" : "0", paddingRight: isMobile ? "0.5rem" : "0", marginBottom: isMobile ? "15px" : "20px" }}
             >
-              Ignite’s IBDP tutoring focuses on subject mastery, IA and EE guidance, and exam techniques. The program is designed to support students through both Year 1 & Year 2 of the Diploma Programme.
+              Our mentors at Ignite Training Institute are accomplished experts, holding advanced degrees and possessing extensive proficiency in the realm.
             </p>
           </div>
 

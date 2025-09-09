@@ -1738,83 +1738,139 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const trainers = [
   {
-    name: "NIKHIL PAWAR",
+    name: "MASAB",
     img: "/images/trainer1.png",
-    subtitle: "Chemistry & Environmental Management",
-    experience: "4+ YEARS",
+    subtitle: "Maths & Accounting",
+    experience: "10+ YEARS",
     color: "blue",
   },
   {
-    name: "PRAKSHI SHARMA",
+    name: "SADAF",
     img: "/images/trainer2.png",
-    subtitle: "Biology, Chemistry & Physics",
+    subtitle: "Accounting, Economics & Business",
+    experience: "11+ YEARS",
+    color: "green",
+  },
+  {
+    name: "SARANYA",
+    img: "/images/trainer1.png",
+    subtitle: "Physics",
+    experience: "8+ YEARS",
+    color: "blue",
+  },
+  {
+    name: "ASHWANI",
+    img: "/images/trainer2.png",
+    subtitle: "Maths",
+    experience: "7+ YEARS",
+    color: "green",
+  },
+  {
+    name: "IRTIQA",
+    img: "/images/trainer1.png",
+    subtitle: "Computer Science, ICT",
+    experience: "6+ YEARS",
+    color: "blue",
+  },
+  {
+    name: "ABDUL",
+    img: "/images/trainer2.png",
+    subtitle: "Maths",
+    experience: "13+ YEARS",
+    color: "green",
+  },
+  {
+    name: "HARSHA",
+    img: "/images/trainer1.png",
+    subtitle: "Economics & Business",
+    experience: "10+ YEARS",
+    color: "blue",
+  },
+  {
+    name: "NAMRATA",
+    img: "/images/trainer2.png",
+    subtitle: "Maths & Physics",
+    experience: "10+ YEARS",
+    color: "green",
+  },
+  {
+    name: "KRITIKA",
+    img: "/images/trainer1.png",
+    subtitle: "Maths",
+    experience: "3+ YEARS",
+    color: "blue",
+  },
+  {
+    name: "RUSTHA",
+    img: "/images/trainer2.png",
+    subtitle: "Chemistry, Biology, & EVM",
+    experience: "3+ YEARS",
+    color: "green",
+  },
+  {
+    name: "IPSITA",
+    img: "/images/trainer1.png",
+    subtitle: "Biology & EVM",
+    experience: "7+ YEARS",
+    color: "blue",
+  },
+  {
+    name: "FREEZY",
+    img: "/images/trainer2.png",
+    subtitle: "Biology, Chemistry",
     experience: "4+ YEARS",
     color: "green",
   },
   {
-    name: "NIKHIL PAWAR",
+    name: "AASHIMA",
     img: "/images/trainer1.png",
-    subtitle: "Chemistry & Environmental Management",
-    experience: "4+ YEARS",
+    subtitle: "Spanish",
+    experience: "5+ YEARS",
     color: "blue",
   },
   {
-    name: "PRAKSHI SHARMA",
+    name: "ANUJA",
     img: "/images/trainer2.png",
-    subtitle: "Biology, Chemistry & Physics",
-    experience: "4+ YEARS",
+    subtitle: "English & French",
+    experience: "10+ YEARS",
     color: "green",
   },
   {
-    name: "NIKHIL PAWAR",
+    name: "DR. HAYA",
     img: "/images/trainer1.png",
-    subtitle: "Chemistry & Environmental Management",
-    experience: "4+ YEARS",
+    subtitle: "Chemistry, Physics, Biology",
+    experience: "9+ YEARS",
     color: "blue",
   },
   {
-    name: "PRAKSHI SHARMA",
+    name: "DEEPAK",
     img: "/images/trainer2.png",
-    subtitle: "Biology, Chemistry & Physics",
-    experience: "4+ YEARS",
+    subtitle: "Physics & Maths",
+    experience: "13+ YEARS",
     color: "green",
   },
-  {
-    name: "NIKHIL PAWAR",
-    img: "/images/trainer1.png",
-    subtitle: "Chemistry & Environmental Management",
-    experience: "4+ YEARS",
-    color: "blue",
-  },
-  {
-    name: "PRAKSHI SHARMA",
-    img: "/images/trainer2.png",
-    subtitle: "Biology, Chemistry & Physics",
-    experience: "4+ YEARS",
-    color: "green",
-  },
-
 ];
+
 
 
 export default function Trainers({ }) {
 
   const [isTrainersSwiper, setIsTrainersSwiper] = useState(true);
-const [isMobile, setIsMobile] = useState(false);
-const [isTablet, setIsTablet] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
 
-useEffect(() => {
-  const checkDevice = () => {
-    const width = window.innerWidth;
-    setIsMobile(width <= 768);  
-    setIsTablet(width > 1100 && width <= 1366); 
-  };
+  useEffect(() => {
+    const checkDevice = () => {
+      const width = window.innerWidth;
+      setIsMobile(width <= 768);
+      setIsTablet(width > 1100 && width <= 1366);
+    };
 
-  checkDevice();
-  window.addEventListener("resize", checkDevice);
-  return () => window.removeEventListener("resize", checkDevice);
-}, []);
-useEffect(() => {
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+    return () => window.removeEventListener("resize", checkDevice);
+  }, []);
+  useEffect(() => {
     const handleResize = () => {
       setIsTrainersSwiper(true);
     };
@@ -1842,11 +1898,11 @@ useEffect(() => {
             data-scroll
             data-scroll-class="is-inview"
             data-scroll-repeat="true"
-            className="fade-in-section trainersTitle"
+            className="fade-in-section trainersTitle text-uppercase"
             style={{ animationDelay: "0.2s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,
-            CONSECTETUR <span className="trainersHighlight">ADIPISCING</span>
+            Train With Expert Mentors At Dubai’s Trusted
+            <span className="trainersHighlight">Institute</span>
           </h2>
 
           {isTrainersSwiper ? (
@@ -1886,7 +1942,7 @@ useEffect(() => {
                       <div
                         data-color={t.color}
                         className={` trainerCard ${isActive ? "activeTrainer" : "inactiveTrainer"}`}
-                        style={{ animationDelay: 0.2,width:"365px",marginRight:"36px" }}
+                        style={{ animationDelay: 0.2, width: "365px", marginRight: "36px" }}
                       >
                         <div className="trainerName">{t.name}</div>
                         <div className="trainerImgWrap">

@@ -1,13 +1,32 @@
 import React from "react";
 
 const subjectRows = [
-  ["Computer Science"],
-  ["Spanish", "English", "Economics"],
-  ["Business Studies"],
-  ["Biology", "Chemistry", "Physics"],
-  ["Math", "French"],
-  ["Accounting"],
+  [
+    { name: "Maths", link: "https://ignitetraininginstitute.com/maths-tutor-in-dubai/" },
+  ],
+  [
+    { name: "Physics", link: "https://ignitetraininginstitute.com/physics-tutor-in-dubai/" },
+    { name: "Chemistry", link: "https://ignitetraininginstitute.com/chemistry-tutor-in-dubai/" },
+  ],
+  [
+    { name: "Biology", link: "https://ignitetraininginstitute.com/biology-tutor-in-dubai/" },
+    { name: "Computer Science", link: "https://ignitetraininginstitute.com/computer-science-tutor-in-dubai/" },
+    { name: "French", link: "https://ignitetraininginstitute.com/french-tutor-in-dubai/" },
+  ],
+  [
+    { name: "Economics", link: "https://ignitetraininginstitute.com/economics-tutor-in-dubai/" },
+    { name: "English", link: "https://ignitetraininginstitute.com/english-tutor-in-dubai/" },
+    { name: "Spanish", link: "https://ignitetraininginstitute.com/spanish-tutor-in-dubai/" },
+  ],
+  [
+    { name: "Accounting", link: "https://ignitetraininginstitute.com/accounting-tutor-in-dubai/" },
+    { name: "Business Studies", link: "https://ignitetraininginstitute.com/business-studies-tutor-in-dubai/" },
+  ],
+  [
+    { name: "Psychology", link: "https://ignitetraininginstitute.com/psychology-tutor-in-dubai/" },
+  ],
 ];
+
 
 export default function SubjectsCard1({ }) {
   return (
@@ -31,7 +50,7 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section"
             style={{ animationDelay: "0.1s" }}
           >
-            <div className="SubHeading testSubheading">Subject
+            <div className="SubHeading testSubheading">SUBJECTS WE SUPPORT
             </div>
           </div>
           <h2
@@ -41,8 +60,8 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-            LOREM IPSUM DOLOR SIT AMET,<br />
-            CONSECTETUR <span className="highlight">ADIPISCING</span>
+          Tutoring That Makes<br />
+            Every <span className="highlight">Subject Clear</span>
           </h2>
         </div>
       </div>
@@ -75,16 +94,20 @@ export default function SubjectsCard1({ }) {
               {subjectRows.map((row, rowIdx) => (
                 <div
                   key={rowIdx}
-                  data-scroll
-                  data-scroll-class="is-inview"
-                  data-scroll-repeat="true"
-                  className={`fade-in-section subjects-card1-bubble-row`}
-                  style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
+                  className={`subjects-card1-bubble-row`}
+                  // style={{ animationDelay: `${0.4 + rowIdx * 0.12}s` }}
                 >
                   {row.map((subj) => (
-                    <div key={subj} className="subjects-card1-bubble">
-                      {subj}
-                    </div>
+                    <a
+                      key={subj.name}
+                      href={subj.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="subjects-card1-bubble"
+                      style={{ textDecoration: "none" }}
+                    >
+                      {subj.name}
+                    </a>
                   ))}
                 </div>
               ))}

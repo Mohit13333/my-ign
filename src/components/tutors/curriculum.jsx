@@ -14,7 +14,7 @@ const IBCurriculumStages = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <div style={{marginBlock:isMobile?"10px":"100px"}}>
+    <div style={{ marginBlock: isMobile ? "10px" : "100px" }}>
       <section className="achievementsSection pb-0" style={{ position: 'relative' }}>
         <div className="container">
           <div className="achievementsHeadings">
@@ -37,8 +37,8 @@ const IBCurriculumStages = () => {
               style={{ animationDelay: "0.25s" }}
             >
               <h1 className="achievementsTitle">
-                Lorem ipsum dolor sit amet,<br />
-                <span className="highlight"> consectetur</span> adipiscing{" "}
+                Curriculum-Based Learning &<br />
+                <span className="highlight">  Exam Prep</span> Solutions{" "}
               </h1>
             </div>
           </div>
@@ -69,8 +69,8 @@ const IBCurriculumStages = () => {
                 <div
                   style={{
                     border: "1px solid rgba(35, 52, 103, 1)",
-                    maxWidth: isMobile?300:300,
-                    margin:isMobile?"0 auto": "0",
+                    maxWidth: isMobile ? 300 : 300,
+                    margin: isMobile ? "0 auto" : "0",
                     opacity: ".25",
                   }}
                 />
@@ -78,44 +78,84 @@ const IBCurriculumStages = () => {
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={isMobile?20:30}
-                      height={isMobile?20:30}
+                      width={isMobile ? 20 : 30}
+                      height={isMobile ? 20 : 30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
-                    <h1>IB (MYP & IBDP)</h1>
+                    <h1>
+                      <a
+                        href="https://ignitetraininginstitute.com/ib-curriculum-tutors-in-dubai/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        IB (MYP & IBDP)
+                      </a>
+                    </h1>
                   </div>
+
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={isMobile?20:30}
-                      height={isMobile?20:30}
+                      width={isMobile ? 20 : 30}
+                      height={isMobile ? 20 : 30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
-                    <h1>IGCSE / GCSE</h1>
+                    <h1>
+                      <a
+                        href="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        IGCSE
+                      </a>
+                    </h1>
                   </div>
+
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={isMobile?20:30}
-                      height={isMobile?20:30}
+                      width={isMobile ? 20 : 30}
+                      height={isMobile ? 20 : 30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
-                    <h1>A-Levels</h1>
+                    <h1>
+                      <a
+                        href="https://ignitetraininginstitute.com/courses/a-level-tutors-in-dubai/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        A-Levels
+                      </a>
+                    </h1>
                   </div>
+
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={isMobile?20:30}
-                      height={isMobile?20:30}
+                      width={isMobile ? 20 : 30}
+                      height={isMobile ? 20 : 30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
-                    <h1>Homeschooling</h1>
+                    <h1>
+                      <a
+                        href="https://ignitetraininginstitute.com/courses/igcse-tutors-in-dubai/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        Private Candidate (Homeschooling)
+                      </a>
+                    </h1>
                   </div>
                 </div>
+
               </div>
             </div>
             <div className="col-lg-6">
@@ -135,8 +175,8 @@ const IBCurriculumStages = () => {
                 <div
                   style={{
                     border: "1px solid rgba(35, 52, 103, 1)",
-                    maxWidth: isMobile?300:300,
-                    margin:isMobile?"0 auto": "0",
+                    maxWidth: isMobile ? 300 : 300,
+                    margin: isMobile ? "0 auto" : "0",
                     opacity: ".25",
                   }}
                 />
@@ -144,44 +184,75 @@ const IBCurriculumStages = () => {
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={isMobile?20:30}
-                      height={isMobile?20:30}
+                      width={isMobile ? 20 : 30}
+                      height={isMobile ? 20 : 30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
                     <h1>EmSAT</h1>
                   </div>
+
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={isMobile?20:30}
-                      height={isMobile?20:30}
+                      width={isMobile ? 20 : 30}
+                      height={isMobile ? 20 : 30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
-                    <h1>ACT</h1>
+                    <h1>
+                      <a
+                        href="https://ignitetraininginstitute.com/act-tutors-in-dubai/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        ACT
+                      </a>
+                    </h1>
                   </div>
+
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={isMobile?20:30}
-                      height={isMobile?20:30}
+                      width={isMobile ? 20 : 30}
+                      height={isMobile ? 20 : 30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
-                    <h1>Advanced Placements (AP)</h1>
+                    <h1>
+                      <a
+                        href="https://ignitetraininginstitute.com/advanced-placements-tutors-in-dubai/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        Advanced Placements (AP)
+                      </a>
+                    </h1>
                   </div>
+
                   <div className="curriculum-info">
                     <Image
                       src="/assets/check-inactive-blue.webp"
-                      width={isMobile?20:30}
-                      height={isMobile?20:30}
+                      width={isMobile ? 20 : 30}
+                      height={isMobile ? 20 : 30}
                       quality={100}
                       alt="Check icon"
                     />{" "}
-                    <h1>UCAT</h1>
+                    <h1>
+                      <a
+                        href="https://ignitetraininginstitute.com/ucat-tutors-in-dubai/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none", color: "inherit" }}
+                      >
+                        UCAT
+                      </a>
+                    </h1>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
