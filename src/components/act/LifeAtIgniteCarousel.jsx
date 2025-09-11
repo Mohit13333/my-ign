@@ -333,7 +333,7 @@ export default function LifeAtIgniteCarousel() {
             font-size: 18px;
           }
           .alumniTitle {
-            font-size: 20px;
+            font-size: 16px;
           }
           .carousel-images {
             height: 350px;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const subjectRows = [
   ["ACT Maths I"],
@@ -8,6 +8,18 @@ const subjectRows = [
 ];
 
 export default function SubjectsCard1({ }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkDevice = () => {
+      setIsMobile(window.innerWidth <= 1100);
+    };
+
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+
+    return () => window.removeEventListener("resize", checkDevice);
+  }, []);
   return (
     <section
       data-scroll
@@ -39,8 +51,8 @@ export default function SubjectsCard1({ }) {
             className="fade-in-section testTitle"
             style={{ animationDelay: "0.2s" }}
           >
-           Tutoring That Makes Every <br /> ACT  <span className="highlight"> Subject </span> 
-              Clear
+            Tutoring That Makes Every <br /> ACT  <span className="highlight"> Subject </span>
+            Clear
           </h2>
         </div>
       </div>
@@ -64,7 +76,7 @@ export default function SubjectsCard1({ }) {
             data-scroll
             data-scroll-class="is-clipped"
             data-scroll-offset="-10%"
-            src="/assets/rm.png"
+            src={isMobile ? "/assets/lb.png" : "/assets/rm.png"}
             alt="bg-shape"
             className="subjects-card1-bg-rect"
           />
@@ -134,20 +146,20 @@ export default function SubjectsCard1({ }) {
 
         .subjects-card1-section .subjects-card1-bg-rect:nth-child(2) {
           bottom: 13%;
-    left: -1px;
+          left: -1px;
         }
 
         .subjects-card1-section .subjects-card1-bg-rect:nth-child(3) {
-width: 257px;
-    -o-object-fit: fill;
-    object-fit: fill;
-    -o-object-position: left;
-    object-position: left;
-    -webkit-border-radius: 0 20px 20px 0;
-    -moz-border-radius: 0 20px 20px 0;
-    border-radius: 0 20px 20px 0;
-    bottom: 43%;
-    right: -14px;
+          width: 257px;
+          -o-object-fit: fill;
+          object-fit: fill;
+          -o-object-position: left;
+          object-position: left;
+          -webkit-border-radius: 0 20px 20px 0;
+          -moz-border-radius: 0 20px 20px 0;
+          border-radius: 0 20px 20px 0;
+          bottom: 43%;
+          right: -14px;
         }
 
         .subjects-card1-section .subjects-card1-right {
@@ -178,48 +190,47 @@ width: 257px;
           position: relative;
           z-index: 1;
           width: 100%;
-          flex-wrap: nowrap; /* Prevent wrapping to maintain row structure */
+          flex-wrap: nowrap;
         }
 
- .subjects-card1-section .subjects-card1-bubble {
-  position: relative;
-  border-radius: 40px;
-  color: var(--green-text);
-  font-size: 1.4vw;
-  font-weight: 400;
-  padding: 10px 55px;
-  cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: none;
-  margin-bottom: 0;
-  user-select: none;
-  min-width: 120px;
-  text-align: center;
-  letter-spacing: 0.02em;
-  outline: none;
-  z-index: 1;
-  flex-shrink: 1;
-  background: transparent; /* inside stays transparent */
-  border: 1px solid transparent;
-}
+        .subjects-card1-section .subjects-card1-bubble {
+          position: relative;
+          border-radius: 40px;
+          color: var(--green-text);
+          font-size: 1.4vw;
+          font-weight: 400;
+          padding: 10px 55px;
+          cursor: pointer;
+          transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: none;
+          margin-bottom: 0;
+          user-select: none;
+          min-width: 120px;
+          text-align: center;
+          letter-spacing: 0.02em;
+          outline: none;
+          z-index: 1;
+          flex-shrink: 1;
+          background: transparent;
+          border: 1px solid transparent;
+        }
 
-/* Gradient border using pseudo-element */
-.subjects-card1-section .subjects-card1-bubble::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 40px;
-  padding: 2px;
-  background: linear-gradient(275.93deg, #EDFFF4 18.79%, #A6EAC7 114.24%);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  z-index: -1; /* keep it behind text */
-}
-
+        /* Gradient border using pseudo-element */
+        .subjects-card1-section .subjects-card1-bubble::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: 40px;
+          padding: 2px;
+          background: linear-gradient(275.93deg, #EDFFF4 18.79%, #A6EAC7 114.24%);
+          -webkit-mask: 
+            linear-gradient(#fff 0 0) content-box, 
+            linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          pointer-events: none;
+          z-index: -1;
+        }
 
         .subjects-card1-section .subjects-card1-bubble:hover {
           color: var(--white-color);
@@ -267,7 +278,7 @@ width: 257px;
             width: 100%;
             top: 40px;
             left: 0;
-            display:none;
+            display: none;
           }
 
           .subjects-card1-section .subjects-card1-bubbles-grid {
@@ -279,71 +290,116 @@ width: 257px;
           }
         }
 
+        /* Unified mobile styles for consistent appearance across all mobile devices */
         @media (max-width: 767px) {
-          .subjects-card1-section .subjects-card1-bubble {
-            padding: 5px 15px 10px 15px;
-            font-size: 16px;
-            min-width: auto; /* Remove min-width constraint on mobile */
+          .subjects-card1-section .container {
+            max-width: 95vw;
+            padding: 0 10px;
+          }
+
+          .subjects-card1-section .subjects-card1-inner {
+            padding: 40px 15px;
+            border-radius: 25px;
+          }
+
+          .subjects-card1-section .subjects-card1-bubbles-grid {
+            gap: 12px;
+            width: 100%;
           }
 
           .subjects-card1-section .subjects-card1-bubble-row {
-            gap: 8px; /* Smaller gap on mobile */
-          }
-        }
-
-        @media (max-width: 575px) {
-          .subjects-card1-section .subjects-card1-bg-rect:nth-child(2) {
-            top: 14%;
-            left: 0;
-            width: 32%;
-            height: 55px;
-            object-fit: cover;
-            border-radius: 0 20px 20px 0;
-          }
-                    .subjects-card1-section .container {
-          width: 100%;
-          max-width: 95vw !important;
-          margin: 0 auto;
-          padding: 0;
-        }
-
-          .subjects-card1-section .subjects-card1-bg-rect:nth-child(3) {
-            bottom: 8%;
-            left: auto;
-            right: 0;
-            width: 22%;
-            height: 55px;
-            rotate: 180deg;
-          }
-
-          .subjects-card1-section .subjects-card1-bubble-row {
+            gap: 8px;
             justify-content: center;
-            gap: 6px; /* Even smaller gap for very small screens */
+            flex-wrap: nowrap;
           }
 
           .subjects-card1-section .subjects-card1-bubble {
-            padding: 8px 20px; /* Smaller padding */
+            padding: 10px 16px;
             font-size: 14px;
+            min-width: auto;
+            border-radius: 25px;
+            white-space: nowrap;
+            flex-shrink: 1;
           }
-        }
 
-        @media (max-width: 420px) {
-          .subjects-card1-section .subjects-card1-bubble {
-          padding: 8px 4px !important;
-        font-size: 8px !important;
+          .subjects-card1-section .subjects-card1-bg-rect:nth-child(1) {
+            display: none;
           }
 
           .subjects-card1-section .subjects-card1-bg-rect:nth-child(2) {
-           top: 14%;
-        width: 96px
+            top: 15%;
+            left: 0;
+            width: 80px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 0 15px 15px 0;
           }
 
           .subjects-card1-section .subjects-card1-bg-rect:nth-child(3) {
-            bottom: 14%;
+            bottom: 15%;
+            right: -8px;
+            width: 65px;
+            height: 45px;
+            transform: rotate(180deg);
+            border-radius: 0 15px 15px 0;
+          }
+        }
+
+        /* Extra small devices - consistent across iPhone 12 (390px) and Galaxy S8+ (360px) */
+        @media (max-width: 414px) {
+          .subjects-card1-section .subjects-card1-inner {
+            padding: 35px 12px;
+          }
+
+          .subjects-card1-section .subjects-card1-bubbles-grid {
+            gap: 10px;
           }
 
           .subjects-card1-section .subjects-card1-bubble-row {
-            gap: 5px;
+            gap: 6px;
+          }
+
+          .subjects-card1-section .subjects-card1-bubble {
+            padding: 8px 12px;
+            font-size: 13px;
+            border-radius: 20px;
+          }
+
+          .subjects-card1-section .subjects-card1-bg-rect:nth-child(2) {
+            width: 70px;
+            height: 40px;
+          }
+
+          .subjects-card1-section .subjects-card1-bg-rect:nth-child(3) {
+            width: 55px;
+            height: 40px;
+          }
+        }
+
+        /* Very small devices */
+        @media (max-width: 360px) {
+          .subjects-card1-section .subjects-card1-inner {
+            padding: 30px 10px;
+          }
+
+          .subjects-card1-section .subjects-card1-bubble {
+            padding: 6px 10px;
+            font-size: 12px;
+            border-radius: 18px;
+          }
+
+          .subjects-card1-section .subjects-card1-bubble-row {
+            gap: 15px;
+          }
+
+          .subjects-card1-section .subjects-card1-bg-rect:nth-child(2) {
+            width: 60px;
+            height: 35px;
+          }
+
+          .subjects-card1-section .subjects-card1-bg-rect:nth-child(3) {
+            width: 50px;
+            height: 35px;
           }
         }
       `}</style>

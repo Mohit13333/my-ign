@@ -185,6 +185,7 @@ export default function InfoCard() {
                   lineHeight: "1.8",
                   fontWeight: "500",
                   opacity: "0.9",
+                  marginTop:isMobile ? "0" : "20px!important",
                 }}
               >
                 We offer personalized ACT tutoring tailored to each student’s unique learning style. Our expert-led programs deliver targeted guidance & proven strategies to help students excel confidently in the ACT.
@@ -205,7 +206,7 @@ export default function InfoCard() {
                       padding: "10px 14px 10px 20px",
                       boxShadow: "2px 4px 8px rgba(38, 66, 149, 0.5)",
                       minWidth: "290px", // ensures spacing looks consistent
-                      marginTop: isMobile ? "auto" : "20px",
+                      marginTop: isMobile ? "auto" : "40px!important",
                     }}
                   >
                     <span style={{ letterSpacing: isMobile ? "1px" : "3px" }}>
@@ -257,7 +258,7 @@ export default function InfoCard() {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
-                  minHeight: "632px",
+                  minHeight: "550px",
                   gap: "5px",
                   minWidth: "550px",
                   display: "flex",
@@ -804,7 +805,7 @@ margin-block: 30px !important;
           .col-lg-8 {
             order: 1 !important;
             margin-top: 3rem !important;
-            padding: 2rem 1.5rem !important;
+            padding: 2rem 1.5rem 0 1.5rem!important;
           }
 
           .col-lg-4 {

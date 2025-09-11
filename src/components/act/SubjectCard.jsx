@@ -73,7 +73,7 @@ export default function SubjectsCard() {
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
                 letterSpacing: "0.05em",
-                fontSize:isMobile?"1.2rem": "1.81rem",
+                fontSize:isMobile?"15px": "1.81rem",
                 fontWeight: "700",
                 borderRight: "1px solid rgba(63, 136, 186, 0.3)",
                 textTransform: "uppercase"
@@ -87,7 +87,7 @@ export default function SubjectsCard() {
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
                 letterSpacing: "0.05em",
-                fontSize:isMobile?"1.2rem": "1.81rem",
+                fontSize:isMobile?"15px": "1.81rem",
                 fontWeight: "700",
                 borderRight: "1px solid rgba(63, 136, 186, 0.3)",
                 textTransform: "uppercase"
@@ -101,7 +101,7 @@ export default function SubjectsCard() {
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
                 letterSpacing: "0.05em",
-                fontSize:isMobile?"1.2rem": "1.81rem",
+                fontSize:isMobile?"15px": "1.81rem",
                 fontWeight: "700",
                 borderRight: "1px solid rgba(63, 136, 186, 0.3)",
                 textTransform: "uppercase"
@@ -115,7 +115,7 @@ export default function SubjectsCard() {
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
                 letterSpacing: "0.05em",
-                fontSize:isMobile?"1.2rem": "1.81rem",
+                fontSize:isMobile?"15px": "1.81rem",
                 fontWeight: "700",
                 textTransform: "uppercase"
               }}>
@@ -176,7 +176,7 @@ export default function SubjectsCard() {
                 <td style={{
                   padding:isMobile? "1.3rem":"1.7rem",
                   fontSize: isMobile?"1.3rem":"1.6rem",
-                      backgroundClip: isMobile?"1.3rem":"t.6ext",
+                      backgroundClip: "text",
     WebkitBackgroundClip: "text",
     color: "transparent",
     backgroundImage: "linear-gradient(90deg, #161664, #3F88BA)",
@@ -245,22 +245,36 @@ export default function SubjectsCard() {
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Hide scrollbar on mobile */
-  @media (max-width: 768px) {
+  /* Mobile specific styling to show 3 columns at a time */
+  @media (max-width: 1100px) {
     .table-container {
       scrollbar-width: none; /* Firefox */
       -ms-overflow-style: none; /* IE 10+ */
     }
+    
     .table-container::-webkit-scrollbar {
       display: none; /* Chrome, Safari, Opera */
     }
 
-    /* 👇 Force all table content to stay in one line */
+    /* Set table width to show exactly 3 columns at a time */
+    table {
+      min-width: 133.33vw; /* This ensures 3 columns show at a time (100vw / 3 * 4 columns) */
+    }
+    
     table th,
     table td {
+      width: 25%; /* Each column takes 25% of table width */
+      min-width: 33.33vw; /* Each column is 1/3 of viewport width */
       white-space: nowrap;
-      padding: 1.2rem 1rem !important; /* more spacing */
-      font-size: 1.3rem !important;   /* keep big font */
+      padding: 1.2rem 0.8rem !important;
+      font-size: 1.3rem !important;
+    }
+    
+    /* Heading font size specifically for mobile */
+    table th {
+      font-size: 15px !important;
+      line-height: 1.2;
+      padding: 1rem 0.8rem !important;
     }
   }
       `}</style>
