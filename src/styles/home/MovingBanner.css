@@ -65,6 +65,26 @@
     line-height: 40px;
       gap: 3rem; /* equal spacing between dot and text */
   }
+  .scrollItem1 .dot {
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #EDFFF4, #A6EAC7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin: 0; /* remove old margin */
+}
+.bannerScroll1 {
+  margin: 100px 0;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(90deg, #161d58 50%, #2f648e 100%);
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
   .scrollContent1 {
   gap: 0.3rem !important; /* equal space between items */
 }
