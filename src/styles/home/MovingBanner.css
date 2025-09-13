@@ -58,7 +58,7 @@
 
 @media (max-width: 575px) {
   .bannerScroll1 {
-    margin: 40px 0;
+    margin: 80px 0 40px 0;
   }
   .scrollItem1 {
     font-size: 1rem;
