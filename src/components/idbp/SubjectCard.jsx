@@ -2533,7 +2533,7 @@ export default function SubjectsCard() {
           }
 
           .subjectBubble {
-            padding: 10px 25px !important;
+            padding: 10px 20px !important;
             white-space: normal;
             text-align: center;
             font-size: 12px !important;
@@ -2543,7 +2543,12 @@ export default function SubjectsCard() {
         @media (max-width: 420px) {
           .subjectBubble {
             padding: 8px 20px !important;
-            font-size: 11px !important;
+            font-size: 10px !important;
+          }
+                 .subjectTitle {
+            width: 349px;
+            font-size: 18px !important;
+            line-height: 1.4;
           }
         }
       `}</style>

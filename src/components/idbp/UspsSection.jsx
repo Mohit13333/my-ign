@@ -267,7 +267,7 @@ function UpsSection() {
 
         @media (max-width: 768px) {
           .testTitle {
-            font-size: 22px !important;
+            font-size: 16px !important;
           }
         }
 @media (max-width: 575px) {
