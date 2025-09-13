@@ -76,7 +76,6 @@
   margin: 0; /* remove old margin */
 }
 .bannerScroll1 {
-  margin: 100px 0;
   width: 100%;
   overflow: hidden;
   background: linear-gradient(90deg, #161d58 50%, #2f648e 100%);
