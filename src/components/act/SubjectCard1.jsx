@@ -315,7 +315,7 @@ export default function SubjectsCard1({ }) {
 
           .subjects-card1-section .subjects-card1-bubble {
             padding: 10px 16px;
-            font-size: 14px;
+            font-size: 20px;
             min-width: auto;
             border-radius: 25px;
             white-space: nowrap;
@@ -361,7 +361,7 @@ export default function SubjectsCard1({ }) {
 
           .subjects-card1-section .subjects-card1-bubble {
             padding: 8px 12px;
-            font-size: 13px;
+            font-size: 17px;
             border-radius: 20px;
           }
 
@@ -384,7 +384,7 @@ export default function SubjectsCard1({ }) {
 
           .subjects-card1-section .subjects-card1-bubble {
             padding: 6px 10px;
-            font-size: 12px;
+            font-size: 16px;
             border-radius: 18px;
           }
 
