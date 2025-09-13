@@ -73,6 +73,6 @@
   .scrollItem1 {
     padding: 0 10px 0 10px; /* reduced padding on mobile */
     gap: 2rem;     /* optional: reduce gap for better fit */
-    font-size: 1rem; /* optional: smaller font */
+    font-size: 0.8rem; /* optional: smaller font */
   }
 }
