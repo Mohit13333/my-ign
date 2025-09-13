@@ -69,3 +69,10 @@
   gap: 0.3rem !important; /* equal space between items */
 }
 }
+@media (max-width: 768px) {
+  .scrollItem1 {
+    padding: 10px; /* reduced padding on mobile */
+    gap: 2rem;     /* optional: reduce gap for better fit */
+    font-size: 1rem; /* optional: smaller font */
+  }
+}

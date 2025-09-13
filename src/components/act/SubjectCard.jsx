@@ -24,17 +24,13 @@ export default function SubjectsCard() {
   ];
 
   return (
-    <div
-      className="mx-auto fade-in-section"
-      style={{
-        maxWidth: isMobile?"95vw":"85vw",
-        marginBlock:isMobile?"48px":"70px",
-        background: "white"
-      }}
-      data-scroll
-      data-scroll-class="is-inview"
-      data-scroll-repeat
-    >
+<div
+  className="custom-container fade-in-section"
+  data-scroll
+  data-scroll-class="is-inview"
+  data-scroll-repeat
+>
+
       <div className="d-flex align-items-center justify-content-center mb-md-4 mb-3 fade-in-section"
         data-scroll
         data-scroll-class="is-inview"
@@ -47,13 +43,7 @@ export default function SubjectsCard() {
       </div>
 
 
-      <div className="table-container" style={{
-        borderRadius: "12px",
-        overflow: "auto",
-        border: "2px solid #3F88BA",
-        boxShadow: "0 8px 20px rgba(63, 136, 186, 0.15)",
-        background: "white"
-      }}>
+      <div className="table-container">
         <table
           style={{
             width: "100%",
@@ -197,14 +187,39 @@ export default function SubjectsCard() {
           transform: translateY(30px);
           transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
+          .custom-container {
+  max-width: 85vw;
+  margin-block: 70px;
+  margin-left: 0;
+  background: white;
+  margin-right: auto;
+  margin-left: auto; /* for mx-auto */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .custom-container {
+    max-width: 100%;
+    margin-block: 48px;
+    margin-left: 20px !important;
+  }
+}
+
         .fade-in-section.is-inview {
           opacity: 1;
           transform: translateY(0);
         }
-        
-        .table-container {
+         .table-container {
           overflow-x: auto;
           -webkit-overflow-scrolling: touch;
+              border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top: 2px solid #3F88BA;
+    border-left: 2px solid #3F88BA;
+    border-bottom: 2px solid #3F88BA;
+    border-right: 2px solid #3F88BA;
         }
         
         /* Hide scrollbar on mobile */
@@ -212,6 +227,18 @@ export default function SubjectsCard() {
           .table-container {
             scrollbar-width: none; /* Firefox */
             -ms-overflow-style: none; /* IE 10+ */
+                overflow: auto;
+    border: 2px solid #3F88BA;
+    box-shadow: 0 8px 20px rgba(63, 136, 186, 0.15);
+    background: white;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top: 2px solid #3F88BA;
+    border-left: 2px solid #3F88BA;
+    border-bottom: 2px solid #3F88BA;
+    border-right: none;
           }
           
           .table-container::-webkit-scrollbar {
